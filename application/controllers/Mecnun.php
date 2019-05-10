@@ -251,9 +251,13 @@
 
     public function update_teachers($teacher_id)
     {
+        $data["teacher"] = $this->Mecnun_model->get_teacher(array(
+            "teacher_id" => $teacher_id,
+        ));
 
+        $data["categories"] = $this->Mecnun_model->get_categories();
 
-        $this->load->view('Admin/teachers_category/teachers_update');
+        $this->load->view('Admin/teachers_category/teachers_update', $data);
     }
 
     public function delete_teachers($teacher_id)

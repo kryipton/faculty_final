@@ -18,21 +18,26 @@
                 <form action="<?php echo base_url('') ?>" method="POST" enctype="multipart/form-data">
 
                     <label for="">Ad</label>
-                    <input value="<?php ?>" type="text" class="form-control" name="teacher_name"><br>
+                    <input value="<?php echo $teacher["teacher_name"] ?>" type="text" class="form-control" name="teacher_name"><br>
 
                     <label for="">Soyad</label>
-                    <input type="text" class="form-control" name="teacher_surname"><br>
+                    <input value="<?php echo $teacher["teacher_surname"] ?>" type="text" class="form-control" name="teacher_surname"><br>
 
                     <label for="">Dərəcə</label>
-                    <input type="text" class="form-control" name="teacher_position"><br>
+                    <input value="<?php echo $teacher["teacher_position"] ?>" type="text" class="form-control" name="teacher_position"><br>
 
 
 
                     <label for="">Kafedra</label>
                     <select name="teacher_specialty" id="" class="form-control" style="height: 40px">
-                        <?php foreach ($categories as $category){ ?>
-                            <option value="<?php echo $category["category_name"]?>"><?php echo $category["category_name"] ?></option>
-                        <?php }?>
+                        <option value="<?php echo $teacher["department_category"]?>"><?php echo $teacher["department_category"] ?></option>
+                            <?php foreach ($categories as $category){ ?>
+
+                                <?php if ($teacher["department_category"] != $category["category_name"]){?>
+                                    <option value="<?php echo $category["category_name"]?>"><?php echo $category["category_name"] ?></option>
+                                <?php }?>
+
+                            <?php }?>
                     </select>
                     <br>
 

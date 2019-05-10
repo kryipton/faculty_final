@@ -35,7 +35,12 @@ class Mecnun_model extends  CI_Model{
 
     public function get_teachers()
     {
-        return $this->db->get('teachers_db')-> result_array();
+        return $this->db->get('teachers_db')->result_array();
+    }
+
+    public function get_teacher($where)
+    {
+        return $this->db->where($where)->get('teachers_db')->row_array();
     }
 
 
