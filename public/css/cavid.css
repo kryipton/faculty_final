@@ -52,4 +52,13 @@
     text-indent: 0px;
 }
 
+.c_nav_pill{
+    color: black;
+    margin-top: 20px;
+}
+
+.c_nav_pill li a:hover{
+    color: black!important;
+}
+
 
