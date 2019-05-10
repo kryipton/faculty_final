@@ -15,6 +15,7 @@ class Leyli extends CI_Controller {
         $this->load->model('Bachelor_model');
         $this->load->model('Master_model');
         $this->load->model('Doctorate_model');
+        $this->load->model('Department_model');
         $this->load->model('Laboratory_model');
         date_default_timezone_set('Asia/Dhaka');
     }
@@ -139,6 +140,46 @@ class Leyli extends CI_Controller {
         ));
 
         $this->load->view('Front/doctorate_speciality_single/whole_page', $data);
+    }
+
+    public function department(){
+        $data['data'] = $this->Department_model->get_desc();
+
+        $data['last_events'] = $this->Events_model->get_last_events();
+
+        $this->load->view('Front/department/whole_page', $data);
+    }
+
+    public function department_contact(){
+        $data['data'] = $this->Department_model->get_desc();
+
+        $data['last_events'] = $this->Events_model->get_last_events();
+
+        $this->load->view('Front/department_contact/whole_page', $data);
+    }
+
+    public function department_teachers(){
+        $data['data'] = $this->Department_model->get_desc();
+
+        $data['last_events'] = $this->Events_model->get_last_events();
+
+        $this->load->view('Front/department_teachers/whole_page', $data);
+    }
+
+    public function department_specialities(){
+        $data['data'] = $this->Department_model->get_desc();
+
+        $data['last_events'] = $this->Events_model->get_last_events();
+
+        $this->load->view('Front/department_specialities/whole_page', $data);
+    }
+
+    public function department_labaratory(){
+        $data['data'] = $this->Department_model->get_desc();
+
+        $data['last_events'] = $this->Events_model->get_last_events();
+
+        $this->load->view('Front/department_labaratory/whole_page', $data);
     }
 
 
