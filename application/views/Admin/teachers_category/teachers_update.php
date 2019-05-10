@@ -18,38 +18,38 @@
                 <form action="<?php echo base_url('') ?>" method="POST" enctype="multipart/form-data">
 
                     <label for="">Ad</label>
-                    <input type="text" class="form-control" name="teacher_name" value="<?php ?>"><br>
+                    <input value="<?php echo $teacher["teacher_name"] ?>" type="text" class="form-control" name="teacher_name"><br>
 
                     <label for="">Soyad</label>
-                    <input type="text" class="form-control" name="teacher_surname" value="<?php  ?>"><br>
+                    <input value="<?php echo $teacher["teacher_surname"] ?>" type="text" class="form-control" name="teacher_surname"><br>
 
-                    <label for="">E-adress</label>
-                    <input type="text" class="form-control" name="teacher_email" value="<?php  ?>"><br>
+                    <label for="">Dərəcə</label>
+                    <input value="<?php echo $teacher["teacher_position"] ?>" type="text" class="form-control" name="teacher_position"><br>
 
-                    <label for="">Telefon</label>
-                    <input type="text" class="form-control" name="teacher_number" value="<?php  ?>"><br>
 
-                    <label for="">Dərs</label>
-                    <input type="text" class="form-control" name="teacher_lesson" value="<?php ?>"><br>
 
-                    <label for="">İxtisas</label>
-                    <select name="teacher_specialty" id="">
-                        <?php ?>
-                            <option <?php ?> value="<?php ?>"</option>
-                        <?php  ?>
+                    <label for="">Kafedra</label>
+                    <select name="teacher_specialty" id="" class="form-control" style="height: 40px">
+                        <option value="<?php echo $teacher["department_category"]?>"><?php echo $teacher["department_category"] ?></option>
+                        <?php foreach ($categories as $category){ ?>
+
+                            <?php if ($teacher["department_category"] != $category["category_name"]){?>
+                                <option value="<?php echo $category["category_name"]?>"><?php echo $category["category_name"] ?></option>
+                            <?php }?>
+
+                        <?php }?>
+
                     </select>
                     <br>
 
                     <label for="">Haqqında</label>
-                    <textarea style="resize: none" class="form-control ckeditor" name="teacher_about" id="" cols="30" rows="10" placeholder="">
-							<?php  ?>
-						</textarea><br>
-
+                    <textarea style="resize: none" class="form-control ckeditor" name="teacher_about" id="" cols="30" rows="10" placeholder=""></textarea><br>
 
                     <label for="">Şəkil</label>
                     <input type="file" class="form-control" name="teacher_photo"><br>
 
                     <input type="submit" value="Əlavə et" class="btn btn-info">
+
 
 
                 </form>

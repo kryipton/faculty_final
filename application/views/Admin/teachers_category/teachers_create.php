@@ -23,20 +23,16 @@
                     <label for="">Soyad</label>
                     <input type="text" class="form-control" name="teacher_surname"><br>
 
-                    <label for="">E-adress</label>
-                    <input type="text" class="form-control" name="teacher_email"><br>
+                    <label for="">Dərəcə</label>
+                    <input type="text" class="form-control" name="teacher_position"><br>
 
-                    <label for="">Telefon</label>
-                    <input type="text" class="form-control" name="teacher_number"><br>
 
-                    <label for="">Dərs</label>
-                    <input type="text" class="form-control" name="teacher_lesson"><br>
 
-                    <label for="">İxtisas</label>
-                    <select name="teacher_specialty" id="">
-                        <?php  ?>
-                            <option value="<?php  ?>"><?php  ?></option>
-                        <?php ?>
+                    <label for="">Kafedra</label>
+                    <select name="teacher_specialty" id="" class="form-control" style="height: 40px">
+                        <?php foreach ($categories as $category){ ?>
+                            <option value="<?php echo $category["category_name"]?>"><?php echo $category["category_name"] ?></option>
+                        <?php }?>
                     </select>
                     <br>
 
