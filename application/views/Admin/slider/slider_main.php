@@ -20,6 +20,12 @@
                     </div>
                 <?php } ?>
 
+                <?php if ($this->session->flashdata('alert')){ ?>
+                    <div class="alert alert-danger" role="alert">
+                        <?php echo $this->session->flashdata('alert') ?>
+                    </div>
+                <?php } ?>
+
 
                 <?php
                 foreach ($sliderInfo as $info) {
@@ -38,7 +44,7 @@
 
                                 <div class="slide-in" style="padding: 0px 5px">
                                     <p style="font-size: 15px;line-height: 20px">
-                                        <?php echo $info['slide_title']?>
+                                        <?php echo $info['slide_title_az']?>
                                     </p>
                                 </div>
                                 <a href="<?php echo base_url('himalaY_slider_duzenle/').$info['slide_id'] ?>" class="btn btn-info btn-md">

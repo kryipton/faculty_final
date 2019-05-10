@@ -26,7 +26,7 @@
                                     data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1000"
                                     data-thumb="<?php echo base_url('upload/slide_images/'.$all_slide['slide_image']) ?>" data-rotate="0" data-fstransition="fade"
                                     data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"
-                                    data-title="<?php echo $all_slide['slide_title'] ?>" data-description="">
+                                    data-title="<?php echo $all_slide['slide_title_az'] ?>" data-description="">
 
                                     <img  src="<?php echo base_url('upload/slide_images/'.$all_slide['slide_image']) ?>" alt="" data-bgposition="center center"
                                           data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10"
@@ -46,7 +46,7 @@
                                     </div>
 
                                     <div class="tp-caption BigBold-Title tp-resizeme rs-parallaxlevel-0"
-                                         style="margin-top: 150px;z-index: 6; white-space: nowrap;font-size: 45px;"> <?php echo $all_slide['slide_title'] ?>
+                                         style="margin-top: 150px;z-index: 6; white-space: nowrap;font-size: 45px;"> <?php echo $all_slide['slide_title_az'] ?>
                                     </div>
 
                                     <div class="tp-caption BigBold-SubTitle rs-parallaxlevel-0" id="slide-309-layer-4"
@@ -60,7 +60,7 @@
                                          data-basealign="slide" data-responsive_offset="off"
                                          data-transform_out="y:50px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
                                          data-responsive="off" style="z-index: 7; min-width: 410px; max-width: 410px;
-                                        max-width: 60px; white-space: normal;"><?php echo $all_slide['slide_desc'] ?>
+                                        max-width: 60px; white-space: normal;"><?php echo $all_slide['slide_desc_az'] ?>
                                     </div>
 
                                     <?php
