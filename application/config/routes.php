@@ -126,7 +126,7 @@ $route['Department_Specialities'] = 'Leyli/department_specialities';
 //Kafedra labaratoriyalar hissesi
 $route['Department_Labaratories'] = 'Leyli/department_labaratory';
 
-
+//qaqli netersen netersen
 
 
 
