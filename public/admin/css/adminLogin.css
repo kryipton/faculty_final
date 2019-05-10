@@ -1,0 +1,23 @@
+
+
+body{
+    background: #222222!important;
+    color: white!important;
+}
+.main{
+    width: 50%;
+    min-height:350px;
+    /*background: ; */
+    margin: 100px auto;
+    border-radius: 5px
+}
+.headerLogin{
+    background: #E4E7E8;
+    height: 50px;
+    width: 100%;
+    text-align:center;
+    border-radius: 5px;
+    padding:5px;
+    font-size: 30px;
+    color :black
+}

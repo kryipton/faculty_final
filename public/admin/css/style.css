@@ -1,0 +1,100 @@
+
+
+.adminPanel{
+    width: 100%;
+    height:30px;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    /*background: #007AFF;*/
+    background:lightgray;
+}
+.user{
+    width: 100%;
+    height: 50px;
+    background: #222222;
+    border-bottom: 1px solid #E4E7E8;
+}
+
+
+
+
+
+
+.userProfile{
+    width: 100%;
+    height: 150px;
+    background: #5BC0DE;
+    border-bottom:  1px solid grey;
+    padding-top:15px;
+}
+.imgPhoto{
+    width: 100px;
+    height: 100px;
+    /*background: grey;*/
+    border-radius: 20%;
+}
+
+.userProfile img{
+    width: 100px;
+    height: 100px;
+    border-radius: 20%;
+    background: #222222;
+}
+.main{
+    width: 100%;
+    min-height: 600px;
+    /*background:#4c4c4c;*/
+    background: #222222;
+
+}
+
+.left{
+    width: 100%;
+    /*min-height:600px;*/
+    height: inherit;
+    /*background:#4c4c4c;*/
+    background: #222222;
+
+
+
+}
+
+
+.left li{
+    width: 100%;
+    min-height: 50px;
+    /*background: #FFBF43;*/
+    /*background:#96ca4b;*/
+    background: #222222;
+    /*margin-top:5px;*/
+    color:#909090;
+    cursor: pointer;
+    padding: 10px;
+    box-sizing: border-box;
+    list-style-type: none;
+    transition: 0.3s linear;
+
+
+}
+
+
+.right{
+
+    width: 100%;
+    min-height:800px;
+    background: #E4E7E8;
+    padding: 10px;
+    box-sizing: border-box;
+
+}
+
+.adminText{
+    color:white;
+}
+
+
+/*.left li:first-child:hover*/
+/*{*/
+    /*background: red;*/
+/*}*/
