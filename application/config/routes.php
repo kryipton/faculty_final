@@ -169,7 +169,9 @@ $route['himalaY_tedbirler_elave_et'] = 'Mecnun/add_events';
 //Muellimler
 $route['himalaY_muellimler'] = 'Mecnun/teachers';
 $route['himalaY_muellimler_elave_et'] = 'Mecnun/add_teachers';
+$route['himalaY_muellimler_elave_edilmesi'] = 'Mecnun/add_teachers_act';
 $route['himalaY_muellimler_yenile/(.*)'] = 'Mecnun/update_teachers/$1';
+$route['himalaY_muellimler_yenilenmesi/(.*)'] = 'Mecnun/update_teachers_act/$1';
 $route['himalaY_muellimler_silme/(.*)'] = 'Mecnun/delete_teachers/$1';
 
 

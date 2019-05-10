@@ -68,10 +68,21 @@ class Mecnun_model extends  CI_Model{
         return $this->db->where($where)->get('teachers_db')->row_array();
     }
 
-
     public function get_categories()
     {
         return $this->db->get('department_categories')-> result_array();
+    }
+
+    public function add_teacher($data){
+        $this->db->insert('teachers_db',$data);
+    }
+
+    public function update_teacher($where, $data){
+        $this->db->where($where)->update('teachers_db',$data);
+    }
+
+    public function delete_teacher($where){
+        $this->db->where($where)->delete('teachers_db');
     }
 
 //    =================================================================cavidin isleri=================================================================
