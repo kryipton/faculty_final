@@ -21,32 +21,35 @@
                 <tr>
                     <th  scope="col">Sıra</th>
                     <th scope="col">Adı</th>
-                    <th  scope="col">Soyad</th>
-                    <th scope="col">Telefon</th>
-
-                    <th  scope="col">Dərs</th>
+                    <th  scope="col">Dərəcə</th>
+                    <th scope="col">Kafedra</th>
+                    <th  scope="col">Müəllim Haqqında</th>
+                    <th  scope="col">Şəkil</th>
                     <th  scope="col">Əməliyyat</th>
                 </tr>
                 </thead>
                 <tbody>
 
                 <?php
-
-                 ?>
+                foreach ($teachers as $teacher) {
+                    ?>
 
                     <tr>
 
-                        <th><?php  ?></th>
-                        <th><?php  ?></th>
-                        <th><?php  ?></th>
-                        <th><?php  ?></th>
-                        <th><?php  ?></th>
+                        <th><?php echo $teacher["teacher_id"]?></th>
+                        <th><?php echo $teacher["teacher_name"]?></th>
+                        <th><?php echo $teacher["teacher_surname"]?></th>
+                        <th><?php echo $teacher["department_category"]?></th>
+                        <th><?php echo $teacher["teacher_about"]?></th>
+                        <th><?php echo $teacher["teacher_photo"]?></th>
                         <td>
-                            <a href="<?php echo base_url('') ?>" class="btn btn-primary btn-sm" style="background: #3C8DBC; border:0px solid #3C8DBC">
+                            <a href="<?php echo base_url('himalaY_muellimler_yenile/').$teacher["teacher_id"] ?>" class="btn btn-primary btn-sm"
+                               style="background: #3C8DBC; border:0px solid #3C8DBC">
                                 <i class="fa fa-pencil" aria-hidden="true"></i>
                             </a>
-                            <a href="<?php echo base_url('') ?>" class="btn btn-primary btn-sm" style="background: #DD4B39;border:0px solid #DD4B39">
-                                <i class="fa fa-times" aria-hidden="true" ></i>
+                            <a href="<?php echo base_url('himalaY_muellimler_sil/').$teacher["teacher_id"] ?>" class="btn btn-primary btn-sm"
+                               style="background: #DD4B39;border:0px solid #DD4B39">
+                                <i class="fa fa-times" aria-hidden="true"></i>
                             </a>
                         </td>
 
@@ -54,7 +57,7 @@
                     </tr>
 
                 <?php
-
+                }
                 ?>
                 </tbody>
             </table>

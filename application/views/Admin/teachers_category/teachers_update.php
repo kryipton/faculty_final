@@ -1,7 +1,7 @@
-
 <title>Müəllimlər</title>
 <?php $this->load->view('Admin/includes_for_all/admin_header'); ?>
 <?php $this->load->view('Admin/includes_for_all/left_menu'); ?>
+
 
 
 
@@ -9,7 +9,7 @@
     <div class="row">
 
         <div class="right">
-            <a href="<?php echo base_url('himalaY_muellimler') ?>" class="btn btn-info btn-md">
+            <a href="<?php echo base_url('') ?>" class="btn btn-info btn-md">
                 <span class="glyphicon glyphicon-plus-sign"></span> Bütün Müəllimlər
             </a>
             <br>
@@ -18,25 +18,21 @@
                 <form action="<?php echo base_url('') ?>" method="POST" enctype="multipart/form-data">
 
                     <label for="">Ad</label>
-                    <input type="text" class="form-control" name="teacher_name"><br>
+                    <input value="<?php ?>" type="text" class="form-control" name="teacher_name"><br>
 
                     <label for="">Soyad</label>
                     <input type="text" class="form-control" name="teacher_surname"><br>
 
-                    <label for="">E-adress</label>
-                    <input type="text" class="form-control" name="teacher_email"><br>
+                    <label for="">Dərəcə</label>
+                    <input type="text" class="form-control" name="teacher_position"><br>
 
-                    <label for="">Telefon</label>
-                    <input type="text" class="form-control" name="teacher_number"><br>
 
-                    <label for="">Dərs</label>
-                    <input type="text" class="form-control" name="teacher_lesson"><br>
 
-                    <label for="">İxtisas</label>
-                    <select name="teacher_specialty" id="">
-                        <?php  ?>
-                            <option value="<?php  ?>"><?php  ?></option>
-                        <?php ?>
+                    <label for="">Kafedra</label>
+                    <select name="teacher_specialty" id="" class="form-control" style="height: 40px">
+                        <?php foreach ($categories as $category){ ?>
+                            <option value="<?php echo $category["category_name"]?>"><?php echo $category["category_name"] ?></option>
+                        <?php }?>
                     </select>
                     <br>
 
@@ -49,14 +45,17 @@
                     <input type="submit" value="Əlavə et" class="btn btn-info">
 
 
+
                 </form>
+            </div>
+            <div class="col-md-4">
+                <img style="width: 400px;height: inherit;" src="<?php echo base_url(''); ?>" alt="">
+
             </div>
 
 
         </div>
     </div>
 </div>
-
-
 
 <?php $this->load->view('Admin/includes_for_all/admin_footer'); ?>

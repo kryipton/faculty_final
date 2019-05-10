@@ -12,7 +12,6 @@
          $this->load->view('Admin/main_page/main');
      }
 
-
 //     ============= Xeberler Hissesi ================
      public function news()
      {
@@ -24,7 +23,6 @@
      {
          $this->load->view('Admin/news/news_create');
      }
-
 
      public function add_news_act()
      {
@@ -98,10 +96,6 @@
 
 
      }
-
-
-
-
 
     public function delete_news($id)
     {
@@ -222,10 +216,12 @@
     {
         $this->load->view('Admin/events/events_main');
     }
+
     public function add_events()
     {
         $this->load->view('Admin/events/events_create');
     }
+
     public function update_events()
     {
         $this->load->view('Admin/events/events_update');
@@ -238,15 +234,33 @@
 
     public function teachers()
     {
-        $this->load->view('Admin/teachers/teachers_main');
+        $data["teachers"] = $this->Mecnun_model->get_teachers();
+
+        $data["categories"] = $this->Mecnun_model->get_categories();
+
+
+        $this->load->view('Admin/teachers_category/teachers_main', $data);
     }
+
     public function add_teachers()
     {
-        $this->load->view('Admin/teachers/teachers_create');
+        $data["categories"] = $this->Mecnun_model->get_categories();
+
+        $this->load->view('Admin/teachers_category/teachers_create', $data);
     }
-    public function update_teachers()
+
+    public function update_teachers($teacher_id)
     {
-        $this->load->view('Admin/teachers/teachers_update');
+
+
+        $this->load->view('Admin/teachers_category/teachers_update');
+    }
+
+    public function delete_teachers($teacher_id)
+    {
+
+
+        $this->load->view('Admin/teachers_category/teachers_update');
     }
 
 
@@ -329,6 +343,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
  }
+
 
 
