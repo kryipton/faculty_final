@@ -31,13 +31,14 @@
                     <label for="">Kafedra</label>
                     <select name="teacher_specialty" id="" class="form-control" style="height: 40px">
                         <option value="<?php echo $teacher["department_category"]?>"><?php echo $teacher["department_category"] ?></option>
-                            <?php foreach ($categories as $category){ ?>
+                        <?php foreach ($categories as $category){ ?>
 
-                                <?php if ($teacher["department_category"] != $category["category_name"]){?>
-                                    <option value="<?php echo $category["category_name"]?>"><?php echo $category["category_name"] ?></option>
-                                <?php }?>
-
+                            <?php if ($teacher["department_category"] != $category["category_name"]){?>
+                                <option value="<?php echo $category["category_name"]?>"><?php echo $category["category_name"] ?></option>
                             <?php }?>
+
+                        <?php }?>
+
                     </select>
                     <br>
 
