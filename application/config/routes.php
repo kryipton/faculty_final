@@ -134,7 +134,7 @@ $route['Department_Labaratories'] = 'Leyli/department_labaratory';
 
 
 
-//==========  Admin panele aid ===========
+//==========================================  Admin panele aid =============================
 
 //Dashboard
 $route['himalaY'] = 'Mecnun/index';
@@ -163,6 +163,10 @@ $route['himalaY_slider_duzenle_act/(.*)'] = 'Mecnun/update_slider_act/$1';
 //Tədbirlər
 $route['himalaY_tedbirler'] = 'Mecnun/events';
 $route['himalaY_tedbirler_elave_et'] = 'Mecnun/add_events';
+$route['himalaY_tedbirler_elave_et_act'] = 'Mecnun/add_events_act';
+$route['himalaY_tedbirler_sil/(.*)'] = 'Mecnun/delete_events/$1';
+$route['himalaY_tedbirler_duzenle/(.*)'] = 'Mecnun/update_events/$1';
+$route['himalaY_tedbirler_duzenle_act/(.*)'] = 'Mecnun/update_events_act/$1';
 
 
 

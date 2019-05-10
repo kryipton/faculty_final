@@ -31,9 +31,9 @@ class Mecnun extends CI_Controller{
         $news_title_az = strip_tags($this->input->post('news_title_az'));
         $news_title_en = strip_tags($this->input->post('news_title_en'));
         $news_title_ru = strip_tags($this->input->post('news_title_ru'));
-        $news_desc_az  = strip_tags($this->input->post('news_desc_az'));
-        $news_desc_en  = strip_tags($this->input->post('news_desc_en'));
-        $news_desc_ru  = strip_tags($this->input->post('news_desc_ru'));
+        $news_desc_az  = $this->input->post('news_desc_az');
+        $news_desc_en  = $this->input->post('news_desc_en');
+        $news_desc_ru  = $this->input->post('news_desc_ru');
         $news_time     = strip_tags($this->input->post('news_date'));
 
         $config['upload_path']   = 'upload/news_images/';
@@ -95,6 +95,8 @@ class Mecnun extends CI_Controller{
 
     public function delete_news($id)
     {
+        $msg = 'Xəbər uğurla silindi ! ';
+        $this->session->set_flashdata('success',$msg);
         $where =[
             'news_id' => $id,
         ];
@@ -360,14 +362,144 @@ class Mecnun extends CI_Controller{
         $this->load->view('Admin/events/events_main',$data);
     }
 
+
+    public function delete_events($id)
+    {
+        $where=[
+            'event_id'=>$id
+        ];
+
+    $this->Mecnun_model->deleteEvent($where);
+        $msg = 'Tedbir uğurla silindi ! ';
+        $this->session->set_flashdata('success',$msg);
+
+    redirect(base_url('himalaY_tedbirler'));
+    }
+
     public function add_events()
     {
         $this->load->view('Admin/events/events_create');
     }
 
-    public function update_events()
+    public function add_events_act(){
+
+        $event_title_az = strip_tags($this->input->post('eventTitleAz'));
+        $event_title_en = strip_tags($this->input->post('eventTitleEn'));
+        $event_title_ru = strip_tags($this->input->post('eventTitleRu'));
+        $event_desc_az  = $this->input->post('eventDescAz');
+        $event_desc_en  = $this->input->post('eventDescEn');
+        $event_desc_ru  = $this->input->post('eventDescRu');
+        $event_time     = strip_tags($this->input->post('eventDate'));
+
+        $config['upload_path']   = 'upload/event_images/';
+        $config['max_size']     = '10000';
+        $config['allowed_types'] = 'jpg|jpeg|png';
+        $this->upload->initialize($config);
+
+        if (!empty($event_title_az) && !empty($event_title_en) && !empty($event_title_ru) && !empty($event_desc_az)){
+
+
+            $event_data = array(
+
+                'event_title_az' => $event_title_az,
+                'event_title_en' => $event_title_en,
+                'event_title_ru' => $event_title_ru,
+                'event_desc_az'  => $event_desc_az,
+                'event_desc_en'  => $event_desc_en,
+                'event_desc_ru'  => $event_desc_ru,
+                'event_time'     => $event_time,
+                'event_img'    => ($this->upload->do_upload('event_image')) ? $this->upload->data('file_name') : 'default.png'
+
+
+            );
+
+            $this->Mecnun_model->addEvent($event_data);
+            $msg = 'Yeni tədbir əlavə olundu ! ';
+            $this->session->set_flashdata('success',$msg);
+
+            redirect(base_url('himalaY_tedbirler'));
+        }else{
+
+            $msg = 'Zəhmət olmasa boşluq buraxmayın ! ';
+            $this->session->set_flashdata('alert',$msg);
+
+            redirect(base_url('himalaY_tedbirler_elave_et'));
+        }
+    }
+
+    public function update_events($id)
     {
-        $this->load->view('Admin/events/events_update');
+       $data['event'] = $this->Mecnun_model->getEvent([
+            'event_id' => $id
+        ]);
+        $this->load->view('Admin/events/events_update',$data);
+    }
+
+    public function update_events_act($id)
+    {
+        $where = [
+          'event_id' => $id
+        ];
+
+        $event_title_az = strip_tags($this->input->post('eventTitleAz'));
+        $event_title_en = strip_tags($this->input->post('eventTitleEn'));
+        $event_title_ru = strip_tags($this->input->post('eventTitleRu'));
+        $event_desc_az  = $this->input->post('eventDescAz');
+        $event_desc_en  = $this->input->post('eventDescEn');
+        $event_desc_ru  = $this->input->post('eventDescRu');
+        $event_time     = strip_tags($this->input->post('eventDate'));
+
+        $config['upload_path']   = 'upload/event_images/';
+        $config['max_size']     = '10000';
+        $config['allowed_types'] = 'jpg|jpeg|png';
+        $this->upload->initialize($config);
+
+        if (!empty($event_title_az) && !empty($event_title_en) && !empty($event_title_ru) && !empty($event_desc_az)){
+
+            if ($this->upload->do_upload('event_image')) {
+                $event_data = array(
+
+                    'event_title_az' => $event_title_az,
+                    'event_title_en' => $event_title_en,
+                    'event_title_ru' => $event_title_ru,
+                    'event_desc_az'  => $event_desc_az,
+                    'event_desc_en'  => $event_desc_en,
+                    'event_desc_ru'  => $event_desc_ru,
+                    'event_time'     => $event_time,
+                    'event_img'      =>  $this->upload->data('file_name')
+
+                );
+
+                $this->Mecnun_model->updateEvent($where,$event_data);
+                $msg = 'Tedbir düzənləndi ! ';
+                $this->session->set_flashdata('success', $msg);
+
+                redirect(base_url('himalaY_tedbirler'));
+            }else{
+                $event_data = array(
+
+                    'event_title_az' => $event_title_az,
+                    'event_title_en' => $event_title_en,
+                    'event_title_ru' => $event_title_ru,
+                    'event_desc_az'  => $event_desc_az,
+                    'event_desc_en'  => $event_desc_en,
+                    'event_desc_ru'  => $event_desc_ru,
+                    'event_time'     => $event_time,
+                );
+
+                $this->Mecnun_model->updateEvent($where,$event_data);
+                $msg = 'Tedbir düzənləndi ! ';
+                $this->session->set_flashdata('success', $msg);
+
+                redirect(base_url('himalaY_tedbirler'));
+            }
+        }else{
+
+            $msg = 'Zəhmət olmasa boşluq buraxmayın ! ';
+            $this->session->set_flashdata('alert',$msg);
+
+            redirect(base_url('himalaY_tedbirler'));
+        }
     }
 
 

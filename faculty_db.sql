@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 10 May 2019, 16:38:24
--- Sunucu sürümü: 10.1.37-MariaDB
--- PHP Sürümü: 7.3.1
+-- Üretim Zamanı: 10 May 2019, 22:27:54
+-- Sunucu sürümü: 10.1.38-MariaDB
+-- PHP Sürümü: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -105,8 +105,18 @@ INSERT INTO `department_about_text` (`id`, `department_desc`) VALUES
 
 CREATE TABLE `department_categories` (
   `id` int(11) NOT NULL,
-  `category_name` varchar(255) NOT NULL
+  `category_name_az` varchar(255) NOT NULL,
+  `category_name_en` varchar(255) NOT NULL,
+  `category_name_ru` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Tablo döküm verisi `department_categories`
+--
+
+INSERT INTO `department_categories` (`id`, `category_name_az`, `category_name_en`, `category_name_ru`) VALUES
+(1, 'ekologiya kafedrasi', 'echology department', 'отдел экологии'),
+(2, 'uzvi kimya kafedrasi', 'chemistry department', 'химический факультет');
 
 -- --------------------------------------------------------
 
@@ -232,9 +242,8 @@ CREATE TABLE `events_db` (
 --
 
 INSERT INTO `events_db` (`event_id`, `event_img`, `event_time`, `event_title_az`, `event_title_en`, `event_title_ru`, `event_desc_az`, `event_desc_en`, `event_desc_ru`) VALUES
-(14, 'sds.png', '2017-12-17', 'Dekabrın 12-də Azərbaycan Dövlət Neft və Sənaye Universitetində (ADNSU) ABŞ Hərbi Qüvvələrinin 1-ci dərəcəli kapitanı, astronavt Haydi Payperlə görüş keçirilib.  Əvvəlcə ADNSU-nun rektoru, professor Mustafa Babanlı ilə görüşən NASA astronavtı Haydi Payper', 'Dekabrın 12-də Azərbaycan Dövlət Neft və Sənaye Universitetində (ADNSU) ABŞ Hərbi Qüvvələrinin 1-ci dərəcəli kapitanı, astronavt Haydi Payperlə görüş keçirilib.  Əvvəlcə ADNSU-nun rektoru, professor Mustafa Babanlı ilə görüşən NASA astronavtı Haydi Payper', 'Dekabrın 12-də Azərbaycan Dövlət Neft və Sənaye Universitetində (ADNSU) ABŞ Hərbi Qüvvələrinin 1-ci dərəcəli kapitanı, astronavt Haydi Payperlə görüş keçirilib.  Əvvəlcə ADNSU-nun rektoru, professor Mustafa Babanlı ilə görüşən NASA astronavtı Haydi Payper', '<p>Dekabrın 12-də Azərbaycan D&ouml;vlət Neft və Sənaye Universitetində (ADNSU) ABŞ Hərbi Q&uuml;vvələrinin 1-ci dərəcəli kapitanı, astronavt Haydi Payperlə g&ouml;r&uuml;ş ke&ccedil;irilib.</p>\r\n\r\n<p>Əvvəlcə ADNSU-nun rektoru, professor Mustafa Babanlı ilə g&ouml;r&uuml;şən NASA astronavtı Haydi Payper universitetdə olmaqdan məmnunluq duyduğunu dilə gətirib.</p>\r\n\r\n<p>Qonağı universitetdə g&ouml;rməkdən məmnun olduğunu deyən rektor, professor M.Babanlı ona xatirə hədiyyəsi təqdim edib. &Ouml;z&nbsp; n&ouml;vbəsində H.Payper ADNSU-nun muzeyinə NASA kosmonavtlarının uniformalarında olan &ouml;z formasının şevronlarını hədiyyə edib.</p>\r\n\r\n<p>Daha sonra xanım astronavtın tələbələrlə g&ouml;r&uuml;ş&uuml; baş tutub. H.Payper tələbələr qarşısında &nbsp;gələcək həyatlarında və karyeralarında uğurlu addımlar atmaları &uuml;&ccedil;&uuml;n motivasiyaedici nitqi ilə &ccedil;ıxış edib. İnsan qarşısına qoyduğu məqsədində qətiyyətli olarsa, hədəfə &nbsp;&ccedil;atmaq &uuml;&ccedil;&uuml;n he&ccedil; bir maneənin olmadığını deyən H.Payper &nbsp;qadınlar &uuml;&ccedil;&uuml;n qoyulmuş kəskin məhdudiyyətləri və stereotipləri aşmağın he&ccedil; də &ccedil;ətin olmadığını qeyd edib. Sonda H.Payperin həyatından və a&ccedil;ıq kosmosa səyahətindən bəhs edən foto təqdimat tələbələr &uuml;&ccedil;&uuml;n n&uuml;mayiş olunub.</p>\r\n', '<p>Dekabrın 12-də Azərbaycan D&ouml;vlət Neft və Sənaye Universitetində (ADNSU) ABŞ Hərbi Q&uuml;vvələrinin 1-ci dərəcəli kapitanı, astronavt Haydi Payperlə g&ouml;r&uuml;ş ke&ccedil;irilib.</p>\r\n\r\n<p>Əvvəlcə ADNSU-nun rektoru, professor Mustafa Babanlı ilə g&ouml;r&uuml;şən NASA astronavtı Haydi Payper universitetdə olmaqdan məmnunluq duyduğunu dilə gətirib.</p>\r\n\r\n<p>Qonağı universitetdə g&ouml;rməkdən məmnun olduğunu deyən rektor, professor M.Babanlı ona xatirə hədiyyəsi təqdim edib. &Ouml;z&nbsp; n&ouml;vbəsində H.Payper ADNSU-nun muzeyinə NASA kosmonavtlarının uniformalarında olan &ouml;z formasının şevronlarını hədiyyə edib.</p>\r\n\r\n<p>Daha sonra xanım astronavtın tələbələrlə g&ouml;r&uuml;ş&uuml; baş tutub. H.Payper tələbələr qarşısında &nbsp;gələcək həyatlarında və karyeralarında uğurlu addımlar atmaları &uuml;&ccedil;&uuml;n motivasiyaedici nitqi ilə &ccedil;ıxış edib. İnsan qarşısına qoyduğu məqsədində qətiyyətli olarsa, hədəfə &nbsp;&ccedil;atmaq &uuml;&ccedil;&uuml;n he&ccedil; bir maneənin olmadığını deyən H.Payper &nbsp;qadınlar &uuml;&ccedil;&uuml;n qoyulmuş kəskin məhdudiyyətləri və stereotipləri aşmağın he&ccedil; də &ccedil;ətin olmadığını qeyd edib. Sonda H.Payperin həyatından və a&ccedil;ıq kosmosa səyahətindən bəhs edən foto təqdimat tələbələr &uuml;&ccedil;&uuml;n n&uuml;mayiş olunub.</p>\r\n', '<p>Dekabrın 12-də Azərbaycan D&ouml;vlət Neft və Sənaye Universitetində (ADNSU) ABŞ Hərbi Q&uuml;vvələrinin 1-ci dərəcəli kapitanı, astronavt Haydi Payperlə g&ouml;r&uuml;ş ke&ccedil;irilib.</p>\r\n\r\n<p>Əvvəlcə ADNSU-nun rektoru, professor Mustafa Babanlı ilə g&ouml;r&uuml;şən NASA astronavtı Haydi Payper universitetdə olmaqdan məmnunluq duyduğunu dilə gətirib.</p>\r\n\r\n<p>Qonağı universitetdə g&ouml;rməkdən məmnun olduğunu deyən rektor, professor M.Babanlı ona xatirə hədiyyəsi təqdim edib. &Ouml;z&nbsp; n&ouml;vbəsində H.Payper ADNSU-nun muzeyinə NASA kosmonavtlarının uniformalarında olan &ouml;z formasının şevronlarını hədiyyə edib.</p>\r\n\r\n<p>Daha sonra xanım astronavtın tələbələrlə g&ouml;r&uuml;ş&uuml; baş tutub. H.Payper tələbələr qarşısında &nbsp;gələcək həyatlarında və karyeralarında uğurlu addımlar atmaları &uuml;&ccedil;&uuml;n motivasiyaedici nitqi ilə &ccedil;ıxış edib. İnsan qarşısına qoyduğu məqsədində qətiyyətli olarsa, hədəfə &nbsp;&ccedil;atmaq &uuml;&ccedil;&uuml;n he&ccedil; bir maneənin olmadığını deyən H.Payper &nbsp;qadınlar &uuml;&ccedil;&uuml;n qoyulmuş kəskin məhdudiyyətləri və stereotipləri aşmağın he&ccedil; də &ccedil;ətin olmadığını qeyd edib. Sonda H.Payperin həyatından və a&ccedil;ıq kosmosa səyahətindən bəhs edən foto təqdimat tələbələr &uuml;&ccedil;&uuml;n n&uuml;mayiş olunub.</p>\r\n'),
-(16, 'default_noimage1.jpg', '2017-12-15', 'Dekabrın 12-də Azərbaycan Dövlət Neft və Sənaye Universitetində (ADNSU) ABŞ Hərbi Qüvvələrinin 1-ci dərəcəli kapitanı, ast', 'Dekabrın 12-də Azərbaycan Dövlət Neft və Sənaye Universitetində (ADNSU) ABŞ Hərbi Qüvvələrinin 1-ci dərəcəli kapitanı, ast', 'Dekabrın 12-də Azərbaycan Dövlət Neft və Sənaye Universitetində (ADNSU) ABŞ Hərbi Qüvvələrinin 1-ci dərəcəli kapitanı, ast', '<p>Dekabrın 12-də Azərbaycan D&ouml;vlət Neft və Sənaye Universitetində (ADNSU) ABŞ Hərbi Q&uuml;vvələrinin 1-ci dərəcəli kapitanı, ast</p>\r\n', '<p>Dekabrın 12-də Azərbaycan D&ouml;vlət Neft və Sənaye Universitetində (ADNSU) ABŞ Hərbi Q&uuml;vvələrinin 1-ci dərəcəli kapitanı, ast</p>\r\n', '<p>Dekabrın 12-də Azərbaycan D&ouml;vlət Neft və Sənaye Universitetində (ADNSU) ABŞ Hərbi Q&uuml;vvələrinin 1-ci dərəcəli kapitanı, ast</p>\r\n'),
-(17, 'IMG_0095.JPG', '2017-12-15', 'Dekabrın 12-də Azərbaycan Dövlət Neft və Sənaye Universitetində (ADNSU) ABŞ Hərbi Qüvvələrinin 1-ci dərəcəli kapitanı, ast', 'Dekabrın 12-də Azərbaycan Dövlət Neft və Sənaye Universitetində (ADNSU) ABŞ Hərbi Qüvvələrinin 1-ci dərəcəli kapitanı, ast', 'Dekabrın 12-də Azərbaycan Dövlət Neft və Sənaye Universitetində (ADNSU) ABŞ Hərbi Qüvvələrinin 1-ci dərəcəli kapitanı, ast', '<p>Dekabrın 12-də Azərbaycan D&ouml;vlət Neft və Sənaye Universitetində (ADNSU) ABŞ Hərbi Q&uuml;vvələrinin 1-ci dərəcəli kapitanı, ast</p>\r\n', '<p>Dekabrın 12-də Azərbaycan D&ouml;vlət Neft və Sənaye Universitetində (ADNSU) ABŞ Hərbi Q&uuml;vvələrinin 1-ci dərəcəli kapitanı, ast</p>\r\n', '<p>Dekabrın 12-də Azərbaycan D&ouml;vlət Neft və Sənaye Universitetində (ADNSU) ABŞ Hərbi Q&uuml;vvələrinin 1-ci dərəcəli kapitanı, ast</p>\r\n');
+(17, 'IMG_0095.JPG', '2017-12-15', 'Dekabrın 12-də Azərbaycan Dövlət Neft və Sənaye Universitetində (ADNSU) ABŞ Hərbi Qüvvələrinin 1-ci dərəcəli kapitanı, ast', 'Dekabrın 12-də Azərbaycan Dövlət Neft və Sənaye Universitetində (ADNSU) ABŞ Hərbi Qüvvələrinin 1-ci dərəcəli kapitanı, ast', 'Dekabrın 12-də Azərbaycan Dövlət Neft və Sənaye Universitetində (ADNSU) ABŞ Hərbi Qüvvələrinin 1-ci dərəcəli kapitanı, ast', '<p>Dekabrın 12-də Azərbaycan D&ouml;vlət Neft və Sənaye Universitetində (ADNSU) ABŞ Hərbi Q&uuml;vvələrinin 1-ci dərəcəli kapitanı, ast</p>\r\n', '<p>Dekabrın 12-də Azərbaycan D&ouml;vlət Neft və Sənaye Universitetində (ADNSU) ABŞ Hərbi Q&uuml;vvələrinin 1-ci dərəcəli kapitanı, ast</p>\r\n', '<p>Dekabrın 12-də Azərbaycan D&ouml;vlət Neft və Sənaye Universitetində (ADNSU) ABŞ Hərbi Q&uuml;vvələrinin 1-ci dərəcəli kapitanı, ast</p>\r\n'),
+(20, 'motorcycle_motorcyclist_cross_130826_3840x2160.jpg', '2019-05-18', 'dssd', 's', 's', '<p>s</p>\r\n', '', '');
 
 -- --------------------------------------------------------
 
@@ -414,15 +423,31 @@ INSERT INTO `specialty_db` (`specialty_id`, `specialty_name`) VALUES
 
 CREATE TABLE `teachers_db` (
   `teacher_id` int(11) NOT NULL,
-  `teacher_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `teacher_surname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `teacher_about` text COLLATE utf8_unicode_ci NOT NULL,
-  `teacher_speciality` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `teacher_phone` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `teacher_lesson` text COLLATE utf8_unicode_ci NOT NULL,
-  `teacher_email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `teacher_photo` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+  `teacher_name_az` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `teacher_surname_az` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `teacher_about_az` text COLLATE utf8_unicode_ci NOT NULL,
+  `teacher_position_az` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `teacher_photo` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `department_category_az` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `teacher_name_en` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `teacher_surname_en` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `teacher_about_en` text COLLATE utf8_unicode_ci NOT NULL,
+  `teacher_position_en` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `department_category_en` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `teacher_name_ru` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `teacher_surname_ru` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `teacher_about_ru` text COLLATE utf8_unicode_ci NOT NULL,
+  `teacher_position_ru` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `department_category_ru` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Tablo döküm verisi `teachers_db`
+--
+
+INSERT INTO `teachers_db` (`teacher_id`, `teacher_name_az`, `teacher_surname_az`, `teacher_about_az`, `teacher_position_az`, `teacher_photo`, `department_category_az`, `teacher_name_en`, `teacher_surname_en`, `teacher_about_en`, `teacher_position_en`, `department_category_en`, `teacher_name_ru`, `teacher_surname_ru`, `teacher_about_ru`, `teacher_position_ru`, `department_category_ru`) VALUES
+(1, 'cavid2', 'leleyev2', '<p><span style=\"color:#27ae60\">asdasdasdasdads</span></p>\r\n', 'bomba oglan2', 'default.png', 'ekologiya kafedrasi', 'asd', 'asdasdasd', '<p>asdasdadasdasdasdadas</p>\r\n', 'asdas', 'echology department', 'asd', 'dasdas0as', '<p><span style=\"background-color:#000000\">0asdasdasd</span></p>\r\n', 'asdaasd', 'отдел экологии'),
+(3, 'asdas<br>', 'asdasd<br>', '<p>asdasdasdasdasd</p>\r\n<br>', 'asdasd<br>', 'image3.jpg', 'uzvi kimya kafedrasi<br>', '<br>', '<br>', '<br>', '<br>', 'echology department<br>', '<br>', '<br>', '<br>', '<br>', 'отдел экологии<br>');
 
 -- --------------------------------------------------------
 
@@ -637,7 +662,7 @@ ALTER TABLE `department_about_text`
 -- Tablo için AUTO_INCREMENT değeri `department_categories`
 --
 ALTER TABLE `department_categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `department_contact`
@@ -679,7 +704,7 @@ ALTER TABLE `doctorate_speciality_db`
 -- Tablo için AUTO_INCREMENT değeri `events_db`
 --
 ALTER TABLE `events_db`
-  MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `laboratory_db`
@@ -703,7 +728,7 @@ ALTER TABLE `master_speciality_db`
 -- Tablo için AUTO_INCREMENT değeri `news_db`
 --
 ALTER TABLE `news_db`
-  MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `phd_about_text`
@@ -733,7 +758,7 @@ ALTER TABLE `specialty_db`
 -- Tablo için AUTO_INCREMENT değeri `teachers_db`
 --
 ALTER TABLE `teachers_db`
-  MODIFY `teacher_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `teacher_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `users_db`

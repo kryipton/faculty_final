@@ -85,7 +85,7 @@ class Mecnun_model extends  CI_Model{
         $this->db->where($where)->delete('teachers_db');
     }
 
-//    =================================================================cavidin isleri=================================================================
+//    ==================================================================================================================================
 
 
 
@@ -94,8 +94,27 @@ class Mecnun_model extends  CI_Model{
 
     public function getEvents()
     {
-        return $this->db->get('events_db')->result_array();
+        return $this->db->order_by('event_id','DESC')->get('events_db')->result_array();
+    }
+
+    public function deleteEvent($where)
+    {
+        $this->db->where($where)->delete('events_db');
+    }
+
+    public function addEvent($event_data)
+    {
+        $this->db->insert('events_db',$event_data);
     }
 
 
+    public function getEvent($where)
+    {
+        return $this->db->where($where)->get('events_db')->row_array();
+    }
+
+    public function updateEvent($where,$event_data)
+    {
+        $this->db->where($where)->update('events_db',$event_data);
+}
 }

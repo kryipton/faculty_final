@@ -10,12 +10,6 @@
 
 <title>Tədbir əlavə et</title>
 
-<?php
-if($this->session->userdata('success_event_add')){ ?>
-    <span style="padding: 2px" class="alert alert-success"><?php echo $this->session->userdata('success_event_add') ?></span>
-<?php };
-$this->session->unset_userdata('success_event_add');
-?>
 
 
 <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10" style="display: inline-block; float: left;">
@@ -27,9 +21,16 @@ $this->session->unset_userdata('success_event_add');
             <a href="<?php echo base_url('himalaY_tedbirler') ?>" class="btn btn-info btn-md">
                 <span class="">Bütün Tədbirlər</span>
             </a>
+            <br>
+            <br>
+            <?php if ($this->session->flashdata('alert')){ ?>
+                <div class="alert alert-danger" role="alert">
+                    <?php echo $this->session->flashdata('alert') ?>
+                </div>
+            <?php } ?>
+            <br>
 
-
-            <form action="<?php echo base_url('') ?>" method="POST" enctype="multipart/form-data">
+            <form action="<?php echo base_url('himalaY_tedbirler_elave_et_act') ?>" method="POST" enctype="multipart/form-data">
 
                 <br>
 
