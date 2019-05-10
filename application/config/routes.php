@@ -152,6 +152,10 @@ $route['himalaY_xeber_duzenle_act/(.*)'] = 'Mecnun/update_news_act/$1';
 //Slider
 $route['himalaY_slider'] = 'Mecnun/slider';
 $route['himalaY_slider_elave_et'] = 'Mecnun/add_slider';
+$route['himalaY_slider_elave_et_act'] = 'Mecnun/add_slider_act';
+$route['himalaY_slider_sil/(.*)'] = 'Mecnun/delete_slider/$1';
+$route['himalaY_slider_duzenle/(.*)'] = 'Mecnun/update_slider/$1';
+$route['himalaY_slider_duzenle_act/(.*)'] = 'Mecnun/update_slider_act/$1';
 
 
 

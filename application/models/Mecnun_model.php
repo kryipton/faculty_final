@@ -30,6 +30,31 @@ class Mecnun_model extends  CI_Model{
         $this->db->where($where)->update('news_db',$news_data);
     }
 
+    //==========   Slider emeliyatlari ===================
+
+
+    public function getSlider()
+    {
+        return $this->db->order_by('slide_id','DESC')->get('slide')->result_array();
+    }
+
+    public function deleteSlide($where)
+    {
+        $this->db->where($where)->delete('slide');
+    }
+
+    public function addSlider($slide_data){
+        $this->db->insert('slide',$slide_data);
+    }
+
+    public function updateSlider($where,$slide_data){
+        $this->db->where($where)->update('slide',$slide_data);
+    }
+
+    public function getSlide($where)
+    {
+        return $this->db->where($where)->get('slide')->row_array();
+    }
 
 
 }

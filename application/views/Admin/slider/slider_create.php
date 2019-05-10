@@ -14,11 +14,17 @@
                 <span class="glyphicon glyphicon-plus-sign"></span> Bütün Slide
             </a>
             <br>
+            <br>
+            <?php if ($this->session->flashdata('alert')){ ?>
+                <div class="alert alert-danger" role="alert">
+                    <?php echo $this->session->flashdata('alert') ?>
+                </div>
+            <?php } ?>
 
             <br>
 
             <div class="slide-main">
-                <form action="<?php echo base_url('Admin/Slide/Slide/create') ?>" method="post" enctype="multipart/form-data">
+                <form action="<?php echo base_url('himalaY_slider_elave_et_act') ?>" method="post" enctype="multipart/form-data">
                     <label for="">Slide title</label>
                     <input type="text" class="form-control" name="slide_title">
 
@@ -39,8 +45,6 @@
 
 
             <br>
-
-
 
         </div>
     </div>

@@ -100,9 +100,6 @@
      }
 
 
-
-
-
     public function delete_news($id)
     {
         $where =[
@@ -111,6 +108,7 @@
         $this->Mecnun_model->deleteNews($where);
         redirect(base_url('himalaY_xeberler'));
      }
+
 
      public function update_news($id)
      {
@@ -121,6 +119,7 @@
 
          $this->load->view('Admin/news/news_update',$data);
      }
+
 
     public function update_news_act($id)
     {
@@ -200,7 +199,9 @@
 
     public function slider()
     {
-        $this->load->view('Admin/slider/slider_main');
+
+        $data['sliderInfo']=$this->Mecnun_model->getSlider();
+        $this->load->view('Admin/slider/slider_main',$data);
     }
 
     public function add_slider()
@@ -208,10 +209,159 @@
         $this->load->view('Admin/slider/slider_create');
     }
 
-
-    public function update_slider()
+    public function add_slider_act()
     {
-        $this->load->view('Admin/slider/slider_update');
+
+        $slide_title = $this->input->post('slide_title');
+        $slide_desc  = $this->input->post('slide_desc');
+        $slide_link  = $this->input->post('slide_link');
+
+
+        $config['upload_path']   = 'upload/slide_images/';
+        $config['max_size']     = '10000';
+        $config['allowed_types'] = 'jpg|jpeg|png';
+
+        $this->upload->initialize($config);
+
+        if ($this->upload->do_upload('slide_img')){
+            if (!empty($slide_link)) {
+            $slide_img = $this->upload->data('file_name');
+            $slide_data = array(
+
+                'slide_title' => $slide_title,
+                'slide_desc'  => $slide_desc,
+                'slide_link'  => $slide_link,
+                'slide_image' => $slide_img
+
+            );
+
+            $this->Mecnun_model->addSlider($slide_data);
+            $msg = 'Yeni slider əlavə olundu ! ';
+            $this->session->set_flashdata('success',$msg);
+
+            redirect(base_url('himalaY_slider'));
+            }else {
+                $slide_img = $this->upload->data('file_name');
+                $slide_data = array(
+
+                    'slide_title' => $slide_title,
+                    'slide_desc'  => $slide_desc,
+                    'slide_link'  => base_url('home'),
+                    'slide_image' => $slide_img
+
+                );
+
+                $this->Mecnun_model->addSlider($slide_data);
+                $msg = 'Yeni slider əlavə olundu ! ( link əlavə etmədiniz ) ';
+                $this->session->set_flashdata('success',$msg);
+
+                redirect(base_url('himalaY_slider'));
+
+            }
+
+        }else{
+            $msg = 'Şəkilsiz slider əlavə etmək mümkün deyil! ';
+            $this->session->set_flashdata('alert',$msg);
+
+            redirect(base_url('himalaY_slider_elave_et'));
+        }
+
+    }
+
+    public function delete_slider($id)
+    {
+        $where=[
+          'slide_id'=>$id
+        ];
+        $this->Mecnun_model->deleteSlide($where);
+        $msg = 'Slider silindi! ';
+        $this->session->set_flashdata('success',$msg);
+
+        redirect(base_url('himalaY_slider'));
+    }
+
+
+    public function update_slider($id)
+    {
+        $where=[
+            'slide_id'=>$id
+        ];
+
+        $data['slide'] = $this->Mecnun_model->getSlide($where);
+        $this->load->view('Admin/slider/slider_update',$data);
+    }
+
+    public function  update_slider_act($id)
+    {
+        $where=[
+            'slide_id'=>$id
+        ];
+
+        $slide_title = $this->input->post('slide_title');
+        $slide_desc  = $this->input->post('slide_desc');
+        $slide_link  = $this->input->post('slide_link');
+
+
+        $config['upload_path']   = 'upload/slide_images/';
+        $config['max_size']     = '10000';
+        $config['allowed_types'] = 'jpg|jpeg|png';
+
+        $this->upload->initialize($config);
+
+        if ($this->upload->do_upload('slide_img')){
+            if (!empty($slide_link)) {
+                $slide_img = $this->upload->data('file_name');
+                $slide_data = array(
+
+                    'slide_title' => $slide_title,
+                    'slide_desc'  => $slide_desc,
+                    'slide_link'  => $slide_link,
+                    'slide_image' => $slide_img
+
+                );
+
+                $this->Mecnun_model->updateSlider($where,$slide_data);
+                $msg = 'Slider düzənləndi !  ';
+                $this->session->set_flashdata('success',$msg);
+
+                redirect(base_url('himalaY_slider'));
+            }else {
+                $slide_img = $this->upload->data('file_name');
+                $slide_data = array(
+
+                    'slide_title' => $slide_title,
+                    'slide_desc'  => $slide_desc,
+                    'slide_link'  => base_url('home'),
+                    'slide_image' => $slide_img
+
+                );
+
+                $this->Mecnun_model->updateSlider($where,$slide_data);
+                $msg = 'Slider düzənləndi! ';
+                $this->session->set_flashdata('success',$msg);
+
+                redirect(base_url('himalaY_slider'));
+
+            }
+
+        }else{
+            $slide_data = array(
+
+                'slide_title' => $slide_title,
+                'slide_desc'  => $slide_desc,
+                'slide_link'  => base_url('home'),
+
+
+            );
+
+            $this->Mecnun_model->updateSlider($where,$slide_data);
+            $msg = 'Slider düzənləndi! ';
+            $this->session->set_flashdata('success',$msg);
+
+            redirect(base_url('himalaY_slider'));
+        }
+
+
     }
 
 
