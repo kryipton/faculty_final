@@ -72,7 +72,6 @@ $route['Labaratory'] = 'Leyli/labaratory';
 //Xeberler hissesi
 $route['News'] = 'Leyli/news';
 
-
 //Tedbirler hissesi
 $route['Actions'] = 'Leyli/actions';
 
@@ -95,7 +94,6 @@ $route['Master/Speciality'] = 'Leyli/master_speciality';
 //Master tek ixtisas hissesi
 $route['Master/Speciality/(.*)'] = 'Leyli/master_speciality_single/$1';
 
-
 //Doktorantura hissesi
 $route['Doctorate'] = 'Leyli/doctorate';
 
@@ -105,14 +103,31 @@ $route['Doctorate/Speciality'] = 'Leyli/doctorate_speciality';
 //Doktorantura tek ixtisas hissesi
 $route['Doctorate/Speciality/(.*)'] = 'Leyli/doctorate_speciality_single/$1';
 
-
-
 //Tedbirler hissesi single page
 $route['Single_page_events/(.*)'] = 'Leyli/single_page_events/$1';
 
 
 //Xeberler hissesi single page
 $route['Single_page_news/(.*)'] = 'Leyli/single_page_news/$1';
+
+
+//Kafedra hissesi
+$route['Department'] = 'Leyli/department';
+
+//Kafedra elaqe hissesi
+$route['Department_Contact'] = 'Leyli/department_contact';
+
+//Kafedra mellimler hissesi
+$route['Department_Teachers'] = 'Leyli/department_teachers';
+
+//Kafedra ixtisaslar hissesi
+$route['Department_Specialities'] = 'Leyli/department_specialities';
+
+//Kafedra labaratoriyalar hissesi
+$route['Department_Labaratories'] = 'Leyli/department_labaratory';
+
+
+
 
 
 

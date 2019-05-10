@@ -117,9 +117,8 @@
                             <li>
                                 <a href="#">Kafedra</a>
                                 <ul class="dl-submenu">
-                                    <li><a href="<?php echo base_url('home/news') ?>">Xəbərlər</a></li>
-                                    <li><a href="<?php echo base_url('home/events') ?>">Tədbirlər</a></li>
-                                    <li><a href="#">Unibook</a></li>
+                                    <li><a href="<?php echo base_url('Department') ?>">Ekologiya Kafedrası</a></li>
+                                    <li><a href="<?php echo base_url('home/events') ?>">Üzvi Kimya Kafedrası</a></li>
                                 </ul>
                             </li>
 
@@ -149,11 +148,8 @@
 
                             <li><a class="trigger" href="#">Kafedra<i class="fa fa-angle-down"></i></a>
                                 <ul class="submenu">
-                                    <li><a href="<?php echo base_url('home/news') ?>">Kafedra1</a></li>
-                                    <li><a href="<?php echo base_url('home/events') ?>">Kafedra2</a></li>
-                                    <li><a href="<?php echo base_url('home/events') ?>">Kafedra1</a></li>
-                                    <li><a href="<?php echo base_url('home/events') ?>">Kafedra1</a></li>
-                                    <li><a href="<?php echo base_url('home/events') ?>">Kafedra1</a></li>
+                                    <li><a href="<?php echo base_url('Department') ?>">Ekologiya Kafedrası</a></li>
+                                    <li><a href="<?php echo base_url('home/events') ?>">Üzvi Kimya Kafedrası</a></li>
                                 </ul>
                             </li>
 
