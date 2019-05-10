@@ -29,7 +29,7 @@ class Mecnun_model extends  CI_Model{
         $this->db->where($where)->update('news_db',$news_data);
     }
 
-    //==========   Slider emeliyatlari ===================
+    //==================================================   Slider emeliyatlari =======================================================================
 
 
     public function getSlider()
@@ -76,6 +76,15 @@ class Mecnun_model extends  CI_Model{
 
 //    =================================================================cavidin isleri=================================================================
 
+
+
+    //==================================================   Tedbir emeliyyatlari emeliyatlari =======================================================================
+
+
+    public function getEvents()
+    {
+        return $this->db->get('events_db')->result_array();
+    }
 
 
 }

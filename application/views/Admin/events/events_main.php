@@ -35,34 +35,36 @@
 
 
 
-                <?php ?>
+                <?php foreach ($allEvents as $event) { ?>
 
                     <tr>
 
 
-                        <td><?php  ?></td>
-                        <td><?php  ?></td>
-                        <td><?php  ?></td>
-                        <td><?php ?></td>
+                        <td><?php  echo $event['event_id']?></td>
+                        <td><?php  echo substr($event['event_title_az'], 0,100)?></td>
+                        <td><?php  echo substr($event['event_desc_az'], 0,160)?></td>
+                        <td><?php  echo $event['event_time']?></td>
                         <td>
                             <?php ?>
-                                <img style="width: 150px; height: 90px" src="<?php  ?>" alt="">
+                            <img style="width: 150px; height: 90px" src="<?php  echo base_url('upload/event_images/'.$event['event_img']) ?>" alt="">
                             <?php ?>
 
                         </td>
                         <td>
-                            <a href="<?php  ?>" class="btn btn-primary btn-sm"style="background: #3C8DBC; border:1px solid #3C8DBC">
+                            <a href="<?php ?>" class="btn btn-primary btn-sm"
+                               style="background: #3C8DBC; border:1px solid #3C8DBC">
                                 <i class="fa fa-pencil" aria-hidden="true"></i>
                             </a>
-                            <a href="<?php  ?>" class="btn btn-primary btn-sm" style="background: #DD4B39;border:1px solid #DD4B39">
-                                <i class="fa fa-times" aria-hidden="true" ></i>
+                            <a href="<?php ?>" class="btn btn-primary btn-sm"
+                               style="background: #DD4B39;border:1px solid #DD4B39">
+                                <i class="fa fa-times" aria-hidden="true"></i>
                             </a>
                         </td>
 
                     </tr>
 
-                <?php
-
+                    <?php
+                }
                 ?>
                 </tbody>
             </table>
