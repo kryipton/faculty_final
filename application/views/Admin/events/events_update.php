@@ -75,7 +75,7 @@
                     <label for="">Tədbir vaxtı</label>
                     <input type="date" class="form-control" name="eventDate" value="<?php echo $event['event_time']?>"> <br>
 
-                    <button type="submit" class="btn btn-info btn-md">Əlavə et</button>
+                    <button type="submit" class="btn btn-info btn-md">Düzənlə</button>
                 </div>
             </form>
         </div>

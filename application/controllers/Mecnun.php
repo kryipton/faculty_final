@@ -716,16 +716,77 @@ class Mecnun extends CI_Controller{
 
 
 
+
     //     ============= Laboratory Hissesi ================
 
     public function laboratory()
     {
-        $this->load->view('Admin/laboratory/laboratory_main');
+        $data["categories"] = $this->Mecnun_model->get_categories();
+        $data['laboratories'] = $this->Mecnun_model->get_laboratories();
+        $this->load->view('Admin/laboratory/laboratory_main',$data);
     }
 
     public function update_laboratory()
     {
-        $this->load->view('Admin/laboratory/laboratory_update');
+        $data["categories"] = $this->Mecnun_model->get_categories();
+        $this->load->view('Admin/laboratory/laboratory_update',$data);
+    }
+    public function create_laboratory()
+    {
+        $data["categories"] = $this->Mecnun_model->get_categories();
+        $this->load->view('Admin/laboratory/laboratory_create',$data);
+    }
+
+    public function create_laboratory_action()
+    {
+        $laboratory_name_az = strip_tags($_POST['laboratory_name_az']);
+        $laboratory_name_ru = strip_tags($_POST['laboratory_name_ru']);
+        $laboratory_name_en = strip_tags($_POST['laboratory_name_en']);
+        $laboratory_desc_az = $_POST['laboratory_desc_az'];
+        $laboratory_desc_ru = $_POST['laboratory_desc_ru'];
+        $laboratory_desc_en = $_POST['laboratory_desc_en'];
+        $laboratory_catg_az = $_POST['laboratory_catg_az'];
+        $laboratory_catg_ru = $_POST['laboratory_catg_ru'];
+        $laboratory_catg_en = $_POST['laboratory_catg_en'];
+
+        $config['upload_path']   = 'upload/laboratory_images/';
+        $config['max_size']     = '10000';
+        $config['allowed_types'] = 'jpg|jpeg|png';
+
+        $this->upload->initialize($config);
+
+        if (!empty($laboratory_name_az) and !empty($laboratory_name_ru) and !empty($laboratory_name_en) and !empty($laboratory_desc_az) and !empty($laboratory_desc_ru) and !empty($laboratory_desc_en) and !empty($laboratory_catg_en) and !empty($laboratory_catg_az) and !empty($laboratory_catg_ru))
+        {
+            $data = array(
+                'laboratory_name_az' => $laboratory_name_az,
+                'laboratory_name_ru' => $laboratory_name_ru,
+                'laboratory_name_en' => $laboratory_name_en,
+                'laboratory_desc_az' => $laboratory_desc_az,
+                'laboratory_desc_ru' => $laboratory_desc_ru,
+                'laboratory_desc_en' => $laboratory_desc_en,
+                'laboratory_catg_az' => $laboratory_catg_az,
+                'laboratory_catg_ru' => $laboratory_catg_ru,
+                'laboratory_catg_en' => $laboratory_catg_en,
+                'laboratory_img'     => ($this->upload->do_upload('laboratory_photo')) ? $this->upload->data('file_name') : 'default_noimage.jpg',
+
+            );
+            $this->Mecnun_model->insert_laboratory($data);
+            $this->session->set_flashdata('success','Labaratoriya elave edildi');
+            redirect(base_url('himalaY_laboratoriya'));
+
+
+        }else{
+            $this->session->set_flashdata('error','Melumatlari duzgun daxil edin');
+            redirect(base_url('himalaY_laboratoriya_elave_et'));
+        }
+
+    }
+
+    public function delete_laboratory($id)
+    {
+        $this->Mecnun_model->delete_laboratory($id);
+        $this->session->set_flashdata('success','Labaratoriya silindi');
+        redirect(base_url('himalaY_laboratoriya'));
     }
 
 
@@ -755,17 +816,53 @@ class Mecnun extends CI_Controller{
 
     public function about()
     {
-        $this->load->view('Admin/about/about_main');
+        $where=[
+          'faculty_name' => 'kimya'
+        ];
+        $data['abouts'] = $this->Mecnun_model->getAbout($where);
+        $this->load->view('Admin/about/about_main',$data);
     }
 
-    public function add_about()
+
+    public function update_about($id)
     {
-        $this->load->view('Admin/about/about_create');
+        $where=[
+            'about_id' => $id
+        ];
+        $data['about'] = $this->Mecnun_model->getAbout($where);
+
+        $this->load->view('Admin/about/about_update',$data);
     }
 
-    public function update_about()
+    public function update_about_act($id)
     {
-        $this->load->view('Admin/about/about_update');
+        $where=[
+            'about_id' => $id
+        ];
+
+        $data = [
+          'about_text_az' => $this->input->post('about_text_az'),
+          'about_text_en' => $this->input->post('about_text_en'),
+          'about_text_ru' => $this->input->post('about_text_ru'),
+        ];
+
+        if (!empty($this->input->post('about_text_az')) && !empty($this->input->post('about_text_en')) && !empty($this->input->post('about_text_ru')) ){
+
+            $this->Mecnun_model->updateAbout($where,$data);
+            $msg = 'Haqqımızda hissəsi düzənləndi ! ';
+            $this->session->set_flashdata('success', $msg);
+
+            redirect(base_url('himalaY_haqqimizda'));
+
+        }else{
+            $msg = 'Zəhmət olmasa boşluq buraxmayın ! ';
+            $this->session->set_flashdata('alert',$msg);
+
+            redirect(base_url('himalaY_haqqimizda'));
+        }
+
+
+
     }
 
 

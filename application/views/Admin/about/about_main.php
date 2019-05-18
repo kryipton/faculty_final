@@ -8,15 +8,44 @@
     <div class="row">
 
         <div class="right">
+            <?php if ($this->session->flashdata('success')){ ?>
+                <div class="alert alert-success" role="alert">
+                    <?php echo $this->session->flashdata('success') ?>
+                </div>
+            <?php } ?>
+            <br>
+            <br>
+            <?php if ($this->session->flashdata('alert')){ ?>
+                <div class="alert alert-danger" role="alert">
+                    <?php echo $this->session->flashdata('alert') ?>
+                </div>
+            <?php } ?>
+            <br>
+            <br>
 
-            <a href="<?php  ?>" class="btn btn-info btn-md">
+            <a href="<?php echo base_url('himalaY_haqqimizda_duzenle/').$abouts['about_id']?>" class="btn btn-info btn-md">
                 <span class="glyphicon glyphicon-plus-sign"></span> Editlə
             </a>
             <br>
             <br>
+            <label for="">Haqqimizda AZ</label>
             <div style="background: lightgrey;padding: 30px;">
                 <?php
-
+                echo $abouts['about_text_az'];
+                ?>
+            </div>
+            <br>
+            <label for="">Haqqimizda EN</label>
+            <div style="background: lightgrey;padding: 30px;">
+                <?php
+                echo $abouts['about_text_en'];
+                ?>
+            </div>
+            <br>
+            <label for="">Haqqimizda RU</label>
+            <div style="background: lightgrey;padding: 30px;">
+                <?php
+                echo $abouts['about_text_ru'];
                 ?>
             </div>
 

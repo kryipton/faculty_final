@@ -13,8 +13,8 @@ if($event){ ?>
                 <div class="container">
                     <h2 style="text-align: right;color: white"><?php echo substr($event['event_title_az'], 0,71); ?></h2>
                     <ul class="breadcrumbs">
-                        <li><a href="index-2.html">Ana Səhifə</a> /</li>
-                        <li><a href="course_grid.html">Tədbirlər</a> /</li>
+                        <li><a href="<?php echo base_url('Home')?>">Ana Səhifə</a> /</li>
+                        <li><a href="<?php echo base_url('Actions')?>">Tədbirlər</a> /</li>
                         <li><?php echo substr($event['event_title_az'], 0,120) ?></li>
                     </ul>
                 </div>

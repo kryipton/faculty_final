@@ -155,7 +155,7 @@
 
                             <li><a class="trigger" href="<?php echo base_url('Contact') ?>">Əlaqə</a></li>
 
-                            <li><a class="trigger" href="<?php echo base_url('Labaratory') ?>">Labaratoriya</a></li>
+                            <li><a class="trigger" href="<?php echo base_url('Labaratory') ?>">Laboratoriya</a></li>
 
                         </ul>
                     </div>

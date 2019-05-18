@@ -180,8 +180,13 @@ $route['himalaY_muellimler_silme/(.*)'] = 'Mecnun/delete_teachers/$1';
 
 
 
+
 //Laboratoriya
 $route['himalaY_laboratoriya'] = 'Mecnun/laboratory';
+$route['himalaY_laboratoriya_yenile'] = 'Mecnun/update_laboratory';
+$route['himalaY_laboratoriya_elave_et'] = 'Mecnun/create_laboratory';
+$route['himalaY_laboratoriya_elave_etme'] = 'Mecnun/create_laboratory_action';
+$route['himalaY_laboratoriya_sil/(.*)'] = 'Mecnun/delete_laboratory/$1';
 
 
 //Linkler
@@ -192,6 +197,8 @@ $route['himalaY_link_elave_et'] = 'Mecnun/add_link';
 
 //Haqqimizda
 $route['himalaY_haqqimizda'] = 'Mecnun/about';
+$route['himalaY_haqqimizda_duzenle/(.*)'] = 'Mecnun/update_about/$1';
+$route['himalaY_haqqimizda_duzenle_act/(.*)'] = 'Mecnun/update_about_act/$1';
 
 
 

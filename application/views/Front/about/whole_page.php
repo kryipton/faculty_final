@@ -23,7 +23,7 @@
             <div class="about_right_text" style="color: grey">
                 <span> 
                     <?php
-                        echo $about[0]['about_text'];
+                        echo $about[0]['about_text_az'];
                     ?>
                 </span>
             </div>

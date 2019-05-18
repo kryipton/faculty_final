@@ -117,4 +117,46 @@ class Mecnun_model extends  CI_Model{
     {
         $this->db->where($where)->update('events_db',$event_data);
 }
+
+
+
+//==========================Laboratory Hissesi============================
+    public function insert_laboratory($data)
+    {
+        $this->db->insert('department_labaratory',$data);
+    }
+
+    public function get_laboratories()
+    {
+        return $this->db->get('department_labaratory')->result_array();
+    }
+
+    public function delete_laboratory($id)
+    {
+        $this->db->where('id',$id)->delete('department_labaratory');
+    }
+
+
+
+
+
+
+    //==================================================   Haqqimizda emeliyyatlari emeliyatlari =======================================================================
+
+
+    public function getAbout($where)
+    {
+       return $this->db->where($where)->get('about_db')->row_array();
+
+}
+
+    public function updateAbout($where,$data)
+    {
+        $this->db->where($where)->update('about_db',$data);
+}
+
+
+
+
+
 }
