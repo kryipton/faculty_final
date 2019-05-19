@@ -43,8 +43,14 @@
 
                             <label for="">Kafedra</label>
                             <select name="teacher_department_category_az" id="" class="form-control" style="height: 40px">
+
+                                <option value="<?php echo $teacher["department_category_az"]?>"><?php echo $teacher["department_category_az"] ?></option>
+
                                 <?php foreach ($categories as $category){ ?>
-                                    <option value="<?php echo $category["category_name_az"]?>"><?php echo $category["category_name_az"] ?></option>
+
+                                    <?php if ($teacher["department_category_az"] != $category["category_name_az"]){ ?>
+                                        <option value="<?php echo $category["category_name_az"]?>"><?php echo $category["category_name_az"] ?></option>
+                                    <?php }?>
                                 <?php }?>
                             </select>
                             <br>
@@ -76,10 +82,14 @@
                             <label for="">Kafedra</label>
                             <select name="teacher_department_category_ru" id="" class="form-control" style="height: 40px">
 
-                                <?php foreach ($categories as $category){ ?>
-                                    <option value="<?php echo $category["category_name_ru"]?>"><?php echo $category["category_name_ru"] ?></option>
-                                <?php }?>
+                                <option value="<?php echo $teacher["department_category_ru"]?>"><?php echo $teacher["department_category_ru"] ?></option>
 
+                                <?php foreach ($categories as $category){ ?>
+
+                                    <?php if ($teacher["department_category_ru"] != $category["category_name_ru"]){ ?>
+                                        <option value="<?php echo $category["category_name_ru"]?>"><?php echo $category["category_name_ru"] ?></option>
+                                    <?php }?>
+                                <?php }?>
                             </select>
                             <br>
 
@@ -109,8 +119,13 @@
 
                             <label for="">Kafedra</label>
                             <select name="teacher_department_category_en" id="" class="form-control" style="height: 40px">
+                                <option value="<?php echo $teacher["department_category_en"]?>"><?php echo $teacher["department_category_en"] ?></option>
+
                                 <?php foreach ($categories as $category){ ?>
-                                    <option value="<?php echo $category["category_name_en"]?>"><?php echo $category["category_name_en"] ?></option>
+
+                                    <?php if ($teacher["department_category_en"] != $category["category_name_en"]){ ?>
+                                        <option value="<?php echo $category["category_name_en"]?>"><?php echo $category["category_name_en"] ?></option>
+                                    <?php }?>
                                 <?php }?>
                             </select>
                             <br>

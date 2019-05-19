@@ -1,4 +1,4 @@
-<title>Bakalavr</title>
+<title>doktorantura</title>
 
 <?php $this->load->view('Admin/includes_for_all/admin_header'); ?>
 <?php $this->load->view('Admin/includes_for_all/left_menu'); ?>
@@ -10,10 +10,10 @@
         <div class="right">
 
             <h1 style="color: red;">
-                <?php echo $this->session->flashdata("bachelor_about_error_message")?>
+                <?php echo $this->session->flashdata("doctorate_about_error_message")?>
             </h1>
 
-            <form action="<?php echo base_url("himalaY_bakalavr_yenileme")?>" method="post">
+            <form action="<?php echo base_url("himalaY_doktorantura_yenileme")?>" method="post">
                 <div class="container">
 
                     <ul class="nav nav-pills">
@@ -27,8 +27,8 @@
 
                         <!--                    Azerbaycanca olan hisse-->
                         <div id="az" class="tab-pane fade in active">
-                        <textarea style="resize: none" class="form-control ckeditor" name="bachelor_about_az" id="" cols="30" rows="10" placeholder="">
-                            <?php echo $bachelor_about_text["bachelor_about_text_az"] ?>
+                        <textarea style="resize: none" class="form-control ckeditor" name="doctorate_about_az" id="" cols="30" rows="10" placeholder="">
+                            <?php echo $doctorate_about_text["doctorate_about_text_az"] ?>
                         </textarea>
                         </div>
                         <!--                    Azerbaycanca olan hisse-->
@@ -37,8 +37,8 @@
 
                         <!--                    Rusca olan hisse-->
                         <div id="ru" class="tab-pane fade">
-                        <textarea style="resize: none" class="form-control ckeditor" name="bachelor_about_ru" id="" cols="30" rows="10" placeholder="">
-                            <?php echo $bachelor_about_text["bachelor_about_text_ru"] ?>
+                        <textarea style="resize: none" class="form-control ckeditor" name="doctorate_about_ru" id="" cols="30" rows="10" placeholder="">
+                            <?php echo $doctorate_about_text["doctorate_about_text_ru"] ?>
                         </textarea>
                         </div>
                         <!--                    Rusca olan hisse-->
@@ -47,8 +47,8 @@
 
                         <!--                    Ingilisce olan hisse-->
                         <div id="en" class="tab-pane fade">
-                        <textarea style="resize: none" class="form-control ckeditor" name="bachelor_about_en" id="" cols="30" rows="10" placeholder="">
-                            <?php echo $bachelor_about_text["bachelor_about_text_en"] ?>
+                        <textarea style="resize: none" class="form-control ckeditor" name="doctorate_about_en" id="" cols="30" rows="10" placeholder="">
+                            <?php echo $doctorate_about_text["doctorate_about_text_en"] ?>
                         </textarea>
                         </div>
                         <!--                    Ingilisce olan hisse-->

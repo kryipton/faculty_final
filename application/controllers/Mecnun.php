@@ -566,12 +566,12 @@ class Mecnun extends CI_Controller{
                 $data = array(
 
                     'teacher_name_az' => $teacher_name_az,
-                    'teacher_name_en' => $teacher_name_ru,
-                    'teacher_name_ru' => $teacher_name_en,
+                    'teacher_name_en' => $teacher_name_en,
+                    'teacher_name_ru' => $teacher_name_ru,
 
                     'teacher_surname_az' => $teacher_surname_az,
-                    'teacher_surname_en' => $teacher_surname_ru,
-                    'teacher_surname_ru' => $teacher_surname_en,
+                    'teacher_surname_en' => $teacher_surname_en,
+                    'teacher_surname_ru' => $teacher_surname_ru,
 
                     'teacher_position_az' => $teacher_position_az,
                     'teacher_position_en' => $teacher_position_en,
@@ -654,6 +654,10 @@ class Mecnun extends CI_Controller{
 
         $teacher_picture  = $this->input->post('teacher_photo');
 
+        $teacher = $this->Mecnun_model->get_teacher(array(
+            "teacher_id" => $teacher_id,
+        ));
+
 
 
 
@@ -668,12 +672,12 @@ class Mecnun extends CI_Controller{
             $data = array(
 
                 'teacher_name_az' => $teacher_name_az,
-                'teacher_name_en' => $teacher_name_ru,
-                'teacher_name_ru' => $teacher_name_en,
+                'teacher_name_en' => $teacher_name_en,
+                'teacher_name_ru' => $teacher_name_ru,
 
                 'teacher_surname_az' => $teacher_surname_az,
-                'teacher_surname_en' => $teacher_surname_ru,
-                'teacher_surname_ru' => $teacher_surname_en,
+                'teacher_surname_en' => $teacher_surname_en,
+                'teacher_surname_ru' => $teacher_surname_ru,
 
                 'teacher_position_az' => $teacher_position_az,
                 'teacher_position_en' => $teacher_position_en,
@@ -689,7 +693,7 @@ class Mecnun extends CI_Controller{
                 'department_category_ru' => $teacher_department_category_ru,
 
 
-                'teacher_photo' => ($this->upload->do_upload('teacher_photo')) ? $this->upload->data('file_name') : "default.png",
+                'teacher_photo' => ($this->upload->do_upload('teacher_photo')) ? $this->upload->data('file_name') : $teacher["teacher_photo"],
 
             );
 
@@ -889,7 +893,6 @@ class Mecnun extends CI_Controller{
         $this->load->view('Admin/about/about_main',$data);
     }
 
-
     public function update_about($id)
     {
         $where=[
@@ -934,29 +937,532 @@ class Mecnun extends CI_Controller{
 
 
 
+//     ============= Loqo ve saytin basliqi hissesi Hissesi ================
+
+    public function logo()
+    {
+        $where=[
+            'faculty_name' => 'kimya'
+        ];
+        $data['abouts'] = $this->Mecnun_model->getAbout($where);
+        $this->load->view('Admin/logo_and_title/logo_main',$data);
+    }
+
+    public function update_logo($id)
+    {
+        $where=[
+            'about_id' => $id
+        ];
+        $data['about'] = $this->Mecnun_model->getAbout($where);
+
+        $this->load->view('Admin/logo_and_title/logo_main',$data);
+    }
+
+    public function update_logo_act($id)
+    {
+        $where=[
+            'about_id' => $id
+        ];
+
+        $data = [
+            'about_text_az' => $this->input->post('about_text_az'),
+            'about_text_en' => $this->input->post('about_text_en'),
+            'about_text_ru' => $this->input->post('about_text_ru'),
+        ];
+
+        if (!empty($this->input->post('about_text_az')) && !empty($this->input->post('about_text_en')) && !empty($this->input->post('about_text_ru')) ){
+
+            $this->Mecnun_model->updateAbout($where,$data);
+            $msg = 'Haqqımızda hissəsi düzənləndi ! ';
+            $this->session->set_flashdata('success', $msg);
+
+            redirect(base_url('himalaY_haqqimizda'));
+
+        }else{
+            $msg = 'Zəhmət olmasa boşluq buraxmayın ! ';
+            $this->session->set_flashdata('alert',$msg);
+
+            redirect(base_url('himalaY_haqqimizda'));
+        }
+
+
+
+    }
+
+
+
+
 //     ============= Bakalavr Hissesi ================
 
     public function bachelor()
     {
-        $this->load->view('Admin/bachelor/bachelor_main');
-    }
 
-    public function bachelor_specialities()
-    {
-        $this->load->view('Admin/bachelor/bachelor_specialities');
-    }
+        $data["bachelor_about_text"] = $this->Mecnun_model->get_bachelor_about_text();
 
-    public function add_bachelor_speciality()
-    {
-        $this->load->view('Admin/bachelor/bachelor_speciality_create');
+        $this->load->view('Admin/bachelor/bachelor_main', $data);
     }
 
     public function update_bachelor_info()
     {
-        $this->load->view('Admin/bachelor/bachelor_info_update');
+        $data["bachelor_about_text"] = $this->Mecnun_model->get_bachelor_about_text();
+
+        $this->load->view('Admin/bachelor/bachelor_info_update', $data);
+    }
+
+    public function update_bachelor_info_act()
+    {
+        $text_az = $this->input->post("bachelor_about_az");
+        $text_en = $this->input->post("bachelor_about_en");
+        $text_ru = $this->input->post("bachelor_about_ru");
+
+        if (!empty($text_az) && !empty($text_ru) && !empty($text_en)){
+            $data = array(
+              "bachelor_about_text_az" => $text_az,
+              "bachelor_about_text_en" => $text_en,
+              "bachelor_about_text_ru" => $text_ru,
+            );
+
+            $this->Mecnun_model->update_bachelor_about_text($data);
+
+            redirect("himalaY_bakalavr");
+
+        }else{
+            $this->session->set_flashdata("bachelor_about_error_message", "Boşluq buraxmayın");
+            redirect("himalaY_bakalavr_yenile");
+        }
+
+        die();
+
+    }
+
+    public function bachelor_specialities()
+    {
+
+        $data["all_specialities"] = $this->Mecnun_model->get_bachelor_all_specialties();
+
+        $this->load->view('Admin/bachelor/bachelor_specialities', $data);
+    }
+
+    public function add_bachelor_speciality()
+    {
+        $this->load->view('Admin/bachelor/bachelor_add_specialities');
+    }
+
+    public function add_bachelor_speciality_act()
+    {
+
+       $speciality_code = $this->input->post("speciality_code");
+
+       $speciality_name_az = $this->input->post("speciality_name_az");
+       $speciality_about_az = $this->input->post("speciality_about_az");
+
+
+       $speciality_name_en = $this->input->post("speciality_name_en");
+       $speciality_about_en = $this->input->post("speciality_about_en");
+
+
+       $speciality_name_ru = $this->input->post("speciality_name_ru");
+       $speciality_about_ru = $this->input->post("speciality_about_ru");
+
+        if (!empty($speciality_code) && !empty($speciality_name_az) && !empty($speciality_about_az) && !empty($speciality_about_ru) && !empty($speciality_name_en) && !empty($speciality_about_en) && !empty($speciality_name_ru)){
+            $data = array(
+                "bachelor_text" => $speciality_code,
+                "bachelor_text_about_az" => $speciality_name_az,
+                "bachelor_text_text_az" => $speciality_about_az,
+                "bachelor_text_about_en" => $speciality_name_en,
+                "bachelor_text_text_en" => $speciality_about_en,
+                "bachelor_text_about_ru" => $speciality_name_ru,
+                "bachelor_text_text_ru" => $speciality_about_ru,
+            );
+
+            $this->Mecnun_model->add_bachelor_speciality($data);
+
+            redirect("himalaY_bakalavr_ixtisaslar");
+
+        }else{
+            $this->session->set_flashdata("bachelor_about_error_message", "Boşluq buraxmayın");
+            redirect("himalaY_bakalavr_ixtisas_elave_et");
+        }
+
+
+    }
+
+    public function update_bachelor_speciality($id)
+    {
+        $data["speciality"] = $this->Mecnun_model->get_single_speciality(array(
+            "bachelor_id" => $id,
+        ));
+
+        $this->load->view('Admin/bachelor/bachelor_update_specialities', $data);
+    }
+
+    public function update_bachelor_speciality_act($id)
+    {
+        $speciality_code = $this->input->post("speciality_code");
+
+        $speciality_name_az = $this->input->post("speciality_name_az");
+        $speciality_about_az = $this->input->post("speciality_about_az");
+
+
+        $speciality_name_en = $this->input->post("speciality_name_en");
+        $speciality_about_en = $this->input->post("speciality_about_en");
+
+
+        $speciality_name_ru = $this->input->post("speciality_name_ru");
+        $speciality_about_ru = $this->input->post("speciality_about_ru");
+
+        if (!empty($speciality_code) && !empty($speciality_name_az) && !empty($speciality_about_az) && !empty($speciality_about_ru) && !empty($speciality_name_en) && !empty($speciality_about_en) && !empty($speciality_name_ru)){
+            $data = array(
+                "bachelor_text" => $speciality_code,
+                "bachelor_text_about_az" => $speciality_name_az,
+                "bachelor_text_text_az" => $speciality_about_az,
+                "bachelor_text_about_en" => $speciality_name_en,
+                "bachelor_text_text_en" => $speciality_about_en,
+                "bachelor_text_about_ru" => $speciality_name_ru,
+                "bachelor_text_text_ru" => $speciality_about_ru,
+            );
+
+            $where = array(
+              "bachelor_id" => $id,
+            );
+
+            $this->Mecnun_model->update_bachelor_speciality($where, $data);
+
+            redirect("himalaY_bakalavr_ixtisaslar");
+
+        }else{
+            $this->session->set_flashdata("bachelor_about_error_message", "Boşluq buraxmayın");
+            redirect("himalaY_bakalavr_ixtisas_yenile/$id");
+        }
+
+    }
+
+    public function delete_bachelor_speciality($id)
+    {
+        $this->Mecnun_model->delete_bachelor_speciality(array(
+            "bachelor_id" => $id,
+        ));
+
+        redirect("himalaY_bakalavr_ixtisaslar");
     }
 
 
+
+
+
+    //     ============= Magistr Hissesi ================
+
+    public function master()
+    {
+
+        $data["master_about_text"] = $this->Mecnun_model->get_master_about_text();
+
+        $this->load->view('Admin/master/master_main', $data);
+    }
+
+    public function update_master_info()
+    {
+        $data["master_about_text"] = $this->Mecnun_model->get_master_about_text();
+
+        $this->load->view('Admin/master/master_info_update', $data);
+    }
+
+    public function update_master_info_act()
+    {
+        $text_az = $this->input->post("master_about_az");
+        $text_en = $this->input->post("master_about_en");
+        $text_ru = $this->input->post("master_about_ru");
+
+        if (!empty($text_az) && !empty($text_ru) && !empty($text_en)){
+            $data = array(
+                "master_about_text_az" => $text_az,
+                "master_about_text_en" => $text_en,
+                "master_about_text_ru" => $text_ru,
+            );
+
+            $this->Mecnun_model->update_master_about_text($data);
+
+            redirect("himalaY_magistr");
+
+        }else{
+            $this->session->set_flashdata("bachelor_about_error_message", "Boşluq buraxmayın");
+            redirect("himalaY_magistr_yenile");
+        }
+
+        die();
+
+    }
+
+    public function master_specialities()
+    {
+
+        $data["all_specialities"] = $this->Mecnun_model->get_master_all_specialties();
+
+        $this->load->view('Admin/master/master_specialities', $data);
+    }
+
+    public function add_master_speciality()
+    {
+        $this->load->view('Admin/master/master_add_specialities');
+    }
+
+    public function add_master_speciality_act()
+    {
+
+        $speciality_code = $this->input->post("speciality_code");
+
+        $speciality_name_az = $this->input->post("speciality_name_az");
+        $speciality_about_az = $this->input->post("speciality_about_az");
+
+
+        $speciality_name_en = $this->input->post("speciality_name_en");
+        $speciality_about_en = $this->input->post("speciality_about_en");
+
+
+        $speciality_name_ru = $this->input->post("speciality_name_ru");
+        $speciality_about_ru = $this->input->post("speciality_about_ru");
+
+        if (!empty($speciality_code) && !empty($speciality_name_az) && !empty($speciality_about_az) && !empty($speciality_about_ru) && !empty($speciality_name_en) && !empty($speciality_about_en) && !empty($speciality_name_ru)){
+            $data = array(
+                "master_text" => $speciality_code,
+                "master_text_about_az" => $speciality_name_az,
+                "master_text_text_az" => $speciality_about_az,
+                "master_text_about_en" => $speciality_name_en,
+                "master_text_text_en" => $speciality_about_en,
+                "master_text_about_ru" => $speciality_name_ru,
+                "master_text_text_ru" => $speciality_about_ru,
+            );
+
+            $this->Mecnun_model->add_master_speciality($data);
+
+            redirect("himalaY_magistr_ixtisaslar");
+
+        }else{
+            $this->session->set_flashdata("bachelor_about_error_message", "Boşluq buraxmayın");
+            redirect("himalaY_magistr_ixtisas_elave_et");
+        }
+
+
+    }
+
+    public function update_master_speciality($id)
+    {
+        $data["speciality"] = $this->Mecnun_model->get_single_speciality_master(array(
+            "master_id" => $id,
+        ));
+
+        $this->load->view('Admin/master/master_update_specialities', $data);
+    }
+
+    public function update_master_speciality_act($id)
+    {
+        $speciality_code = $this->input->post("speciality_code");
+
+        $speciality_name_az = $this->input->post("speciality_name_az");
+        $speciality_about_az = $this->input->post("speciality_about_az");
+
+
+        $speciality_name_en = $this->input->post("speciality_name_en");
+        $speciality_about_en = $this->input->post("speciality_about_en");
+
+
+        $speciality_name_ru = $this->input->post("speciality_name_ru");
+        $speciality_about_ru = $this->input->post("speciality_about_ru");
+
+        if (!empty($speciality_code) && !empty($speciality_name_az) && !empty($speciality_about_az) && !empty($speciality_about_ru) && !empty($speciality_name_en) && !empty($speciality_about_en) && !empty($speciality_name_ru)){
+            $data = array(
+                "master_text" => $speciality_code,
+                "master_text_about_az" => $speciality_name_az,
+                "master_text_text_az" => $speciality_about_az,
+                "master_text_about_en" => $speciality_name_en,
+                "master_text_text_en" => $speciality_about_en,
+                "master_text_about_ru" => $speciality_name_ru,
+                "master_text_text_ru" => $speciality_about_ru,
+            );
+
+            $where = array(
+                "master_id" => $id,
+            );
+
+            $this->Mecnun_model->update_master_speciality($where, $data);
+
+            redirect("himalaY_magistr_ixtisaslar");
+
+        }else{
+            $this->session->set_flashdata("bachelor_about_error_message", "Boşluq buraxmayın");
+            redirect("himalaY_magistr_ixtisas_yenile/$id");
+        }
+
+    }
+
+    public function delete_master_speciality($id)
+    {
+        $this->Mecnun_model->delete_master_speciality(array(
+            "master_id" => $id,
+        ));
+
+        redirect("himalaY_magistr_ixtisaslar");
+    }
+
+
+
+
+
+
+    //     ============= Doktorantura Hissesi ================
+
+
+    public function doctorate()
+    {
+
+        $data["doctorate_about_text"] = $this->Mecnun_model->get_doctorate_about_text();
+
+        $this->load->view('Admin/doctorate/doctorate_main', $data);
+    }
+
+    public function update_doctorate_info()
+    {
+        $data["doctorate_about_text"] = $this->Mecnun_model->get_doctorate_about_text();
+
+        $this->load->view('Admin/doctorate/doctorate_info_update', $data);
+    }
+
+    public function update_doctorate_info_act()
+    {
+        $text_az = $this->input->post("doctorate_about_az");
+        $text_en = $this->input->post("doctorate_about_en");
+        $text_ru = $this->input->post("doctorate_about_ru");
+
+        if (!empty($text_az) && !empty($text_ru) && !empty($text_en)){
+            $data = array(
+                "doctorate_about_text_az" => $text_az,
+                "doctorate_about_text_en" => $text_en,
+                "doctorate_about_text_ru" => $text_ru,
+            );
+
+            $this->Mecnun_model->update_doctorate_about_text($data);
+
+            redirect("himalaY_doktorantura");
+
+        }else{
+            $this->session->set_flashdata("doctorate_about_error_message", "Boşluq buraxmayın");
+            redirect("himalaY_doktorantura_yenile");
+        }
+
+        die();
+
+    }
+
+    public function doctorate_specialities()
+    {
+
+        $data["all_specialities"] = $this->Mecnun_model->get_doctorate_all_specialties();
+
+        $this->load->view('Admin/doctorate/doctorate_specialities', $data);
+    }
+
+    public function add_doctorate_speciality()
+    {
+        $this->load->view('Admin/doctorate/doctorate_add_specialities');
+    }
+
+    public function add_doctorate_speciality_act()
+    {
+
+        $speciality_code = $this->input->post("speciality_code");
+
+        $speciality_name_az = $this->input->post("speciality_name_az");
+        $speciality_about_az = $this->input->post("speciality_about_az");
+
+
+        $speciality_name_en = $this->input->post("speciality_name_en");
+        $speciality_about_en = $this->input->post("speciality_about_en");
+
+
+        $speciality_name_ru = $this->input->post("speciality_name_ru");
+        $speciality_about_ru = $this->input->post("speciality_about_ru");
+
+        if (!empty($speciality_code) && !empty($speciality_name_az) && !empty($speciality_about_az) && !empty($speciality_about_ru) && !empty($speciality_name_en) && !empty($speciality_about_en) && !empty($speciality_name_ru)){
+            $data = array(
+                "doctorate_text" => $speciality_code,
+                "doctorate_text_about_az" => $speciality_name_az,
+                "doctorate_text_text_az" => $speciality_about_az,
+                "doctorate_text_about_en" => $speciality_name_en,
+                "doctorate_text_text_en" => $speciality_about_en,
+                "doctorate_text_about_ru" => $speciality_name_ru,
+                "doctorate_text_text_ru" => $speciality_about_ru,
+            );
+
+            $this->Mecnun_model->add_doctorate_speciality($data);
+
+            redirect("himalaY_doktorantura_ixtisaslar");
+
+        }else{
+            $this->session->set_flashdata("doctorate_about_error_message", "Boşluq buraxmayın");
+            redirect("himalaY_doktorantura_ixtisas_elave_et");
+        }
+
+
+    }
+
+    public function update_doctorate_speciality($id)
+    {
+        $data["speciality"] = $this->Mecnun_model->get_single_speciality_doctorate(array(
+            "doctorate_id" => $id,
+        ));
+
+        $this->load->view('Admin/doctorate/doctorate_update_specialities', $data);
+    }
+
+    public function update_doctorate_speciality_act($id)
+    {
+        $speciality_code = $this->input->post("speciality_code");
+
+        $speciality_name_az = $this->input->post("speciality_name_az");
+        $speciality_about_az = $this->input->post("speciality_about_az");
+
+
+        $speciality_name_en = $this->input->post("speciality_name_en");
+        $speciality_about_en = $this->input->post("speciality_about_en");
+
+
+        $speciality_name_ru = $this->input->post("speciality_name_ru");
+        $speciality_about_ru = $this->input->post("speciality_about_ru");
+
+        if (!empty($speciality_code) && !empty($speciality_name_az) && !empty($speciality_about_az) && !empty($speciality_about_ru) && !empty($speciality_name_en) && !empty($speciality_about_en) && !empty($speciality_name_ru)){
+            $data = array(
+                "doctorate_text" => $speciality_code,
+                "doctorate_text_about_az" => $speciality_name_az,
+                "doctorate_text_text_az" => $speciality_about_az,
+                "doctorate_text_about_en" => $speciality_name_en,
+                "doctorate_text_text_en" => $speciality_about_en,
+                "doctorate_text_about_ru" => $speciality_name_ru,
+                "doctorate_text_text_ru" => $speciality_about_ru,
+            );
+
+            $where = array(
+                "doctorate_id" => $id,
+            );
+
+            $this->Mecnun_model->update_doctorate_speciality($where, $data);
+
+            redirect("himalaY_doktorantura_ixtisaslar");
+
+        }else{
+            $this->session->set_flashdata("doctorate_about_error_message", "Boşluq buraxmayın");
+            redirect("himalaY_doktorantura_ixtisas_yenile/$id");
+        }
+
+    }
+
+    public function delete_doctorate_speciality($id)
+    {
+        $this->Mecnun_model->delete_doctorate_speciality(array(
+            "doctorate_id" => $id,
+        ));
+
+        redirect("himalaY_doktorantura_ixtisaslar");
+    }
 
 
 

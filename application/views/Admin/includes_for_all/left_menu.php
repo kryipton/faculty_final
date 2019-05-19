@@ -38,12 +38,12 @@
             <a class="a2" href="<?php echo base_url('himalaY_link') ?>"><li class="a1">Linklər</li></a>
 
             <a class="a2" href="<?php echo base_url('himalaY_haqqimizda') ?>"><li class="a1">Haqqımızda</li></a>
-
+            <a class="a2" href="<?php echo base_url('himalaY_loqo') ?>"><li class="a1">Loqo Və Başlıqı</li></a>
 
 
             <a class="a2" href="<?php echo base_url('himalaY_bakalavr') ?>"><li class="a1">Bakalavr</li></a>
-            <a class="a2" href="<?php echo base_url('Admin/Master/Master') ?>"><li class="a1">Magistratura</li></a>
-            <a class="a2" href="<?php echo base_url('Admin/PhD/PhD') ?>"><li class="a1">Doktorantura</li></a>
+            <a class="a2" href="<?php echo base_url('himalaY_magistr') ?>"><li class="a1">Magistratura</li></a>
+            <a class="a2" href="<?php echo base_url('himalaY_doktorantura') ?>"><li class="a1">Doktorantura</li></a>
 
 
 
