@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2019 at 01:58 PM
+-- Generation Time: May 19, 2019 at 03:30 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -92,24 +92,6 @@ INSERT INTO `bachelor_speciality_db` (`bachelor_id`, `bachelor_text`, `bachelor_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `department_about_text`
---
-
-CREATE TABLE `department_about_text` (
-  `id` int(11) NOT NULL,
-  `department_desc` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `department_about_text`
---
-
-INSERT INTO `department_about_text` (`id`, `department_desc`) VALUES
-(1, 'asdadadasdasd');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `department_categories`
 --
 
@@ -117,28 +99,22 @@ CREATE TABLE `department_categories` (
   `id` int(11) NOT NULL,
   `category_name_az` varchar(255) NOT NULL,
   `category_name_en` varchar(255) NOT NULL,
-  `category_name_ru` varchar(255) NOT NULL
+  `category_name_ru` varchar(255) NOT NULL,
+  `category_about_text_az` text NOT NULL,
+  `category_about_text_en` text NOT NULL,
+  `category_about_text_ru` text NOT NULL,
+  `category_contact_az` text NOT NULL,
+  `category_contact_en` text NOT NULL,
+  `category_contact_ru` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `department_categories`
 --
 
-INSERT INTO `department_categories` (`id`, `category_name_az`, `category_name_en`, `category_name_ru`) VALUES
-(1, 'ekologiya kafedrasi', 'echology department', 'отдел экологии'),
-(2, 'uzvi kimya kafedrasi', 'chemistry department', 'химический факультет');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `department_contact`
---
-
-CREATE TABLE `department_contact` (
-  `id` int(11) NOT NULL,
-  `contact_email` varchar(100) NOT NULL,
-  `contact_phone` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `department_categories` (`id`, `category_name_az`, `category_name_en`, `category_name_ru`, `category_about_text_az`, `category_about_text_en`, `category_about_text_ru`, `category_contact_az`, `category_contact_en`, `category_contact_ru`) VALUES
+(1, 'ekologiya kafedrasi', 'echology department', 'отдел экологии', '<p><span style=\"font-size:20px\"><span style=\"background-color:#e74c3c\">haqqinda birinici kafedra</span></span></p>\r\n', '<p><span style=\"font-size:20px\"><span style=\"background-color:#e74c3c\">haqqinda birinici kafedra en</span></span></p>\r\n', '<p><span style=\"font-size:20px\"><span style=\"background-color:#e74c3c\">haqqinda birinici kafedra ru</span></span></p>\r\n', '<p>ealqe az3</p>\r\n', '<p>ealqe en3</p>\r\n', '<p>ealqe ru3</p>\r\n'),
+(2, 'uzvi kimya kafedrasi', 'chemistry department', 'химический факультет', '<p><span style=\"color:#000000\"><span style=\"font-size:20px\"><span style=\"background-color:#d35400\">haqqinda</span></span></span></p>\r\n', '<p><span style=\"color:#2980b9\"><span style=\"font-size:16px\">haqqinda en2</span></span></p>\r\n', '<p><span style=\"font-size:20px\"><span style=\"color:#f1c40f\">haqqinda ru2</span></span></p>\r\n', '<p>elaqe az 2</p>\r\n', '<p>elaqe en 2</p>\r\n', '<p>elaqe ru 2</p>\r\n');
 
 -- --------------------------------------------------------
 
@@ -532,21 +508,9 @@ ALTER TABLE `bachelor_speciality_db`
   ADD PRIMARY KEY (`bachelor_id`);
 
 --
--- Indexes for table `department_about_text`
---
-ALTER TABLE `department_about_text`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `department_categories`
 --
 ALTER TABLE `department_categories`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `department_contact`
---
-ALTER TABLE `department_contact`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -668,22 +632,10 @@ ALTER TABLE `bachelor_speciality_db`
   MODIFY `bachelor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `department_about_text`
---
-ALTER TABLE `department_about_text`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT for table `department_categories`
 --
 ALTER TABLE `department_categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `department_contact`
---
-ALTER TABLE `department_contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `department_labaratory`

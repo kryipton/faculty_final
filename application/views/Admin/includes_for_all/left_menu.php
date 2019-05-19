@@ -44,7 +44,9 @@
             <a class="a2" href="<?php echo base_url('himalaY_doktorantura') ?>"><li class="a1">Doktorantura</li></a>
 
 
-            <a class="a2" href="<?php echo base_url('himalaY_kafedralar') ?>"><li class="a1">Kafedralar(Adları)</li></a>
+            <a class="a2" href="<?php echo base_url('himalaY_kafedralar') ?>"><li class="a1">Kafedralar</li></a>
+            <a class="a2" href="<?php echo base_url('himalaY_kafedralar_haqqinda') ?>"><li class="a1">Kafedralar(Haqqında)</li></a>
+            <a class="a2" href="<?php echo base_url('himalaY_kafedralar_elaqe') ?>"><li class="a1">Kafedralar(Əlaqə)</li></a>
             <a class="a2" href="<?php echo base_url('himalaY_muellimler') ?>"><li class="a1">Kafedralar(Müəllimlər)</li></a>
             <a class="a2" href="<?php echo base_url('himalaY_laboratoriya') ?>"><li class="a1">Kafedralar(Laboratoriya)</li></a>
 

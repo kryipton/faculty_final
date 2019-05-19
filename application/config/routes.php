@@ -177,6 +177,14 @@ $route['himalaY_kafedralar_yenile/(.*)'] = 'Mecnun/update_departments/$1';
 $route['himalaY_kafedralar_yenilenmesi/(.*)'] = 'Mecnun/update_departments_act/$1';
 $route['himalaY_kafedralar_silme/(.*)'] = 'Mecnun/delete_departments/$1';
 
+$route['himalaY_kafedralar_haqqinda'] = 'Mecnun/about_departments';
+$route['himalaY_kafedralar_haqqinda_yenile/(.*)'] = 'Mecnun/update_about_department/$1';
+$route['himalaY_kafedralar_haqqinda_yenileme/(.*)'] = 'Mecnun/update_about_department_act/$1';
+
+$route['himalaY_kafedralar_elaqe'] = 'Mecnun/contact_departments';
+$route['himalaY_kafedralar_elaqe_yenile/(.*)'] = 'Mecnun/update_contact_department/$1';
+$route['himalaY_kafedralar_elaqe_yenileme/(.*)'] = 'Mecnun/update_contact_department_act/$1';
+
 
 //Muellimler
 $route['himalaY_muellimler'] = 'Mecnun/teachers';
