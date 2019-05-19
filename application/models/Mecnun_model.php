@@ -128,12 +128,22 @@ class Mecnun_model extends  CI_Model{
 
     public function get_laboratories()
     {
-        return $this->db->get('department_labaratory')->result_array();
+        return $this->db->order_by('id','DESC')->get('department_labaratory')->result_array();
+    }
+
+    public function getLaboratory($where)
+    {
+        return $this->db->where($where)->get('department_labaratory')->row_array();
     }
 
     public function delete_laboratory($id)
     {
         $this->db->where('id',$id)->delete('department_labaratory');
+    }
+
+    public function updateLab($where,$data)
+    {
+        $this->db->where($where)->update('department_labaratory',$data);
     }
 
 

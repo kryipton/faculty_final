@@ -726,11 +726,78 @@ class Mecnun extends CI_Controller{
         $this->load->view('Admin/laboratory/laboratory_main',$data);
     }
 
-    public function update_laboratory()
+    public function update_laboratory($id)
     {
+        $where=[
+          'id' => $id
+        ];
+
+        $data["laboratory"] = $this->Mecnun_model->getLaboratory($where);
         $data["categories"] = $this->Mecnun_model->get_categories();
         $this->load->view('Admin/laboratory/laboratory_update',$data);
     }
+
+    public function update_laboratory_act($id){
+        $where =[
+          'id' =>$id
+        ];
+        $laboratory_name_az = strip_tags($_POST['laboratory_name_az']);
+        $laboratory_name_ru = strip_tags($_POST['laboratory_name_ru']);
+        $laboratory_name_en = strip_tags($_POST['laboratory_name_en']);
+        $laboratory_desc_az = $_POST['laboratory_desc_az'];
+        $laboratory_desc_ru = $_POST['laboratory_desc_ru'];
+        $laboratory_desc_en = $_POST['laboratory_desc_en'];
+        $laboratory_catg_az = $_POST['laboratory_catg_az'];
+        $laboratory_catg_ru = $_POST['laboratory_catg_ru'];
+        $laboratory_catg_en = $_POST['laboratory_catg_en'];
+
+        $config['upload_path']   = 'upload/laboratory_images/';
+        $config['max_size']     = '10000';
+        $config['allowed_types'] = 'jpg|jpeg|png';
+        $this->upload->initialize($config);
+        if (!empty($laboratory_name_az) and !empty($laboratory_name_ru) and !empty($laboratory_name_en) and !empty($laboratory_desc_az) and !empty($laboratory_desc_ru) and !empty($laboratory_desc_en) and !empty($laboratory_catg_en) and !empty($laboratory_catg_az) and !empty($laboratory_catg_ru))
+        {
+            if($this->upload->do_upload('laboratory_photo')) {
+                $data = array(
+                    'laboratory_name_az' => $laboratory_name_az,
+                    'laboratory_name_ru' => $laboratory_name_ru,
+                    'laboratory_name_en' => $laboratory_name_en,
+                    'laboratory_desc_az' => $laboratory_desc_az,
+                    'laboratory_desc_ru' => $laboratory_desc_ru,
+                    'laboratory_desc_en' => $laboratory_desc_en,
+                    'laboratory_catg_az' => $laboratory_catg_az,
+                    'laboratory_catg_ru' => $laboratory_catg_ru,
+                    'laboratory_catg_en' => $laboratory_catg_en,
+                    'laboratory_img' =>  $this->upload->data('file_name')
+                );
+                $this->Mecnun_model->updateLab($where,$data);
+                $this->session->set_flashdata('success', 'Labaratoriya düzənləndi');
+                redirect(base_url('himalaY_laboratoriya'));
+            }else{
+                $data = array(
+                    'laboratory_name_az' => $laboratory_name_az,
+                    'laboratory_name_ru' => $laboratory_name_ru,
+                    'laboratory_name_en' => $laboratory_name_en,
+                    'laboratory_desc_az' => $laboratory_desc_az,
+                    'laboratory_desc_ru' => $laboratory_desc_ru,
+                    'laboratory_desc_en' => $laboratory_desc_en,
+                    'laboratory_catg_az' => $laboratory_catg_az,
+                    'laboratory_catg_ru' => $laboratory_catg_ru,
+                    'laboratory_catg_en' => $laboratory_catg_en,
+                );
+                $this->Mecnun_model->updateLab($where,$data);
+                $this->session->set_flashdata('success', 'Labaratoriya düzənləndi');
+                redirect(base_url('himalaY_laboratoriya'));
+
+            }
+
+        }else{
+            $this->session->set_flashdata('error','Melumatlari duzgun daxil edin');
+            redirect(base_url('himalaY_laboratoriya'));
+        }
+
+    }
+
     public function create_laboratory()
     {
         $data["categories"] = $this->Mecnun_model->get_categories();
@@ -752,7 +819,6 @@ class Mecnun extends CI_Controller{
         $config['upload_path']   = 'upload/laboratory_images/';
         $config['max_size']     = '10000';
         $config['allowed_types'] = 'jpg|jpeg|png';
-
         $this->upload->initialize($config);
 
         if (!empty($laboratory_name_az) and !empty($laboratory_name_ru) and !empty($laboratory_name_en) and !empty($laboratory_desc_az) and !empty($laboratory_desc_ru) and !empty($laboratory_desc_en) and !empty($laboratory_catg_en) and !empty($laboratory_catg_az) and !empty($laboratory_catg_ru))

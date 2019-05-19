@@ -24,7 +24,7 @@
             <form action="<?php echo base_url('himalaY_laboratoriya_elave_etme') ?>" method="POST" enctype="multipart/form-data">
 
             <div class="tab-content" style="margin-top: 30px">
-                <a href="<?php echo base_url('himalaY_muellimler') ?>" class="btn btn-info btn-md">
+                <a href="<?php echo base_url('himalaY_laboratoriya') ?>" class="btn btn-info btn-md">
                     <span class="glyphicon glyphicon-plus-sign"></span> Butun Laborotoriyalar
                 </a>
 

@@ -183,7 +183,8 @@ $route['himalaY_muellimler_silme/(.*)'] = 'Mecnun/delete_teachers/$1';
 
 //Laboratoriya
 $route['himalaY_laboratoriya'] = 'Mecnun/laboratory';
-$route['himalaY_laboratoriya_yenile'] = 'Mecnun/update_laboratory';
+$route['himalaY_laboratoriya_yenile/(.*)'] = 'Mecnun/update_laboratory/$1';
+$route['himalaY_laboratoriya_yenile_act/(.*)'] = 'Mecnun/update_laboratory_act/$1';
 $route['himalaY_laboratoriya_elave_et'] = 'Mecnun/create_laboratory';
 $route['himalaY_laboratoriya_elave_etme'] = 'Mecnun/create_laboratory_action';
 $route['himalaY_laboratoriya_sil/(.*)'] = 'Mecnun/delete_laboratory/$1';
