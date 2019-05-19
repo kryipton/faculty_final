@@ -2,6 +2,10 @@
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
+-- Host: 127.0.0.1
+-- Generation Time: May 19, 2019 at 04:16 PM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.2
 -- Anamakine: 127.0.0.1
 -- Üretim Zamanı: 19 May 2019, 17:15:36
 -- Sunucu sürümü: 10.1.38-MariaDB
@@ -19,13 +23,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Veritabanı: `faculty_db`
+-- Database: `faculty_db`
 --
 
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `about_db`
+-- Table structure for table `about_db`
 --
 
 CREATE TABLE `about_db` (
@@ -37,16 +41,16 @@ CREATE TABLE `about_db` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Tablo döküm verisi `about_db`
+-- Dumping data for table `about_db`
 --
 
 INSERT INTO `about_db` (`about_id`, `faculty_name`, `about_text_az`, `about_text_en`, `about_text_ru`) VALUES
-(1, 'kimya', '<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p style=\"text-align:center\">Fak&uuml;ltədə 1 akademik, 20 professor, 69 dosent, 18 baş m&uuml;əllim və assistent &ccedil;alışır. Hazırda Kimya texnologiya fak&uuml;ltəsinin g&uuml;nd&uuml;z ş&ouml;bəsində 831 nəfər əyani, 64 nəfər isə qiyabi ş&ouml;bədə təhsil alır.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>2016-cı ildən ADNSU rektorunun əmri ilə fak&uuml;ltənin nəzdində &laquo;Yeni kimyəvi materiallar və texnologiyalar&raquo; adlı elmi-tədqiqat laboratoriyası yaradılıb. Laboratoriyaya k.e.d, professor Bağıyev Vaqif La&ccedil;ın oğlu rəhbərlik edir.</p>\r\n\r\n<p>&Uuml;mumilikdə fak&uuml;ltədə 13 professor, 4 elmlər doktoru, 68 dosent, 2 assistent və 29 laborant &ccedil;alışır.</p>\r\n\r\n<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>ADNSU-da kimya&ccedil;ı m&uuml;həndislərin hazırlığı 1921-ci ildən kimya ş&ouml;bəsi kimi &laquo;Neft sənayesi&raquo; fak&uuml;ltəsində, 1934-ci ildən &laquo;Neft texnologiyası&raquo;, 1940-cı ildən isə &laquo;Kimya texnologiyası&raquo; fak&uuml;ltəsində həyata ke&ccedil;irilir.Fak&uuml;ltədə yarandığı g&uuml;ndən indiyədək neft emalı və neft-kimya sənayesi &uuml;&ccedil;&uuml;n 18000-ə yaxın kimya&ccedil;ı-m&uuml;həndis texnoloq hazırlanıb. 1981-ci ildən fak&uuml;ltədə xarici &ouml;lkə vətəndaşlarının hazırlığı həyata ke&ccedil;irilir. &Ouml;tən illər ərzində d&uuml;nyanın 54 &ouml;lkəsi &uuml;&ccedil;&uuml;n 332 bakalavr, 326 magistr və 33 elmlər namizədi hazırlanıb.</p>\r\n\r\n<p>2009/2010-cu tədris ilinədək fak&uuml;ltədə: 1. &laquo;Kimya-texnologiyası&raquo;, 2. &laquo;Ekologiya və təbiətdən istifadə&raquo; və 3. &laquo;Həyat fəaliyyətinin təhl&uuml;kəsizliyi&raquo; istiqamətləri, 2009/2010-cu tədris ilindən isə 1.&raquo;Kimya m&uuml;həndisliyi&raquo;, 2. &laquo;Ekologiya m&uuml;həndisliyi&raquo; və 3. &laquo; F&ouml;vqəladə hallar və həyat fəaliyyətinin təhl&uuml;kəsizliyi&raquo; ixtisasları və 11 ixtisaslaşma &uuml;zrə kredit sistemi ilə bakalavr hazırlığı &nbsp;həyata ke&ccedil;irilir.Fak&uuml;ltədə 3 istiqamət: 1. &laquo;Kimya texnologiyası&raquo; 2. &laquo;Ekologiya və təbiətdən istifadə&raquo; və 3. &laquo;Həyat fəaliyyətinin təhl&uuml;kəsizliyi&raquo; istiqamətləri və 3 ixtisas &uuml;zrə magistr hazırlığı həyata ke&ccedil;irilir.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Fak&uuml;ltənin nəzdində 4 &uuml;mumi və 4 ixtisas kafedrası, 7 tədris, 6 problem və Rusiyanın &laquo;Lukoyl&raquo; firmasının təsis&ccedil;iliyi ilə &laquo;Fizika-kimyəvi &nbsp;analiz metodları&raquo; mərkəzləşdirilmiş laboratoriya fəaliyyət g&ouml;stərir.</p>\r\n\r\n<p>2016-cı ildən fak&uuml;ltədə 2 istiqamət; &laquo;Kimya m&uuml;həndisliyi&raquo; və &laquo;Ekologiya m&uuml;həndisliyi&raquo; ixtisasları &uuml;zrə y&uuml;ksək ixtisaslı m&uuml;həndis hazırlanır.</p>\r\n\r\n<p>Kafedralar: M&ouml;vcud olan 7 kafedra 2016-cı ilin fevral ayından birləşdirilərək:</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<ul>\r\n	<li><strong>&laquo;Kimya və qeyri-&uuml;zvi maddələrin texnologiyası&raquo;</strong></li>\r\n	<li><strong>&laquo;&Uuml;zvi maddələr və y&uuml;ksək molekullu birləşmələrin texnologiyası&raquo;</strong></li>\r\n	<li><strong>&laquo;Neft-kimya texnologiyası və sənaye ekologiyası&raquo; kafedraları yaradılıb.</strong></li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Fak&uuml;ltənin nəzdində həm&ccedil;inin &ldquo;İctimai elmlər&raquo; kafedrası da fəaliyyət g&ouml;stərir.</p>\r\n\r\n<p>Kimya texnologiya fak&uuml;ltəsində&nbsp;<strong><em>4 tyutor</em></strong>&nbsp;fəaliyyət g&ouml;stərir.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<ol>\r\n	<li><strong>&nbsp;Qədimov İlqar Kamil oğlu</strong></li>\r\n	<li><strong>&nbsp;Ağayev Famil Bayram oğlu</strong></li>\r\n	<li><strong>&nbsp;Əhmədova Dinarə Vəlyəddin qızı</strong></li>\r\n	<li><strong>&nbsp;Həsənova Fərqanə &Ccedil;ingiz qızı&nbsp;</strong></li>\r\n</ol>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&laquo;Kimya və qeyri-&uuml;zvi maddələrin texnologiyası&raquo; kafedrasında 43 əməkdaş, o c&uuml;mlədən 2 professor, 2 elmlər doktoru və 25 dosent, 1 assistent və 13 laborant fəaliyyət g&ouml;stərir.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&laquo;&Uuml;zvi maddələr və y&uuml;ksək molekullu birləşmələrin texnologiyası&raquo; kafedrasında 21 əməkdaş, o c&uuml;mlədən 2 professor və 10 dosent, 1 assistent, 1 baş m&uuml;əllim və 9 laborant fəaliyyət g&ouml;stərir.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&laquo;Neft-kimya texnolgoiyası və sənaye ekologiyasi&raquo; kafedrasında 48 əməkdaş, o c&uuml;mlədən 8 professor, 21 dosent &ccedil;alışır.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&laquo;İctimai elmlər&raquo; kafedrasında 18 əməkdaş, o c&uuml;mlədən 1 professor və 2 nəfəri elmlər doktoru olmaqla 11 dosent, 3 baş m&uuml;əllim və 3 m&uuml;əllimdən ibarətdir. Kafedrada həm&ccedil;inin 4 əvəz&ccedil;i m&uuml;əllim &ccedil;alışır. Tədris k&ouml;mək&ccedil;i heyəti isə 2 nəfərdən ibarətdir.</p>\r\n\r\n<p style=\"text-align:center\">&nbsp;<img alt=\"\" src=\"http://ktf.asoiu.edu.az/public/images/faculty_logo/kimya.png\" style=\"height:250px; width:250px\" /></p>\r\n\r\n<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n', '<p>s</p>\r\n', '<p>s</p>\r\n');
+(1, 'kimya', '<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p style=\"text-align:center\">Fak&uuml;ltədə 1 akademik, 20 professor, 69 dosent, 18 baş m&uuml;əllim və assistent &ccedil;alışır. Hazırda Kimya texnologiya fak&uuml;ltəsinin g&uuml;nd&uuml;z ş&ouml;bəsində 831 nəfər əyani, 64 nəfər isə qiyabi ş&ouml;bədə təhsil alır.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>2016-cı ildən ADNSU rektorunun əmri ilə fak&uuml;ltənin nəzdində &laquo;Yeni kimyəvi materiallar və texnologiyalar&raquo; adlı elmi-tədqiqat laboratoriyası yaradılıb. Laboratoriyaya k.e.d, professor Bağıyev Vaqif La&ccedil;ın oğlu rəhbərlik edir.</p>\r\n\r\n<p>&Uuml;mumilikdə fak&uuml;ltədə 13 professor, 4 elmlər doktoru, 68 dosent, 2 assistent və 29 laborant &ccedil;alışır.</p>\r\n\r\n<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>ADNSU-da kimya&ccedil;ı m&uuml;həndislərin hazırlığı 1921-ci ildən kimya ş&ouml;bəsi kimi &laquo;Neft sənayesi&raquo; fak&uuml;ltəsində, 1934-ci ildən &laquo;Neft texnologiyası&raquo;, 1940-cı ildən isə &laquo;Kimya texnologiyası&raquo; fak&uuml;ltəsində həyata ke&ccedil;irilir.Fak&uuml;ltədə yarandığı g&uuml;ndən indiyədək neft emalı və neft-kimya sənayesi &uuml;&ccedil;&uuml;n 18000-ə yaxın kimya&ccedil;ı-m&uuml;həndis texnoloq hazırlanıb. 1981-ci ildən fak&uuml;ltədə xarici &ouml;lkə vətəndaşlarının hazırlığı həyata ke&ccedil;irilir. &Ouml;tən illər ərzində d&uuml;nyanın 54 &ouml;lkəsi &uuml;&ccedil;&uuml;n 332 bakalavr, 326 magistr və 33 elmlər namizədi hazırlanıb.</p>\r\n\r\n<p>2009/2010-cu tədris ilinədək fak&uuml;ltədə: 1. &laquo;Kimya-texnologiyası&raquo;, 2. &laquo;Ekologiya və təbiətdən istifadə&raquo; və 3. &laquo;Həyat fəaliyyətinin təhl&uuml;kəsizliyi&raquo; istiqamətləri, 2009/2010-cu tədris ilindən isə 1.&raquo;Kimya m&uuml;həndisliyi&raquo;, 2. &laquo;Ekologiya m&uuml;həndisliyi&raquo; və 3. &laquo; F&ouml;vqəladə hallar və həyat fəaliyyətinin təhl&uuml;kəsizliyi&raquo; ixtisasları və 11 ixtisaslaşma &uuml;zrə kredit sistemi ilə bakalavr hazırlığı &nbsp;həyata ke&ccedil;irilir.Fak&uuml;ltədə 3 istiqamət: 1. &laquo;Kimya texnologiyası&raquo; 2. &laquo;Ekologiya və təbiətdən istifadə&raquo; və 3. &laquo;Həyat fəaliyyətinin təhl&uuml;kəsizliyi&raquo; istiqamətləri və 3 ixtisas &uuml;zrə magistr hazırlığı həyata ke&ccedil;irilir.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Fak&uuml;ltənin nəzdində 4 &uuml;mumi və 4 ixtisas kafedrası, 7 tədris, 6 problem və Rusiyanın &laquo;Lukoyl&raquo; firmasının təsis&ccedil;iliyi ilə &laquo;Fizika-kimyəvi &nbsp;analiz metodları&raquo; mərkəzləşdirilmiş laboratoriya fəaliyyət g&ouml;stərir.</p>\r\n\r\n<p>2016-cı ildən fak&uuml;ltədə 2 istiqamət; &laquo;Kimya m&uuml;həndisliyi&raquo; və &laquo;Ekologiya m&uuml;həndisliyi&raquo; ixtisasları &uuml;zrə y&uuml;ksək ixtisaslı m&uuml;həndis hazırlanır.</p>\r\n\r\n<p>Kafedralar: M&ouml;vcud olan 7 kafedra 2016-cı ilin fevral ayından birləşdirilərək:</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<ul>\r\n	<li><strong>&laquo;Kimya və qeyri-&uuml;zvi maddələrin texnologiyası&raquo;</strong></li>\r\n	<li><strong>&laquo;&Uuml;zvi maddələr və y&uuml;ksək molekullu birləşmələrin texnologiyası&raquo;</strong></li>\r\n	<li><strong>&laquo;Neft-kimya texnologiyası və sənaye ekologiyası&raquo; kafedraları yaradılıb.</strong></li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Fak&uuml;ltənin nəzdində həm&ccedil;inin &ldquo;İctimai elmlər&raquo; kafedrası da fəaliyyət g&ouml;stərir.</p>\r\n\r\n<p>Kimya texnologiya fak&uuml;ltəsində&nbsp;<strong><em>4 tyutor</em></strong>&nbsp;fəaliyyət g&ouml;stərir.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<ol>\r\n	<li><strong>&nbsp;Qədimov İlqar Kamil oğlu</strong></li>\r\n	<li><strong>&nbsp;Ağayev Famil Bayram oğlu</strong></li>\r\n	<li><strong>&nbsp;Əhmədova Dinarə Vəlyəddin qızı</strong></li>\r\n	<li><strong>&nbsp;Həsənova Fərqanə &Ccedil;ingiz qızı&nbsp;</strong></li>\r\n</ol>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&laquo;Kimya və qeyri-&uuml;zvi maddələrin texnologiyası&raquo; kafedrasında 43 əməkdaş, o c&uuml;mlədən 2 professor, 2 elmlər doktoru və 25 dosent, 1 assistent və 13 laborant fəaliyyət g&ouml;stərir.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&laquo;&Uuml;zvi maddələr və y&uuml;ksək molekullu birləşmələrin texnologiyası&raquo; kafedrasında 21 əməkdaş, o c&uuml;mlədən 2 professor və 10 dosent, 1 assistent, 1 baş m&uuml;əllim və 9 laborant fəaliyyət g&ouml;stərir.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&laquo;Neft-kimya texnolgoiyası və sənaye ekologiyasi&raquo; kafedrasında 48 əməkdaş, o c&uuml;mlədən 8 professor, 21 dosent &ccedil;alışır.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&laquo;İctimai elmlər&raquo; kafedrasında 18 əməkdaş, o c&uuml;mlədən 1 professor və 2 nəfəri elmlər doktoru olmaqla 11 dosent, 3 baş m&uuml;əllim və 3 m&uuml;əllimdən ibarətdir. Kafedrada həm&ccedil;inin 4 əvəz&ccedil;i m&uuml;əllim &ccedil;alışır. Tədris k&ouml;mək&ccedil;i heyəti isə 2 nəfərdən ibarətdir.</p>\r\n\r\n<p style=\"text-align:center\">&nbsp;<img alt=\"\" src=\"http://ktf.asoiu.edu.az/public/images/faculty_logo/kimya.png\" style=\"height:250px; width:250px\" /></p>\r\n\r\n<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n', '<p>En</p>\r\n', '<p>Ru</p>\r\n');
 
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `bachelor_about_text`
+-- Table structure for table `bachelor_about_text`
 --
 
 CREATE TABLE `bachelor_about_text` (
@@ -57,7 +61,7 @@ CREATE TABLE `bachelor_about_text` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Tablo döküm verisi `bachelor_about_text`
+-- Dumping data for table `bachelor_about_text`
 --
 
 INSERT INTO `bachelor_about_text` (`id`, `bachelor_about_text_az`, `bachelor_about_text_en`, `bachelor_about_text_ru`) VALUES
@@ -66,7 +70,7 @@ INSERT INTO `bachelor_about_text` (`id`, `bachelor_about_text_az`, `bachelor_abo
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `bachelor_speciality_db`
+-- Table structure for table `bachelor_speciality_db`
 --
 
 CREATE TABLE `bachelor_speciality_db` (
@@ -81,7 +85,7 @@ CREATE TABLE `bachelor_speciality_db` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Tablo döküm verisi `bachelor_speciality_db`
+-- Dumping data for table `bachelor_speciality_db`
 --
 
 INSERT INTO `bachelor_speciality_db` (`bachelor_id`, `bachelor_text`, `bachelor_text_about_az`, `bachelor_text_text_az`, `bachelor_text_about_en`, `bachelor_text_text_en`, `bachelor_text_about_ru`, `bachelor_text_text_ru`) VALUES
@@ -93,6 +97,7 @@ INSERT INTO `bachelor_speciality_db` (`bachelor_id`, `bachelor_text`, `bachelor_
 
 --
 -- Tablo için tablo yapısı `department_about_text`
+-- Table structure for table `contact_db`
 --
 
 CREATE TABLE `department_about_text` (
@@ -102,10 +107,11 @@ CREATE TABLE `department_about_text` (
 
 --
 -- Tablo döküm verisi `department_about_text`
+-- Dumping data for table `contact_db`
 --
 
-INSERT INTO `department_about_text` (`id`, `department_desc`) VALUES
-(1, 'asdadadasdasd');
+INSERT INTO `contact_db` (`id`, `contact_text_az`, `contact_text_en`, `contact_text_ru`) VALUES
+(1, '<p>Fak&uuml;ltədə 1 akademik, 20 professor, 69 dosent, 18 baş m&uuml;əllim və assistent &ccedil;alışır. Hazırda Kimya texnologiya fak&uuml;ltəsinin g&uuml;nd&uuml;z ş&ouml;bəsində 831 nəfər əyani, 64 nəfər isə qiyabi ş&ouml;bədə təhsil alır.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>2016-cı ildən ADNSU rektorunun əmri ilə fak&uuml;ltənin nəzdində &laquo;Yeni kimyəvi materiallar və texnologiyalar&raquo; adlı elmi-tədqiqat laboratoriyası yaradılıb. Laboratoriyaya k.e.d, professor Bağıyev Vaqif La&ccedil;ın oğlu rəhbərlik edir.</p>\r\n\r\n<p>&Uuml;mumilikdə fak&uuml;ltədə 13 professor, 4 elmlər doktoru, 68 dosent, 2 assistent və 29 laborant &ccedil;alışır.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>ADNSU-da kimya&ccedil;ı m&uuml;həndislərin hazırlığı 1921-ci ildən kimya ş&ouml;bəsi kimi &laquo;Neft sənayesi&raquo; fak&uuml;ltəsində, 1934-ci ildən &laquo;Neft texnologiyası&raquo;, 1940-cı ildən isə &laquo;Kimya texnologiyası&raquo; fak&uuml;ltəsində həyata ke&ccedil;irilir.Fak&uuml;ltədə yarandığı g&uuml;ndən indiyədək neft emalı və neft-kimya sənayesi &uuml;&ccedil;&uuml;n 18000-ə yaxın kimya&ccedil;ı-m&uuml;həndis texnoloq hazırlanıb. 1981-ci ildən fak&uuml;ltədə xarici &ouml;lkə vətəndaşlarının hazırlığı həyata ke&ccedil;irilir. &Ouml;tən illər ərzində d&uuml;nyanın 54 &ouml;lkəsi &uuml;&ccedil;&uuml;n 332 bakalavr, 326 magistr və 33 elmlər namizədi hazırlanıb.</p>\r\n\r\n<p>2009/2010-cu tədris ilinədək fak&uuml;ltədə: 1. &laquo;Kimya-texnologiyası&raquo;, 2. &laquo;Ekologiya və təbiətdən istifadə&raquo; və 3. &laquo;Həyat fəaliyyətinin təhl&uuml;kəsizliyi&raquo; istiqamətləri, 2009/2010-cu tədris ilindən isə 1.&raquo;Kimya m&uuml;həndisliyi&raquo;, 2. &laquo;Ekologiya m&uuml;həndisliyi&raquo; və 3. &laquo; F&ouml;vqəladə hallar və həyat fəaliyyətinin təhl&uuml;kəsizliyi&raquo; ixtisasları və 11 ixtisaslaşma &uuml;zrə kredit sistemi ilə bakalavr hazırlığı &nbsp;həyata ke&ccedil;irilir.Fak&uuml;ltədə 3 istiqamət: 1. &laquo;Kimya texnologiyası&raquo; 2. &laquo;Ekologiya və təbiətdən istifadə&raquo; və 3. &laquo;Həyat fəaliyyətinin təhl&uuml;kəsizliyi&raquo; istiqamətləri və 3 ixtisas &uuml;zrə magistr hazırlığı həyata ke&ccedil;irilir.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Fak&uuml;ltənin nəzdində 4 &uuml;mumi və 4 ixtisas kafedrası, 7 tədris, 6 problem və Rusiyanın &laquo;Lukoyl&raquo; firmasının təsis&ccedil;iliyi ilə &laquo;Fizika-kimyəvi &nbsp;analiz metodları&raquo; mərkəzləşdirilmiş laboratoriya fəaliyyət g&ouml;stərir.</p>\r\n\r\n<p>2016-cı ildən fak&uuml;ltədə 2 istiqamət; &laquo;Kimya m&uuml;həndisliyi&raquo; və &laquo;Ekologiya m&uuml;həndisliyi&raquo; ixtisasları &uuml;zrə y&uuml;ksək ixtisaslı m&uuml;həndis hazırlanır.</p>\r\n\r\n<p>Kafedralar: M&ouml;vcud olan 7 kafedra 2016-cı ilin fevral ayından birləşdirilərək:</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<ul>\r\n	<li><strong>&laquo;Kimya və qeyri-&uuml;zvi maddələrin texnologiyası&raquo;</strong></li>\r\n	<li><strong>&laquo;&Uuml;zvi maddələr və y&uuml;ksək molekullu birləşmələrin texnologiyası&raquo;</strong></li>\r\n	<li><strong>&laquo;Neft-kimya texnologiyası və sənaye ekologiyası&raquo; kafedraları yaradılıb.</strong></li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Fak&uuml;ltənin nəzdində həm&ccedil;inin &ldquo;İctimai elmlər&raquo; kafedrası da fəaliyyət g&ouml;stərir.</p>\r\n\r\n<p>Kimya texnologiya fak&uuml;ltəsində&nbsp;<strong><em>4 tyutor</em></strong>&nbsp;fəaliyyət g&ouml;stərir.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<ol>\r\n	<li><strong>&nbsp;Qədimov İlqar Kamil oğlu</strong></li>\r\n	<li><strong>&nbsp;Ağayev Famil Bayram oğlu</strong></li>\r\n	<li><strong>&nbsp;Əhmədova Dinarə Vəlyəddin qızı</strong></li>\r\n	<li><strong>&nbsp;Həsənova Fərqanə &Ccedil;ingiz qızı&nbsp;</strong></li>\r\n</ol>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&laquo;Kimya və qeyri-&uuml;zvi maddələrin texnologiyası&raquo; kafedrasında 43 əməkdaş, o c&uuml;mlədən 2 professor, 2 elmlər doktoru və 25 dosent, 1 assistent və 13 laborant fəaliyyət g&ouml;stərir.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&laquo;&Uuml;zvi maddələr və y&uuml;ksək molekullu birləşmələrin texnologiyası&raquo; kafedrasında 21 əməkdaş, o c&uuml;mlədən 2 professor və 10 dosent, 1 assistent, 1 baş m&uuml;əllim və 9 laborant fəaliyyət g&ouml;stərir.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&laquo;Neft-kimya texnolgoiyası və sənaye ek</p>\r\n', '<p>elaqe en22</p>\r\n', '<p>elaqe ru2222222</p>\r\n');
 
 -- --------------------------------------------------------
 
@@ -117,11 +123,17 @@ CREATE TABLE `department_categories` (
   `id` int(11) NOT NULL,
   `category_name_az` varchar(255) NOT NULL,
   `category_name_en` varchar(255) NOT NULL,
-  `category_name_ru` varchar(255) NOT NULL
+  `category_name_ru` varchar(255) NOT NULL,
+  `category_about_text_az` text NOT NULL,
+  `category_about_text_en` text NOT NULL,
+  `category_about_text_ru` text NOT NULL,
+  `category_contact_az` text NOT NULL,
+  `category_contact_en` text NOT NULL,
+  `category_contact_ru` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Tablo döküm verisi `department_categories`
+-- Dumping data for table `department_categories`
 --
 
 INSERT INTO `department_categories` (`id`, `category_name_az`, `category_name_en`, `category_name_ru`) VALUES
@@ -139,11 +151,14 @@ CREATE TABLE `department_contact` (
   `contact_email` varchar(100) NOT NULL,
   `contact_phone` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `department_categories` (`id`, `category_name_az`, `category_name_en`, `category_name_ru`, `category_about_text_az`, `category_about_text_en`, `category_about_text_ru`, `category_contact_az`, `category_contact_en`, `category_contact_ru`) VALUES
+(1, 'ekologiya kafedrasi', 'echology department', 'отдел экологии', '<p><span style=\"font-size:20px\"><span style=\"background-color:#e74c3c\">haqqinda birinici kafedra</span></span></p>\r\n', '<p><span style=\"font-size:20px\"><span style=\"background-color:#e74c3c\">haqqinda birinici kafedra en</span></span></p>\r\n', '<p><span style=\"font-size:20px\"><span style=\"background-color:#e74c3c\">haqqinda birinici kafedra ru</span></span></p>\r\n', '<p>ealqe az3</p>\r\n', '<p>ealqe en3</p>\r\n', '<p>ealqe ru3</p>\r\n'),
+(2, 'uzvi kimya kafedrasi', 'chemistry department', 'химический факультет', '<p><span style=\"color:#000000\"><span style=\"font-size:20px\"><span style=\"background-color:#d35400\">haqqinda</span></span></span></p>\r\n', '<p><span style=\"color:#2980b9\"><span style=\"font-size:16px\">haqqinda en2</span></span></p>\r\n', '<p><span style=\"font-size:20px\"><span style=\"color:#f1c40f\">haqqinda ru2</span></span></p>\r\n', '<p>elaqe az 2</p>\r\n', '<p>elaqe en 2</p>\r\n', '<p>elaqe ru 2</p>\r\n');
 
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `department_labaratory`
+-- Table structure for table `department_labaratory`
 --
 
 CREATE TABLE `department_labaratory` (
@@ -161,7 +176,7 @@ CREATE TABLE `department_labaratory` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Tablo döküm verisi `department_labaratory`
+-- Dumping data for table `department_labaratory`
 --
 
 INSERT INTO `department_labaratory` (`id`, `laboratory_name_az`, `laboratory_name_ru`, `laboratory_name_en`, `laboratory_desc_az`, `laboratory_desc_ru`, `laboratory_desc_en`, `laboratory_img`, `laboratory_catg_az`, `laboratory_catg_ru`, `laboratory_catg_en`) VALUES
@@ -227,7 +242,7 @@ CREATE TABLE `doctorate_about_text` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Tablo döküm verisi `doctorate_about_text`
+-- Dumping data for table `doctorate_about_text`
 --
 
 INSERT INTO `doctorate_about_text` (`id`, `doctorate_about_text_az`, `doctorate_about_text_en`, `doctorate_about_text_ru`) VALUES
@@ -236,7 +251,7 @@ INSERT INTO `doctorate_about_text` (`id`, `doctorate_about_text_az`, `doctorate_
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `doctorate_speciality_db`
+-- Table structure for table `doctorate_speciality_db`
 --
 
 CREATE TABLE `doctorate_speciality_db` (
@@ -251,7 +266,7 @@ CREATE TABLE `doctorate_speciality_db` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Tablo döküm verisi `doctorate_speciality_db`
+-- Dumping data for table `doctorate_speciality_db`
 --
 
 INSERT INTO `doctorate_speciality_db` (`doctorate_id`, `doctorate_text`, `doctorate_text_about_az`, `doctorate_text_text_az`, `doctorate_text_about_en`, `doctorate_text_text_en`, `doctorate_text_about_ru`, `doctorate_text_text_ru`) VALUES
@@ -261,7 +276,7 @@ INSERT INTO `doctorate_speciality_db` (`doctorate_id`, `doctorate_text`, `doctor
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `events_db`
+-- Table structure for table `events_db`
 --
 
 CREATE TABLE `events_db` (
@@ -277,7 +292,7 @@ CREATE TABLE `events_db` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Tablo döküm verisi `events_db`
+-- Dumping data for table `events_db`
 --
 
 INSERT INTO `events_db` (`event_id`, `event_img`, `event_time`, `event_title_az`, `event_title_en`, `event_title_ru`, `event_desc_az`, `event_desc_en`, `event_desc_ru`) VALUES
@@ -288,7 +303,7 @@ INSERT INTO `events_db` (`event_id`, `event_img`, `event_time`, `event_title_az`
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `laboratory_db`
+-- Table structure for table `laboratory_db`
 --
 
 CREATE TABLE `laboratory_db` (
@@ -297,7 +312,7 @@ CREATE TABLE `laboratory_db` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Tablo döküm verisi `laboratory_db`
+-- Dumping data for table `laboratory_db`
 --
 
 INSERT INTO `laboratory_db` (`id`, `lab_text`) VALUES
@@ -306,7 +321,7 @@ INSERT INTO `laboratory_db` (`id`, `lab_text`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `logo_and_title`
+-- Table structure for table `logo_and_title`
 --
 
 CREATE TABLE `logo_and_title` (
@@ -315,10 +330,17 @@ CREATE TABLE `logo_and_title` (
   `site_title` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `logo_and_title`
+--
+
+INSERT INTO `logo_and_title` (`id`, `logo_img`, `site_title`) VALUES
+(1, 'kimya.png', 'Kimya Fakültəsi');
+
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `master_about_text`
+-- Table structure for table `master_about_text`
 --
 
 CREATE TABLE `master_about_text` (
@@ -329,7 +351,7 @@ CREATE TABLE `master_about_text` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Tablo döküm verisi `master_about_text`
+-- Dumping data for table `master_about_text`
 --
 
 INSERT INTO `master_about_text` (`id`, `master_about_text_az`, `master_about_text_en`, `master_about_text_ru`) VALUES
@@ -338,7 +360,7 @@ INSERT INTO `master_about_text` (`id`, `master_about_text_az`, `master_about_tex
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `master_speciality_db`
+-- Table structure for table `master_speciality_db`
 --
 
 CREATE TABLE `master_speciality_db` (
@@ -353,16 +375,17 @@ CREATE TABLE `master_speciality_db` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Tablo döküm verisi `master_speciality_db`
+-- Dumping data for table `master_speciality_db`
 --
 
 INSERT INTO `master_speciality_db` (`master_id`, `master_text`, `master_text_about_az`, `master_text_text_az`, `master_text_about_en`, `master_text_text_en`, `master_text_about_ru`, `master_text_text_ru`) VALUES
-(12, '050628 master2', 'az name master2', '<h2 style=\"font-style:italic\">az about</h2>\r\n', 'en name', '<p>en about</p>\r\n', 'ru name', '<p>ru about</p>\r\n');
+(12, '050628 master2', 'az name master2', '<h2 style=\"font-style:italic\">az about</h2>\r\n', 'en name', '<p>en about</p>\r\n', 'ru name', '<p>ru about</p>\r\n'),
+(15, 'f', 'ff', '<p>asdasdsad</p>\r\n', 'asdasd', '<p>asdasdasd</p>\r\n', 'asdsad', '<p>asdsadasd</p>\r\n');
 
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `news_db`
+-- Table structure for table `news_db`
 --
 
 CREATE TABLE `news_db` (
@@ -378,7 +401,7 @@ CREATE TABLE `news_db` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Tablo döküm verisi `news_db`
+-- Dumping data for table `news_db`
 --
 
 INSERT INTO `news_db` (`news_id`, `news_title_az`, `news_title_en`, `news_title_ru`, `news_description_az`, `news_description_en`, `news_description_ru`, `news_time`, `news_img`) VALUES
@@ -392,7 +415,7 @@ INSERT INTO `news_db` (`news_id`, `news_title_az`, `news_title_en`, `news_title_
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `slide`
+-- Table structure for table `slide`
 --
 
 CREATE TABLE `slide` (
@@ -408,7 +431,7 @@ CREATE TABLE `slide` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Tablo döküm verisi `slide`
+-- Dumping data for table `slide`
 --
 
 INSERT INTO `slide` (`slide_id`, `slide_image`, `slide_title_az`, `slide_title_en`, `slide_title_ru`, `slide_desc_az`, `slide_desc_en`, `slide_desc_ru`, `slide_link`) VALUES
@@ -417,7 +440,7 @@ INSERT INTO `slide` (`slide_id`, `slide_image`, `slide_title_az`, `slide_title_e
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `specialty_db`
+-- Table structure for table `specialty_db`
 --
 
 CREATE TABLE `specialty_db` (
@@ -426,7 +449,7 @@ CREATE TABLE `specialty_db` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Tablo döküm verisi `specialty_db`
+-- Dumping data for table `specialty_db`
 --
 
 INSERT INTO `specialty_db` (`specialty_id`, `specialty_name`) VALUES
@@ -436,7 +459,7 @@ INSERT INTO `specialty_db` (`specialty_id`, `specialty_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `teachers_db`
+-- Table structure for table `teachers_db`
 --
 
 CREATE TABLE `teachers_db` (
@@ -460,7 +483,7 @@ CREATE TABLE `teachers_db` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Tablo döküm verisi `teachers_db`
+-- Dumping data for table `teachers_db`
 --
 
 INSERT INTO `teachers_db` (`teacher_id`, `teacher_name_az`, `teacher_surname_az`, `teacher_about_az`, `teacher_position_az`, `teacher_photo`, `department_category_az`, `teacher_name_en`, `teacher_surname_en`, `teacher_about_en`, `teacher_position_en`, `department_category_en`, `teacher_name_ru`, `teacher_surname_ru`, `teacher_about_ru`, `teacher_position_ru`, `department_category_ru`) VALUES
@@ -470,7 +493,7 @@ INSERT INTO `teachers_db` (`teacher_id`, `teacher_name_az`, `teacher_surname_az`
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `users_db`
+-- Table structure for table `users_db`
 --
 
 CREATE TABLE `users_db` (
@@ -481,16 +504,16 @@ CREATE TABLE `users_db` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Tablo döküm verisi `users_db`
+-- Dumping data for table `users_db`
 --
 
 INSERT INTO `users_db` (`user_id`, `user_name`, `user_password`, `user_email`) VALUES
-(1, 'admin', '6c9cdce9f6d927cea4c621b33ca05013', 'admin@mail.ru');
+(1, 'Admin', 'admin2017', 'admin@mail.ru');
 
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `use_links_db`
+-- Table structure for table `use_links_db`
 --
 
 CREATE TABLE `use_links_db` (
@@ -500,280 +523,280 @@ CREATE TABLE `use_links_db` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Tablo döküm verisi `use_links_db`
+-- Dumping data for table `use_links_db`
 --
 
 INSERT INTO `use_links_db` (`link_id`, `link_title`, `link_url`) VALUES
 (6, 'Google', '<p><a href=\"http://www.thechemicalengineer.com/\">http://www.thechemicalengineer.com/</a></p>\r\n\r\n<p><a href=\"https://www.thoughtco.com/chemistry-4133594\">https://www.thoughtco.com/chemistry-4133594</a>asdasd</p>\r\n');
 
 --
--- Dökümü yapılmış tablolar için indeksler
+-- Indexes for dumped tables
 --
 
 --
--- Tablo için indeksler `about_db`
+-- Indexes for table `about_db`
 --
 ALTER TABLE `about_db`
   ADD PRIMARY KEY (`about_id`);
 
 --
--- Tablo için indeksler `bachelor_about_text`
+-- Indexes for table `bachelor_about_text`
 --
 ALTER TABLE `bachelor_about_text`
   ADD PRIMARY KEY (`id`);
 
 --
--- Tablo için indeksler `bachelor_speciality_db`
+-- Indexes for table `bachelor_speciality_db`
 --
 ALTER TABLE `bachelor_speciality_db`
   ADD PRIMARY KEY (`bachelor_id`);
 
 --
--- Tablo için indeksler `department_about_text`
+-- Indexes for table `department_about_text`
 --
 ALTER TABLE `department_about_text`
   ADD PRIMARY KEY (`id`);
 
 --
--- Tablo için indeksler `department_categories`
+-- Indexes for table `department_categories`
 --
 ALTER TABLE `department_categories`
   ADD PRIMARY KEY (`id`);
 
 --
--- Tablo için indeksler `department_contact`
+-- Indexes for table `department_contact`
 --
 ALTER TABLE `department_contact`
   ADD PRIMARY KEY (`id`);
 
 --
--- Tablo için indeksler `department_labaratory`
+-- Indexes for table `department_labaratory`
 --
 ALTER TABLE `department_labaratory`
   ADD PRIMARY KEY (`id`);
 
 --
--- Tablo için indeksler `department_speciality`
+-- Indexes for table `department_speciality`
 --
 ALTER TABLE `department_speciality`
   ADD PRIMARY KEY (`id`);
 
 --
--- Tablo için indeksler `department_teacher`
+-- Indexes for table `department_teacher`
 --
 ALTER TABLE `department_teacher`
   ADD PRIMARY KEY (`id`);
 
 --
--- Tablo için indeksler `doctorate_about_text`
+-- Indexes for table `doctorate_about_text`
 --
 ALTER TABLE `doctorate_about_text`
   ADD PRIMARY KEY (`id`);
 
 --
--- Tablo için indeksler `doctorate_speciality_db`
+-- Indexes for table `doctorate_speciality_db`
 --
 ALTER TABLE `doctorate_speciality_db`
   ADD PRIMARY KEY (`doctorate_id`);
 
 --
--- Tablo için indeksler `events_db`
+-- Indexes for table `events_db`
 --
 ALTER TABLE `events_db`
   ADD PRIMARY KEY (`event_id`);
 
 --
--- Tablo için indeksler `laboratory_db`
+-- Indexes for table `laboratory_db`
 --
 ALTER TABLE `laboratory_db`
   ADD PRIMARY KEY (`id`);
 
 --
--- Tablo için indeksler `logo_and_title`
+-- Indexes for table `logo_and_title`
 --
 ALTER TABLE `logo_and_title`
   ADD PRIMARY KEY (`id`);
 
 --
--- Tablo için indeksler `master_about_text`
+-- Indexes for table `master_about_text`
 --
 ALTER TABLE `master_about_text`
   ADD PRIMARY KEY (`id`);
 
 --
--- Tablo için indeksler `master_speciality_db`
+-- Indexes for table `master_speciality_db`
 --
 ALTER TABLE `master_speciality_db`
   ADD PRIMARY KEY (`master_id`);
 
 --
--- Tablo için indeksler `news_db`
+-- Indexes for table `news_db`
 --
 ALTER TABLE `news_db`
   ADD PRIMARY KEY (`news_id`);
 
 --
--- Tablo için indeksler `slide`
+-- Indexes for table `slide`
 --
 ALTER TABLE `slide`
   ADD PRIMARY KEY (`slide_id`);
 
 --
--- Tablo için indeksler `specialty_db`
+-- Indexes for table `specialty_db`
 --
 ALTER TABLE `specialty_db`
   ADD PRIMARY KEY (`specialty_id`);
 
 --
--- Tablo için indeksler `teachers_db`
+-- Indexes for table `teachers_db`
 --
 ALTER TABLE `teachers_db`
   ADD PRIMARY KEY (`teacher_id`);
 
 --
--- Tablo için indeksler `users_db`
+-- Indexes for table `users_db`
 --
 ALTER TABLE `users_db`
   ADD PRIMARY KEY (`user_id`);
 
 --
--- Tablo için indeksler `use_links_db`
+-- Indexes for table `use_links_db`
 --
 ALTER TABLE `use_links_db`
   ADD PRIMARY KEY (`link_id`);
 
 --
--- Dökümü yapılmış tablolar için AUTO_INCREMENT değeri
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- Tablo için AUTO_INCREMENT değeri `about_db`
+-- AUTO_INCREMENT for table `about_db`
 --
 ALTER TABLE `about_db`
   MODIFY `about_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- Tablo için AUTO_INCREMENT değeri `bachelor_about_text`
+-- AUTO_INCREMENT for table `bachelor_about_text`
 --
 ALTER TABLE `bachelor_about_text`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- Tablo için AUTO_INCREMENT değeri `bachelor_speciality_db`
+-- AUTO_INCREMENT for table `bachelor_speciality_db`
 --
 ALTER TABLE `bachelor_speciality_db`
   MODIFY `bachelor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- Tablo için AUTO_INCREMENT değeri `department_about_text`
+-- AUTO_INCREMENT for table `department_about_text`
 --
 ALTER TABLE `department_about_text`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- Tablo için AUTO_INCREMENT değeri `department_categories`
+-- AUTO_INCREMENT for table `department_categories`
 --
 ALTER TABLE `department_categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- Tablo için AUTO_INCREMENT değeri `department_contact`
+-- AUTO_INCREMENT for table `department_contact`
 --
 ALTER TABLE `department_contact`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Tablo için AUTO_INCREMENT değeri `department_labaratory`
+-- AUTO_INCREMENT for table `department_labaratory`
 --
 ALTER TABLE `department_labaratory`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- Tablo için AUTO_INCREMENT değeri `department_speciality`
+-- AUTO_INCREMENT for table `department_speciality`
 --
 ALTER TABLE `department_speciality`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- Tablo için AUTO_INCREMENT değeri `department_teacher`
+-- AUTO_INCREMENT for table `department_teacher`
 --
 ALTER TABLE `department_teacher`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Tablo için AUTO_INCREMENT değeri `doctorate_about_text`
+-- AUTO_INCREMENT for table `doctorate_about_text`
 --
 ALTER TABLE `doctorate_about_text`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- Tablo için AUTO_INCREMENT değeri `doctorate_speciality_db`
+-- AUTO_INCREMENT for table `doctorate_speciality_db`
 --
 ALTER TABLE `doctorate_speciality_db`
   MODIFY `doctorate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- Tablo için AUTO_INCREMENT değeri `events_db`
+-- AUTO_INCREMENT for table `events_db`
 --
 ALTER TABLE `events_db`
   MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- Tablo için AUTO_INCREMENT değeri `laboratory_db`
+-- AUTO_INCREMENT for table `laboratory_db`
 --
 ALTER TABLE `laboratory_db`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- Tablo için AUTO_INCREMENT değeri `logo_and_title`
+-- AUTO_INCREMENT for table `logo_and_title`
 --
 ALTER TABLE `logo_and_title`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- Tablo için AUTO_INCREMENT değeri `master_about_text`
+-- AUTO_INCREMENT for table `master_about_text`
 --
 ALTER TABLE `master_about_text`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- Tablo için AUTO_INCREMENT değeri `master_speciality_db`
+-- AUTO_INCREMENT for table `master_speciality_db`
 --
 ALTER TABLE `master_speciality_db`
   MODIFY `master_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- Tablo için AUTO_INCREMENT değeri `news_db`
+-- AUTO_INCREMENT for table `news_db`
 --
 ALTER TABLE `news_db`
   MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- Tablo için AUTO_INCREMENT değeri `slide`
+-- AUTO_INCREMENT for table `slide`
 --
 ALTER TABLE `slide`
   MODIFY `slide_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
--- Tablo için AUTO_INCREMENT değeri `specialty_db`
+-- AUTO_INCREMENT for table `specialty_db`
 --
 ALTER TABLE `specialty_db`
   MODIFY `specialty_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- Tablo için AUTO_INCREMENT değeri `teachers_db`
+-- AUTO_INCREMENT for table `teachers_db`
 --
 ALTER TABLE `teachers_db`
   MODIFY `teacher_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- Tablo için AUTO_INCREMENT değeri `users_db`
+-- AUTO_INCREMENT for table `users_db`
 --
 ALTER TABLE `users_db`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- Tablo için AUTO_INCREMENT değeri `use_links_db`
+-- AUTO_INCREMENT for table `use_links_db`
 --
 ALTER TABLE `use_links_db`
   MODIFY `link_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;

@@ -825,6 +825,105 @@ class Mecnun extends CI_Controller{
 
 
 
+    public function about_departments(){
+
+        $data["categories"] = $this->Mecnun_model->get_categories();
+
+        $this->load->view('Admin/department_about/category_main', $data);
+    }
+
+    public function update_about_department($id){
+        $data["category"] = $this->Mecnun_model->get_department_category(array(
+            "id" => $id,
+        ));
+
+        $this->load->view('Admin/department_about/category_update', $data);
+    }
+
+    public function update_about_department_act($id){
+
+        $about_az = $this->input->post("about_az");
+        $about_en = $this->input->post("about_en");
+        $about_ru = $this->input->post("about_ru");
+
+        if (!empty($about_az) && !empty($about_en) && !empty($about_ru)){
+
+            $data = array(
+                "category_about_text_az" => $about_az,
+                "category_about_text_en" => $about_en,
+                "category_about_text_ru" => $about_ru,
+            );
+
+            $where = array(
+              "id" => $id,
+            );
+
+            $this->Mecnun_model->update_department_category($where, $data);
+
+            $msg = 'Haqqında hissesi uğurla yeniləndi!';
+            $this->session->set_flashdata('success',$msg);
+            redirect("himalaY_kafedralar_haqqinda");
+
+        }else{
+            $msg = 'Zəhmət olmasa boşluq buraxmayın!';
+            $this->session->set_flashdata('alert',$msg);
+            redirect('himalaY_kafedralar_haqqinda_yenile');
+        }
+
+    }
+
+
+
+
+    public function contact_departments(){
+
+        $data["categories"] = $this->Mecnun_model->get_categories();
+
+        $this->load->view('Admin/department_contact/category_main', $data);
+    }
+
+    public function update_contact_department($id){
+        $data["category"] = $this->Mecnun_model->get_department_category(array(
+            "id" => $id,
+        ));
+
+        $this->load->view('Admin/department_contact/category_update', $data);
+    }
+
+    public function update_contact_department_act($id){
+
+        $contact_az = $this->input->post("category_contact_text_az");
+        $contact_en = $this->input->post("category_contact_text_en");
+        $contact_ru = $this->input->post("category_contact_text_ru");
+
+        if (!empty($contact_az) && !empty($contact_en) && !empty($contact_ru)){
+
+            $data = array(
+                "category_contact_az" => $contact_az,
+                "category_contact_en" => $contact_en,
+                "category_contact_ru" => $contact_ru,
+            );
+
+            $where = array(
+                "id" => $id,
+            );
+
+            $this->Mecnun_model->update_department_category($where, $data);
+
+            $msg = 'Əlaqə hissesi uğurla yeniləndi!';
+            $this->session->set_flashdata('success',$msg);
+            redirect("himalaY_kafedralar_elaqe");
+
+        }else{
+            $msg = 'Zəhmət olmasa boşluq buraxmayın!';
+            $this->session->set_flashdata('alert',$msg);
+            redirect("himalaY_kafedralar_elaqe_yenile/$id");
+        }
+
+    }
+
+
+
 
 
     //     ============= Laboratory Hissesi ================
@@ -1040,6 +1139,53 @@ class Mecnun extends CI_Controller{
 
     }
 
+
+
+//     ============= Elaqe Hissesi ================
+
+    public function contact()
+    {
+
+        $data["contact_text"] = $this->Mecnun_model->getContact();
+
+        $this->load->view('Admin/contact/contact_main',$data);
+    }
+
+    public function update_contact()
+    {
+
+        $data["contact"] = $this->Mecnun_model->getContact();
+
+        $this->load->view('Admin/contact/contact_update',$data);
+    }
+
+    public function update_contact_act()
+    {
+
+        $data = [
+            'contact_text_az' => $this->input->post('contact_text_az'),
+            'contact_text_en' => $this->input->post('contact_text_en'),
+            'contact_text_ru' => $this->input->post('contact_text_ru'),
+        ];
+
+        if (!empty($this->input->post('contact_text_az')) && !empty($this->input->post('contact_text_en')) && !empty($this->input->post('contact_text_ru')) ){
+
+            $this->Mecnun_model->updateContact($data);
+            $msg = 'Əlaqə hissəsi düzənləndi ! ';
+            $this->session->set_flashdata('success', $msg);
+
+            redirect(base_url('himalaY_elaqe'));
+
+        }else{
+            $msg = 'Zəhmət olmasa boşluq buraxmayın ! ';
+            $this->session->set_flashdata('alert',$msg);
+
+            redirect(base_url('himalaY_elaqe_duzenle'));
+        }
+
+
+
+    }
 
 
 
