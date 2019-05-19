@@ -50,7 +50,7 @@
                             <td><?php echo $data_key['bachelor_text'] ?></td>
                             <td>
 
-                                <a href="<?php echo base_url('Bachelor/Speciality/'.$data_key['bachelor_id']); ?>"><?php echo $data_key['bachelor_text_about'] ?></a>
+                                <a href="<?php echo base_url('Bachelor/Speciality/'.$data_key['bachelor_id']); ?>"><?php echo $data_key['bachelor_text_about_az'] ?></a>
 
                             </td>
                         </tr>

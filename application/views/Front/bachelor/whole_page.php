@@ -32,7 +32,7 @@
                 <div class="about_right_text">
 
                     <?php
-                    echo $data[0]['bachelor_about_text'];
+                    echo $data[0]['bachelor_about_text_az'];
                     ?>
 
                 </div>

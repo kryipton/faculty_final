@@ -867,14 +867,11 @@ class Mecnun extends CI_Controller{
         }else{
             $msg = 'Zəhmət olmasa boşluq buraxmayın!';
             $this->session->set_flashdata('alert',$msg);
-            redirect('himalaY_kafedralar_haqqinda_yenile');
+            redirect("himalaY_kafedralar_haqqinda_yenile/$id");
         }
 
     }
-
-
-
-
+    
     public function contact_departments(){
 
         $data["categories"] = $this->Mecnun_model->get_categories();
@@ -926,7 +923,7 @@ class Mecnun extends CI_Controller{
 
 
 
-    //     ============= Laboratory Hissesi ================
+    //     ============= Laboratory (KAFEDRA) Hissesi ================
 
     public function laboratory()
     {
@@ -1824,6 +1821,134 @@ class Mecnun extends CI_Controller{
             redirect("himalaY_ixtisas_yenile/$id");
         }
     }
+
+
+
+    //     ============= Laboratory (FAKULTE) Hissesi ================
+
+    public function faculty_laboratory()
+    {
+        $data['laboratories']=$this->Mecnun_model->getLaboratoriesF();
+        $this->load->view('Admin/faculty_lab/laboratory',$data);
+    }
+
+    public function update_faculty_laboratory($id)
+    {
+        $where=[
+            'id' => $id
+        ];
+
+        $data["laboratory"] = $this->Mecnun_model->getLaboratoryF($where);
+        $this->load->view('Admin/faculty_lab/laboratory_update',$data);
+    }
+
+    public function update_faculty_laboratory_act($id){
+        $where =[
+            'id' =>$id
+        ];
+        $laboratory_name_az = strip_tags($_POST['laboratory_name_az']);
+        $laboratory_name_ru = strip_tags($_POST['laboratory_name_ru']);
+        $laboratory_name_en = strip_tags($_POST['laboratory_name_en']);
+        $laboratory_desc_az = $_POST['laboratory_desc_az'];
+        $laboratory_desc_ru = $_POST['laboratory_desc_ru'];
+        $laboratory_desc_en = $_POST['laboratory_desc_en'];
+
+
+        $config['upload_path']   = 'upload/laboratory_images/';
+        $config['max_size']     = '10000';
+        $config['allowed_types'] = 'jpg|jpeg|png';
+        $this->upload->initialize($config);
+        if (!empty($laboratory_name_az) and !empty($laboratory_name_ru) and !empty($laboratory_name_en) and !empty($laboratory_desc_az) and !empty($laboratory_desc_ru))
+        {
+            if($this->upload->do_upload('laboratory_photo')) {
+                $data = array(
+                    'lab_title_az' => $laboratory_name_az,
+                    'lab_title_ru' => $laboratory_name_ru,
+                    'lab_title_en' => $laboratory_name_en,
+                    'lab_text_az' => $laboratory_desc_az,
+                    'lab_text_ru' => $laboratory_desc_ru,
+                    'lab_text_en' => $laboratory_desc_en,
+
+                    'laboratory_img' =>  $this->upload->data('file_name')
+                );
+                $this->Mecnun_model->updateLaboratoryF($where,$data);
+                $this->session->set_flashdata('success', 'Labaratoriya düzənləndi');
+                redirect(base_url('himalaY_fakulte_laboratoriya'));
+            }else{
+                $data = array(
+                    'lab_title_az' => $laboratory_name_az,
+                    'lab_title_ru' => $laboratory_name_ru,
+                    'lab_title_en' => $laboratory_name_en,
+                    'lab_text_az' => $laboratory_desc_az,
+                    'lab_text_ru' => $laboratory_desc_ru,
+                    'lab_text_en' => $laboratory_desc_en,
+                );
+                $this->Mecnun_model->updateLaboratoryF($where,$data);
+                $this->session->set_flashdata('success', 'Labaratoriya düzənləndi');
+                redirect(base_url('himalaY_fakulte_laboratoriya'));
+
+            }
+
+        }else{
+            $this->session->set_flashdata('error','Melumatlari duzgun daxil edin');
+            redirect(base_url('himalaY_fakulte_laboratoriya'));
+        }
+
+    }
+
+    public function create_faculty_laboratory()
+    {
+        $this->load->view('Admin/faculty_lab/laboratory_create');
+    }
+
+    public function create_faculty_laboratory_action()
+    {
+        $laboratory_name_az = strip_tags($_POST['laboratory_name_az']);
+        $laboratory_name_ru = strip_tags($_POST['laboratory_name_ru']);
+        $laboratory_name_en = strip_tags($_POST['laboratory_name_en']);
+        $laboratory_desc_az = $_POST['laboratory_desc_az'];
+        $laboratory_desc_ru = $_POST['laboratory_desc_ru'];
+        $laboratory_desc_en = $_POST['laboratory_desc_en'];
+
+        $config['upload_path']   = 'upload/laboratory_images/';
+        $config['max_size']     = '10000';
+        $config['allowed_types'] = 'jpg|jpeg|png';
+        $this->upload->initialize($config);
+
+        if (!empty($laboratory_name_az) and !empty($laboratory_name_ru) and !empty($laboratory_name_en) and !empty($laboratory_desc_az) and !empty($laboratory_desc_ru) and !empty($laboratory_desc_en) )
+        {
+            $data = array(
+                'lab_title_az' => $laboratory_name_az,
+                'lab_title_ru' => $laboratory_name_ru,
+                'lab_title_en' => $laboratory_name_en,
+                'lab_text_az' => $laboratory_desc_az,
+                'lab_text_ru' => $laboratory_desc_ru,
+                'lab_text_en' => $laboratory_desc_en,
+                'laboratory_img'     => ($this->upload->do_upload('laboratory_photo')) ? $this->upload->data('file_name') : 'default_noimage.jpg',
+
+            );
+            $this->Mecnun_model->insertLaboratoryF($data);
+            $this->session->set_flashdata('success','Labaratoriya elave edildi');
+            redirect(base_url('himalaY_fakulte_laboratoriya'));
+
+
+        }else{
+            $this->session->set_flashdata('error','Boşluq buraxmayın');
+            redirect(base_url('himalaY_fakulte_laboratoriya_elave_et'));
+        }
+
+    }
+
+    public function delete_faculty_laboratory($id)
+    {
+        $this->Mecnun_model->deleteLaboratoryF([
+            'id' => $id
+        ]);
+        $this->session->set_flashdata('success','Labaratoriya silindi');
+        redirect(base_url('himalaY_fakulte_laboratoriya'));
+    }
+
+
 
 
 

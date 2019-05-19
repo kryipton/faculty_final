@@ -46,6 +46,7 @@ class Leyli extends CI_Controller {
 
     public function labaratory(){
         $data['last_events'] = $this->Events_model->get_last_events();
+        $data['laboratories'] = $this->Laboratory_model->get_all();
 
         $this->load->view('Front/labaratory/whole_page', $data);
     }
@@ -162,6 +163,8 @@ class Leyli extends CI_Controller {
         $data['data'] = $this->Department_model->get_desc();
 
         $data['last_events'] = $this->Events_model->get_last_events();
+
+        $data['teachers'] = $this->Events_model->get_last_events();
 
         $this->load->view('Front/department_teachers/whole_page', $data);
     }

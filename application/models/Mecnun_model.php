@@ -119,8 +119,34 @@ class Mecnun_model extends  CI_Model{
 }
 
 
+    //==========================Laboratory (FAKULTE) Hissesi========================================================================
 
-//==========================Laboratory Hissesi========================================================================
+    public function getLaboratoriesF()
+    {
+        return $this->db->order_by('id','DESC')->get('laboratory_db')->result_array();
+    }
+
+    public function insertLaboratoryF($data)
+    {
+        $this->db->insert('laboratory_db',$data);
+    }
+
+    public function deleteLaboratoryF($where)
+    {
+        $this->db->where($where)->delete('laboratory_db');
+    }
+
+    public function getLaboratoryF($where)
+    {
+        return $this->db->where($where)->get('laboratory_db')->row_array();
+    }
+
+    public function updateLaboratoryF($where,$data)
+    {
+        $this->db->where($where)->update('laboratory_db',$data);
+
+    }
+//==========================Laboratory (KAFEDRA) Hissesi========================================================================
 
 
    public function insert_laboratory($data)
@@ -353,4 +379,7 @@ class Mecnun_model extends  CI_Model{
     {
         $this->db->where($where)->update("department_speciality", $data);
     }
+
+
+
 }

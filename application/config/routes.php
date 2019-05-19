@@ -194,16 +194,27 @@ $route['himalaY_muellimler_yenile/(.*)'] = 'Mecnun/update_teachers/$1';
 $route['himalaY_muellimler_yenilenmesi/(.*)'] = 'Mecnun/update_teachers_act/$1';
 $route['himalaY_muellimler_silme/(.*)'] = 'Mecnun/delete_teachers/$1';
 
+//Laboratoriya (Fakulte)
+$route['himalaY_fakulte_laboratoriya'] = 'Mecnun/faculty_laboratory';
+$route['himalaY_fakulte_laboratoriya_yenile/(.*)'] = 'Mecnun/update_faculty_laboratory/$1';
+$route['himalaY_fakulte_laboratoriya_yenile_act/(.*)'] = 'Mecnun/update_faculty_laboratory_act/$1';
+$route['himalaY_fakulte_laboratoriya_elave_et'] = 'Mecnun/create_faculty_laboratory';
+$route['himalaY_fakulte_laboratoriya_elave_etme'] = 'Mecnun/create_faculty_laboratory_action';
+$route['himalaY_fakulte_laboratoriya_sil/(.*)'] = 'Mecnun/delete_faculty_laboratory/$1';
 
 
 
-//Laboratoriya
+
+
+//Laboratoriya (Kafedra)
 $route['himalaY_laboratoriya'] = 'Mecnun/laboratory';
 $route['himalaY_laboratoriya_yenile/(.*)'] = 'Mecnun/update_laboratory/$1';
 $route['himalaY_laboratoriya_yenile_act/(.*)'] = 'Mecnun/update_laboratory_act/$1';
 $route['himalaY_laboratoriya_elave_et'] = 'Mecnun/create_laboratory';
 $route['himalaY_laboratoriya_elave_etme'] = 'Mecnun/create_laboratory_action';
 $route['himalaY_laboratoriya_sil/(.*)'] = 'Mecnun/delete_laboratory/$1';
+
+
 
 
 //Linkler

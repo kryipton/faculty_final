@@ -28,10 +28,10 @@
 
 
         <div class="col-md-8">
-            <span class="text-center head_f_p"><?php echo $data['bachelor_text_about']; ?></span>
+            <span class="text-center head_f_p"><?php echo $data['bachelor_text_about_az']; ?></span>
             <div class="about_right" style="padding: 20px 0px 0px 10px">
 
-                <div><?php echo $data['bachelor_text_text']; ?></div>
+                <div><?php echo $data['bachelor_text_text_az']; ?></div>
 
             </div>
         </div>

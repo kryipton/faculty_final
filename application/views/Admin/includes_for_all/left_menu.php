@@ -31,6 +31,7 @@
             <a class="a2" href="<?php echo base_url('himalaY_xeberler') ?>"><li class="a1">Xəbərlər</li></a>
             <a class="a2" href="<?php echo base_url('himalaY_slider') ?>"><li class="a1">Slider</li></a>
             <a class="a2" href="<?php echo base_url('himalaY_tedbirler') ?>"><li class="a1">Tədbirlər</li></a>
+            <a class="a2" href="<?php echo base_url('himalaY_fakulte_laboratoriya') ?>"><li class="a1">Laboratoriya</li></a>
             <a class="a2" href="<?php echo base_url('himalaY_link') ?>"><li class="a1">Linklər</li></a>
 
             <a class="a2" href="<?php echo base_url('himalaY_bakalavr') ?>"><li class="a1">Bakalavr</li></a>
