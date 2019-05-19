@@ -153,7 +153,7 @@ class Mecnun_model extends  CI_Model{
 
 
 
-    //==================================================   Haqqimizda emeliyyatlari emeliyatlari =======================================================================
+    //==================================================   Haqqimizda hissesi =======================================================================
 
 
     public function getAbout($where)
@@ -166,6 +166,23 @@ class Mecnun_model extends  CI_Model{
     {
         $this->db->where($where)->update('about_db',$data);
 }
+
+
+
+
+    //==================================================   Elaqe hissesi =======================================================================
+
+
+    public function getContact()
+    {
+        return $this->db->where("id", 1)->get('contact_db')->row_array();
+
+    }
+
+    public function updateContact($data)
+    {
+        $this->db->where("id", 1)->update('contact_db',$data);
+    }
 
 
 

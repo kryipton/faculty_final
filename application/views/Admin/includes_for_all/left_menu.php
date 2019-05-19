@@ -32,6 +32,7 @@
             <a class="a2" href="<?php echo base_url('himalaY') ?>"><li class="a1">Dashboard</li></a>
 
             <a class="a2" href="<?php echo base_url('himalaY_haqqimizda') ?>"><li class="a1">Haqqımızda</li></a>
+            <a class="a2" href="<?php echo base_url('himalaY_elaqe') ?>"><li class="a1">Əlaqə</li></a>
             <a class="a2" href="<?php echo base_url('himalaY_loqo') ?>"><li class="a1">Loqo Və Başlıqı</li></a>
 
             <a class="a2" href="<?php echo base_url('himalaY_xeberler') ?>"><li class="a1">Xəbərlər</li></a>
@@ -44,7 +45,9 @@
             <a class="a2" href="<?php echo base_url('himalaY_doktorantura') ?>"><li class="a1">Doktorantura</li></a>
 
 
-            <a class="a2" href="<?php echo base_url('himalaY_kafedralar') ?>"><li class="a1">Kafedralar(Adları)</li></a>
+            <a class="a2" href="<?php echo base_url('himalaY_kafedralar') ?>"><li class="a1">Kafedralar</li></a>
+            <a class="a2" href="<?php echo base_url('himalaY_kafedralar_haqqinda') ?>"><li class="a1">Kafedralar(Haqqında)</li></a>
+            <a class="a2" href="<?php echo base_url('himalaY_kafedralar_elaqe') ?>"><li class="a1">Kafedralar(Əlaqə)</li></a>
             <a class="a2" href="<?php echo base_url('himalaY_muellimler') ?>"><li class="a1">Kafedralar(Müəllimlər)</li></a>
             <a class="a2" href="<?php echo base_url('himalaY_laboratoriya') ?>"><li class="a1">Kafedralar(Laboratoriya)</li></a>
 
