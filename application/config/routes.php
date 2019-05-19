@@ -216,6 +216,15 @@ $route['himalaY_haqqimizda'] = 'Mecnun/about';
 $route['himalaY_haqqimizda_duzenle/(.*)'] = 'Mecnun/update_about/$1';
 $route['himalaY_haqqimizda_duzenle_act/(.*)'] = 'Mecnun/update_about_act/$1';
 
+
+
+//Elaqe
+$route['himalaY_elaqe'] = 'Mecnun/contact';
+$route['himalaY_elaqe_duzenle'] = 'Mecnun/update_contact';
+$route['himalaY_elaqe_duzenle_act'] = 'Mecnun/update_contact_act';
+
+
+
 //Logo ve basliq
 $route['himalaY_loqo'] = 'Mecnun/logo';
 $route['himalaY_loqo_duzenle'] = 'Mecnun/update_logo_and_title';

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2019 at 03:30 PM
+-- Generation Time: May 19, 2019 at 04:16 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -88,6 +88,26 @@ INSERT INTO `bachelor_speciality_db` (`bachelor_id`, `bachelor_text`, `bachelor_
 (12, '050628', 'az name', '<h2 style=\"font-style:italic\">az about</h2>\r\n', 'en name', '<p>en about</p>\r\n', 'ru name', '<p>ru about</p>\r\n'),
 (13, '050628', 'Prosesleriadasdsaddad', '<p>aboutasdasdasdasdad</p>\r\n', 'en name', '<p>en</p>\r\n', 'ry name', '<p>ru</p>\r\n'),
 (14, 'asdsa', 'sadasd', '<p>asdasd</p>\r\n', 'asdsad', '<p>asdasd</p>\r\n', 'asdas', '<p>asdsad</p>\r\n');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact_db`
+--
+
+CREATE TABLE `contact_db` (
+  `id` int(11) NOT NULL,
+  `contact_text_az` text NOT NULL,
+  `contact_text_en` text NOT NULL,
+  `contact_text_ru` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `contact_db`
+--
+
+INSERT INTO `contact_db` (`id`, `contact_text_az`, `contact_text_en`, `contact_text_ru`) VALUES
+(1, '<p>Fak&uuml;ltədə 1 akademik, 20 professor, 69 dosent, 18 baş m&uuml;əllim və assistent &ccedil;alışır. Hazırda Kimya texnologiya fak&uuml;ltəsinin g&uuml;nd&uuml;z ş&ouml;bəsində 831 nəfər əyani, 64 nəfər isə qiyabi ş&ouml;bədə təhsil alır.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>2016-cı ildən ADNSU rektorunun əmri ilə fak&uuml;ltənin nəzdində &laquo;Yeni kimyəvi materiallar və texnologiyalar&raquo; adlı elmi-tədqiqat laboratoriyası yaradılıb. Laboratoriyaya k.e.d, professor Bağıyev Vaqif La&ccedil;ın oğlu rəhbərlik edir.</p>\r\n\r\n<p>&Uuml;mumilikdə fak&uuml;ltədə 13 professor, 4 elmlər doktoru, 68 dosent, 2 assistent və 29 laborant &ccedil;alışır.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>ADNSU-da kimya&ccedil;ı m&uuml;həndislərin hazırlığı 1921-ci ildən kimya ş&ouml;bəsi kimi &laquo;Neft sənayesi&raquo; fak&uuml;ltəsində, 1934-ci ildən &laquo;Neft texnologiyası&raquo;, 1940-cı ildən isə &laquo;Kimya texnologiyası&raquo; fak&uuml;ltəsində həyata ke&ccedil;irilir.Fak&uuml;ltədə yarandığı g&uuml;ndən indiyədək neft emalı və neft-kimya sənayesi &uuml;&ccedil;&uuml;n 18000-ə yaxın kimya&ccedil;ı-m&uuml;həndis texnoloq hazırlanıb. 1981-ci ildən fak&uuml;ltədə xarici &ouml;lkə vətəndaşlarının hazırlığı həyata ke&ccedil;irilir. &Ouml;tən illər ərzində d&uuml;nyanın 54 &ouml;lkəsi &uuml;&ccedil;&uuml;n 332 bakalavr, 326 magistr və 33 elmlər namizədi hazırlanıb.</p>\r\n\r\n<p>2009/2010-cu tədris ilinədək fak&uuml;ltədə: 1. &laquo;Kimya-texnologiyası&raquo;, 2. &laquo;Ekologiya və təbiətdən istifadə&raquo; və 3. &laquo;Həyat fəaliyyətinin təhl&uuml;kəsizliyi&raquo; istiqamətləri, 2009/2010-cu tədris ilindən isə 1.&raquo;Kimya m&uuml;həndisliyi&raquo;, 2. &laquo;Ekologiya m&uuml;həndisliyi&raquo; və 3. &laquo; F&ouml;vqəladə hallar və həyat fəaliyyətinin təhl&uuml;kəsizliyi&raquo; ixtisasları və 11 ixtisaslaşma &uuml;zrə kredit sistemi ilə bakalavr hazırlığı &nbsp;həyata ke&ccedil;irilir.Fak&uuml;ltədə 3 istiqamət: 1. &laquo;Kimya texnologiyası&raquo; 2. &laquo;Ekologiya və təbiətdən istifadə&raquo; və 3. &laquo;Həyat fəaliyyətinin təhl&uuml;kəsizliyi&raquo; istiqamətləri və 3 ixtisas &uuml;zrə magistr hazırlığı həyata ke&ccedil;irilir.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Fak&uuml;ltənin nəzdində 4 &uuml;mumi və 4 ixtisas kafedrası, 7 tədris, 6 problem və Rusiyanın &laquo;Lukoyl&raquo; firmasının təsis&ccedil;iliyi ilə &laquo;Fizika-kimyəvi &nbsp;analiz metodları&raquo; mərkəzləşdirilmiş laboratoriya fəaliyyət g&ouml;stərir.</p>\r\n\r\n<p>2016-cı ildən fak&uuml;ltədə 2 istiqamət; &laquo;Kimya m&uuml;həndisliyi&raquo; və &laquo;Ekologiya m&uuml;həndisliyi&raquo; ixtisasları &uuml;zrə y&uuml;ksək ixtisaslı m&uuml;həndis hazırlanır.</p>\r\n\r\n<p>Kafedralar: M&ouml;vcud olan 7 kafedra 2016-cı ilin fevral ayından birləşdirilərək:</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<ul>\r\n	<li><strong>&laquo;Kimya və qeyri-&uuml;zvi maddələrin texnologiyası&raquo;</strong></li>\r\n	<li><strong>&laquo;&Uuml;zvi maddələr və y&uuml;ksək molekullu birləşmələrin texnologiyası&raquo;</strong></li>\r\n	<li><strong>&laquo;Neft-kimya texnologiyası və sənaye ekologiyası&raquo; kafedraları yaradılıb.</strong></li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Fak&uuml;ltənin nəzdində həm&ccedil;inin &ldquo;İctimai elmlər&raquo; kafedrası da fəaliyyət g&ouml;stərir.</p>\r\n\r\n<p>Kimya texnologiya fak&uuml;ltəsində&nbsp;<strong><em>4 tyutor</em></strong>&nbsp;fəaliyyət g&ouml;stərir.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<ol>\r\n	<li><strong>&nbsp;Qədimov İlqar Kamil oğlu</strong></li>\r\n	<li><strong>&nbsp;Ağayev Famil Bayram oğlu</strong></li>\r\n	<li><strong>&nbsp;Əhmədova Dinarə Vəlyəddin qızı</strong></li>\r\n	<li><strong>&nbsp;Həsənova Fərqanə &Ccedil;ingiz qızı&nbsp;</strong></li>\r\n</ol>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&laquo;Kimya və qeyri-&uuml;zvi maddələrin texnologiyası&raquo; kafedrasında 43 əməkdaş, o c&uuml;mlədən 2 professor, 2 elmlər doktoru və 25 dosent, 1 assistent və 13 laborant fəaliyyət g&ouml;stərir.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&laquo;&Uuml;zvi maddələr və y&uuml;ksək molekullu birləşmələrin texnologiyası&raquo; kafedrasında 21 əməkdaş, o c&uuml;mlədən 2 professor və 10 dosent, 1 assistent, 1 baş m&uuml;əllim və 9 laborant fəaliyyət g&ouml;stərir.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&laquo;Neft-kimya texnolgoiyası və sənaye ek</p>\r\n', '<p>elaqe en22</p>\r\n', '<p>elaqe ru2222222</p>\r\n');
 
 -- --------------------------------------------------------
 
@@ -508,6 +528,12 @@ ALTER TABLE `bachelor_speciality_db`
   ADD PRIMARY KEY (`bachelor_id`);
 
 --
+-- Indexes for table `contact_db`
+--
+ALTER TABLE `contact_db`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `department_categories`
 --
 ALTER TABLE `department_categories`
@@ -630,6 +656,12 @@ ALTER TABLE `bachelor_about_text`
 --
 ALTER TABLE `bachelor_speciality_db`
   MODIFY `bachelor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `contact_db`
+--
+ALTER TABLE `contact_db`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `department_categories`

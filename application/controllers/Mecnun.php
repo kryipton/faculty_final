@@ -1072,6 +1072,53 @@ class Mecnun extends CI_Controller{
 
 
 
+//     ============= Elaqe Hissesi ================
+
+    public function contact()
+    {
+
+        $data["contact_text"] = $this->Mecnun_model->getContact();
+
+        $this->load->view('Admin/contact/contact_main',$data);
+    }
+
+    public function update_contact()
+    {
+
+        $data["contact"] = $this->Mecnun_model->getContact();
+
+        $this->load->view('Admin/contact/contact_update',$data);
+    }
+
+    public function update_contact_act()
+    {
+
+        $data = [
+            'contact_text_az' => $this->input->post('contact_text_az'),
+            'contact_text_en' => $this->input->post('contact_text_en'),
+            'contact_text_ru' => $this->input->post('contact_text_ru'),
+        ];
+
+        if (!empty($this->input->post('contact_text_az')) && !empty($this->input->post('contact_text_en')) && !empty($this->input->post('contact_text_ru')) ){
+
+            $this->Mecnun_model->updateContact($data);
+            $msg = 'Əlaqə hissəsi düzənləndi ! ';
+            $this->session->set_flashdata('success', $msg);
+
+            redirect(base_url('himalaY_elaqe'));
+
+        }else{
+            $msg = 'Zəhmət olmasa boşluq buraxmayın ! ';
+            $this->session->set_flashdata('alert',$msg);
+
+            redirect(base_url('himalaY_elaqe_duzenle'));
+        }
+
+
+
+    }
+
+
 
 //     ============= Loqo ve saytin basliqi hissesi Hissesi ================
 
