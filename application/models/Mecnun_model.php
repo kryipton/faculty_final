@@ -311,6 +311,29 @@ class Mecnun_model extends  CI_Model{
     }
 
 
+    //==================================================   Kafedra Ixtisaslar hissesi hissesi=======================================================================
+    public function get_all_specialties()
+    {
+        return $this->db->get("department_speciality")->result_array();
+    }
 
+    public function deleteSpeciality($where)
+    {
+        $this->db->where($where)->delete("department_speciality");
+    }
 
+    public function addSpeciality($data)
+    {
+        $this->db->insert("department_speciality", $data);
+    }
+
+    public function getSingleSpeciality($where)
+    {
+        return $this->db->where($where)->get('department_speciality')->row_array();
+}
+
+    public function updateSpeciality($where, $data)
+    {
+        $this->db->where($where)->update("department_speciality", $data);
+    }
 }

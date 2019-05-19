@@ -250,8 +250,25 @@ $route['himalaY_doktorantura_ixtisas_silme/(.*)'] = 'Mecnun/delete_doctorate_spe
 $route['himalaY_doktorantura_ixtisas_yenile/(.*)'] = 'Mecnun/update_doctorate_speciality/$1';
 $route['himalaY_doktorantura_ixtisas_yenileme/(.*)'] = 'Mecnun/update_doctorate_speciality_act/$1';
 
+// Ixtisaslar
+
+$route['himalaY_ixtisaslar'] = 'Mecnun/specialities';
+$route['himalaY_ixtisas_elave_et'] = 'Mecnun/speciality_add';
+$route['himalaY_ixtisas_elave_et_act'] = 'Mecnun/speciality_add_act';
+$route['himalaY_ixtisas_silme/(.*)'] = 'Mecnun/speciality_delete/$1';
+$route['himalaY_ixtisas_yenile/(.*)'] = 'Mecnun/speciality_update/$1';
+$route['himalaY_ixtisas_yenile_act/(.*)'] = 'Mecnun/speciality_update_act/$1';
 
 
 
 
+
+
+
+
+//==========================================  Admin panele aid login hisse ===================================================
+
+$route['himalaY_secure'] = 'LeyMec/login';
+$route['himalaY_secure_act'] = 'LeyMec/login_act';
+$route['himalaY_secure_out'] = 'LeyMec/logOut';
 

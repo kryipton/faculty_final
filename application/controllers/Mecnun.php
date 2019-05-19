@@ -5,6 +5,9 @@ class Mecnun extends CI_Controller{
     {
         parent::__construct();
         $this->load->model('Mecnun_model');
+        if(!get_active_user()){
+            redirect(base_url('himalaY_secure'));
+        }
     }
 
     public function index(){
@@ -1564,10 +1567,117 @@ class Mecnun extends CI_Controller{
 
 
 
+    //     ============================ Kafedra(ixtisaslar) Hissesi ================================
+    public function specialities()
+    {
+        $data["all_specialities"] = $this->Mecnun_model->get_all_specialties();
+        $this->load->view('Admin/specialities/speciality_list',$data);
+    }
+
+    public function speciality_add()
+    {
+        $this->load->view('Admin/specialities/speciality_add');
+    }
+
+    public function speciality_add_act()
+    {
+        $speciality_code = $this->input->post("speciality_code");
+
+        $speciality_name_az = $this->input->post("speciality_name_az");
+        $speciality_about_az = $this->input->post("speciality_about_az");
 
 
+        $speciality_name_en = $this->input->post("speciality_name_en");
+        $speciality_about_en = $this->input->post("speciality_about_en");
 
 
+        $speciality_name_ru = $this->input->post("speciality_name_ru");
+        $speciality_about_ru = $this->input->post("speciality_about_ru");
+
+        if (!empty($speciality_code) && !empty($speciality_name_az) && !empty($speciality_about_az) && !empty($speciality_about_ru) && !empty($speciality_name_en) && !empty($speciality_about_en) && !empty($speciality_name_ru)){
+            $data = array(
+                "speciality_code" => $speciality_code,
+                "speciality_name_az" => $speciality_name_az,
+                "speciality_desc_az" => $speciality_about_az,
+                "speciality_name_en" => $speciality_name_en,
+                "speciality_desc_en" => $speciality_about_en,
+                "speciality_name_ru" => $speciality_name_ru,
+                "speciality_desc_ru" => $speciality_about_ru,
+            );
+
+            $this->Mecnun_model->addSpeciality($data);
+            $msg = 'Ixtisas uğurla əlavə edildi ! ';
+            $this->session->set_flashdata('success',$msg);
+            redirect("himalaY_ixtisaslar");
+
+        }else{
+            $this->session->set_flashdata("error", "Boşluq buraxmayın");
+            redirect("himalaY_ixtisas_elave_et");
+        }
+
+
+    }
+
+    public function speciality_delete($id)
+    {
+        $this->Mecnun_model->deleteSpeciality([
+            "id" => $id,
+        ]);
+        $msg = 'Ixtisas uğurla silindi ! ';
+        $this->session->set_flashdata('success',$msg);
+
+        redirect("himalaY_ixtisaslar");
+    }
+
+    public function speciality_update($id)
+    {
+        $data["speciality"] = $this->Mecnun_model->getSingleSpeciality([
+            "id" => $id,
+        ]);
+
+        $this->load->view('Admin/specialities/speciality_update',$data);
+    }
+
+    public function speciality_update_act($id)
+    {
+        $speciality_code = $this->input->post("speciality_code");
+
+        $speciality_name_az = $this->input->post("speciality_name_az");
+        $speciality_about_az = $this->input->post("speciality_about_az");
+
+
+        $speciality_name_en = $this->input->post("speciality_name_en");
+        $speciality_about_en = $this->input->post("speciality_about_en");
+
+
+        $speciality_name_ru = $this->input->post("speciality_name_ru");
+        $speciality_about_ru = $this->input->post("speciality_about_ru");
+
+        if (!empty($speciality_code) && !empty($speciality_name_az) && !empty($speciality_about_az) && !empty($speciality_about_ru) && !empty($speciality_name_en) && !empty($speciality_about_en) && !empty($speciality_name_ru)){
+            $data = array(
+                "speciality_code" => $speciality_code,
+                "speciality_name_az" => $speciality_name_az,
+                "speciality_desc_az" => $speciality_about_az,
+                "speciality_name_en" => $speciality_name_en,
+                "speciality_desc_en" => $speciality_about_en,
+                "speciality_name_ru" => $speciality_name_ru,
+                "speciality_desc_ru" => $speciality_about_ru,
+            );
+
+            $where = array(
+                "id" => $id,
+            );
+
+            $this->Mecnun_model->updateSpeciality($where, $data);
+            $msg = 'Ixtisas düzənləndi ! ';
+            $this->session->set_flashdata('success',$msg);
+            redirect("himalaY_ixtisaslar");
+
+        }else{
+            $this->session->set_flashdata("error", "Boşluq buraxmayın");
+            redirect("himalaY_ixtisas_yenile/$id");
+        }
+    }
 
 
 
