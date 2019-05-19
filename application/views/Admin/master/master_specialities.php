@@ -8,7 +8,7 @@
     <div class="row">
 
         <div class="right">
-            <a class="btn btn-primary" href="<?php echo base_url("himalaY_bakalavr_ixtisas_elave_et") ?>">Əlavə et</a>
+            <a class="btn btn-primary" href="<?php echo base_url("himalaY_magistr_ixtisas_elave_et") ?>">Əlavə et</a>
             <h3>İxtİsaslar</h3>
 
             <table class="table table-hover" style="background-color: lightgrey">
@@ -26,21 +26,21 @@
                 <tr>
                     <td>
                         <p style="color: black!important;">
-                            <?php echo $speciality["bachelor_text"] ?>
+                            <?php echo $speciality["master_text"] ?>
                         </p>
                     </td>
 
 
                     <td>
                         <p style="color: black!important;">
-                            <?php echo $speciality["bachelor_text_about_az"] ?>
+                            <?php echo $speciality["master_text_about_az"] ?>
                         </p>
                     </td>
 
 
                     <td>
-                        <a href="<?php echo base_url("himalaY_bakalavr_ixtisas_silme/$speciality[bachelor_id]") ?>" class="btn btn-danger">Sil</a>
-                        <a href="<?php echo base_url("himalaY_bakalavr_ixtisas_yenile/$speciality[bachelor_id]")?>" class="btn btn-warning">Yenilə</a>
+                        <a href="<?php echo base_url("himalaY_magistr_ixtisas_silme/$speciality[master_id]") ?>" class="btn btn-danger">Sil</a>
+                        <a href="<?php echo base_url("himalaY_magistr_ixtisas_yenile/$speciality[master_id]")?>" class="btn btn-warning">Yenilə</a>
                     </td>
                 </tr>
                 </tbody>

@@ -1,4 +1,4 @@
-<title>Bakalavr</title>
+<title>doktorantura</title>
 
 <?php $this->load->view('Admin/includes_for_all/admin_header'); ?>
 <?php $this->load->view('Admin/includes_for_all/left_menu'); ?>
@@ -11,8 +11,8 @@
         <div class="right">
 
             <p style="background: lightgrey;padding: 40px 10px;margin-top: 20px;">
-                <a href="<?php echo base_url("himalaY_bakalavr_yenile")?>" class="btn btn-info">Ümumi məlumat Edit</a>
-                <a href="<?php echo base_url('himalaY_bakalavr_ixtisaslar') ?>" class="btn btn-info">Ixtisaslar</a>
+                <a href="<?php echo base_url("himalaY_doktorantura_yenile")?>" class="btn btn-info">Ümumi məlumat Edit</a>
+                <a href="<?php echo base_url('himalaY_doktorantura_ixtisaslar') ?>" class="btn btn-info">Ixtisaslar</a>
 
             <h1>Haqqimizda</h1>
             <br><br>
@@ -35,7 +35,7 @@
                     <div id="az" class="tab-pane fade in active">
                         <br><br>
                         <p style="color: black!important;">
-                            <?php echo $bachelor_about_text["bachelor_about_text_az"] ?>
+                            <?php echo $doctorate_about_text["doctorate_about_text_az"] ?>
                         </p>
                     </div>
 <!--                    Azerbaycanca olan hisse-->
@@ -46,7 +46,7 @@
                     <div id="ru" class="tab-pane fade">
                         <br><br>
                         <p style="color: black;">
-                            <?php echo $bachelor_about_text["bachelor_about_text_ru"] ?>
+                            <?php echo $doctorate_about_text["doctorate_about_text_ru"] ?>
                         </p>
                     </div>
 <!--                    Rusca olan hisse-->
@@ -57,7 +57,7 @@
                     <div id="en" class="tab-pane fade">
                         <br><br>
                         <p style="color: black;">
-                            <?php echo $bachelor_about_text["bachelor_about_text_en"] ?>
+                            <?php echo $doctorate_about_text["doctorate_about_text_en"] ?>
                         </p>
                     </div>
 <!--                    Ingilisce olan hisse-->

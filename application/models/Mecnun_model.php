@@ -56,7 +56,7 @@ class Mecnun_model extends  CI_Model{
     }
 
 
-//    =================================================================cavidin isleri=================================================================
+//    =================================================================Mellimler hissesi=================================================================
 
     public function get_teachers()
     {
@@ -120,8 +120,10 @@ class Mecnun_model extends  CI_Model{
 
 
 
-//==========================Laboratory Hissesi============================
-    public function insert_laboratory($data)
+//==========================Laboratory Hissesi========================================================================
+
+
+   public function insert_laboratory($data)
     {
         $this->db->insert('department_labaratory',$data);
     }
@@ -156,6 +158,104 @@ class Mecnun_model extends  CI_Model{
 }
 
 
+
+
+//==================================================   Bakalavr hissesi=======================================================================
+
+    public function get_bachelor_about_text(){
+        return $this->db->where("id", 1)->get("bachelor_about_text")->row_array();
+    }
+
+    public function update_bachelor_about_text($data){
+        $this->db->where("id", 1)->update("bachelor_about_text", $data);
+    }
+
+    public function get_bachelor_all_specialties(){
+        return $this->db->get("bachelor_speciality_db")->result_array();
+    }
+
+    public function add_bachelor_speciality($data){
+        $this->db->insert("bachelor_speciality_db", $data);
+    }
+
+    public function delete_bachelor_speciality($where){
+        $this->db->where($where)->delete("bachelor_speciality_db");
+    }
+
+    public function get_single_speciality($where){
+        return $this->db->where($where)->get("bachelor_speciality_db")->row_array();
+    }
+
+    public function update_bachelor_speciality($where, $data){
+        $this->db->where($where)->update("bachelor_speciality_db", $data);
+    }
+
+
+
+
+
+    //==================================================   Magistr hissesi=======================================================================
+
+    public function get_master_about_text(){
+        return $this->db->where("id", 1)->get("master_about_text")->row_array();
+    }
+
+    public function update_master_about_text($data){
+        $this->db->where("id", 1)->update("master_about_text", $data);
+    }
+
+    public function get_master_all_specialties(){
+        return $this->db->get("master_speciality_db")->result_array();
+    }
+
+    public function add_master_speciality($data){
+        $this->db->insert("master_speciality_db", $data);
+    }
+
+    public function delete_master_speciality($where){
+        $this->db->where($where)->delete("master_speciality_db");
+    }
+
+    public function get_single_speciality_master($where){
+        return $this->db->where($where)->get("master_speciality_db")->row_array();
+    }
+
+    public function update_master_speciality($where, $data){
+        $this->db->where($where)->update("master_speciality_db", $data);
+    }
+
+
+
+
+    //==================================================   Doktorantura hissesi=======================================================================
+
+    public function get_doctorate_about_text(){
+        return $this->db->where("id", 1)->get("doctorate_about_text")->row_array();
+    }
+
+    public function update_doctorate_about_text($data){
+        $this->db->where("id", 1)->update("doctorate_about_text", $data);
+    }
+
+    public function get_doctorate_all_specialties(){
+        return $this->db->get("doctorate_speciality_db")->result_array();
+    }
+
+    public function add_doctorate_speciality($data){
+        $this->db->insert("doctorate_speciality_db", $data);
+    }
+
+    public function delete_doctorate_speciality($where){
+        $this->db->where($where)->delete("doctorate_speciality_db");
+    }
+
+    public function get_single_speciality_doctorate($where){
+        return $this->db->where($where)->get("doctorate_speciality_db")->row_array();
+    }
+
+    public function update_doctorate_speciality($where, $data){
+        $this->db->where($where)->update("doctorate_speciality_db", $data);
+    }
 
 
 
