@@ -202,8 +202,8 @@ $route['himalaY_haqqimizda_duzenle_act/(.*)'] = 'Mecnun/update_about_act/$1';
 
 //Logo ve basliq
 $route['himalaY_loqo'] = 'Mecnun/logo';
-$route['himalaY_loqo_duzenle/(.*)'] = 'Mecnun/update_logo/$1';
-$route['himalaY_loqo_duzenle_act/(.*)'] = 'Mecnun/update_logo/$1';
+$route['himalaY_loqo_duzenle'] = 'Mecnun/update_logo_and_title';
+$route['himalaY_loqo_duzenle_act'] = 'Mecnun/update_logo_and_title_act';
 
 
 
@@ -218,6 +218,7 @@ $route['himalaY_bakalavr_ixtisas_silme/(.*)'] = 'Mecnun/delete_bachelor_speciali
 $route['himalaY_bakalavr_ixtisas_yenile/(.*)'] = 'Mecnun/update_bachelor_speciality/$1';
 $route['himalaY_bakalavr_ixtisas_yenileme/(.*)'] = 'Mecnun/update_bachelor_speciality_act/$1';
 
+//Magistr
 $route['himalaY_magistr'] = 'Mecnun/master';
 $route['himalaY_magistr_yenile'] = 'Mecnun/update_master_info';
 $route['himalaY_magistr_yenileme'] = 'Mecnun/update_master_info_act';
@@ -228,6 +229,8 @@ $route['himalaY_magistr_ixtisas_silme/(.*)'] = 'Mecnun/delete_master_speciality/
 $route['himalaY_magistr_ixtisas_yenile/(.*)'] = 'Mecnun/update_master_speciality/$1';
 $route['himalaY_magistr_ixtisas_yenileme/(.*)'] = 'Mecnun/update_master_speciality_act/$1';
 
+
+//Doktorantura
 $route['himalaY_doktorantura'] = 'Mecnun/doctorate';
 $route['himalaY_doktorantura_yenile'] = 'Mecnun/update_doctorate_info';
 $route['himalaY_doktorantura_yenileme'] = 'Mecnun/update_doctorate_info_act';

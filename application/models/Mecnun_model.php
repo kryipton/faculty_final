@@ -259,4 +259,25 @@ class Mecnun_model extends  CI_Model{
 
 
 
+
+
+
+
+
+//==================================================   Loqo ve basliq hissesi=======================================================================
+
+    public function get_logo_and_title(){
+        return $this->db->where("id", 1)->get("logo_and_title")->row_array();
+    }
+
+    public function update_logo_and_title($data){
+        return $this->db->where("id", 1)->update("logo_and_title", $data);
+    }
+
+
+
+
+
+
+
 }
