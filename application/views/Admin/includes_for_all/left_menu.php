@@ -28,22 +28,25 @@
                     text-decoration: none;
                 }
             </style>
-            <a class="a2" href="<?php echo base_url('himalaY') ?>"><li class="a1">Dashboard</li></a>
-            <a class="a2" href="<?php echo base_url('himalaY_xeberler') ?>"><li class="a1">Xəbərlər</li></a>
-            <a class="a2" href="<?php echo base_url('himalaY_slider') ?>"><li class="a1">Slider</li></a>
-            <a class="a2" href="<?php echo base_url('himalaY_tedbirler') ?>"><li class="a1">Tədbirlər</li></a>
-            <a class="a2" href="<?php echo base_url('himalaY_muellimler') ?>"><li class="a1">Müəllimlər</li></a>
-            <a class="a2" href="<?php echo base_url('himalaY_laboratoriya') ?>"><li class="a1">Laboratoriya</li></a>
 
-            <a class="a2" href="<?php echo base_url('himalaY_link') ?>"><li class="a1">Linklər</li></a>
+            <a class="a2" href="<?php echo base_url('himalaY') ?>"><li class="a1">Dashboard</li></a>
 
             <a class="a2" href="<?php echo base_url('himalaY_haqqimizda') ?>"><li class="a1">Haqqımızda</li></a>
             <a class="a2" href="<?php echo base_url('himalaY_loqo') ?>"><li class="a1">Loqo Və Başlıqı</li></a>
 
+            <a class="a2" href="<?php echo base_url('himalaY_xeberler') ?>"><li class="a1">Xəbərlər</li></a>
+            <a class="a2" href="<?php echo base_url('himalaY_slider') ?>"><li class="a1">Slider</li></a>
+            <a class="a2" href="<?php echo base_url('himalaY_tedbirler') ?>"><li class="a1">Tədbirlər</li></a>
+            <a class="a2" href="<?php echo base_url('himalaY_link') ?>"><li class="a1">Linklər</li></a>
 
             <a class="a2" href="<?php echo base_url('himalaY_bakalavr') ?>"><li class="a1">Bakalavr</li></a>
             <a class="a2" href="<?php echo base_url('himalaY_magistr') ?>"><li class="a1">Magistratura</li></a>
             <a class="a2" href="<?php echo base_url('himalaY_doktorantura') ?>"><li class="a1">Doktorantura</li></a>
+
+
+            <a class="a2" href="<?php echo base_url('himalaY_kafedralar') ?>"><li class="a1">Kafedralar(Adları)</li></a>
+            <a class="a2" href="<?php echo base_url('himalaY_muellimler') ?>"><li class="a1">Kafedralar(Müəllimlər)</li></a>
+            <a class="a2" href="<?php echo base_url('himalaY_laboratoriya') ?>"><li class="a1">Kafedralar(Laboratoriya)</li></a>
 
 
 
