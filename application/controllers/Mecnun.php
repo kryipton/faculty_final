@@ -941,50 +941,44 @@ class Mecnun extends CI_Controller{
 
     public function logo()
     {
-        $where=[
-            'faculty_name' => 'kimya'
-        ];
-        $data['abouts'] = $this->Mecnun_model->getAbout($where);
-        $this->load->view('Admin/logo_and_title/logo_main',$data);
-    }
-
-    public function update_logo($id)
-    {
-        $where=[
-            'about_id' => $id
-        ];
-        $data['about'] = $this->Mecnun_model->getAbout($where);
+        $data['logo_and_title'] = $this->Mecnun_model->get_logo_and_title();
 
         $this->load->view('Admin/logo_and_title/logo_main',$data);
     }
 
-    public function update_logo_act($id)
+    public function update_logo_and_title()
     {
-        $where=[
-            'about_id' => $id
-        ];
 
-        $data = [
-            'about_text_az' => $this->input->post('about_text_az'),
-            'about_text_en' => $this->input->post('about_text_en'),
-            'about_text_ru' => $this->input->post('about_text_ru'),
-        ];
+        $data['logo_and_title'] = $this->Mecnun_model->get_logo_and_title();
 
-        if (!empty($this->input->post('about_text_az')) && !empty($this->input->post('about_text_en')) && !empty($this->input->post('about_text_ru')) ){
+        $this->load->view('Admin/logo_and_title/logo_update',$data);
+    }
 
-            $this->Mecnun_model->updateAbout($where,$data);
-            $msg = 'Haqqımızda hissəsi düzənləndi ! ';
-            $this->session->set_flashdata('success', $msg);
+    public function update_logo_and_title_act()
+    {
+        $site_title = $this->input->post("site_title");
 
-            redirect(base_url('himalaY_haqqimizda'));
+        $config['upload_path']   = 'public/images/faculty_logo/';
+        $config['max_size']     = '10000';
+        $config['allowed_types'] = 'jpg|jpeg|png';
+        $this->upload->initialize($config);
+
+        if (!empty($site_title)){
+
+            $data = array(
+              "site_title" => $site_title,
+              "logo_img"   => ($this->upload->do_upload('site_loqo')) ? $this->upload->data('file_name') : "kimya2.png",
+            );
+
+            $this->Mecnun_model->update_logo_and_title($data);
+
+            redirect("himalaY_loqo");
 
         }else{
-            $msg = 'Zəhmət olmasa boşluq buraxmayın ! ';
+            $msg = 'Zəhmət olmasa boşluq buraxmayın!';
             $this->session->set_flashdata('alert',$msg);
-
-            redirect(base_url('himalaY_haqqimizda'));
+            redirect("himalaY_loqo_duzenle");
         }
-
 
 
     }

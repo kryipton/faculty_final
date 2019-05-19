@@ -10,23 +10,15 @@
 
         <div class="right">
 
+            <h1 style="color: red"><?php echo $this->session->flashdata("alert")?></h1>
 
-            <form action="<?php echo base_url('himalaY_haqqimizda_duzenle_act/').$about['about_id']; ?>" method="POST">
-                <label for="">Haqqımızda AZ</label>
-                <textarea name="about_text_az" class="ckeditor" id="" cols="30" rows="10" required>
-                        <?php echo $about['about_text_az'] ?>
-                    </textarea>
-                <br>
-                <label for="">Haqqımızda EN</label>
-                <textarea name="about_text_en" class="ckeditor" id="" cols="30" rows="10" required>
-                       <?php echo $about['about_text_en'] ?>
-                    </textarea>
-                <br>
-                <label for="">Haqqımızda RU</label>
-                <textarea name="about_text_ru" class="ckeditor" id="" cols="30" rows="10" required>
-                       <?php echo $about['about_text_ru'] ?>
-                    </textarea>
-                <br>
+            <form action="<?php echo base_url('himalaY_loqo_duzenle_act')?>" method="POST" enctype="multipart/form-data">
+                <label for="">Saytın Başlıqı</label>
+                <input value="<?php echo $logo_and_title["site_title"] ?>" type="text" name="site_title">
+                <br><br>
+                <label for="">Saytın Loqosu</label>
+                <input type="file" name="site_loqo">
+                <br><br>
                 <input type="submit" class="btn btn-info" value="Düzənlə">
             </form>
 
