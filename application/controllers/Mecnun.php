@@ -718,6 +718,109 @@ class Mecnun extends CI_Controller{
 
 
 
+    //     ============= Kafedralar Hissesi ================
+
+    public function departments()
+    {
+
+        $data["categories"] = $this->Mecnun_model->get_categories();
+
+
+        $this->load->view('Admin/department_category/category_main', $data);
+    }
+
+    public function add_departments()
+    {
+        $this->load->view('Admin/department_category/category_create');
+    }
+
+    public function add_departments_act()
+    {
+
+        $departmet_name_az = strip_tags($this->input->post('department_name_az'));
+        $departmet_name_en = strip_tags($this->input->post('department_name_en'));
+        $departmet_name_ru = strip_tags($this->input->post('department_name_ru'));
+
+
+        if (!empty($departmet_name_az) && !empty($departmet_name_en) && !empty($departmet_name_ru) )
+        {
+
+            $data = array(
+
+                'category_name_az' => $departmet_name_az,
+                'category_name_en' => $departmet_name_en,
+                'category_name_ru' => $departmet_name_ru,
+
+            );
+
+            $this->Mecnun_model->add_department_category($data);
+            $msg = 'Xəbər uğurla əlavə olundu! ';
+            $this->session->set_flashdata('success',$msg);
+            redirect(base_url('himalaY_kafedralar'));
+
+
+        }else{
+            $msg = 'Zəhmət olmasa boşluq buraxmayın!';
+            $this->session->set_flashdata('alert',$msg);
+            redirect('himalaY_kafedralar_elave_et');
+        }
+
+    }
+
+    public function update_departments($id)
+    {
+        $data["category"] = $this->Mecnun_model->get_department_category(array(
+            "id" => $id,
+        ));
+
+        $this->load->view('Admin/department_category/category_update', $data);
+    }
+
+    public function delete_departments($id)
+    {
+
+        $where =array(
+            "id" => $id,
+        );
+        $this->Mecnun_model->delete_department_category($where);
+
+        redirect(base_url("himalaY_kafedralar"));
+    }
+
+    public function update_departments_act($id)
+    {
+
+        $departmet_name_az = strip_tags($this->input->post('department_name_az'));
+        $departmet_name_en = strip_tags($this->input->post('department_name_en'));
+        $departmet_name_ru = strip_tags($this->input->post('department_name_ru'));
+
+        if (!empty($departmet_name_az) && !empty($departmet_name_en) && !empty($departmet_name_ru) )
+
+        {
+            $data = array(
+                'category_name_az' => $departmet_name_az,
+                'category_name_en' => $departmet_name_en,
+                'category_name_ru' => $departmet_name_ru,
+            );
+
+            $where = array(
+                "id" => $id,
+            );
+
+            $this->Mecnun_model->update_department_category($where, $data);
+            $msg = 'Xəbər uğurla yeniləndi!';
+            $this->session->set_flashdata('success',$msg);
+            redirect(base_url('himalaY_kafedralar'));
+
+        }else{
+            $msg = 'Zəhmət olmasa boşluq buraxmayın!';
+            $this->session->set_flashdata('alert',$msg);
+            redirect("himalaY_kafedralar_yenile/$id");
+        }
+    }
+
+
+
 
 
 

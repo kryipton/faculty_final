@@ -276,6 +276,29 @@ class Mecnun_model extends  CI_Model{
 
 
 
+//==================================================   Kafedralar hissesi=======================================================================
+
+    public function get_all_department_categories(){
+        return $this->db->get("department_categories")->result_array();
+    }
+
+    public function add_department_category($data){
+        $this->db->insert("department_categories", $data);
+    }
+
+
+    public function update_department_category($where, $data){
+        $this->db->where($where)->update("department_categories", $data);
+    }
+
+
+    public function delete_department_category($where){
+        $this->db->where($where)->delete("department_categories");
+    }
+
+    public function get_department_category($where){
+        return $this->db->where($where)->get("department_categories")->row_array();
+    }
 
 
 

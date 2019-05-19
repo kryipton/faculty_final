@@ -46,6 +46,9 @@
             <a class="a2" href="<?php echo base_url('himalaY_doktorantura') ?>"><li class="a1">Doktorantura</li></a>
 
 
+            <a class="a2" href="<?php echo base_url('himalaY_kafedralar') ?>"><li class="a1">Kafedralar</li></a>
+
+
 
 
 
