@@ -7,10 +7,10 @@
     <div class="breadcrumb_wrap">
         <div class="breadcrumb_wrap_inner about_head">
             <div class="container">
-                <h1>Kimya texnologiya fakültəsi</h1>
+                <h1><?php echo $logo["site_title"]?></h1>
                 <ul class="breadcrumbs">
-                    <li><a href="<?php echo base_url("Home")?>">Ana Səhifə</a> /</li>
-                    <li>Əlaqə</li>
+                    <li><a href="<?php echo base_url("Home")?>"><?php echo $this->lang->line("ana_sehife"); ?></a> /</li>
+                    <li><?php echo $this->lang->line("elaqe"); ?></li>
                 </ul>
             </div>
         </div>
@@ -20,9 +20,20 @@
 
     <div class="col-md-8">
         <div class="about_right" style="padding: 20px 0px 0px 10px">
-            <h2>Əlaqə</h2>
+            <h2><?php echo $this->lang->line("elaqe"); ?></h2>
             <div class="about_right_text" style="color: grey">
-                elaqe
+                <?php
+
+                    if ($this->session->userdata("dil") == "az"){
+                        echo $contact["contact_text_az"];
+                    }elseif ($this->session->userdata("dil") == "en"){
+                        echo $contact["contact_text_en"];
+                    }elseif ($this->session->userdata("dil") == "ru"){
+                        echo $contact["contact_text_ru"];
+                    }
+
+
+                ?>
             </div>
         </div>
     </div>

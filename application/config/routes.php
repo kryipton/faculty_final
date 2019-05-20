@@ -53,78 +53,80 @@ $route['default_controller'] = 'Leyli';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+//multilanguage ucun route
+//$route['(:any)'] = 'en/Leyli/contact';
 
 // Home page routes
-$route['Home'] = 'Leyli';
+$route['(:any)/Home'] = 'Leyli';
 
 //About Hissesi
-$route['About'] = 'Leyli/about';
+$route['(:any)/About'] = 'Leyli/about';
 
 
 //Elaqe hissesi
-$route['Contact'] = 'Leyli/contact';
+$route['(:any)/Contact'] = 'Leyli/contact';
 
 //Labaratoriya hissesi
-$route['Labaratory'] = 'Leyli/labaratory';
+$route['(:any)/Labaratory'] = 'Leyli/labaratory';
 
 
 
 //Xeberler hissesi
-$route['News'] = 'Leyli/news';
+$route['(:any)/News'] = 'Leyli/news';
 
 //Tedbirler hissesi
-$route['Actions'] = 'Leyli/actions';
+$route['(:any)/Actions'] = 'Leyli/actions';
 
 //Bakalavr hissesi
-$route['Bachelor'] = 'Leyli/bachelor';
+$route['(:any)/Bachelor'] = 'Leyli/bachelor';
 
 //Bakalavr ixtisaslar hissesi
-$route['Bachelor/Speciality'] = 'Leyli/bachelor_speciality';
+$route['(:any)/Bachelor/Speciality'] = 'Leyli/bachelor_speciality';
 
 //Bakalavr tek ixtisas hissesi
-$route['Bachelor/Speciality/(.*)'] = 'Leyli/bachelor_speciality_single/$1';
+$route['(:any)/Bachelor/Speciality/(.*)'] = 'Leyli/bachelor_speciality_single/$1';
 
 
 //Master hissesi
-$route['Master'] = 'Leyli/master';
+$route['(:any)/Master'] = 'Leyli/master';
 
 //Master ixtisaslar hissesi
-$route['Master/Speciality'] = 'Leyli/master_speciality';
+$route['(:any)/Master/Speciality'] = 'Leyli/master_speciality';
 
 //Master tek ixtisas hissesi
-$route['Master/Speciality/(.*)'] = 'Leyli/master_speciality_single/$1';
+$route['(:any)/Master/Speciality/(.*)'] = 'Leyli/master_speciality_single/$1';
 
 //Doktorantura hissesi
-$route['Doctorate'] = 'Leyli/doctorate';
+$route['(:any)/Doctorate'] = 'Leyli/doctorate';
 
 //Doktorantura ixtisaslar hissesi
-$route['Doctorate/Speciality'] = 'Leyli/doctorate_speciality';
+$route['(:any)/Doctorate/Speciality'] = 'Leyli/doctorate_speciality';
 
 //Doktorantura tek ixtisas hissesi
-$route['Doctorate/Speciality/(.*)'] = 'Leyli/doctorate_speciality_single/$1';
+$route['(:any)/Doctorate/Speciality/(.*)'] = 'Leyli/doctorate_speciality_single/$1';
 
 //Tedbirler hissesi single page
-$route['Single_page_events/(.*)'] = 'Leyli/single_page_events/$1';
+$route['(:any)/Single_page_events/(.*)'] = 'Leyli/single_page_events/$1';
 
 
 //Xeberler hissesi single page
-$route['Single_page_news/(.*)'] = 'Leyli/single_page_news/$1';
+$route['(:any)/Single_page_news/(.*)'] = 'Leyli/single_page_news/$1';
 
 
 //Kafedra hissesi
-$route['Department'] = 'Leyli/department';
+$route['(:any)/Department'] = 'Leyli/department';
 
 //Kafedra elaqe hissesi
-$route['Department_Contact'] = 'Leyli/department_contact';
+$route['(:any)/Department_Contact'] = 'Leyli/department_contact';
 
 //Kafedra mellimler hissesi
-$route['Department_Teachers'] = 'Leyli/department_teachers';
+$route['(:any)/Department_Teachers'] = 'Leyli/department_teachers';
 
 //Kafedra ixtisaslar hissesi
-$route['Department_Specialities'] = 'Leyli/department_specialities';
+$route['(:any)/Department_Specialities'] = 'Leyli/department_specialities';
 
 //Kafedra labaratoriyalar hissesi
-$route['Department_Labaratories'] = 'Leyli/department_labaratory';
+$route['(:any)/Department_Labaratories'] = 'Leyli/department_labaratory';
 
 
 
