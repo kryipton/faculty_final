@@ -103,31 +103,83 @@
                         <button class="dl-trigger visible-sm visible-xs"><i class="fa fa-bars"></i></button>
                         <ul class="dl-menu">
                             <li>
-                                <h5 class="sp_module_title">LearnMate</h5>
-                            </li>
-                            <li>
-                                <a href="<?php echo base_url('Home') ?>">Ana Səhifə</a>
-
+                                <h5 class="sp_module_title"></h5>
                             </li>
 
-
-
-
-                            <li><a class="trigger" href="<?php echo base_url('About') ?>">Haqqımızda</a></li>
                             <li>
-                                <a href="#">Kafedra</a>
+                                <a href="<?php echo base_url('Home') ?>">
+                                    <?php echo $this->lang->line("ana_sehife"); ?>
+                                </a>
+
+                            </li>
+
+                            <li>
+                                <a class="trigger" href="<?php echo base_url('About') ?>">
+                                    <?php echo $this->lang->line("haqqimizda"); ?>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <?php echo $this->lang->line("kafedralar"); ?>
+
+                                </a>
                                 <ul class="dl-submenu">
-                                    <li><a href="<?php echo base_url('Department') ?>">Ekologiya Kafedrası</a></li>
-                                    <li><a href="<?php echo base_url('home/events') ?>">Üzvi Kimya Kafedrası</a></li>
+
+                                    <?php foreach ($all_categories_of_department as $category){?>
+                                        <li>
+
+<!--                                            burada kateqoriyalarin hrefi dile gore siralanir-->
+                                            <a href="<?php
+
+                                                if ($this->session->userdata("dil") == "az"){
+                                                    echo base_url('az/Department');
+                                                }
+                                                elseif ($this->session->userdata("dil") == "en"){
+                                                    echo base_url('en/Department');
+                                                }
+                                                elseif ($this->session->userdata("dil") == "ru"){
+                                                    echo base_url('ru/Department');
+                                                }
+
+                                            ?>">
+<!--                                            burada kateqoriyalarin hrefi dile gore siralanir-->
+
+
+
+<!--                                                burda kateqoriyalar dile gore siralanir-->
+                                                <?php if ($this->session->userdata("dil") == "az"){
+                                                    echo $category["category_name_az"];
+                                                }?>
+
+                                                <?php if ($this->session->userdata("dil") == "en"){
+                                                    echo $category["category_name_en"];
+                                                }?>
+
+                                                <?php if ($this->session->userdata("dil") == "ru"){
+                                                    echo $category["category_name_ru"];
+                                                }?>
+<!--                                                burda kateqoriyalar dile gore siralanir-->
+
+
+                                            </a>
+                                        </li>
+                                    <?php }?>
+
                                 </ul>
                             </li>
 
-                            <li><a class="trigger" href="<?php echo base_url('Contact') ?>">Əlaqə</a></li>
+                            <li>
+                                <a class="trigger" href="<?php echo base_url('Contact') ?>">
+                                    <?php echo $this->lang->line("elaqe"); ?>
+                                </a>
+                            </li>
 
-                            <li><a class="trigger" href="<?php echo base_url('Labaratory') ?>">Labaratoriya</a></li>
-
-
-
+                            <li>
+                                <a class="trigger" href="<?php echo base_url('Labaratory') ?>">
+                                    <?php echo $this->lang->line("labaratoriyalar"); ?>
+                                </a>
+                            </li>
 
                         </ul>
 
@@ -138,24 +190,137 @@
 <!--                    main navbar-->
                     <div class="main_menu_wrap">
                         <ul class="main_menu">
-                            <li><a class="trigger" href="<?php echo base_url('Home') ?>">Ana Səhifə </a>
 
+
+                            <li>
+                                <a class="trigger" href="<?php
+
+                                    if ($this->session->userdata("dil") == "az"){
+                                        echo base_url('az/Home');
+                                    }
+                                    elseif ($this->session->userdata("dil") == "en"){
+                                        echo base_url('en/Home');
+                                    }
+                                    elseif ($this->session->userdata("dil") == "ru"){
+                                        echo base_url('ru/Home');
+                                    }
+
+                                ?>">
+                                    <?php echo $this->lang->line("ana_sehife"); ?>
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="trigger" href="<?php
+
+                                    if ($this->session->userdata("dil") == "az"){
+                                        echo base_url('az/About');
+                                    }
+                                    elseif ($this->session->userdata("dil") == "en"){
+                                        echo base_url('en/About');
+                                    }
+                                    elseif ($this->session->userdata("dil") == "ru"){
+                                        echo base_url('ru/About');
+                                    }
+
+                                ?>">
+                                    <?php echo $this->lang->line("haqqimizda"); ?>
+                                </a>
                             </li>
 
-
-                            
-                            <li><a class="trigger" href="<?php echo base_url('About') ?>">Haqqımızda</a></li>
-
-                            <li><a class="trigger" href="#">Kafedra<i class="fa fa-angle-down"></i></a>
+                            <li>
+                                <a class="trigger">
+                                    <?php echo $this->lang->line("kafedralar"); ?>
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
                                 <ul class="submenu">
-                                    <li><a href="<?php echo base_url('Department') ?>">Ekologiya Kafedrası</a></li>
-                                    <li><a href="<?php echo base_url('home/events') ?>">Üzvi Kimya Kafedrası</a></li>
+
+
+                                    <?php foreach ($all_categories_of_department as $category){?>
+                                        <li>
+                                            <a href="<?php
+
+                                            if ($this->session->userdata("dil") == "az"){
+                                                echo base_url('az/Department');
+                                            }
+                                            elseif ($this->session->userdata("dil") == "en"){
+                                                echo base_url('en/Department');
+                                            }
+                                            elseif ($this->session->userdata("dil") == "ru"){
+                                                echo base_url('ru/Department');
+                                            }
+
+                                             ?>">
+
+                                                <?php if ($this->session->userdata("dil") == "az"){
+                                                    echo $category["category_name_az"];
+                                                }?>
+
+                                                <?php if ($this->session->userdata("dil") == "en"){
+                                                    echo $category["category_name_en"];
+                                                }?>
+
+                                                <?php if ($this->session->userdata("dil") == "ru"){
+                                                    echo $category["category_name_ru"];
+                                                }?>
+
+                                            </a>
+                                        </li>
+                                    <?php }?>
+
                                 </ul>
                             </li>
 
-                            <li><a class="trigger" href="<?php echo base_url('Contact') ?>">Əlaqə</a></li>
+                            <li>
+                                <a class="trigger" href="<?php
 
-                            <li><a class="trigger" href="<?php echo base_url('Labaratory') ?>">Laboratoriya</a></li>
+                                    if ($this->session->userdata("dil") == "az"){
+                                        echo base_url('az/Contact');
+                                    }
+                                    elseif ($this->session->userdata("dil") == "en"){
+                                        echo base_url('en/Contact');
+                                    }
+                                    elseif ($this->session->userdata("dil") == "ru"){
+                                        echo base_url('ru/Contact');
+                                    }
+                                    ?>">
+                                    <?php echo $this->lang->line("elaqe"); ?>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="trigger" href="<?php
+
+                                    if ($this->session->userdata("dil") == "az"){
+                                        echo base_url('az/Labaratory');
+                                    }
+                                    elseif ($this->session->userdata("dil") == "en"){
+                                        echo base_url('en/Labaratory');
+                                    }
+                                    elseif ($this->session->userdata("dil") == "ru"){
+                                        echo base_url('ru/Labaratory');
+                                    }
+
+                                ?>">
+                                    <?php echo $this->lang->line("labaratoriyalar"); ?>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="trigger" style="padding-top: 0px">
+                                    <a style="padding: 0px!important; float: left; color: black; margin-left: 9px;" href="<?php echo base_url("az/Home")?>">
+                                        <img width="35px" height="20px" src="<?php echo base_url("upload/language_images/azerbaijan2.jpg")?>" alt="sekil">
+                                    </a>
+
+                                    <a style="padding: 0px!important; float: left; color: black; margin-left: 9px" href="<?php echo base_url("ru/Home")?>">
+                                        <img width=35px" height="20px" src="<?php echo base_url("upload/language_images/russia.png")?>" alt="sekil">
+                                    </a>
+
+                                    <a style="padding: 0px!important; float: left; color: black; margin-left: 9px;" href="<?php echo base_url("en/Home")?>">
+                                        <img width="35px" height="20px" src="<?php echo base_url("upload/language_images/english.png")?>" alt="sekil">
+                                    </a>
+                                </a>
+                            </li>
 
                         </ul>
                     </div>

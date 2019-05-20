@@ -323,7 +323,7 @@ header nav {
 
 .main_menu > li > a {
     padding: 32px 0 33px;
-    margin: 0px 20px;
+    margin: 0px 14px;
     font-size: 15px;
     color: #3b4351;
     letter-spacing: 1px;
@@ -2007,7 +2007,7 @@ body.cms_index5 {
     z-index: 99;
     padding: 70px 0px 80px;
     position: relative;
-    margin-bottom: 150px;
+    margin-bottom: 0px;
 }
 
 .count h2, .count p {

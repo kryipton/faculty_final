@@ -1,7 +1,8 @@
 <div class="copyright">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 coppyright_txt"> &copy; 2017. Bütün hüquqlar qorunur.
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 coppyright_txt">
+                <?php echo $this->lang->line("footer");?>
                <a href="http://www.pixxett.com/" target="_blank">  </a></div>
            
 
