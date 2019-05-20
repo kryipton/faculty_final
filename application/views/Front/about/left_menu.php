@@ -7,10 +7,43 @@
 
 <!--        sol terefde olan linkler-->
             <div class="category_course about_left_b">
-                <h4><?php echo $logo["site_title"]?></h4>
+                <h4><?php
+
+
+                    if ($this->session->userdata("dil") == "az"){
+                        echo $logo["site_title_az"];
+                    }elseif ($this->session->userdata("dil") == "en"){
+                        echo $logo["site_title_en"];
+                    }elseif ($this->session->userdata("dil") == "ru"){
+                        echo $logo["site_title_ru"];
+                    }
+
+                    ?></h4>
                 <ul>
-                    <li><a href="<?php echo base_url('About'); ?>"><?php echo $this->lang->line("umumi_melumat"); ?></a></li>
-                    <li><a href="<?php echo base_url('Labaratory'); ?>"><?php echo $this->lang->line("labaratoriyalar"); ?></a></li>
+                    <li><a href="<?php
+
+                        if ($this->session->userdata("dil") == "az"){
+                            echo base_url('az/About');
+                        }elseif ($this->session->userdata("dil") == "en"){
+                            echo base_url('en/About');
+                        }elseif ($this->session->userdata("dil") == "ru"){
+                            echo base_url('ru/About');
+                        }
+
+                        ?>"><?php echo $this->lang->line("umumi_melumat"); ?></a></li>
+
+
+                    <li><a href="<?php
+
+                        if ($this->session->userdata("dil") == "az"){
+                            echo base_url('az/Labaratory');
+                        }elseif ($this->session->userdata("dil") == "en"){
+                            echo base_url('en/Labaratory');
+                        }elseif ($this->session->userdata("dil") == "ru"){
+                            echo base_url('ru/Labaratory');
+                        }
+
+                        ?>"><?php echo $this->lang->line("labaratoriyalar"); ?></a></li>
 <!--                    <li><a href="--><?php //echo base_url('Home/links'); ?><!--">Faydalı linklər</a></li>-->
 <!--                    <li><a href="--><?php //echo base_url('home/teacher') ?><!--">Müəllimlər</a></li>-->
                 </ul>

@@ -7,10 +7,37 @@
     <div class="breadcrumb_wrap">
         <div class="breadcrumb_wrap_inner about_head">
             <div class="container">
-                <h1>Kimya texnologiya fakültəsi</h1>
+                <h1>
+                    <?php
+
+
+                    if ($this->session->userdata("dil") == "az"){
+                        echo $logo["site_title_az"];
+                    }elseif ($this->session->userdata("dil") == "en"){
+                        echo $logo["site_title_en"];
+                    }elseif ($this->session->userdata("dil") == "ru"){
+                        echo $logo["site_title_ru"];
+                    }
+
+                    ?>
+                </h1>
                 <ul class="breadcrumbs">
-                    <li><a href="<?php echo base_url("Home")?>">Ana Səhifə</a> /</li>
-                    <li>Ümumi Məlumat</li>
+                    <li><a href="<?php
+
+                        if ($this->session->userdata("dil") == "az"){
+                            echo base_url('az/Home');
+                        }
+                        elseif ($this->session->userdata("dil") == "en"){
+                            echo base_url('en/Home');
+                        }
+                        elseif ($this->session->userdata("dil") == "ru"){
+                            echo base_url('ru/Home');
+                        }
+
+                        ?>">
+                            <?php echo $this->lang->line("ana_sehife"); ?>
+                        </a> /</li>
+                    <li>  <?php echo $this->lang->line("umumi_melumat"); ?></li>
                 </ul>
             </div>
         </div>
@@ -20,11 +47,59 @@
 
     <div class="col-md-8">
         <div class="about_right" style="padding: 20px 0px 0px 10px">
-            <h2>Ixtisaslar</h2>
+            <h2><?php echo $this->lang->line("ixtisaslar"); ?></h2>
             <div class="about_right_text" style="color: grey">
-                <span> 
-                    Ixtisaslar
-                </span>
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th style="width: 30%;">İxtisas kodu</th>
+                        <th><?php echo $this->lang->line("ixtisaslar"); ?></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                    foreach($all_specialites_of_department as $spec){ ?>
+                    <tr>
+                        <td><?php echo $spec['speciality_code'] ?></td>
+                        <td>
+
+                            <a href="<?php
+
+                            if ($this->session->userdata("dil") == "az"){
+                                echo base_url('az/Bachelor/Speciality/'.$spec['id'] );
+                            }
+                            elseif ($this->session->userdata("dil") == "en"){
+                                echo base_url('en/Bachelor/Speciality/'.$spec['id'] );
+                            }
+                            elseif ($this->session->userdata("dil") == "ru"){
+                                echo base_url('ru/Bachelor/Speciality/'.$spec['id'] );
+                            }
+
+                             ?>">
+
+                                <?php
+
+                                if ($this->session->userdata("dil") == "az"){
+                                    echo $spec['speciality_name_az'];
+                                }
+                                elseif ($this->session->userdata("dil") == "en"){
+                                    echo $spec['speciality_name_en'];
+                                }
+                                elseif ($this->session->userdata("dil") == "ru"){
+                                    echo $spec['speciality_name_ru'];
+                                }
+
+                           ?>
+
+                            </a>
+
+                        </td>
+                    </tr>
+                    </tbody>
+                    <?php  }
+                    ?>
+
+                </table>
             </div>
         </div>
     </div>

@@ -126,20 +126,20 @@
                                 </a>
                                 <ul class="dl-submenu">
 
-                                    <?php foreach ($all_categories_of_department as $category){?>
+                                    <?php foreach ($all_categories_of_department as $category){ ?>
                                         <li>
 
 <!--                                            burada kateqoriyalarin hrefi dile gore siralanir-->
                                             <a href="<?php
 
                                                 if ($this->session->userdata("dil") == "az"){
-                                                    echo base_url('az/Department');
+                                                    echo base_url("az/Department/$category[id]");
                                                 }
                                                 elseif ($this->session->userdata("dil") == "en"){
-                                                    echo base_url('en/Department');
+                                                    echo base_url("en/Department/$category[id]");
                                                 }
                                                 elseif ($this->session->userdata("dil") == "ru"){
-                                                    echo base_url('ru/Department');
+                                                    echo base_url("ru/Department/$category[id]");
                                                 }
 
                                             ?>">
@@ -241,13 +241,13 @@
                                             <a href="<?php
 
                                             if ($this->session->userdata("dil") == "az"){
-                                                echo base_url('az/Department');
+                                                echo base_url("az/Department/$category[id]");
                                             }
                                             elseif ($this->session->userdata("dil") == "en"){
-                                                echo base_url('en/Department');
+                                                echo base_url("en/Department/$category[id]");
                                             }
                                             elseif ($this->session->userdata("dil") == "ru"){
-                                                echo base_url('ru/Department');
+                                                echo base_url("ru/Department/$category[id]");
                                             }
 
                                              ?>">

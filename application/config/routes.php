@@ -114,7 +114,7 @@ $route['(:any)/Single_page_news/(.*)'] = 'Leyli/single_page_news/$1';
 
 
 //Kafedra hissesi
-$route['(:any)/Department'] = 'Leyli/department';
+$route['(:any)/Department/(.*)'] = 'Leyli/department/$1';
 
 //Kafedra elaqe hissesi
 $route['(:any)/Department_Contact'] = 'Leyli/department_contact';
@@ -123,7 +123,7 @@ $route['(:any)/Department_Contact'] = 'Leyli/department_contact';
 $route['(:any)/Department_Teachers'] = 'Leyli/department_teachers';
 
 //Kafedra ixtisaslar hissesi
-$route['(:any)/Department_Specialities'] = 'Leyli/department_specialities';
+$route['(:any)/Department_Specialities/(.*)'] = 'Leyli/department_specialities/$1';
 
 //Kafedra labaratoriyalar hissesi
 $route['(:any)/Department_Labaratories'] = 'Leyli/department_labaratory';
