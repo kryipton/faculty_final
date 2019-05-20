@@ -145,7 +145,20 @@
             <div class="container">
 
 
-                <a href="<?php echo base_url('Bachelor'); ?>">
+
+                <a href="<?php
+
+                if ($this->session->userdata("dil") == "az"){
+                    echo base_url('az/Bachelor');
+                }
+                elseif ($this->session->userdata("dil") == "en"){
+                    echo base_url('en/Bachelor');
+                }
+                elseif ($this->session->userdata("dil") == "ru"){
+                    echo base_url('ru/Bachelor');
+                }
+
+                ?>">
 
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                         <div class="feature_block_wrap">
@@ -162,7 +175,19 @@
                     </div>
                 </a>
 
-                <a href="<?php echo base_url('Master'); ?>">
+                <a href="<?php
+
+                if ($this->session->userdata("dil") == "az"){
+                    echo base_url('az/Master');
+                }
+                elseif ($this->session->userdata("dil") == "en"){
+                    echo base_url('en/Master');
+                }
+                elseif ($this->session->userdata("dil") == "ru"){
+                    echo base_url('ru/Master');
+                }
+
+                ?>">
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                         <div class="feature_block_wrap">
                             <div class="library">
@@ -179,6 +204,19 @@
                 </a>
 
                 <a href="<?php echo base_url('Doctorate'); ?>">
+                <a href="<?php
+
+                if ($this->session->userdata("dil") == "az"){
+                    echo base_url('az/Doctorate');
+                }
+                elseif ($this->session->userdata("dil") == "en"){
+                    echo base_url('en/Doctorate');
+                }
+                elseif ($this->session->userdata("dil") == "ru"){
+                    echo base_url('ru/Doctorate');
+                }
+
+                ?>">
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                         <div class="feature_block_wrap">
                             <div class="courses">
@@ -380,7 +418,7 @@
                                 <div class="funfact expert text-center">
                                     <div class="icon"><i class="fa fa-user"></i></div>
                                     <div class="counts">
-                                        <h2 class="animate-number" data-animation-duration="2000" data-value="730">0</h2>
+                                        <h2 class="animate-number" data-animation-duration="2000" data-value="<?php echo $count['teacher_count']?>">0</h2>
                                         <h4 class="title"><?php echo $this->lang->line("muellimler");?></h4>
                                     </div>
                                 </div>
@@ -389,7 +427,7 @@
                                 <div class="funfact student text-center">
                                     <div class="icon"><i class="fa fa-users"></i></div>
                                     <div class="counts">
-                                        <h2 class="animate-number" data-animation-duration="2000" data-value="500">0</h2>
+                                        <h2 class="animate-number" data-animation-duration="2000" data-value="<?php echo $count['student_count']?>">0</h2>
                                         <h4 class="title"><?php echo $this->lang->line("telebeler");?></h4>
                                     </div>
                                 </div>
@@ -398,7 +436,7 @@
                                 <div class="funfact online text-center">
                                     <div class="icon"><i class="fa fa-book"></i></div>
                                     <div class="counts">
-                                        <h2 class="animate-number" data-animation-duration="2000" data-value="3565">0</h2>
+                                        <h2 class="animate-number" data-animation-duration="2000" data-value="<?php echo $count['lab_count']?>">0</h2>
                                         <h4 class="title"><?php echo $this->lang->line("labaratoriyalar");?></h4>
                                     </div>
                                 </div>

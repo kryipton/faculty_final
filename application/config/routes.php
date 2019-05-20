@@ -140,6 +140,7 @@ $route['(:any)/Department_Labaratories'] = 'Leyli/department_labaratory';
 
 //Dashboard
 $route['himalaY'] = 'Mecnun/index';
+$route['himalaY_say_deyis'] = 'Mecnun/updateCounts';
 
 //Xeberler
 $route['himalaY_xeberler'] = 'Mecnun/news';

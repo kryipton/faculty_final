@@ -23,6 +23,9 @@ $lang["footer"] = "&copy; 2019. Все права защищены.";
 
 $lang["umumi_melumat"] = "Общая информация";
 
+$lang["ixtisaslar"] = "Ixtisaslar";
+
+
 
 
 

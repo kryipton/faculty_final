@@ -41,6 +41,8 @@ class Leyli extends CI_Controller {
         $data['last_news']   = $this->News_model->get_last_news();
         $data['last_events'] = $this->Events_model->get_last_events();
         $data['all_slide']   = $this->Slide_model->get_all_index();
+        $data['count']   = $this->Mecnun_model->getCounts();
+
 
 		$this->load->view('Front/home_page/whole_page', $data);
 	}

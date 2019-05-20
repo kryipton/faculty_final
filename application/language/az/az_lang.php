@@ -21,6 +21,10 @@ $lang["footer"] = "&copy; 2019. Bütün hüquqlar qorunur.";
 
 $lang["umumi_melumat"] = "Ümumi məlumat";
 
+$lang["ixtisaslar"] = "Ixtisaslar";
+
+
+
 
 
 

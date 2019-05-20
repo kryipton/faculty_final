@@ -3,6 +3,26 @@
 
 class Mecnun_model extends  CI_Model{
 
+//  ============================  DASHBOARDda say hissesi ==========================================
+
+    public function getCounts()
+    {
+        return $this->db->get('counts')->row_array();
+    }
+
+    public function updateCounts($data)
+    {
+        $this->db->update('counts',$data);
+    }
+
+
+
+
+
+
+
+
+
 //==========   Xeberemeliyatlari ===================
     public function getNews()
     {

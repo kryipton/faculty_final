@@ -9,7 +9,19 @@
         <div class="breadcrumb_wrap_inner" style="background-image: url('../public/images/top1.jpg');height: 250px;">
             <div class="container">
                 <ul class="breadcrumbs">
-                    <li><a href="<?php echo base_url("Home")?>">Ana Səhifə</a>  /</li>
+                    <li><a href="<?php
+
+                        if ($this->session->userdata("dil") == "az"){
+                            echo base_url('az/Home');
+                        }
+                        elseif ($this->session->userdata("dil") == "en"){
+                            echo base_url('en/Home');
+                        }
+                        elseif ($this->session->userdata("dil") == "ru"){
+                            echo base_url('ru/Home');
+                        }
+
+                        ?>">Ana Səhifə</a>  /</li>
                     <li>Ümumi məlumat</li>
                 </ul>
             </div>
@@ -20,8 +32,32 @@
         <div class="col-md-3">
             <div class="category_course" style="margin-top: 75px;">
                 <ul>
-                    <li><a href="<?php echo base_url('Master'); ?>">Ümumi məlumat</a></li>
-                    <li><a href="<?php echo base_url('Master/Speciality') ?>">İxtisas</a></li>
+                    <li><a href="<?php
+
+                        if ($this->session->userdata("dil") == "az"){
+                            echo base_url('az/Master');
+                        }
+                        elseif ($this->session->userdata("dil") == "en"){
+                            echo base_url('en/Master');
+                        }
+                        elseif ($this->session->userdata("dil") == "ru"){
+                            echo base_url('ru/Master');
+                        }
+
+                        ?>">Ümumi məlumat</a></li>
+                    <li><a href="<?php
+
+                        if ($this->session->userdata("dil") == "az"){
+                            echo base_url('az/Master/Speciality');
+                        }
+                        elseif ($this->session->userdata("dil") == "en"){
+                            echo base_url('en/Master/Speciality');
+                        }
+                        elseif ($this->session->userdata("dil") == "ru"){
+                            echo base_url('ru/Master/Speciality');
+                        }
+
+                        ?>">İxtisas</a></li>
                 </ul>
             </div>
         </div>
@@ -51,7 +87,19 @@
                             <td><?php echo $data_key['master_text'] ?></td>
                             <td>
 
-                                <a href="<?php echo base_url('Master/Speciality/'.$data_key['master_id']); ?>"><?php echo $data_key['master_text_about'] ?></a>
+                                <a href="<?php
+
+                                if ($this->session->userdata("dil") == "az"){
+                                    echo base_url('az/Master/Speciality/'.$data_key['master_id']);
+                                }
+                                elseif ($this->session->userdata("dil") == "en"){
+                                    echo base_url('en/Master/Speciality/'.$data_key['master_id']);
+                                }
+                                elseif ($this->session->userdata("dil") == "ru"){
+                                    echo base_url('ru/Master/Speciality/'.$data_key['master_id']);
+                                }
+
+                                ?>"><?php echo $data_key['master_text_about'] ?></a>
 
                             </td>
                         </tr>

@@ -10,9 +10,34 @@ class Mecnun extends CI_Controller{
         }
     }
 
-    public function index(){
+//  =================  DASHBOARD telebe lab mellim saylari ============================
 
-        $this->load->view('Admin/main_page/main');
+    public function index(){
+        $data['counts'] = $this->Mecnun_model->getCounts();
+        $this->load->view('Admin/main_page/main',$data);
+    }
+
+    public function updateCounts()
+    {
+        $teacher_count = strip_tags($this->input->post('teacher_count'));
+        $student_count = strip_tags($this->input->post('student_count'));
+        $lab_count = strip_tags($this->input->post('lab_count'));
+        if(!empty($teacher_count) && !empty($student_count) && !empty($lab_count)  ) {
+            $data = [
+              'teacher_count' => $teacher_count,
+              'student_count' => $student_count,
+              'lab_count' =>$lab_count,
+            ];
+            $this->Mecnun_model->updateCounts($data);
+            $msg = 'Saylar uğurla düzənləndi! ';
+            $this->session->set_flashdata('success',$msg);
+            redirect(base_url('himalaY'));
+           }else{
+            $msg = 'Zəhmət olmasa boşluq buraxmayın! ';
+            $this->session->set_flashdata('alert',$msg);
+            redirect(base_url('himalaY'));
+        }
+
     }
 
 //     ============= Xeberler Hissesi ================
