@@ -6,10 +6,10 @@
     <div class="breadcrumb_wrap">
         <div class="breadcrumb_wrap_inner about_head">
             <div class="container">
-                <h1>Kimya texnologiya fakültəsi</h1>
+                <h1><?php echo $logo["site_title"]?></h1>
                 <ul class="breadcrumbs">
-                    <li><a href="<?php echo base_url("Home")?>">Ana Səhifə</a> /</li>
-                    <li>Labaratoriya</li>
+                    <li><a href="<?php echo base_url("Home")?>"><?php echo $this->lang->line("ana_sehife"); ?></a> /</li>
+                    <li><?php echo $this->lang->line("labaratoriyalar"); ?></li>
                 </ul>
             </div>
         </div>
@@ -19,9 +19,13 @@
 
     <div class="col-md-8">
         <div class="about_right" style="padding: 20px 0px 0px 10px">
-            <h2>Labaratoriya</h2>
+            <h2><?php echo $this->lang->line("labaratoriyalar"); ?></h2>
             <div class="about_right_text" style="color: grey">
-                labaratoriya
+                <?php
+
+                   echo "burda 3 dilde labaratoriyalar olacaq";
+
+                ?>
             </div>
         </div>
     </div>

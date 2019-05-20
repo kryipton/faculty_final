@@ -36,6 +36,7 @@ class Leyli extends CI_Controller {
     public function index()
 	{
 
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['last_news']   = $this->News_model->get_last_news();
         $data['last_events'] = $this->Events_model->get_last_events();
@@ -45,6 +46,8 @@ class Leyli extends CI_Controller {
 	}
 
 	public function about(){
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
+
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
 
         $data['last_events'] = $this->Events_model->get_last_events();
@@ -55,25 +58,33 @@ class Leyli extends CI_Controller {
     }
 
     public function contact(){
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
 
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
 
         $data['last_events'] = $this->Events_model->get_last_events();
+
+        $data['contact'] = $this->Mecnun_model->getContact();
+
 
         $this->load->view('Front/contact/whole_page', $data);
     }
 
     public function labaratory(){
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
 
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
 
         $data['last_events'] = $this->Events_model->get_last_events();
+
+        $data['contact'] = $this->Mecnun_model->getContact();
 
         $this->load->view('Front/labaratory/whole_page', $data);
     }
 
     public function actions(){
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
 
         $data['last_events'] = $this->Events_model->get_last_events();
 
@@ -82,6 +93,7 @@ class Leyli extends CI_Controller {
 
     public function news(){
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
 
         $data['last_news']   = $this->News_model->get_last_news();
 
@@ -90,6 +102,7 @@ class Leyli extends CI_Controller {
 
     public function single_page_news($id){
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
 
         $data['new']   = $this->News_model->single_new(array(
             "news_id" => $id,
@@ -102,6 +115,7 @@ class Leyli extends CI_Controller {
 
     public function single_page_events($id){
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
 
         $data['event']   = $this->Events_model->single_event(array(
             "event_id" => $id,
@@ -114,6 +128,7 @@ class Leyli extends CI_Controller {
 
     public function bachelor(){
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
 
         $data['data'] = $this->Bachelor_model->get_desc();
 
@@ -122,6 +137,7 @@ class Leyli extends CI_Controller {
 
     public function bachelor_speciality(){
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
 
         $data['data'] = $this->Bachelor_model->get_bachelor_specialities();
 
@@ -130,6 +146,7 @@ class Leyli extends CI_Controller {
 
     public function bachelor_speciality_single($id){
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
 
         $data['data'] = $this->Bachelor_model->get_bachelor_speciality(array(
             "bachelor_id" => $id,
@@ -140,6 +157,7 @@ class Leyli extends CI_Controller {
 
     public function master(){
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
 
         $data['data'] = $this->Master_model->get_desc();
 
@@ -148,6 +166,7 @@ class Leyli extends CI_Controller {
 
     public function master_speciality(){
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
 
         $data['data'] = $this->Master_model->get_master_specialities();
 
@@ -156,6 +175,7 @@ class Leyli extends CI_Controller {
 
     public function master_speciality_single($id){
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
 
         $data['data'] = $this->Master_model->get_master_speciality(array(
             "master_id" => $id,
@@ -166,6 +186,7 @@ class Leyli extends CI_Controller {
 
     public function doctorate(){
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
 
         $data['data'] = $this->Doctorate_model->get_desc();
 
@@ -174,6 +195,7 @@ class Leyli extends CI_Controller {
 
     public function doctorate_speciality(){
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
 
         $data['data'] = $this->Doctorate_model->get_doctorate_specialities();
 
@@ -182,6 +204,7 @@ class Leyli extends CI_Controller {
 
     public function doctorate_speciality_single($id){
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
 
         $data['data'] = $this->Doctorate_model->get_doctorate_speciality(array(
             "doctorate_id" => $id,
@@ -192,6 +215,7 @@ class Leyli extends CI_Controller {
 
     public function department(){
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
 
         $data['data'] = $this->Department_model->get_desc();
 
@@ -202,6 +226,7 @@ class Leyli extends CI_Controller {
 
     public function department_contact(){
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
 
         $data['data'] = $this->Department_model->get_desc();
 
@@ -212,6 +237,7 @@ class Leyli extends CI_Controller {
 
     public function department_teachers(){
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
 
         $data['data'] = $this->Department_model->get_desc();
 
@@ -222,6 +248,7 @@ class Leyli extends CI_Controller {
 
     public function department_specialities(){
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
 
         $data['data'] = $this->Department_model->get_desc();
 
@@ -232,6 +259,7 @@ class Leyli extends CI_Controller {
 
     public function department_labaratory(){
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
 
         $data['data'] = $this->Department_model->get_desc();
 

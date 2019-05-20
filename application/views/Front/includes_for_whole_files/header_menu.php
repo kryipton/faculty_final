@@ -87,7 +87,7 @@
 <!--                navbarin loqosu-->
                 <div class="navbar-header col-md-2 col-sm-4 col-xs-4">
 <!--                    <a class="navbar-brand trigger" href="--><?php //echo base_url('Home') ?><!--" title="LearnMate"><img alt="Logo" src="http://asoiu.edu.az/newabout/ktf.png"></a>-->
-                    <a class="" href="<?php echo base_url('Home') ?>" title=""><img class="logoIMG" style="border-radius: 50%;background: white;border: 7px solid white;box-sizing: border-box alt="Logo src="<?php echo base_url('public/images/faculty_logo/kimya.png') ?>"></a>
+                    <a class="" href="<?php echo base_url('Home') ?>" title=""><img class="logoIMG" style="border-radius: 50%;background: white;border: 7px solid white;box-sizing: border-box alt="Logo src="<?php echo base_url("public/images/faculty_logo/$logo[logo_img]") ?>"></a>
                 </div>
 <!--                navbarin loqosu-->
 
