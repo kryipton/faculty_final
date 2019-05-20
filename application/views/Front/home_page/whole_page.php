@@ -111,7 +111,7 @@
                                                      data-actions='[{"event":"click","action":"scrollbelow","offset":"px"}]'
                                                      data-basealign="slide" data-responsive_offset="off" data-responsive="off" style="z-index: 8;
                                         white-space: nowrap; border-color: rgba(255, 255, 255, 0.5); outline: none; box-shadow: none; box-sizing: border-box; -moz-box-sizing: border-box;
-                                        -webkit-box-sizing: border-box;">Ətraflı
+                                        -webkit-box-sizing: border-box;"><?php echo $this->lang->line("diger"); ?>
                                                 </div>
                                             </a>
                                         <?php }else{

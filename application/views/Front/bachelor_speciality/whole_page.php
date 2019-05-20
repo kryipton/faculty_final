@@ -20,8 +20,8 @@
                             echo base_url('ru/Home');
                         }
 
-                        ?>">Ana Səhifə</a>  /</li>
-                    <li>Ümumi məlumat</li>
+                        ?>"><?php echo $this->lang->line("ana_sehife"); ?></a>  /   </li>
+                    <li><?php echo $this->lang->line("umumi_melumat"); ?></li>
                 </ul>
             </div>
         </div>
@@ -43,7 +43,7 @@
                             echo base_url('ru/Bachelor');
                         }
 
-                        ?>">Ümumi məlumat</a></li>
+                        ?>"><?php echo $this->lang->line("umumi_melumat"); ?></a></li>
                     <li><a href="<?php
 
                         if ($this->session->userdata("dil") == "az"){
@@ -56,7 +56,7 @@
                             echo base_url('ru/Bachelor/Speciality');
                         }
 
-                        ?>">İxtisas</a></li>
+                        ?>"><?php echo $this->lang->line("ixtisaslar"); ?></a></li>
                 </ul>
             </div>
         </div>
@@ -64,7 +64,7 @@
 
 
         <div class="col-md-9">
-            <h2>İxtisaslar</h2>
+            <h2> <?php echo $this->lang->line("ixtisaslar"); ?>  </h2>
             <div class="about_right" style="padding: 20px 0px 0px 10px">
 
                 <div class="about_right_text">
@@ -73,8 +73,8 @@
                     <table class="table table-hover">
                         <thead>
                         <tr>
-                            <th style="width: 30%;">İxtisas kodu</th>
-                            <th>İxtisas</th>
+                            <th style="width: 30%;"><?php echo $this->lang->line("ixtisas_kodu"); ?></th>
+                            <th><?php echo $this->lang->line("ixtisas_adi"); ?></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -98,9 +98,19 @@
                                     echo base_url('ru/Bachelor/Speciality/'.$data_key['bachelor_id']);
                                 }
 
-                                ?>">
+                                ?>"> <?php
 
-                                    <?php echo $data_key['bachelor_text_about_az'] ?></a>
+                                if ($this->session->userdata("dil") == "az"){
+                                    echo $data_key['bachelor_text_about_az'] ;
+                                }
+                                elseif ($this->session->userdata("dil") == "en"){
+                                    echo $data_key['bachelor_text_about_en'] ;
+                                }
+                                elseif ($this->session->userdata("dil") == "ru"){
+                                    echo $data_key['bachelor_text_about_ru'] ;
+                                }
+
+                                ?></a>
 
                             </td>
                         </tr>

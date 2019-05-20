@@ -21,8 +21,8 @@
                             echo base_url('ru/Home');
                         }
 
-                        ?>">Ana Səhifə</a>  /</li>
-                    <li>Ümumi məlumat</li>
+                        ?>"><?php echo $this->lang->line("ana_sehife"); ?></a>  /</li>
+                    <li><?php echo $this->lang->line("umumi_melumat"); ?></li>
                 </ul>
             </div>
         </div>
@@ -44,7 +44,7 @@
                             echo base_url('ru/Master');
                         }
 
-                        ?>">Ümumi məlumat</a></li>
+                        ?>"><?php echo $this->lang->line("umumi_melumat"); ?></a></li>
                     <li><a href="<?php
 
                         if ($this->session->userdata("dil") == "az"){
@@ -57,19 +57,30 @@
                             echo base_url('ru/Master/Speciality');
                         }
 
-                        ?>">İxtisas</a></li>
+                        ?>"><?php echo $this->lang->line("ixtisaslar"); ?></a></li>
                 </ul>
             </div>
         </div>
 
         <div class="col-md-8">
-            <h2>Magistr təhsili</h2>
+            <h2><?php echo $this->lang->line("magistr_tehsili"); ?></h2>
             <div class="about_right" style="padding: 20px 0px 0px 10px">
 
                 <div class="about_right_text">
 
+
                     <?php
-                    echo $data[0]['master_about_text'];
+
+                    if ($this->session->userdata("dil") == "az"){
+                        echo $data[0]['master_about_text_az'];
+                    }
+                    elseif ($this->session->userdata("dil") == "en"){
+                        echo $data[0]['master_about_text_en'];
+                    }
+                    elseif ($this->session->userdata("dil") == "ru"){
+                        echo $data[0]['master_about_text_ru'];
+                    }
+
                     ?>
 
                 </div>

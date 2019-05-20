@@ -20,8 +20,8 @@
                             echo base_url('ru/Home');
                         }
 
-                        ?>">Ana Səhifə</a>  /</li>
-                    <li>Ümumi məlumat</li>
+                        ?>"><?php echo $this->lang->line("ana_sehife"); ?></a>  /   </li>
+                    <li><?php echo $this->lang->line("umumi_melumat"); ?></li>
                 </ul>
             </div>
         </div>
@@ -43,7 +43,7 @@
                             echo base_url('ru/Bachelor');
                         }
 
-                        ?>">Ümumi məlumat</a></li>
+                        ?>"><?php echo $this->lang->line("umumi_melumat"); ?></a></li>
                     <li><a href="<?php
 
                         if ($this->session->userdata("dil") == "az"){
@@ -56,7 +56,7 @@
                             echo base_url('ru/Bachelor/Speciality');
                         }
 
-                        ?>">İxtisas</a></li>
+                        ?>"><?php echo $this->lang->line("ixtisaslar"); ?></a></li>
                 </ul>
             </div>
         </div>
@@ -64,11 +64,34 @@
 
 
         <div class="col-md-8">
-            <span class="text-center head_f_p"><?php echo $data['bachelor_text_about_az']; ?></span>
+            <h2 class="text-center head_f_p"><?php
+
+                if ($this->session->userdata("dil") == "az"){
+                    echo $speciality_info['bachelor_text_about_az'];
+                }
+                elseif ($this->session->userdata("dil") == "en"){
+                    echo $speciality_info['bachelor_text_about_en'];
+                }
+                elseif ($this->session->userdata("dil") == "ru"){
+                    echo $speciality_info['bachelor_text_about_ru'];
+                }
+
+                ?></h2>
             <div class="about_right" style="padding: 20px 0px 0px 10px">
 
-                <div><?php echo $data['bachelor_text_text_az']; ?></div>
+                <div><?php
 
+                    if ($this->session->userdata("dil") == "az"){
+                        echo $speciality_info['bachelor_text_text_az'];
+                    }
+                    elseif ($this->session->userdata("dil") == "en"){
+                        echo $speciality_info['bachelor_text_text_en'];
+                    }
+                    elseif ($this->session->userdata("dil") == "ru"){
+                        echo $speciality_info['bachelor_text_text_ru'];
+                    }
+
+                    ?></div>
             </div>
         </div>
     </div>

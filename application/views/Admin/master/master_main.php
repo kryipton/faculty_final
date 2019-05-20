@@ -1,4 +1,4 @@
-<title>Bakalavr</title>
+<title>Magistr</title>
 
 <?php $this->load->view('Admin/includes_for_all/admin_header'); ?>
 <?php $this->load->view('Admin/includes_for_all/left_menu'); ?>
