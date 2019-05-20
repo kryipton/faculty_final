@@ -1205,17 +1205,21 @@ class Mecnun extends CI_Controller{
 
     public function update_logo_and_title_act()
     {
-        $site_title = $this->input->post("site_title");
+        $site_title_az = $this->input->post("site_title_az");
+        $site_title_en = $this->input->post("site_title_en");
+        $site_title_ru = $this->input->post("site_title_ru");
 
         $config['upload_path']   = 'public/images/faculty_logo/';
         $config['max_size']     = '10000';
         $config['allowed_types'] = 'jpg|jpeg|png';
         $this->upload->initialize($config);
 
-        if (!empty($site_title)){
+        if (!empty($site_title_az) && !empty($site_title_en) && !empty($site_title_ru) ){
 
             $data = array(
-              "site_title" => $site_title,
+              "site_title_az" => $site_title_az,
+              "site_title_en" => $site_title_en,
+              "site_title_ru" => $site_title_ru,
               "logo_img"   => ($this->upload->do_upload('site_loqo')) ? $this->upload->data('file_name') : "kimya2.png",
             );
 

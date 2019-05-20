@@ -7,7 +7,7 @@
 
 <!--        sol terefde olan linkler-->
             <div class="category_course about_left_b">
-                <h4><?php echo $logo["site_title"]?></h4>
+                <h4><?php echo $logo["site_title_az"]?></h4>
                 <ul>
                     <li><a href="<?php echo base_url('About'); ?>"><?php echo $this->lang->line("umumi_melumat"); ?></a></li>
                     <li><a href="<?php echo base_url('Labaratory'); ?>"><?php echo $this->lang->line("labaratoriyalar"); ?></a></li>
