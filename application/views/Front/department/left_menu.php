@@ -9,11 +9,35 @@
             <div class="category_course about_left_b">
                 <h4>Kimya texnologiya fakültəsi</h4>
                 <ul>
-                    <li><a href="<?php echo base_url('Department'); ?>">Ümumi məlumat</a></li>
-                    <li><a href="<?php echo base_url('Department_Specialities'); ?>">İxtisaslar</a></li>
-                    <li><a href="<?php echo base_url('Department_Labaratories'); ?>">Labaratoriya</a></li>
-                    <li><a href="<?php echo base_url('Department_Teachers'); ?>">Müəllimlər</a></li>
-                    <li><a href="<?php echo base_url('Department_Contact'); ?>">Əlaqə</a></li>
+                    <li><a href="<?php
+
+                        if ($this->session->userdata("dil") == "az"){
+                            echo base_url("az/Department/$department[id]");
+                        }
+                        elseif ($this->session->userdata("dil") == "en"){
+                            echo base_url("en/Department/$department[id]");
+                        }
+                        elseif ($this->session->userdata("dil") == "ru"){
+                            echo base_url("ru/Department/$department[id]");
+                        }
+
+                         ?>"><?php echo $this->lang->line("umumi_melumat"); ?></a></li>
+                    <li><a href="<?php
+
+                        if ($this->session->userdata("dil") == "az"){
+                            echo base_url("az/Department_Specialities/$department[id]");
+                        }
+                        elseif ($this->session->userdata("dil") == "en"){
+                            echo base_url("en/Department_Specialities/$department[id]");
+                        }
+                        elseif ($this->session->userdata("dil") == "ru"){
+                            echo base_url("ru/Department_Specialities/$department[id]");
+                        }
+
+                        ?>"><?php echo $this->lang->line("ixtisaslar"); ?></a></li>
+                    <li><a href="<?php echo base_url('Department_Labaratories'); ?>"><?php echo $this->lang->line("labaratoriyalar"); ?></a></li>
+                    <li><a href="<?php echo base_url('Department_Teachers'); ?>"><?php echo $this->lang->line("muellimler"); ?></a></li>
+                    <li><a href="<?php echo base_url('Department_Contact'); ?>"><?php echo $this->lang->line("elaqe"); ?></a></li>
 <!--                    <li><a href="--><?php //echo base_url('Home/links'); ?><!--">Faydalı linklər</a></li>-->
 <!--                    <li><a href="--><?php //echo base_url('home/teacher') ?><!--">Müəllimlər</a></li>-->
                 </ul>
@@ -21,43 +45,61 @@
 <!--        sol terefde olan linkler-->
 
 
+        <!--        sol terefde olan diger tedbirler -->
+        <div class="category_events about_left_e">
+            <h4><?php echo $this->lang->line("tedbirler"); ?></h4>
+            <ul>
 
-<!--        sol terefde olan diger tedbirler -->
-            <div class="category_events about_left_e">
-                    <h4>Tədbirlər</h4>
-                    <ul>
 
+                <!--                        burada diger tedbirler foreache salinir-->
+                <?php foreach($last_events as $last_events_key){ ?>
 
-<!--                        burada diger tedbirler foreache salinir-->
-                        <?php foreach($last_events as $last_events_key){ ?>
+                    <li>
+                        <a href="<?php echo base_url('Single_page_events/').$last_events_key['event_id']?>">
 
-                            <li>
+                            <div class="date">
+                                <img style="width: 100%" src="<?php echo base_url('upload/event_images/'.$last_events_key['event_img']) ?>" alt="">
+                            </div>
+
+                        </a>
+                        <div class="event_txt">
+                            <h5>
                                 <a href="<?php echo base_url('Single_page_events/').$last_events_key['event_id']?>">
+                                    <?php
 
-                                    <div class="date">
-                                        <img style="width: 100%" src="<?php echo base_url('upload/event_images/'.$last_events_key['event_img']) ?>" alt="">
-                                    </div>
-
+                                    if ($this->session->userdata("dil") == "az"){
+                                        echo $last_events_key['event_title_az'];
+                                    }elseif ($this->session->userdata("dil") == "en"){
+                                        echo $last_events_key['event_title_en'];
+                                    }elseif ($this->session->userdata("dil") == "ru"){
+                                        echo $last_events_key['event_title_ru'];
+                                    }
+                                    ?>
                                 </a>
-                                <div class="event_txt">
-                                    <h5>
-                                        <a href="<?php echo base_url('Single_page_events/').$last_events_key['event_id']?>">
-                                            <?php echo $last_events_key['event_title_az'] ?>
-                                        </a>
-                                    </h5>
-                                    <p> <?php echo substr($last_events_key['event_desc_az'], 0,50) ?></p>
-                                    <span class="month" style="font-size: 12px"><?php echo $last_events_key['event_time'] ?></span>
-                                </div>
-                            </li>
+                            </h5>
+                            <p> <?php
+
+                                if ($this->session->userdata("dil") == "az"){
+                                    echo substr($last_events_key['event_desc_az'], 0,50);
+                                }elseif ($this->session->userdata("dil") == "en"){
+                                    echo substr($last_events_key['event_desc_en'], 0,50);
+                                }elseif ($this->session->userdata("dil") == "ru"){
+                                    echo substr($last_events_key['event_desc_ru'], 0,50);
+                                }
+
+                                ?></p>
+                            <span class="month" style="font-size: 12px"><?php echo $last_events_key['event_time'] ?></span>
+                        </div>
+                    </li>
 
 
-                        <?php } ?>
-<!--                        burada diger tedbirler foreache salinir-->
+                <?php } ?>
+                <!--                        burada diger tedbirler foreache salinir-->
 
 
-                    </ul>
-                </div>
-<!--        sol terefde olan diger tedbirler -->
+            </ul>
+        </div>
+        <!--        sol terefde olan diger tedbirler -->
 
 
     </div>

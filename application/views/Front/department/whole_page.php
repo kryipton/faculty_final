@@ -8,8 +8,8 @@
             <div class="container">
                 <h1>Kimya texnologiya fakültəsi</h1>
                 <ul class="breadcrumbs">
-                    <li><a href="<?php echo base_url("Home")?>">Ana Səhifə</a> /</li>
-                    <li>Ümumi Məlumat</li>
+                    <li><a href="<?php echo base_url("Home")?>"><?php echo $this->lang->line("ana_sehife"); ?></a> /</li>
+                    <li><?php echo $this->lang->line("umumi_melumat"); ?></li>
                 </ul>
             </div>
         </div>
@@ -19,11 +19,31 @@
 
     <div class="col-md-8">
         <div class="about_right" style="padding: 20px 0px 0px 10px">
-            <h2>Ekologiya fakultesi</h2>
+            <h2>
+                <?php
+
+                if ($this->session->userdata("dil") == "az"){
+                    echo $department["category_name_az"];
+                }elseif ($this->session->userdata("dil") == "en"){
+                    echo $department["category_name_en"];
+                }elseif ($this->session->userdata("dil") == "ru"){
+                    echo $department["category_name_ru"];
+                }
+
+                ?>
+            </h2>
             <div class="about_right_text" style="color: grey">
                 <span> 
                     <?php
-                        echo $data[0]['department_desc'];
+
+                        if ($this->session->userdata("dil") == "az"){
+                            echo $department["category_about_text_az"];
+                        }elseif ($this->session->userdata("dil") == "en"){
+                            echo $department["category_about_text_en"];
+                        }elseif ($this->session->userdata("dil") == "ru"){
+                            echo $department["category_about_text_ru"];
+                        }
+
                     ?>
                 </span>
             </div>

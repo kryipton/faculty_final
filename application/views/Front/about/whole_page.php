@@ -7,9 +7,34 @@
     <div class="breadcrumb_wrap">
         <div class="breadcrumb_wrap_inner about_head">
             <div class="container">
-                <h1><?php echo $logo["site_title_az"]?></h1>
+
+                <h1><?php
+
+
+                    if ($this->session->userdata("dil") == "az"){
+                        echo $logo["site_title_az"];
+                    }elseif ($this->session->userdata("dil") == "en"){
+                        echo $logo["site_title_en"];
+                    }elseif ($this->session->userdata("dil") == "ru"){
+                        echo $logo["site_title_ru"];
+                    }
+
+
+     
+
                 <ul class="breadcrumbs">
-                    <li><a href="<?php echo base_url("Home")?>"><?php echo $this->lang->line("ana_sehife"); ?></a> /</li>
+                    <li><a href="<?php
+
+
+                        if ($this->session->userdata("dil") == "az"){
+                            echo base_url("az/Home");
+                        }elseif ($this->session->userdata("dil") == "en"){
+                            echo base_url("en/Home");
+                        }elseif ($this->session->userdata("dil") == "ru"){
+                            echo base_url("ru/Home");
+                        }
+
+                        ?>"><?php echo $this->lang->line("ana_sehife"); ?></a> /</li>
                     <li><?php echo $this->lang->line("haqqimizda"); ?></li>
                 </ul>
             </div>
@@ -20,7 +45,22 @@
 
     <div class="col-md-8">
         <div class="about_right" style="padding: 20px 0px 0px 10px">
-            <h2><?php echo $logo["site_title_az"]?></h2>
+
+            <h2><?php
+
+
+                if ($this->session->userdata("dil") == "az"){
+                    echo $logo["site_title_az"];
+                }elseif ($this->session->userdata("dil") == "en"){
+                    echo $logo["site_title_en"];
+                }elseif ($this->session->userdata("dil") == "ru"){
+                    echo $logo["site_title_ru"];
+                }
+
+
+                ?></h2>
+
+
             <div class="about_right_text" style="color: grey">
                 <span> 
                     <?php
