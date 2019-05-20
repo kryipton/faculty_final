@@ -21,10 +21,10 @@
                 <li><a data-toggle="pill" href="#en">En</a></li>
             </ul>
 
-            <form action="<?php echo base_url('himalaY_laboratoriya_elave_etme') ?>" method="POST" enctype="multipart/form-data">
+            <form action="<?php echo base_url('himalaY_fakulte_laboratoriya_elave_etme') ?>" method="POST" enctype="multipart/form-data">
 
             <div class="tab-content" style="margin-top: 30px">
-                <a href="<?php echo base_url('himalaY_laboratoriya') ?>" class="btn btn-info btn-md">
+                <a href="<?php echo base_url('himalaY_fakulte_laboratoriya') ?>" class="btn btn-info btn-md">
                     <span class="glyphicon glyphicon-plus-sign"></span> Butun Laborotoriyalar
                 </a>
 
@@ -43,18 +43,6 @@
 
 
 
-
-                        <label for="">Kafedra</label>
-                        <select name="laboratory_catg_az" id="" class="form-control" style="height: 40px">
-                            <?php foreach ($categories as $category){ ?>
-                                <option value="<?php echo $category["category_name_az"]?>"><?php echo $category["category_name_az"] ?></option>
-                            <?php }?>
-                        </select>
-                        <br>
-
-
-
-
                     </div>
                 </div>
                 <div id="ru" class="tab-pane fade">
@@ -68,14 +56,6 @@
                         <label for="">Haqqında</label>
                         <textarea style="resize: none" class="form-control ckeditor" name="laboratory_desc_ru" id="" cols="30" rows="10" placeholder=""></textarea><br>
 
-                        <label for="">Kafedra</label>
-                        <select name="laboratory_catg_ru" id="" class="form-control" style="height: 40px">
-                            <?php foreach ($categories as $category){ ?>
-                                <option value="<?php echo $category["category_name_ru"]?>"><?php echo $category["category_name_ru"] ?></option>
-                            <?php }?>
-                        </select>
-                        <br>
-
                     </div>
                 </div>
                 <div id="en" class="tab-pane fade">
@@ -88,16 +68,6 @@
 
                         <label for="">Haqqında</label>
                         <textarea style="resize: none" class="form-control ckeditor" name="laboratory_desc_en" id="" cols="30" rows="10" placeholder=""></textarea><br>
-
-
-                        <label for="">Kafedra</label>
-                        <select name="laboratory_catg_en" id="" class="form-control" style="height: 40px">
-                            <?php foreach ($categories as $category){ ?>
-                                <option value="<?php echo $category["category_name_en"]?>"><?php echo $category["category_name_en"] ?></option>
-                            <?php }?>
-                        </select>
-                        <br>
-
 
                     </div>
                 </div>

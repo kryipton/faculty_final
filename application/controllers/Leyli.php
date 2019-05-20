@@ -76,6 +76,7 @@ class Leyli extends CI_Controller {
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
 
         $data['last_events'] = $this->Events_model->get_last_events();
+        $data['laboratories'] = $this->Laboratory_model->get_all();
 
         $data['contact'] = $this->Mecnun_model->getContact();
 
@@ -242,6 +243,8 @@ class Leyli extends CI_Controller {
         $data['data'] = $this->Department_model->get_desc();
 
         $data['last_events'] = $this->Events_model->get_last_events();
+
+        $data['teachers'] = $this->Events_model->get_last_events();
 
         $this->load->view('Front/department_teachers/whole_page', $data);
     }

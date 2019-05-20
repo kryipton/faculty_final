@@ -19,8 +19,8 @@
                     <?php echo $this->session->flashdata('error') ?>
                 </div>
             <?php } ?>
-            <a href="<?php echo base_url('himalaY_laboratoriya_elave_et') ?>" class="btn btn-info btn-md">
-                <span class="glyphicon glyphicon-plus-sign"></span> lobaratoriya əlavə et
+            <a href="<?php echo base_url('himalaY_fakulte_laboratoriya_elave_et') ?>" class="btn btn-info btn-md">
+                <span class="glyphicon glyphicon-plus-sign"></span> Laboratoriya əlavə et
             </a>
             <br>
 
@@ -31,7 +31,6 @@
                 <tr>
                     <th scope="col">Adı</th>
                     <th  scope="col">Haqqında</th>
-                    <th  scope="col">Kafedra</th>
                     <th  scope="col">Şəkil</th>
                     <th  scope="col">Əməliyyat</th>
                 </tr>
@@ -44,18 +43,17 @@
 
                     <tr>
 
-                        <th><?php echo $lab["laboratory_name_az"]?></th>
-                        <th><?php echo $lab["laboratory_desc_az"]?></th>
-                        <th><?php echo $lab["laboratory_catg_az"]?></th>
+                        <th><?php echo $lab["lab_title_az"]?></th>
+                        <th><?php echo $lab["lab_text_az"]?></th>
                         <th>
                             <img style="width: 150px;" src="<?php echo base_url('upload/laboratory_images/'.$lab['laboratory_img'])?>" alt="">
                         </th>
                         <td>
-                            <a href="<?php echo base_url('himalaY_laboratoriya_yenile/').$lab["id"] ?>" class="btn btn-primary btn-sm"
+                            <a href="<?php echo base_url('himalaY_fakulte_laboratoriya_yenile/').$lab["id"] ?>" class="btn btn-primary btn-sm"
                                style="background: #3C8DBC; border:0px solid #3C8DBC">
                                 <i class="fa fa-pencil" aria-hidden="true"></i>
                             </a>
-                            <a href="<?php echo base_url('himalaY_laboratoriya_sil/').$lab["id"] ?>" class="btn btn-primary btn-sm"
+                            <a href="<?php echo base_url('himalaY_fakulte_laboratoriya_sil/').$lab["id"] ?>" class="btn btn-primary btn-sm"
                                style="background: #DD4B39;border:0px solid #DD4B39">
                                 <i class="fa fa-times" aria-hidden="true"></i>
                             </a>

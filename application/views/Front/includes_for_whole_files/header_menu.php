@@ -31,7 +31,7 @@
     <script type="text/javascript" src="<?php echo base_url('public/') ?>js/respond.min.js"></script>
     <![endif]-->
 
-    <link rel="icon" href="<?php echo base_url('public/') ?>images/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="<?php echo base_url('public/') ?>/images/faculty_logo/kimya.png" type="image/x-icon"/>
     <title>Ana Səhifə</title>
 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/') ?>css/animate.css"/>
@@ -57,7 +57,7 @@
 </head>
 <body id="home" class="cms_index4">
 
-<link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+<link rel="icon" href="<?php echo base_url('public/') ?>/images/faculty_logo/kimya.png" type="image/x-icon"/>
     <title>Laboratoriya</title>
 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/') ?>css/animate.css"/>

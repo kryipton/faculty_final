@@ -1,3 +1,4 @@
+<title>Bakalavr</title>
 <?php $this->load->view('Front/includes_for_whole_files/header_menu'); ?>
 
 
@@ -31,7 +32,7 @@
                 <div class="about_right_text">
 
                     <?php
-                    echo $data[0]['bachelor_about_text'];
+                    echo $data[0]['bachelor_about_text_az'];
                     ?>
 
                 </div>

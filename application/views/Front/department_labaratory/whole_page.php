@@ -1,3 +1,4 @@
+<title>Fakültə Laboratoriyaları</title>
 <?php $this->load->view('Front/includes_for_whole_files/header_menu'); ?>
 
 <div class="content_wrapper" style="margin-bottom: 150px;">

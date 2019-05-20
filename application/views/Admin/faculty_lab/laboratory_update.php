@@ -20,10 +20,10 @@
                 <li><a data-toggle="pill" href="#en">En</a></li>
             </ul>
 
-            <form action="<?php echo base_url('himalaY_laboratoriya_yenile_act/').$laboratory['id'] ?>" method="POST" enctype="multipart/form-data">
+            <form action="<?php echo base_url('himalaY_fakulte_laboratoriya_yenile_act/').$laboratory['id'] ?>" method="POST" enctype="multipart/form-data">
 
                 <div class="tab-content" style="margin-top: 30px">
-                    <a href="<?php echo base_url('himalaY_laboratoriya') ?>" class="btn btn-info btn-md">
+                    <a href="<?php echo base_url('himalaY_fakulte_laboratoriya') ?>" class="btn btn-info btn-md">
                         <span class="glyphicon glyphicon-plus-sign"></span> Butun Laborotoriyalar
                     </a>
 
@@ -34,27 +34,13 @@
                         <div class="col-md-8">
 
                             <label for="">Ad</label>
-                            <input type="text" class="form-control" name="laboratory_name_az" value="<?php echo $laboratory['laboratory_name_az']?>" ><br>
+                            <input type="text" class="form-control" name="laboratory_name_az" value="<?php echo $laboratory['lab_title_az']?>" ><br>
 
 
                             <label for="">Haqqında</label>
                             <textarea style="resize: none" class="form-control ckeditor" name="laboratory_desc_az" id="" cols="30" rows="10" placeholder="">
-                                <?php echo $laboratory['laboratory_desc_az'] ?>
+                                <?php echo $laboratory['lab_text_az'] ?>
                             </textarea><br>
-
-
-
-
-                            <label for="">Kafedra</label>
-                            <select name="laboratory_catg_az" id="" class="form-control" style="height: 40px">
-
-                                <option value="<?php echo $laboratory['laboratory_catg_az']?>"><?php echo $laboratory['laboratory_catg_az']?></option>
-                                <?php foreach ($categories as $category){ if ($category["category_name_az"] != $laboratory['laboratory_catg_az'] ) { ?>
-                                    <option value="<?php echo $category["category_name_az"] ?>"><?php echo $category["category_name_az"] ?></option>
-                                    <?php }
-                                } ?>
-                            </select>
-                            <br>
 
 
 
@@ -67,20 +53,13 @@
                         <div class="col-md-8">
 
                             <label for="">Ad</label>
-                            <input type="text" class="form-control" name="laboratory_name_ru" value="<?php echo $laboratory['laboratory_name_ru']?>" ><br>
+                            <input type="text" class="form-control" name="laboratory_name_ru" value="<?php echo $laboratory['lab_title_ru']?>" ><br>
 
                             <label for="">Haqqında</label>
                             <textarea style="resize: none" class="form-control ckeditor" name="laboratory_desc_ru" id="" cols="30" rows="10" placeholder="">
-                                  <?php echo $laboratory['laboratory_desc_ru'] ?>
+                                  <?php echo $laboratory['lab_text_ru'] ?>
                             </textarea><br>
 
-                            <label for="">Kafedra</label>
-                            <select name="laboratory_catg_ru" id="" class="form-control" style="height: 40px">
-                                <?php foreach ($categories as $category){ ?>
-                                    <option value="<?php echo $category["category_name_ru"]?>"><?php echo $category["category_name_ru"] ?></option>
-                                <?php }?>
-                            </select>
-                            <br>
 
                         </div>
                     </div>
@@ -90,21 +69,12 @@
                         <br>
                         <div class="col-md-8">
                             <label for="">Ad</label>
-                            <input type="text" class="form-control" name="laboratory_name_en" value="<?php echo $laboratory['laboratory_name_en']?>" ><br>
+                            <input type="text" class="form-control" name="laboratory_name_en" value="<?php echo $laboratory['lab_title_en']?>" ><br>
 
                             <label for="">Haqqında</label>
                             <textarea style="resize: none" class="form-control ckeditor" name="laboratory_desc_en" id="" cols="30" rows="10" placeholder="">
-                                  <?php echo $laboratory['laboratory_desc_en'] ?>
+                                  <?php echo $laboratory['lab_text_en'] ?>
                             </textarea><br>
-
-
-                            <label for="">Kafedra</label>
-                            <select name="laboratory_catg_en" id="" class="form-control" style="height: 40px">
-                                <?php foreach ($categories as $category){ ?>
-                                    <option value="<?php echo $category["category_name_en"]?>"><?php echo $category["category_name_en"] ?></option>
-                                <?php }?>
-                            </select>
-                            <br>
 
 
                         </div>

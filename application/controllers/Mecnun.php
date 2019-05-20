@@ -5,6 +5,9 @@ class Mecnun extends CI_Controller{
     {
         parent::__construct();
         $this->load->model('Mecnun_model');
+        if(!get_active_user()){
+            redirect(base_url('himalaY_secure'));
+        }
     }
 
     public function index(){
@@ -864,14 +867,11 @@ class Mecnun extends CI_Controller{
         }else{
             $msg = 'Zəhmət olmasa boşluq buraxmayın!';
             $this->session->set_flashdata('alert',$msg);
-            redirect('himalaY_kafedralar_haqqinda_yenile');
+            redirect("himalaY_kafedralar_haqqinda_yenile/$id");
         }
 
     }
-
-
-
-
+    
     public function contact_departments(){
 
         $data["categories"] = $this->Mecnun_model->get_categories();
@@ -923,7 +923,7 @@ class Mecnun extends CI_Controller{
 
 
 
-    //     ============= Laboratory Hissesi ================
+    //     ============= Laboratory (KAFEDRA) Hissesi ================
 
     public function laboratory()
     {
@@ -932,11 +932,78 @@ class Mecnun extends CI_Controller{
         $this->load->view('Admin/laboratory/laboratory_main',$data);
     }
 
-    public function update_laboratory()
+    public function update_laboratory($id)
     {
+        $where=[
+          'id' => $id
+        ];
+
+        $data["laboratory"] = $this->Mecnun_model->getLaboratory($where);
         $data["categories"] = $this->Mecnun_model->get_categories();
         $this->load->view('Admin/laboratory/laboratory_update',$data);
     }
+
+    public function update_laboratory_act($id){
+        $where =[
+          'id' =>$id
+        ];
+        $laboratory_name_az = strip_tags($_POST['laboratory_name_az']);
+        $laboratory_name_ru = strip_tags($_POST['laboratory_name_ru']);
+        $laboratory_name_en = strip_tags($_POST['laboratory_name_en']);
+        $laboratory_desc_az = $_POST['laboratory_desc_az'];
+        $laboratory_desc_ru = $_POST['laboratory_desc_ru'];
+        $laboratory_desc_en = $_POST['laboratory_desc_en'];
+        $laboratory_catg_az = $_POST['laboratory_catg_az'];
+        $laboratory_catg_ru = $_POST['laboratory_catg_ru'];
+        $laboratory_catg_en = $_POST['laboratory_catg_en'];
+
+        $config['upload_path']   = 'upload/laboratory_images/';
+        $config['max_size']     = '10000';
+        $config['allowed_types'] = 'jpg|jpeg|png';
+        $this->upload->initialize($config);
+        if (!empty($laboratory_name_az) and !empty($laboratory_name_ru) and !empty($laboratory_name_en) and !empty($laboratory_desc_az) and !empty($laboratory_desc_ru) and !empty($laboratory_desc_en) and !empty($laboratory_catg_en) and !empty($laboratory_catg_az) and !empty($laboratory_catg_ru))
+        {
+            if($this->upload->do_upload('laboratory_photo')) {
+                $data = array(
+                    'laboratory_name_az' => $laboratory_name_az,
+                    'laboratory_name_ru' => $laboratory_name_ru,
+                    'laboratory_name_en' => $laboratory_name_en,
+                    'laboratory_desc_az' => $laboratory_desc_az,
+                    'laboratory_desc_ru' => $laboratory_desc_ru,
+                    'laboratory_desc_en' => $laboratory_desc_en,
+                    'laboratory_catg_az' => $laboratory_catg_az,
+                    'laboratory_catg_ru' => $laboratory_catg_ru,
+                    'laboratory_catg_en' => $laboratory_catg_en,
+                    'laboratory_img' =>  $this->upload->data('file_name')
+                );
+                $this->Mecnun_model->updateLab($where,$data);
+                $this->session->set_flashdata('success', 'Labaratoriya düzənləndi');
+                redirect(base_url('himalaY_laboratoriya'));
+            }else{
+                $data = array(
+                    'laboratory_name_az' => $laboratory_name_az,
+                    'laboratory_name_ru' => $laboratory_name_ru,
+                    'laboratory_name_en' => $laboratory_name_en,
+                    'laboratory_desc_az' => $laboratory_desc_az,
+                    'laboratory_desc_ru' => $laboratory_desc_ru,
+                    'laboratory_desc_en' => $laboratory_desc_en,
+                    'laboratory_catg_az' => $laboratory_catg_az,
+                    'laboratory_catg_ru' => $laboratory_catg_ru,
+                    'laboratory_catg_en' => $laboratory_catg_en,
+                );
+                $this->Mecnun_model->updateLab($where,$data);
+                $this->session->set_flashdata('success', 'Labaratoriya düzənləndi');
+                redirect(base_url('himalaY_laboratoriya'));
+
+            }
+
+        }else{
+            $this->session->set_flashdata('error','Melumatlari duzgun daxil edin');
+            redirect(base_url('himalaY_laboratoriya'));
+        }
+
+    }
+
     public function create_laboratory()
     {
         $data["categories"] = $this->Mecnun_model->get_categories();
@@ -958,7 +1025,6 @@ class Mecnun extends CI_Controller{
         $config['upload_path']   = 'upload/laboratory_images/';
         $config['max_size']     = '10000';
         $config['allowed_types'] = 'jpg|jpeg|png';
-
         $this->upload->initialize($config);
 
         if (!empty($laboratory_name_az) and !empty($laboratory_name_ru) and !empty($laboratory_name_en) and !empty($laboratory_desc_az) and !empty($laboratory_desc_ru) and !empty($laboratory_desc_en) and !empty($laboratory_catg_en) and !empty($laboratory_catg_az) and !empty($laboratory_catg_ru))
@@ -1644,8 +1710,243 @@ class Mecnun extends CI_Controller{
 
 
 
+    //     ============================ Kafedra(ixtisaslar) Hissesi ================================
+    public function specialities()
+    {
+        $data["all_specialities"] = $this->Mecnun_model->get_all_specialties();
+        $this->load->view('Admin/specialities/speciality_list',$data);
+    }
+
+    public function speciality_add()
+    {
+        $this->load->view('Admin/specialities/speciality_add');
+    }
+
+    public function speciality_add_act()
+    {
+        $speciality_code = $this->input->post("speciality_code");
+
+        $speciality_name_az = $this->input->post("speciality_name_az");
+        $speciality_about_az = $this->input->post("speciality_about_az");
 
 
+        $speciality_name_en = $this->input->post("speciality_name_en");
+        $speciality_about_en = $this->input->post("speciality_about_en");
+
+
+        $speciality_name_ru = $this->input->post("speciality_name_ru");
+        $speciality_about_ru = $this->input->post("speciality_about_ru");
+
+        if (!empty($speciality_code) && !empty($speciality_name_az) && !empty($speciality_about_az) && !empty($speciality_about_ru) && !empty($speciality_name_en) && !empty($speciality_about_en) && !empty($speciality_name_ru)){
+            $data = array(
+                "speciality_code" => $speciality_code,
+                "speciality_name_az" => $speciality_name_az,
+                "speciality_desc_az" => $speciality_about_az,
+                "speciality_name_en" => $speciality_name_en,
+                "speciality_desc_en" => $speciality_about_en,
+                "speciality_name_ru" => $speciality_name_ru,
+                "speciality_desc_ru" => $speciality_about_ru,
+            );
+
+            $this->Mecnun_model->addSpeciality($data);
+            $msg = 'Ixtisas uğurla əlavə edildi ! ';
+            $this->session->set_flashdata('success',$msg);
+            redirect("himalaY_ixtisaslar");
+
+        }else{
+            $this->session->set_flashdata("error", "Boşluq buraxmayın");
+            redirect("himalaY_ixtisas_elave_et");
+        }
+
+
+    }
+
+    public function speciality_delete($id)
+    {
+        $this->Mecnun_model->deleteSpeciality([
+            "id" => $id,
+        ]);
+        $msg = 'Ixtisas uğurla silindi ! ';
+        $this->session->set_flashdata('success',$msg);
+
+        redirect("himalaY_ixtisaslar");
+    }
+
+    public function speciality_update($id)
+    {
+        $data["speciality"] = $this->Mecnun_model->getSingleSpeciality([
+            "id" => $id,
+        ]);
+
+        $this->load->view('Admin/specialities/speciality_update',$data);
+    }
+
+    public function speciality_update_act($id)
+    {
+        $speciality_code = $this->input->post("speciality_code");
+
+        $speciality_name_az = $this->input->post("speciality_name_az");
+        $speciality_about_az = $this->input->post("speciality_about_az");
+
+
+        $speciality_name_en = $this->input->post("speciality_name_en");
+        $speciality_about_en = $this->input->post("speciality_about_en");
+
+
+        $speciality_name_ru = $this->input->post("speciality_name_ru");
+        $speciality_about_ru = $this->input->post("speciality_about_ru");
+
+        if (!empty($speciality_code) && !empty($speciality_name_az) && !empty($speciality_about_az) && !empty($speciality_about_ru) && !empty($speciality_name_en) && !empty($speciality_about_en) && !empty($speciality_name_ru)){
+            $data = array(
+                "speciality_code" => $speciality_code,
+                "speciality_name_az" => $speciality_name_az,
+                "speciality_desc_az" => $speciality_about_az,
+                "speciality_name_en" => $speciality_name_en,
+                "speciality_desc_en" => $speciality_about_en,
+                "speciality_name_ru" => $speciality_name_ru,
+                "speciality_desc_ru" => $speciality_about_ru,
+            );
+
+            $where = array(
+                "id" => $id,
+            );
+
+            $this->Mecnun_model->updateSpeciality($where, $data);
+            $msg = 'Ixtisas düzənləndi ! ';
+            $this->session->set_flashdata('success',$msg);
+            redirect("himalaY_ixtisaslar");
+
+        }else{
+            $this->session->set_flashdata("error", "Boşluq buraxmayın");
+            redirect("himalaY_ixtisas_yenile/$id");
+        }
+    }
+
+
+
+    //     ============= Laboratory (FAKULTE) Hissesi ================
+
+    public function faculty_laboratory()
+    {
+        $data['laboratories']=$this->Mecnun_model->getLaboratoriesF();
+        $this->load->view('Admin/faculty_lab/laboratory',$data);
+    }
+
+    public function update_faculty_laboratory($id)
+    {
+        $where=[
+            'id' => $id
+        ];
+
+        $data["laboratory"] = $this->Mecnun_model->getLaboratoryF($where);
+        $this->load->view('Admin/faculty_lab/laboratory_update',$data);
+    }
+
+    public function update_faculty_laboratory_act($id){
+        $where =[
+            'id' =>$id
+        ];
+        $laboratory_name_az = strip_tags($_POST['laboratory_name_az']);
+        $laboratory_name_ru = strip_tags($_POST['laboratory_name_ru']);
+        $laboratory_name_en = strip_tags($_POST['laboratory_name_en']);
+        $laboratory_desc_az = $_POST['laboratory_desc_az'];
+        $laboratory_desc_ru = $_POST['laboratory_desc_ru'];
+        $laboratory_desc_en = $_POST['laboratory_desc_en'];
+
+
+        $config['upload_path']   = 'upload/laboratory_images/';
+        $config['max_size']     = '10000';
+        $config['allowed_types'] = 'jpg|jpeg|png';
+        $this->upload->initialize($config);
+        if (!empty($laboratory_name_az) and !empty($laboratory_name_ru) and !empty($laboratory_name_en) and !empty($laboratory_desc_az) and !empty($laboratory_desc_ru))
+        {
+            if($this->upload->do_upload('laboratory_photo')) {
+                $data = array(
+                    'lab_title_az' => $laboratory_name_az,
+                    'lab_title_ru' => $laboratory_name_ru,
+                    'lab_title_en' => $laboratory_name_en,
+                    'lab_text_az' => $laboratory_desc_az,
+                    'lab_text_ru' => $laboratory_desc_ru,
+                    'lab_text_en' => $laboratory_desc_en,
+
+                    'laboratory_img' =>  $this->upload->data('file_name')
+                );
+                $this->Mecnun_model->updateLaboratoryF($where,$data);
+                $this->session->set_flashdata('success', 'Labaratoriya düzənləndi');
+                redirect(base_url('himalaY_fakulte_laboratoriya'));
+            }else{
+                $data = array(
+                    'lab_title_az' => $laboratory_name_az,
+                    'lab_title_ru' => $laboratory_name_ru,
+                    'lab_title_en' => $laboratory_name_en,
+                    'lab_text_az' => $laboratory_desc_az,
+                    'lab_text_ru' => $laboratory_desc_ru,
+                    'lab_text_en' => $laboratory_desc_en,
+                );
+                $this->Mecnun_model->updateLaboratoryF($where,$data);
+                $this->session->set_flashdata('success', 'Labaratoriya düzənləndi');
+                redirect(base_url('himalaY_fakulte_laboratoriya'));
+
+            }
+
+        }else{
+            $this->session->set_flashdata('error','Melumatlari duzgun daxil edin');
+            redirect(base_url('himalaY_fakulte_laboratoriya'));
+        }
+
+    }
+
+    public function create_faculty_laboratory()
+    {
+        $this->load->view('Admin/faculty_lab/laboratory_create');
+    }
+
+    public function create_faculty_laboratory_action()
+    {
+        $laboratory_name_az = strip_tags($_POST['laboratory_name_az']);
+        $laboratory_name_ru = strip_tags($_POST['laboratory_name_ru']);
+        $laboratory_name_en = strip_tags($_POST['laboratory_name_en']);
+        $laboratory_desc_az = $_POST['laboratory_desc_az'];
+        $laboratory_desc_ru = $_POST['laboratory_desc_ru'];
+        $laboratory_desc_en = $_POST['laboratory_desc_en'];
+
+        $config['upload_path']   = 'upload/laboratory_images/';
+        $config['max_size']     = '10000';
+        $config['allowed_types'] = 'jpg|jpeg|png';
+        $this->upload->initialize($config);
+
+        if (!empty($laboratory_name_az) and !empty($laboratory_name_ru) and !empty($laboratory_name_en) and !empty($laboratory_desc_az) and !empty($laboratory_desc_ru) and !empty($laboratory_desc_en) )
+        {
+            $data = array(
+                'lab_title_az' => $laboratory_name_az,
+                'lab_title_ru' => $laboratory_name_ru,
+                'lab_title_en' => $laboratory_name_en,
+                'lab_text_az' => $laboratory_desc_az,
+                'lab_text_ru' => $laboratory_desc_ru,
+                'lab_text_en' => $laboratory_desc_en,
+                'laboratory_img'     => ($this->upload->do_upload('laboratory_photo')) ? $this->upload->data('file_name') : 'default_noimage.jpg',
+
+            );
+            $this->Mecnun_model->insertLaboratoryF($data);
+            $this->session->set_flashdata('success','Labaratoriya elave edildi');
+            redirect(base_url('himalaY_fakulte_laboratoriya'));
+
+
+        }else{
+            $this->session->set_flashdata('error','Boşluq buraxmayın');
+            redirect(base_url('himalaY_fakulte_laboratoriya_elave_et'));
+        }
+
+    }
+
+    public function delete_faculty_laboratory($id)
+    {
+        $this->Mecnun_model->deleteLaboratoryF([
+            'id' => $id
+        ]);
+        $this->session->set_flashdata('success','Labaratoriya silindi');
+        redirect(base_url('himalaY_fakulte_laboratoriya'));
+    }
 
 
 
