@@ -7,6 +7,7 @@
 
 <!--        sol terefde olan linkler-->
             <div class="category_course about_left_b">
+
                 <h4><?php
 
 
@@ -19,6 +20,8 @@
                     }
 
                     ?></h4>
+
+
                 <ul>
                     <li><a href="<?php
 

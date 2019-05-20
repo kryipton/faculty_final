@@ -7,6 +7,7 @@
     <div class="breadcrumb_wrap">
         <div class="breadcrumb_wrap_inner about_head">
             <div class="container">
+
                 <h1><?php
 
 
@@ -18,7 +19,9 @@
                         echo $logo["site_title_ru"];
                     }
 
-                    ?></h1>
+
+     
+
                 <ul class="breadcrumbs">
                     <li><a href="<?php
 
@@ -42,6 +45,7 @@
 
     <div class="col-md-8">
         <div class="about_right" style="padding: 20px 0px 0px 10px">
+
             <h2><?php
 
 
@@ -55,6 +59,8 @@
 
 
                 ?></h2>
+
+
             <div class="about_right_text" style="color: grey">
                 <span> 
                     <?php
