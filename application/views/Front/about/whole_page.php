@@ -36,7 +36,7 @@
                             echo base_url("ru/Home");
                         }
 
-                        ?>"><?php echo $this->lang->line("ana_sehife"); ?></a> /</li>
+                        ?>"?><?php echo $this->lang->line("ana_sehife"); ?></a> /</li>
                     <li><?php echo $this->lang->line("haqqimizda"); ?></li>
                 </ul>
             </div>

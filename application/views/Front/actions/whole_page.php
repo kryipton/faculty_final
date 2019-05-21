@@ -6,7 +6,7 @@
 <div class="content_wrapper" >
 
 
-<!--    tedbirler hissesi-->
+    <!--    tedbirler hissesi-->
     <div class="courses">
         <div class="container">
             <div class="head_part">
@@ -20,15 +20,60 @@
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                         <div class="course_block">
                             <div class="">
-                                <img style="height: 230px;" alt="<?php echo $last_events_key['event_title_az'] ?>" src="<?php echo base_url('upload/event_images/'.$last_events_key['event_img']) ?>">
-                                <div class="course_img_hoverlay_btn"><a href="<?php echo base_url('Single_page_events/'.$last_events_key['event_id']) ?>" title="Ətraflı"
+                                <img style="height: 230px;" alt="<?php
+
+                                if ($this->session->userdata("dil") == "az"){
+                                    echo $last_events_key['event_title_az'];
+                                }elseif ($this->session->userdata("dil") == "en"){
+                                    echo $last_events_key['event_title_en'];
+                                }elseif ($this->session->userdata("dil") == "ru"){
+                                    echo $last_events_key['event_title_ru'];
+                                }
+
+                                ?>" src="<?php echo base_url('upload/event_images/'.$last_events_key['event_img']) ?>">
+
+                                <div class="course_img_hoverlay_btn"><a href="<?php
+
+
+                                    if ($this->session->userdata("dil") == "az"){
+                                        echo base_url('az/Single_page_events/').$last_events_key['event_id'];
+                                    }elseif ($this->session->userdata("dil") == "en"){
+                                        echo base_url('en/Single_page_events/').$last_events_key['event_id'];
+                                    }elseif ($this->session->userdata("dil") == "ru"){
+                                        echo base_url('ru/Single_page_events/').$last_events_key['event_id'];
+                                    }?>
+
+                                    " title="Ətraflı"
                                                                         class="fa fa-eye"></a></div>
                             </div>
                             <div class="psychology">
 
                                 <div class="course_info">
-                                    <h4><?php echo $last_events_key['event_title_az'] ?></h4>
-                                    <?php echo substr($last_events_key['event_desc_az'], 0,150) ?>
+                                    <h4><?php
+
+                                        if ($this->session->userdata("dil") == "az"){
+                                            echo $last_events_key['event_title_az'];
+                                        }elseif ($this->session->userdata("dil") == "en"){
+                                            echo $last_events_key['event_title_en'];
+                                        }elseif ($this->session->userdata("dil") == "ru"){
+                                            echo $last_events_key['event_title_ru'];
+                                        }
+
+                                        ?></h4>
+                                    <?php
+
+
+                                    if ($this->session->userdata("dil") == "az"){
+                                        echo substr($last_events_key['event_desc_az'], 0,150);
+                                    }elseif ($this->session->userdata("dil") == "en"){
+                                        echo substr($last_events_key['event_desc_az'], 0,150);
+                                    }elseif ($this->session->userdata("dil") == "ru"){
+                                        echo substr($last_events_key['event_desc_az'], 0,150);
+                                    }
+
+
+
+                                    ?>
                                 </div>
                             </div>
                             <div class="psychology course_count_wrap">
@@ -48,12 +93,9 @@
             </div>
         </div>
     </div>
-<!--    tedbirler hissesi-->
+    <!--    tedbirler hissesi-->
 
 </div>
 <!-- main content-->
 
 <?php $this->load->view('Front/includes_for_whole_files/footer_menu'); ?>
-
-
-

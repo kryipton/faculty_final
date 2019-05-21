@@ -494,7 +494,17 @@
 
                                     <!--                                bu hissede tedbirin idsi gonderilir single page acmaq ucnun-->
                                     <div class="course_img_hoverlay_btn">
-                                        <a href="<?php echo base_url('Single_page_events/').$last_events_key['event_id']?>" title="Ətraflı" class="fa fa-eye"></a>
+                                        <a href="<?php
+
+                                        if ($this->session->userdata("dil") == "az"){
+                                            echo base_url('az/Single_page_events/').$last_events_key['event_id'];
+                                        }elseif ($this->session->userdata("dil") == "en"){
+                                            echo base_url('en/Single_page_events/').$last_events_key['event_id'];
+                                        }elseif ($this->session->userdata("dil") == "ru"){
+                                            echo base_url('ru/Single_page_events/').$last_events_key['event_id'];
+                                        }
+
+                                        ?>" title="Ətraflı" class="fa fa-eye"></a>
                                     </div>
                                     <!--                                bu hissede tedbirin idsi gonderilir single page acmaq ucnun -->
 
@@ -529,7 +539,7 @@
                                             echo substr($last_events_key['event_desc_ru'], 0,150);
                                         }
 
-                                         ?>
+                                        ?>
                                         <!--                                    tedbirin contenti-->
 
 
@@ -561,7 +571,17 @@
 
             <center>
                 <!--                            diger tedbirlere get-->
-                <a class="effect effect-1 c_margin_top_20" href="<?php echo base_url("Actions")?>" title="Digər Tədbirlər"><?php echo $this->lang->line("diger");?></a>
+                <a class="effect effect-1 c_margin_top_20" href="<?php
+
+                if ($this->session->userdata("dil") == "az"){
+                    echo base_url('az/Actions/');
+                }elseif ($this->session->userdata("dil") == "en"){
+                    echo base_url('en/Actions/');
+                }elseif ($this->session->userdata("dil") == "ru"){
+                    echo base_url('ru/Actions/');
+                }
+
+                ?>" title="Digər Tədbirlər"><?php echo $this->lang->line("diger");?></a>
                 <!--                            diger tedbirlere get-->
             </center>
 

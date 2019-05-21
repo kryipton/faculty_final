@@ -86,8 +86,6 @@
                             <td><?php echo $data_key['bachelor_text'] ?></td>
                             <td>
 
-                                <a href="<?php echo base_url('Bachelor/Speciality/'.$data_key['bachelor_id']); ?>"><?php echo $data_key['bachelor_text_about_az'] ?></a>
-
                                 <a href="<?php
 
                                 if ($this->session->userdata("dil") == "az"){
@@ -116,9 +114,10 @@
 
                             </td>
                         </tr>
-                        </tbody>
                         <?php  }
                         ?>
+                        </tbody>
+
 
                     </table>
 

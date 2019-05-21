@@ -146,24 +146,7 @@ if($new){ ?>
                         <h4><?php echo $this->lang->line("tedbirler"); ?></h4>
                         <ul>
 
-                            <?php foreach($last_events as $last_events_key){ ?>
-
-                                <li>
-                                    <div class="tutor_img">
-                                        <img alt="Leonardo Bonucci" src="<?php echo base_url('upload/event_images/'.$last_events_key['event_img']) ?>">
-                                    </div>
-                                    <div class="tutor_info">
-                                        <h5>
-                                            <a href="<?php echo base_url('Single_page_events/').$last_events_key['event_id']?>"><b><?php echo substr($last_events_key['event_title_az'],0,50) ?></b></a>
-                                        </h5>
-                                        <p><?php echo substr($last_events_key['event_desc_az'],0,50) ?></p>
-                                    </div>
-                                </li>
-
-                            <?php } ?>
-
-
-
+                            <?php $this->load->view('Front/include_last_events/last_events'); ?>
 
                         </ul>
                     </div>

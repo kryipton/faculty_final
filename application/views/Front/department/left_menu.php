@@ -109,48 +109,9 @@
 
 
                 <!--                        burada diger tedbirler foreache salinir-->
-                <?php foreach($last_events as $last_events_key){ ?>
 
-                    <li>
-                        <a href="<?php echo base_url('Single_page_events/').$last_events_key['event_id']?>">
+                <?php $this->load->view('Front/include_last_events/last_events'); ?>
 
-                            <div class="date">
-                                <img style="width: 100%" src="<?php echo base_url('upload/event_images/'.$last_events_key['event_img']) ?>" alt="">
-                            </div>
-
-                        </a>
-                        <div class="event_txt">
-                            <h5>
-                                <a href="<?php echo base_url('Single_page_events/').$last_events_key['event_id']?>">
-                                    <?php
-
-                                    if ($this->session->userdata("dil") == "az"){
-                                        echo $last_events_key['event_title_az'];
-                                    }elseif ($this->session->userdata("dil") == "en"){
-                                        echo $last_events_key['event_title_en'];
-                                    }elseif ($this->session->userdata("dil") == "ru"){
-                                        echo $last_events_key['event_title_ru'];
-                                    }
-                                    ?>
-                                </a>
-                            </h5>
-                            <p> <?php
-
-                                if ($this->session->userdata("dil") == "az"){
-                                    echo substr($last_events_key['event_desc_az'], 0,50);
-                                }elseif ($this->session->userdata("dil") == "en"){
-                                    echo substr($last_events_key['event_desc_en'], 0,50);
-                                }elseif ($this->session->userdata("dil") == "ru"){
-                                    echo substr($last_events_key['event_desc_ru'], 0,50);
-                                }
-
-                                ?></p>
-                            <span class="month" style="font-size: 12px"><?php echo $last_events_key['event_time'] ?></span>
-                        </div>
-                    </li>
-
-
-                <?php } ?>
                 <!--                        burada diger tedbirler foreache salinir-->
 
 

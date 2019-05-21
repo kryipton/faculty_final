@@ -106,7 +106,7 @@ $route['(:any)/Doctorate/Speciality'] = 'Leyli/doctorate_speciality';
 $route['(:any)/Doctorate/Speciality/(.*)'] = 'Leyli/doctorate_speciality_single/$2/$1';
 
 //Tedbirler hissesi single page
-$route['(:any)/Single_page_events/(.*)'] = 'Leyli/single_page_events/$1';
+$route['(:any)/Single_page_events/(.*)'] = 'Leyli/single_page_events/$2/$1';
 
 
 //Xeberler hissesi single page

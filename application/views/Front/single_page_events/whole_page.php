@@ -14,12 +14,52 @@ if($event){ ?>
              style="background: url(images/slider_group_in_campus.jpg); background-attachment: fixed; background-position: 50% 50%;">
             <div class="breadcrumb_wrap_inner">
                 <div class="container">
-                    <h2 style="text-align: right;color: white"><?php echo substr($event['event_title_az'], 0,71); ?></h2>
+                    <h2 style="text-align: right;color: white"><?php
+
+                        if ($this->session->userdata("dil") == "az"){
+                            echo substr($event['event_title_az'], 0,71);
+                        }elseif ($this->session->userdata("dil") == "en"){
+                            echo substr($event['event_title_en'], 0,71);
+                        }elseif ($this->session->userdata("dil") == "ru"){
+                            echo substr($event['event_title_ru'], 0,71);
+                        }
+
+                        ?></h2>
+
+
+
+                    <!--                    <ul class="breadcrumbs">-->
+                    <!--                        <li><a href="--><?php //echo base_url('Home')?><!--">Ana Səhifə</a> /</li>-->
+                    <!--                        <li><a href="--><?php //echo base_url('Actions')?><!--">Tədbirlər</a> /</li>-->
+                    <!--                        <li>--><?php
+                    //
+                    //                            if ($this->session->userdata("dil") == "az"){
+                    //                                echo substr($event['event_title_az'], 0,120);
+                    //                            }elseif ($this->session->userdata("dil") == "en"){
+                    //                                echo substr($event['event_title_en'], 0,120);
+                    //                            }elseif ($this->session->userdata("dil") == "ru"){
+                    //                                echo substr($event['event_title_ru'], 0,120);
+                    //                            }
+                    //
+                    //                             ?><!--</li>-->
+                    <!--                    </ul>-->
+
                     <ul class="breadcrumbs">
-                        <li><a href="<?php echo base_url('Home')?>">Ana Səhifə</a> /</li>
-                        <li><a href="<?php echo base_url('Actions')?>">Tədbirlər</a> /</li>
-                        <li><?php echo substr($event['event_title_az'], 0,120) ?></li>
+                        <li><a href="<?php
+
+
+                            if ($this->session->userdata("dil") == "az"){
+                                echo base_url("az/Home");
+                            }elseif ($this->session->userdata("dil") == "en"){
+                                echo base_url("en/Home");
+                            }elseif ($this->session->userdata("dil") == "ru"){
+                                echo base_url("ru/Home");
+                            }
+
+                            ?>"><?php echo $this->lang->line("ana_sehife"); ?></a> /</li>
+                        <li><?php echo $this->lang->line("haqqimizda"); ?></li>
                     </ul>
+
                 </div>
             </div>
         </div>
@@ -35,7 +75,18 @@ if($event){ ?>
 
                         <div class="dtl_inner last">
                             <div class="dtl_head">
-                                <h1><?php echo substr($event['event_title_az'], 0,71); ?></h1>
+                                <h1><?php
+
+                                    if ($this->session->userdata("dil") == "az"){
+                                        echo substr($event['event_title_az'], 0,71);
+                                    }elseif ($this->session->userdata("dil") == "en"){
+                                        echo substr($event['event_title_en'], 0,71);
+                                    }elseif ($this->session->userdata("dil") == "ru"){
+                                        echo substr($event['event_title_ru'], 0,71);
+                                    }
+
+
+                                    ?></h1>
 
                             </div>
                             <div class="dtl_block">
@@ -45,8 +96,18 @@ if($event){ ?>
                                 <div class="detail_text_wrap">
                                     <div class="info_wrapper">
                                         <div class="info_head">
-                                            <h4>Ətraflı</h4>
-                                            <p><?php echo $event['event_desc_az'] ?></p>
+                                            <h4><?php echo $this->lang->line("etrafli"); ?></h4>
+                                            <p><?php
+
+                                                if ($this->session->userdata("dil") == "az"){
+                                                    echo $event['event_desc_az'];
+                                                }elseif ($this->session->userdata("dil") == "en"){
+                                                    echo $event['event_desc_en'];
+                                                }elseif ($this->session->userdata("dil") == "ru"){
+                                                    echo $event['event_desc_ru'];
+                                                }
+
+                                                ?></p>
                                         </div>
                                     </div>
                                     <div class="info_wrapper">
@@ -69,24 +130,11 @@ if($event){ ?>
 
 
                     <div class="course_tutor event_single_right">
-                        <h4>Tədbirlər</h4>
+                        <h4><?php echo $this->lang->line("tedbirler"); ?></h4>
                         <ul>
 
-                            <?php foreach($last_events as $last_events_key){ ?>
 
-                                <li>
-                                    <div class="tutor_img">
-                                        <img alt="Leonardo Bonucci" src="<?php echo base_url('upload/event_images/'.$last_events_key['event_img']) ?>">
-                                    </div>
-                                    <div class="tutor_info">
-                                        <h5>
-                                            <a href="<?php echo base_url('Single_page_events/').$last_events_key['event_id']?>"><b><?php echo substr($last_events_key['event_title_az'],0,50) ?></b></a>
-                                        </h5>
-                                        <p><?php echo substr($last_events_key['event_desc_az'],0,50) ?></p>
-                                    </div>
-                                </li>
-
-                            <?php } ?>
+                            <?php $this->load->view('Front/include_last_events/last_events'); ?>
 
 
 
@@ -112,4 +160,3 @@ if($event){ ?>
 
 
 <?php $this->load->view('Front/includes_for_whole_files/footer_menu'); ?>
-
