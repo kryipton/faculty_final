@@ -23,9 +23,24 @@ $lang["footer"] = "&copy; 2019. All rights reserved.";
 
 $lang["umumi_melumat"] = "General information";
 
-$lang["ixtisaslar"] = "Specialties";
 
 $lang["ixtisaslar"] = "Specialties";
+
+
+
+$lang["ixtisas_adi"] = "Specialty name";
+
+$lang["ixtisas_kodu"] = "Specialty code";
+
+
+$lang["bakalavr_tehsili"] = "Bachelor education";
+
+$lang["magistr_tehsili"] = "Master education";
+
+$lang["doktorantura_tehsili"] = "Doctorate education";
+
+
+
 
 
 

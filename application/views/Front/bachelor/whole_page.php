@@ -56,19 +56,29 @@
                             echo base_url('ru/Bachelor/Speciality');
                         }
 
-                        ?>">İxtisas</a></li>
+                        ?>"><?php echo $this->lang->line("ixtisaslar"); ?></a></li>
                 </ul>
             </div>
         </div>
 
         <div class="col-md-8">
-            <h2>Bakalavr təhsili</h2>
+            <h2><?php echo $this->lang->line("bakalavr_tehsili"); ?></h2>
             <div class="about_right" style="padding: 20px 0px 0px 10px">
 
                 <div class="about_right_text">
 
                     <?php
-                    echo $data[0]['bachelor_about_text_az'];
+
+                    if ($this->session->userdata("dil") == "az"){
+                        echo $data[0]['bachelor_about_text_az'];
+                    }
+                    elseif ($this->session->userdata("dil") == "en"){
+                        echo $data[0]['bachelor_about_text_en'];
+                    }
+                    elseif ($this->session->userdata("dil") == "ru"){
+                        echo $data[0]['bachelor_about_text_ru'];
+                    }
+
                     ?>
 
                 </div>

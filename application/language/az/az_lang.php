@@ -23,6 +23,19 @@ $lang["umumi_melumat"] = "Ümumi məlumat";
 
 $lang["ixtisaslar"] = "İxtisaslar";
 
+$lang["ixtisas_adi"] = "İxtisas adı";
+
+$lang["ixtisas_kodu"] = "İxtisas kodu";
+
+
+$lang["bakalavr_tehsili"] = "Bakalavr təhsili";
+
+$lang["magistr_tehsili"] = "Magistr təhsili";
+
+$lang["doktorantura_tehsili"] = "Doktorantura təhsili";
+
+
+
 
 
 

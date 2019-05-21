@@ -25,6 +25,19 @@ $lang["umumi_melumat"] = "Общая информация";
 
 $lang["ixtisaslar"] = "Специальности";
 
+$lang["ixtisas_adi"] = "Название специальности";
+
+$lang["ixtisas_kodu"] = "Код специальности";
+
+$lang["bakalavr_tehsili"] = "Степень бакалавра";
+
+$lang["magistr_tehsili"] = "Мастер образование";
+
+$lang["doktorantura_tehsili"] = "Докторантура";
+
+
+
+
 
 
 

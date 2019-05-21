@@ -84,7 +84,7 @@ $route['(:any)/Bachelor'] = 'Leyli/bachelor';
 $route['(:any)/Bachelor/Speciality'] = 'Leyli/bachelor_speciality';
 
 //Bakalavr tek ixtisas hissesi
-$route['(:any)/Bachelor/Speciality/(.*)'] = 'Leyli/bachelor_speciality_single/$1';
+$route['(:any)/Bachelor/Speciality/(.*)'] = 'Leyli/bachelor_speciality_single/$2/$1';
 
 
 //Master hissesi
@@ -94,7 +94,7 @@ $route['(:any)/Master'] = 'Leyli/master';
 $route['(:any)/Master/Speciality'] = 'Leyli/master_speciality';
 
 //Master tek ixtisas hissesi
-$route['(:any)/Master/Speciality/(.*)'] = 'Leyli/master_speciality_single/$1';
+$route['(:any)/Master/Speciality/(.*)'] = 'Leyli/master_speciality_single/$2/$1';
 
 //Doktorantura hissesi
 $route['(:any)/Doctorate'] = 'Leyli/doctorate';
@@ -103,7 +103,7 @@ $route['(:any)/Doctorate'] = 'Leyli/doctorate';
 $route['(:any)/Doctorate/Speciality'] = 'Leyli/doctorate_speciality';
 
 //Doktorantura tek ixtisas hissesi
-$route['(:any)/Doctorate/Speciality/(.*)'] = 'Leyli/doctorate_speciality_single/$1';
+$route['(:any)/Doctorate/Speciality/(.*)'] = 'Leyli/doctorate_speciality_single/$2/$1';
 
 //Tedbirler hissesi single page
 $route['(:any)/Single_page_events/(.*)'] = 'Leyli/single_page_events/$1';
