@@ -92,9 +92,9 @@
                         }
 
                         ?>"><?php echo $this->lang->line("elaqe"); ?></a></li>
-                    <li><a href="<?php echo base_url('Department_Labaratories'); ?>"><?php echo $this->lang->line("labaratoriyalar"); ?></a></li>
-                    <li><a href="<?php echo base_url('Department_Teachers'); ?>"><?php echo $this->lang->line("muellimler"); ?></a></li>
-                    <li><a href="<?php echo base_url('Department_Contact'); ?>"><?php echo $this->lang->line("elaqe"); ?></a></li>
+<!--                    <li><a href="--><?php //echo base_url('Department_Labaratories'); ?><!--">--><?php //echo $this->lang->line("labaratoriyalar"); ?><!--</a></li>-->
+<!--                    <li><a href="--><?php //echo base_url('Department_Teachers'); ?><!--">--><?php //echo $this->lang->line("muellimler"); ?><!--</a></li>-->
+<!--                    <li><a href="--><?php //echo base_url('Department_Contact'); ?><!--">--><?php //echo $this->lang->line("elaqe"); ?><!--</a></li>-->
 <!--                    <li><a href="--><?php //echo base_url('Home/links'); ?><!--">Faydalı linklər</a></li>-->
 <!--                    <li><a href="--><?php //echo base_url('home/teacher') ?><!--">Müəllimlər</a></li>-->
                 </ul>

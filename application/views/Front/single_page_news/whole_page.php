@@ -1,4 +1,4 @@
-<title>Xəbər</title>
+<title><?php echo $this->lang->line("xeberler"); ?></title>
 
 <?php $this->load->view('Front/includes_for_whole_files/header_menu'); ?>
 
@@ -16,11 +16,59 @@ if($new){ ?>
              style="background: url(images/slider_group_in_campus.jpg); background-attachment: fixed; background-position: 50% 50%;">
             <div class="breadcrumb_wrap_inner">
                 <div class="container">
-                    <h2 style="text-align: right;color: white"><?php echo substr($new['news_title_az'], 0,71); ?></h2>
+                    <h2 style="text-align: right;color: white"><?php
+
+                        if ($this->session->userdata("dil") == "az"){
+                            echo substr($new['news_title_az'], 0,71);
+                        }
+                        elseif ($this->session->userdata("dil") == "en"){
+                            echo substr($new['news_title_en'], 0,71);
+                        }
+                        elseif ($this->session->userdata("dil") == "ru"){
+                            echo substr($new['news_title_ru'], 0,71);
+                        }
+
+                        ?></h2>
                     <ul class="breadcrumbs">
-                        <li><a href="index-2.html">Ana Səhifə</a> /</li>
-                        <li><a href="course_grid.html">Tədbirlər</a> /</li>
-                        <li><?php echo substr($new['news_title_az'], 0,120) ?></li>
+                        <li><a href="<?php
+
+                            if ($this->session->userdata("dil") == "az"){
+                                echo base_url('az/Home');
+                            }
+                            elseif ($this->session->userdata("dil") == "en"){
+                                echo base_url('en/Home');
+                            }
+                            elseif ($this->session->userdata("dil") == "ru"){
+                                echo base_url('ru/Home');
+                            }
+
+                            ?>"><?php echo $this->lang->line("ana_sehife"); ?></a>  /   </li>
+                        <li><a href="<?php
+
+                            if ($this->session->userdata("dil") == "az"){
+                                echo base_url("az/News");
+                            }elseif ($this->session->userdata("dil") == "en"){
+                                echo base_url("en/News");
+                            }elseif ($this->session->userdata("dil") == "ru"){
+                                echo base_url("ru/News");
+                            }
+
+                            ?>"><?php echo $this->lang->line("xeberler"); ?></a> /
+                        </li>
+                        <li><?php
+
+                            if ($this->session->userdata("dil") == "az"){
+                                echo substr($new['news_title_az'], 0,120);
+                            }
+                            elseif ($this->session->userdata("dil") == "en"){
+                                echo substr($new['news_title_en'], 0,120);
+                            }
+                            elseif ($this->session->userdata("dil") == "ru"){
+                                echo substr($new['news_title_ru'], 0,120);
+                            }
+
+                            ?>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -37,7 +85,19 @@ if($new){ ?>
 
                         <div class="dtl_inner last">
                             <div class="dtl_head">
-                                <h1><?php echo substr($new['news_title_az'], 0,71); ?></h1>
+                                <h1><?php
+
+                                    if ($this->session->userdata("dil") == "az"){
+                                        echo substr($new['news_title_az'], 0,71);
+                                    }
+                                    elseif ($this->session->userdata("dil") == "en"){
+                                        echo substr($new['news_title_en'], 0,71);
+                                    }
+                                    elseif ($this->session->userdata("dil") == "ru"){
+                                        echo substr($new['news_title_ru'], 0,71);
+                                    }
+
+                                    ?></h1>
 
                             </div>
                             <div class="dtl_block">
@@ -47,8 +107,20 @@ if($new){ ?>
                                 <div class="detail_text_wrap">
                                     <div class="info_wrapper">
                                         <div class="info_head">
-                                            <h4>Ətraflı</h4>
-                                            <p><?php echo $new['news_description_az'] ?></p>
+                                            <h4><?php echo $this->lang->line("etrafli"); ?></h4>
+                                            <p><?php
+
+                                                if ($this->session->userdata("dil") == "az"){
+                                                    echo $new['news_description_az'] ;
+                                                }
+                                                elseif ($this->session->userdata("dil") == "en"){
+                                                    echo $new['news_description_en'] ;
+                                                }
+                                                elseif ($this->session->userdata("dil") == "ru"){
+                                                    echo $new['news_description_ru'] ;
+                                                }
+
+                                                ?></p>
                                         </div>
                                     </div>
                                     <div class="info_wrapper">
@@ -71,7 +143,7 @@ if($new){ ?>
 
 
                     <div class="course_tutor event_single_right">
-                        <h4>Tədbirlər</h4>
+                        <h4><?php echo $this->lang->line("tedbirler"); ?></h4>
                         <ul>
 
                             <?php foreach($last_events as $last_events_key){ ?>

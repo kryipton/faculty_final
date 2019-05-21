@@ -269,7 +269,7 @@ class Leyli extends CI_Controller {
         $data['teachers'] = $this->Mecnun_model->get_teacher_result_array(array(
             "department_category_az" => $department["category_name_az"],
         ));
-        $data['teachers'] = $this->Events_model->get_last_events();
+        $data['last_events'] = $this->Events_model->get_last_events();
 
         $this->load->view('Front/department_teachers/whole_page', $data);
     }
@@ -344,7 +344,7 @@ class Leyli extends CI_Controller {
 
 //        $all_labs = $this->Mecnun_model->get_laboratories();
 
-        $data["laboratories"] = $this->Mecnun_model->getLaboratory(array(
+        $data["laboratories"] = $this->Mecnun_model->getLaboratoriesForCatg(array(
             "laboratory_catg_az" => $department["category_name_az"],
         ));
 

@@ -95,7 +95,7 @@
                 <ul>
 
 
-                    <!--                        burada diger tedbirler foreache salinir-->
+<!--                    burada diger tedbirler foreache salinir-->
                     <?php foreach($last_events as $last_events_key){ ?>
 
                         <li>
@@ -137,13 +137,6 @@
                         </li>
 
 
-
-                                    ?></p>
-                                <span class="month" style="font-size: 12px"><?php echo $last_events_key['event_time'] ?></span>
-                            </div>
-                        </li>
-
-
                     <?php } ?>
                     <!--                        burada diger tedbirler foreache salinir-->
 
@@ -177,7 +170,7 @@
                     <?php if ($count%2 == 0){?>
                         <div class="blog-card">
                             <div class="meta">
-                                <div class="photo" style="background-image: url(<?php echo base_url("upload/laboratory_images/$lab[laboratory_img]")?>)"></div>
+                                <div class="photo" style="  background-image: url(<?php echo base_url("upload/laboratory_images/$lab[laboratory_img]")?>)"></div>
                             </div>
                             <div class="description">
                                 <h1>

@@ -110,7 +110,7 @@ $route['(:any)/Single_page_events/(.*)'] = 'Leyli/single_page_events/$1';
 
 
 //Xeberler hissesi single page
-$route['(:any)/Single_page_news/(.*)'] = 'Leyli/single_page_news/$1';
+$route['(:any)/Single_page_news/(.*)'] = 'Leyli/single_page_news/$2/$1';
 
 
 //Kafedra hissesi

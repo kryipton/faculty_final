@@ -351,7 +351,17 @@
                                                 <h4 class="">
 
                                                     <!--                                                single page ucun link-->
-                                                    <a href="<?php echo base_url("Single_page_news/$last_news_key[news_id]")?>">
+                                                    <a href="<?php
+
+                                                    if ($this->session->userdata("dil") == "az"){
+                                                        echo base_url("az/Single_page_news/$last_news_key[news_id]");
+                                                    }elseif ($this->session->userdata("dil") == "en"){
+                                                        echo base_url("en/Single_page_news/$last_news_key[news_id]");
+                                                    }elseif ($this->session->userdata("dil") == "ru"){
+                                                        echo base_url("ru/Single_page_news/$last_news_key[news_id]");
+                                                    }
+
+                                                    ?>">
                                                     <!--                                                single page ucun link-->
 
 
@@ -387,7 +397,17 @@
         </div>
         <center>
             <!--        burdan diger xeberlere gedir-->
-            <a class="effect effect-1" href="<?php echo base_url("News")?>" title="Digər Xəbərlər"><?php echo $this->lang->line("diger");?></a>
+            <a class="effect effect-1" href="<?php
+
+            if ($this->session->userdata("dil") == "az"){
+                echo base_url("az/News");
+            }elseif ($this->session->userdata("dil") == "en"){
+                echo base_url("en/News");
+            }elseif ($this->session->userdata("dil") == "ru"){
+                echo base_url("ru/News");
+            }
+
+            ?>" title="Digər Xəbərlər"><?php echo $this->lang->line("diger");?></a>
             <!--        burdan diger xeberlere gedir-->
         </center>
         <!--    xeberler hissesi-->

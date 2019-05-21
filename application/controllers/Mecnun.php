@@ -1778,34 +1778,34 @@ class Mecnun extends CI_Controller{
         $speciality_department_en = $this->input->post("speciality_department_category_en");
         $speciality_department_ru = $this->input->post("speciality_department_category_ru");
 
-        if (!empty($speciality_department_ru) &&!empty($speciality_department_en) && !empty($speciality_department_az) && !empty($speciality_code) && !empty($speciality_name_az) && !empty($speciality_about_az) && !empty($speciality_about_ru) && !empty($speciality_name_en) && !empty($speciality_about_en) && !empty($speciality_name_ru)){
-        if (!empty($speciality_code) && !empty($speciality_name_az) && !empty($speciality_about_az) && !empty($speciality_about_ru) && !empty($speciality_name_en) && !empty($speciality_about_en) && !empty($speciality_name_ru)){
-            $data = array(
-                "speciality_code" => $speciality_code,
-                "speciality_name_az" => $speciality_name_az,
-                "speciality_desc_az" => $speciality_about_az,
-                "speciality_name_en" => $speciality_name_en,
-                "speciality_desc_en" => $speciality_about_en,
-                "speciality_name_ru" => $speciality_name_ru,
-                "speciality_desc_ru" => $speciality_about_ru,
-                "department_category_name_az" => $speciality_department_az,
-                "department_category_name_en" => $speciality_department_en,
-                "department_category_name_ru" => $speciality_department_ru,
-            );
+        if (!empty($speciality_department_ru) && !empty($speciality_department_en) && !empty($speciality_department_az) && !empty($speciality_code) && !empty($speciality_name_az) && !empty($speciality_about_az) && !empty($speciality_about_ru) && !empty($speciality_name_en) && !empty($speciality_about_en) && !empty($speciality_name_ru)) {
+            if (!empty($speciality_code) && !empty($speciality_name_az) && !empty($speciality_about_az) && !empty($speciality_about_ru) && !empty($speciality_name_en) && !empty($speciality_about_en) && !empty($speciality_name_ru)) {
+                $data = array(
+                    "speciality_code" => $speciality_code,
+                    "speciality_name_az" => $speciality_name_az,
+                    "speciality_desc_az" => $speciality_about_az,
+                    "speciality_name_en" => $speciality_name_en,
+                    "speciality_desc_en" => $speciality_about_en,
+                    "speciality_name_ru" => $speciality_name_ru,
+                    "speciality_desc_ru" => $speciality_about_ru,
+                    "department_category_name_az" => $speciality_department_az,
+                    "department_category_name_en" => $speciality_department_en,
+                    "department_category_name_ru" => $speciality_department_ru,
+                );
 
-            $this->Mecnun_model->addSpeciality($data);
-            $msg = 'Ixtisas uğurla əlavə edildi ! ';
-            $this->session->set_flashdata('success',$msg);
-            redirect("himalaY_ixtisaslar");
+                $this->Mecnun_model->addSpeciality($data);
+                $msg = 'Ixtisas uğurla əlavə edildi ! ';
+                $this->session->set_flashdata('success', $msg);
+                redirect("himalaY_ixtisaslar");
 
-        }else{
-            $this->session->set_flashdata("error", "Boşluq buraxmayın");
-            redirect("himalaY_ixtisas_elave_et");
+            } else {
+                $this->session->set_flashdata("error", "Boşluq buraxmayın");
+                redirect("himalaY_ixtisas_elave_et");
+            }
+
+
         }
-
-
     }
-
     public function speciality_delete($id)
     {
         $this->Mecnun_model->deleteSpeciality([
@@ -1993,19 +1993,6 @@ class Mecnun extends CI_Controller{
 
     }
 
-
-            );
-            $this->Mecnun_model->insertLaboratoryF($data);
-            $this->session->set_flashdata('success','Labaratoriya elave edildi');
-            redirect(base_url('himalaY_fakulte_laboratoriya'));
-
-
-        }else{
-            $this->session->set_flashdata('error','Boşluq buraxmayın');
-            redirect(base_url('himalaY_fakulte_laboratoriya_elave_et'));
-        }
-
-    }
 
     public function delete_faculty_laboratory($id)
     {

@@ -19,6 +19,9 @@ $lang["tedbirler"] = "Events";
 
 $lang["diger"] = "More";
 
+$lang["etrafli"] = "Detailed";
+
+
 $lang["footer"] = "&copy; 2019. All rights reserved.";
 
 $lang["umumi_melumat"] = "General information";

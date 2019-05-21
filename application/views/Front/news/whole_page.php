@@ -1,4 +1,4 @@
-<title>Xəbərlər</title>
+<title><?php echo $this->lang->line("xeberler"); ?></title>
 
 <?php $this->load->view('Front/includes_for_whole_files/header_menu'); ?>
 
@@ -13,7 +13,7 @@
     <div class="courses" style="margin-top: 50px;">
         <div class="container">
             <div class="head_part">
-                <h2>Xəbərlər</h2>
+                <h2><?php echo $this->lang->line("xeberler"); ?></h2>
             </div>
             <div class="course_wrapper">
 
@@ -23,15 +23,52 @@
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                         <div class="course_block">
                             <div class="">
-                                <img style="height: 230px;" alt="<?php echo $last_news_key['news_title_az'] ?>" src="<?php echo base_url('upload/news_images/'.$last_news_key['news_img']) ?>">
-                                <div class="course_img_hoverlay_btn"><a href="<?php echo base_url("Single_page_news/$last_news_key[news_id]")?>" title="Ətraflı"
-                                                                        class="fa fa-eye"></a></div>
+                                <img style="height: 230px;" alt="<?php
+
+                                if ($this->session->userdata("dil") == "az"){
+                                    echo substr($last_news_key['news_title_az'], 0,71);
+                                }
+                                elseif ($this->session->userdata("dil") == "en"){
+                                    echo substr($last_news_key['news_title_en'], 0,71);
+                                }
+                                elseif ($this->session->userdata("dil") == "ru"){
+                                    echo substr($last_news_key['news_title_ru'], 0,71);
+                                }
+
+                                ?>" src="<?php echo base_url('upload/news_images/'.$last_news_key['news_img']) ?>">
+
+                                <div class="course_img_hoverlay_btn">
+                                    <a href="<?php
+
+                                    if ($this->session->userdata("dil") == "az"){
+                                        echo base_url("az/Single_page_news/$last_news_key[news_id]");
+                                    }elseif ($this->session->userdata("dil") == "en"){
+                                        echo base_url("en/Single_page_news/$last_news_key[news_id]");
+                                    }elseif ($this->session->userdata("dil") == "ru"){
+                                        echo base_url("ru/Single_page_news/$last_news_key[news_id]");
+                                    }
+
+                                    ?>" title="Ətraflı" class="fa fa-eye">
+
+                                    </a>
+                                </div>
                             </div>
                             <div class="psychology">
 
                                 <div class="course_info">
-<!--                                    <h4>--><?php //echo $last_news_key['news_title_az'] ?><!--</h4>-->
-                                    <?php echo substr($last_news_key['news_title_az'], 0,150) ?>
+                                    <?php
+
+                        if ($this->session->userdata("dil") == "az"){
+                            echo substr($last_news_key['news_title_az'],0,150);
+                        }
+                        elseif ($this->session->userdata("dil") == "en"){
+                            echo substr($last_news_key['news_title_en'], 0,150);
+                        }
+                        elseif ($this->session->userdata("dil") == "ru"){
+                            echo substr($last_news_key['news_title_ru'], 0,150);
+                        }
+
+                        ?>
                                 </div>
                             </div>
                             <div class="psychology course_count_wrap">
