@@ -8,7 +8,7 @@
     <div class="row">
 
         <div class="right text-center">
-            <h1 class="text-center"><?php echo $logo_and_title["site_title"] ?></h1>
+            <h1 class="text-center"><?php echo $logo_and_title["site_title_az"] ?></h1>
             <img width="300px" height="300px" src="<?php echo base_url('public/images/faculty_logo/') . $logo_and_title["logo_img"] ?>" alt="sekil">
             <br><br>
             <div class="col-md-12">

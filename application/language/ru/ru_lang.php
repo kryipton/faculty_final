@@ -1,5 +1,6 @@
 <?php
 
+
 $lang["ana_sehife"] = "Главная";
 $lang["haqqimizda"] = "Около";
 $lang["kafedralar"] = "Ведомства";
@@ -22,9 +23,7 @@ $lang["footer"] = "&copy; 2019. Все права защищены.";
 
 $lang["umumi_melumat"] = "Общая информация";
 
-
-
-
+$lang["ixtisaslar"] = "Специальности";
 
 
 

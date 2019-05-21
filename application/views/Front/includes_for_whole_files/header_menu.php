@@ -31,7 +31,7 @@
     <script type="text/javascript" src="<?php echo base_url('public/') ?>js/respond.min.js"></script>
     <![endif]-->
 
-    <link rel="icon" href="<?php echo base_url('public/') ?>images/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="<?php echo base_url('public/') ?>/images/faculty_logo/kimya.png" type="image/x-icon"/>
     <title>Ana Səhifə</title>
 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/') ?>css/animate.css"/>
@@ -57,7 +57,7 @@
 </head>
 <body id="home" class="cms_index4">
 
-<link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+<link rel="icon" href="<?php echo base_url('public/') ?>/images/faculty_logo/kimya.png" type="image/x-icon"/>
     <title>Laboratoriya</title>
 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/') ?>css/animate.css"/>
@@ -126,20 +126,20 @@
                                 </a>
                                 <ul class="dl-submenu">
 
-                                    <?php foreach ($all_categories_of_department as $category){?>
+                                    <?php foreach ($all_categories_of_department as $category){ ?>
                                         <li>
 
 <!--                                            burada kateqoriyalarin hrefi dile gore siralanir-->
                                             <a href="<?php
 
                                                 if ($this->session->userdata("dil") == "az"){
-                                                    echo base_url('az/Department');
+                                                    echo base_url("az/Department/$category[id]");
                                                 }
                                                 elseif ($this->session->userdata("dil") == "en"){
-                                                    echo base_url('en/Department');
+                                                    echo base_url("en/Department/$category[id]");
                                                 }
                                                 elseif ($this->session->userdata("dil") == "ru"){
-                                                    echo base_url('ru/Department');
+                                                    echo base_url("ru/Department/$category[id]");
                                                 }
 
                                             ?>">
@@ -241,13 +241,13 @@
                                             <a href="<?php
 
                                             if ($this->session->userdata("dil") == "az"){
-                                                echo base_url('az/Department');
+                                                echo base_url("az/Department/$category[id]");
                                             }
                                             elseif ($this->session->userdata("dil") == "en"){
-                                                echo base_url('en/Department');
+                                                echo base_url("en/Department/$category[id]");
                                             }
                                             elseif ($this->session->userdata("dil") == "ru"){
-                                                echo base_url('ru/Department');
+                                                echo base_url("ru/Department/$category[id]");
                                             }
 
                                              ?>">

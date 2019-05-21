@@ -68,6 +68,11 @@ class Mecnun_model extends  CI_Model{
         return $this->db->where($where)->get('teachers_db')->row_array();
     }
 
+    public function get_teacher_result_array($where)
+    {
+        return $this->db->where($where)->get('teachers_db')->result_array();
+    }
+
     public function get_categories()
     {
         return $this->db->get('department_categories')-> result_array();
@@ -119,8 +124,34 @@ class Mecnun_model extends  CI_Model{
 }
 
 
+    //==========================Laboratory (FAKULTE) Hissesi========================================================================
 
-//==========================Laboratory Hissesi========================================================================
+    public function getLaboratoriesF()
+    {
+        return $this->db->order_by('id','DESC')->get('laboratory_db')->result_array();
+    }
+
+    public function insertLaboratoryF($data)
+    {
+        $this->db->insert('laboratory_db',$data);
+    }
+
+    public function deleteLaboratoryF($where)
+    {
+        $this->db->where($where)->delete('laboratory_db');
+    }
+
+    public function getLaboratoryF($where)
+    {
+        return $this->db->where($where)->get('laboratory_db')->row_array();
+    }
+
+    public function updateLaboratoryF($where,$data)
+    {
+        $this->db->where($where)->update('laboratory_db',$data);
+
+    }
+//==========================Laboratory (KAFEDRA) Hissesi========================================================================
 
 
    public function insert_laboratory($data)
@@ -130,12 +161,22 @@ class Mecnun_model extends  CI_Model{
 
     public function get_laboratories()
     {
-        return $this->db->get('department_labaratory')->result_array();
+        return $this->db->order_by('id','DESC')->get('department_labaratory')->result_array();
+    }
+
+    public function getLaboratory($where)
+    {
+        return $this->db->where($where)->get('department_labaratory')->result_array();
     }
 
     public function delete_laboratory($id)
     {
         $this->db->where('id',$id)->delete('department_labaratory');
+    }
+
+    public function updateLab($where,$data)
+    {
+        $this->db->where($where)->update('department_labaratory',$data);
     }
 
 
@@ -316,6 +357,45 @@ class Mecnun_model extends  CI_Model{
     public function get_department_category($where){
         return $this->db->where($where)->get("department_categories")->row_array();
     }
+
+
+    //==================================================   Kafedra Ixtisaslar hissesi hissesi=======================================================================
+    public function get_all_specialties()
+    {
+        return $this->db->get("department_speciality")->result_array();
+    }
+
+    public function get_all_specialties_where($where)
+    {
+        return $this->db->where($where)->get("department_speciality")->result_array();
+    }
+
+    public function deleteSpeciality($where)
+    {
+        $this->db->where($where)->delete("department_speciality");
+    }
+
+    public function addSpeciality($data)
+    {
+        $this->db->insert("department_speciality", $data);
+    }
+
+    public function getSingleSpeciality($where)
+    {
+        return $this->db->where($where)->get('department_speciality')->row_array();
+}
+
+    public function updateSpeciality($where, $data)
+    {
+        $this->db->where($where)->update("department_speciality", $data);
+    }
+
+
+
+
+
+
+
 
 
 
