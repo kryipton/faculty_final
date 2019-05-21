@@ -137,6 +137,13 @@
                         </li>
 
 
+
+                                    ?></p>
+                                <span class="month" style="font-size: 12px"><?php echo $last_events_key['event_time'] ?></span>
+                            </div>
+                        </li>
+
+
                     <?php } ?>
                     <!--                        burada diger tedbirler foreache salinir-->
 
@@ -159,6 +166,7 @@
     <div class="col-md-9">
         <div class="about_right" style="padding: 20px 0px 0px 10px">
             <h2><?php echo $this->lang->line("labaratoriyalar"); ?></h2>
+
             <div class="about_right_text" style="color: grey">
 
 
@@ -245,6 +253,7 @@
 
 
             </div>
+
         </div>
     </div>
 

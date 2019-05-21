@@ -43,4 +43,3 @@ $lang["doktorantura_tehsili"] = "Докторантура";
 
 
 
-

@@ -547,6 +547,8 @@ class Mecnun extends CI_Controller{
 
     public function add_teachers()
     {
+
+
         $data["categories"] = $this->Mecnun_model->get_categories();
 
         $this->load->view('Admin/teachers_category/teachers_create', $data);
@@ -847,9 +849,6 @@ class Mecnun extends CI_Controller{
         }
     }
 
-
-
-
     public function about_departments(){
 
         $data["categories"] = $this->Mecnun_model->get_categories();
@@ -943,6 +942,11 @@ class Mecnun extends CI_Controller{
         }
 
     }
+
+
+
+
+
 
 
 
@@ -1748,6 +1752,9 @@ class Mecnun extends CI_Controller{
 
     public function speciality_add()
     {
+        $data["categories"] = $this->Mecnun_model->get_categories();
+
+        $this->load->view('Admin/specialities/speciality_add', $data);
         $this->load->view('Admin/specialities/speciality_add');
     }
 
@@ -1766,6 +1773,12 @@ class Mecnun extends CI_Controller{
         $speciality_name_ru = $this->input->post("speciality_name_ru");
         $speciality_about_ru = $this->input->post("speciality_about_ru");
 
+
+        $speciality_department_az = $this->input->post("speciality_department_category_az");
+        $speciality_department_en = $this->input->post("speciality_department_category_en");
+        $speciality_department_ru = $this->input->post("speciality_department_category_ru");
+
+        if (!empty($speciality_department_ru) &&!empty($speciality_department_en) && !empty($speciality_department_az) && !empty($speciality_code) && !empty($speciality_name_az) && !empty($speciality_about_az) && !empty($speciality_about_ru) && !empty($speciality_name_en) && !empty($speciality_about_en) && !empty($speciality_name_ru)){
         if (!empty($speciality_code) && !empty($speciality_name_az) && !empty($speciality_about_az) && !empty($speciality_about_ru) && !empty($speciality_name_en) && !empty($speciality_about_en) && !empty($speciality_name_ru)){
             $data = array(
                 "speciality_code" => $speciality_code,
@@ -1775,6 +1788,9 @@ class Mecnun extends CI_Controller{
                 "speciality_desc_en" => $speciality_about_en,
                 "speciality_name_ru" => $speciality_name_ru,
                 "speciality_desc_ru" => $speciality_about_ru,
+                "department_category_name_az" => $speciality_department_az,
+                "department_category_name_en" => $speciality_department_en,
+                "department_category_name_ru" => $speciality_department_ru,
             );
 
             $this->Mecnun_model->addSpeciality($data);
@@ -1807,6 +1823,8 @@ class Mecnun extends CI_Controller{
             "id" => $id,
         ]);
 
+        $data["categories"] = $this->Mecnun_model->get_categories();
+
         $this->load->view('Admin/specialities/speciality_update',$data);
     }
 
@@ -1825,6 +1843,10 @@ class Mecnun extends CI_Controller{
         $speciality_name_ru = $this->input->post("speciality_name_ru");
         $speciality_about_ru = $this->input->post("speciality_about_ru");
 
+        $speciality_department_az = $this->input->post("speciality_department_category_az");
+        $speciality_department_en = $this->input->post("speciality_department_category_en");
+        $speciality_department_ru = $this->input->post("speciality_department_category_ru");
+
         if (!empty($speciality_code) && !empty($speciality_name_az) && !empty($speciality_about_az) && !empty($speciality_about_ru) && !empty($speciality_name_en) && !empty($speciality_about_en) && !empty($speciality_name_ru)){
             $data = array(
                 "speciality_code" => $speciality_code,
@@ -1834,6 +1856,9 @@ class Mecnun extends CI_Controller{
                 "speciality_desc_en" => $speciality_about_en,
                 "speciality_name_ru" => $speciality_name_ru,
                 "speciality_desc_ru" => $speciality_about_ru,
+                "department_category_name_az" => $speciality_department_az,
+                "department_category_name_en" => $speciality_department_en,
+                "department_category_name_ru" => $speciality_department_ru,
             );
 
             $where = array(
@@ -1954,6 +1979,20 @@ class Mecnun extends CI_Controller{
                 'lab_text_ru' => $laboratory_desc_ru,
                 'lab_text_en' => $laboratory_desc_en,
                 'laboratory_img'     => ($this->upload->do_upload('laboratory_photo')) ? $this->upload->data('file_name') : 'default_noimage.jpg',
+
+            );
+            $this->Mecnun_model->insertLaboratoryF($data);
+            $this->session->set_flashdata('success','Labaratoriya elave edildi');
+            redirect(base_url('himalaY_fakulte_laboratoriya'));
+
+
+        }else{
+            $this->session->set_flashdata('error','Boşluq buraxmayın');
+            redirect(base_url('himalaY_fakulte_laboratoriya_elave_et'));
+        }
+
+    }
+
 
             );
             $this->Mecnun_model->insertLaboratoryF($data);

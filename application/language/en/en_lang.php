@@ -23,7 +23,10 @@ $lang["footer"] = "&copy; 2019. All rights reserved.";
 
 $lang["umumi_melumat"] = "General information";
 
+
 $lang["ixtisaslar"] = "Specialties";
+
+
 
 $lang["ixtisas_adi"] = "Specialty name";
 

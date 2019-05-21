@@ -31,8 +31,17 @@
                         <label for="">Ixtisasın Kodu</label>
                         <input type="text" class="form-control" name="speciality_code"><br>
 
+
                         <label for="">İxtisasın adı</label>
                         <input type="text" class="form-control" name="speciality_name_az"><br>
+                        <br>
+
+                        <label for="">Kafedra</label>
+                        <select name="speciality_department_category_az" id="" class="form-control" style="height: 40px">
+                            <?php foreach ($categories as $category){ ?>
+                                <option value="<?php echo $category["category_name_az"]?>"><?php echo $category["category_name_az"] ?></option>
+                            <?php }?>
+                        </select>
                         <br>
 
                         <label for="">İxtisas Haqqında</label>
@@ -49,6 +58,14 @@
                         <input type="text" class="form-control" name="speciality_name_ru"><br>
                         <br>
 
+                        <label for="">Kafedra</label>
+                        <select name="speciality_department_category_ru" id="" class="form-control" style="height: 40px">
+                            <?php foreach ($categories as $category){ ?>
+                                <option value="<?php echo $category["category_name_ru"]?>"><?php echo $category["category_name_ru"] ?></option>
+                            <?php }?>
+                        </select>
+                        <br>
+
                         <label for="">İxtisas Haqqında</label>
                         <textarea style="resize: none" class="form-control ckeditor" name="speciality_about_ru" id="" cols="30" rows="10" placeholder=""></textarea><br>
 
@@ -62,6 +79,14 @@
 
                         <label for="">İxtisasın adı</label>
                         <input type="text" class="form-control" name="speciality_name_en"><br>
+                        <br>
+
+                        <label for="">Kafedra</label>
+                        <select name="speciality_department_category_en" id="" class="form-control" style="height: 40px">
+                            <?php foreach ($categories as $category){ ?>
+                                <option value="<?php echo $category["category_name_en"]?>"><?php echo $category["category_name_en"] ?></option>
+                            <?php }?>
+                        </select>
                         <br>
 
                         <label for="">İxtisas Haqqında</label>

@@ -7,7 +7,19 @@
 
 <!--        sol terefde olan linkler-->
             <div class="category_course about_left_b">
-                <h4>Kimya texnologiya fakültəsi</h4>
+
+                <h4><?php
+
+
+                    if ($this->session->userdata("dil") == "az"){
+                        echo $logo["site_title_az"];
+                    }elseif ($this->session->userdata("dil") == "en"){
+                        echo $logo["site_title_en"];
+                    }elseif ($this->session->userdata("dil") == "ru"){
+                        echo $logo["site_title_ru"];
+                    }
+
+                    ?></h4>
                 <ul>
                     <li><a href="<?php
 
@@ -22,6 +34,7 @@
                         }
 
                          ?>"><?php echo $this->lang->line("umumi_melumat"); ?></a></li>
+
                     <li><a href="<?php
 
                         if ($this->session->userdata("dil") == "az"){
@@ -35,6 +48,50 @@
                         }
 
                         ?>"><?php echo $this->lang->line("ixtisaslar"); ?></a></li>
+
+                    <li><a href="<?php
+
+                        if ($this->session->userdata("dil") == "az"){
+                            echo base_url("az/Department_Labaratories/$department[id]");;
+                        }
+                        elseif ($this->session->userdata("dil") == "en"){
+                            echo base_url("en/Department_Labaratories/$department[id]");;
+                        }
+                        elseif ($this->session->userdata("dil") == "ru"){
+                            echo base_url("ru/Department_Labaratories/$department[id]");;
+                        }
+
+                         ?>"><?php echo $this->lang->line("labaratoriyalar"); ?></a></li>
+
+                    <li><a href="<?php
+
+                        if ($this->session->userdata("dil") == "az"){
+                            echo base_url("az/Department_Teachers/$department[id]");;
+                        }
+                        elseif ($this->session->userdata("dil") == "en"){
+                            echo base_url("en/Department_Teachers/$department[id]");;
+                        }
+                        elseif ($this->session->userdata("dil") == "ru"){
+                            echo base_url("ru/Department_Teachers/$department[id]");;
+                        }
+
+                         ?>"><?php echo $this->lang->line("muellimler"); ?></a></li>
+
+                    <li><a href="<?php
+
+
+
+                        if ($this->session->userdata("dil") == "az"){
+                            echo base_url("az/Department_Contact/$department[id]");;
+                        }
+                        elseif ($this->session->userdata("dil") == "en"){
+                            echo base_url("en/Department_Contact/$department[id]");;
+                        }
+                        elseif ($this->session->userdata("dil") == "ru"){
+                            echo base_url("ru/Department_Contact/$department[id]");;
+                        }
+
+                        ?>"><?php echo $this->lang->line("elaqe"); ?></a></li>
                     <li><a href="<?php echo base_url('Department_Labaratories'); ?>"><?php echo $this->lang->line("labaratoriyalar"); ?></a></li>
                     <li><a href="<?php echo base_url('Department_Teachers'); ?>"><?php echo $this->lang->line("muellimler"); ?></a></li>
                     <li><a href="<?php echo base_url('Department_Contact'); ?>"><?php echo $this->lang->line("elaqe"); ?></a></li>

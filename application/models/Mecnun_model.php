@@ -88,6 +88,11 @@ class Mecnun_model extends  CI_Model{
         return $this->db->where($where)->get('teachers_db')->row_array();
     }
 
+    public function get_teacher_result_array($where)
+    {
+        return $this->db->where($where)->get('teachers_db')->result_array();
+    }
+
     public function get_categories()
     {
         return $this->db->get('department_categories')-> result_array();
@@ -181,6 +186,7 @@ class Mecnun_model extends  CI_Model{
 
     public function getLaboratory($where)
     {
+        return $this->db->where($where)->get('department_labaratory')->result_array();
         return $this->db->where($where)->get('department_labaratory')->row_array();
     }
 
@@ -380,6 +386,11 @@ class Mecnun_model extends  CI_Model{
         return $this->db->get("department_speciality")->result_array();
     }
 
+    public function get_all_specialties_where($where)
+    {
+        return $this->db->where($where)->get("department_speciality")->result_array();
+    }
+
     public function deleteSpeciality($where)
     {
         $this->db->where($where)->delete("department_speciality");
@@ -399,6 +410,14 @@ class Mecnun_model extends  CI_Model{
     {
         $this->db->where($where)->update("department_speciality", $data);
     }
+
+
+
+
+
+
+
+
 
 
 

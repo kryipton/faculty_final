@@ -19,8 +19,10 @@
                         echo $logo["site_title_ru"];
                     }
 
+                    ?></h1>
 
-     
+
+
 
                 <ul class="breadcrumbs">
                     <li><a href="<?php
@@ -59,6 +61,7 @@
 
 
                 ?></h2>
+
 
 
             <div class="about_right_text" style="color: grey">

@@ -66,6 +66,13 @@
                             <a href="<?php
 
                             if ($this->session->userdata("dil") == "az"){
+                                echo base_url('az/Department_Specialities_Single/'.$spec['id'] . "/$department[id]" );
+                            }
+                            elseif ($this->session->userdata("dil") == "en"){
+                                echo base_url('en/Department_Specialities_Single/'.$spec['id'] . "/$department[id]" );
+                            }
+                            elseif ($this->session->userdata("dil") == "ru"){
+                                echo base_url('ru/Department_Specialities_Single/'.$spec['id'] . "/$department[id]" );
                                 echo base_url('az/Bachelor/Speciality/'.$spec['id'] );
                             }
                             elseif ($this->session->userdata("dil") == "en"){
