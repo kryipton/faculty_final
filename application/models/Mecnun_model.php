@@ -3,6 +3,26 @@
 
 class Mecnun_model extends  CI_Model{
 
+//  ============================  DASHBOARDda say hissesi ==========================================
+
+    public function getCounts()
+    {
+        return $this->db->get('counts')->row_array();
+    }
+
+    public function updateCounts($data)
+    {
+        $this->db->update('counts',$data);
+    }
+
+
+
+
+
+
+
+
+
 //==========   Xeberemeliyatlari ===================
     public function getNews()
     {
@@ -167,6 +187,7 @@ class Mecnun_model extends  CI_Model{
     public function getLaboratory($where)
     {
         return $this->db->where($where)->get('department_labaratory')->result_array();
+        return $this->db->where($where)->get('department_labaratory')->row_array();
     }
 
     public function delete_laboratory($id)

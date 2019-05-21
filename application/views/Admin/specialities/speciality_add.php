@@ -32,7 +32,6 @@
                         <input type="text" class="form-control" name="speciality_code"><br>
 
 
-
                         <label for="">İxtisasın adı</label>
                         <input type="text" class="form-control" name="speciality_name_az"><br>
                         <br>

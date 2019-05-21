@@ -29,3 +29,6 @@ $lang["ixtisaslar"] = "İxtisaslar";
 
 
 
+
+
+

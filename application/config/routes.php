@@ -125,8 +125,10 @@ $route['(:any)/Department_Teachers/(.*)'] = 'Leyli/department_teachers/$1';
 //Kafedra ixtisaslar hissesi
 $route['(:any)/Department_Specialities/(.*)'] = 'Leyli/department_specialities/$1';
 
+
 //Kafedra tek ixtisas hissesi
 $route['(:any)/Department_Specialities_Single/(.*)'] = 'Leyli/department_speciality/$1';
+
 
 //Kafedra labaratoriyalar hissesi
 $route['(:any)/Department_Labaratories/(.*)'] = 'Leyli/department_labaratory/$1';
@@ -143,6 +145,7 @@ $route['(:any)/Department_Labaratories/(.*)'] = 'Leyli/department_labaratory/$1'
 
 //Dashboard
 $route['himalaY'] = 'Mecnun/index';
+$route['himalaY_say_deyis'] = 'Mecnun/updateCounts';
 
 //Xeberler
 $route['himalaY_xeberler'] = 'Mecnun/news';
@@ -206,6 +209,14 @@ $route['himalaY_fakulte_laboratoriya_yenile_act/(.*)'] = 'Mecnun/update_faculty_
 $route['himalaY_fakulte_laboratoriya_elave_et'] = 'Mecnun/create_faculty_laboratory';
 $route['himalaY_fakulte_laboratoriya_elave_etme'] = 'Mecnun/create_faculty_laboratory_action';
 $route['himalaY_fakulte_laboratoriya_sil/(.*)'] = 'Mecnun/delete_faculty_laboratory/$1';
+
+
+
+
+
+
+
+
 
 
 

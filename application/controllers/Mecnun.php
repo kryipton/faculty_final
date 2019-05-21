@@ -10,9 +10,34 @@ class Mecnun extends CI_Controller{
         }
     }
 
-    public function index(){
+//  =================  DASHBOARD telebe lab mellim saylari ============================
 
-        $this->load->view('Admin/main_page/main');
+    public function index(){
+        $data['counts'] = $this->Mecnun_model->getCounts();
+        $this->load->view('Admin/main_page/main',$data);
+    }
+
+    public function updateCounts()
+    {
+        $teacher_count = strip_tags($this->input->post('teacher_count'));
+        $student_count = strip_tags($this->input->post('student_count'));
+        $lab_count = strip_tags($this->input->post('lab_count'));
+        if(!empty($teacher_count) && !empty($student_count) && !empty($lab_count)  ) {
+            $data = [
+              'teacher_count' => $teacher_count,
+              'student_count' => $student_count,
+              'lab_count' =>$lab_count,
+            ];
+            $this->Mecnun_model->updateCounts($data);
+            $msg = 'Saylar uğurla düzənləndi! ';
+            $this->session->set_flashdata('success',$msg);
+            redirect(base_url('himalaY'));
+           }else{
+            $msg = 'Zəhmət olmasa boşluq buraxmayın! ';
+            $this->session->set_flashdata('alert',$msg);
+            redirect(base_url('himalaY'));
+        }
+
     }
 
 //     ============= Xeberler Hissesi ================
@@ -1730,6 +1755,7 @@ class Mecnun extends CI_Controller{
         $data["categories"] = $this->Mecnun_model->get_categories();
 
         $this->load->view('Admin/specialities/speciality_add', $data);
+        $this->load->view('Admin/specialities/speciality_add');
     }
 
     public function speciality_add_act()
@@ -1753,6 +1779,7 @@ class Mecnun extends CI_Controller{
         $speciality_department_ru = $this->input->post("speciality_department_category_ru");
 
         if (!empty($speciality_department_ru) &&!empty($speciality_department_en) && !empty($speciality_department_az) && !empty($speciality_code) && !empty($speciality_name_az) && !empty($speciality_about_az) && !empty($speciality_about_ru) && !empty($speciality_name_en) && !empty($speciality_about_en) && !empty($speciality_name_ru)){
+        if (!empty($speciality_code) && !empty($speciality_name_az) && !empty($speciality_about_az) && !empty($speciality_about_ru) && !empty($speciality_name_en) && !empty($speciality_about_en) && !empty($speciality_name_ru)){
             $data = array(
                 "speciality_code" => $speciality_code,
                 "speciality_name_az" => $speciality_name_az,
@@ -1952,6 +1979,20 @@ class Mecnun extends CI_Controller{
                 'lab_text_ru' => $laboratory_desc_ru,
                 'lab_text_en' => $laboratory_desc_en,
                 'laboratory_img'     => ($this->upload->do_upload('laboratory_photo')) ? $this->upload->data('file_name') : 'default_noimage.jpg',
+
+            );
+            $this->Mecnun_model->insertLaboratoryF($data);
+            $this->session->set_flashdata('success','Labaratoriya elave edildi');
+            redirect(base_url('himalaY_fakulte_laboratoriya'));
+
+
+        }else{
+            $this->session->set_flashdata('error','Boşluq buraxmayın');
+            redirect(base_url('himalaY_fakulte_laboratoriya_elave_et'));
+        }
+
+    }
+
 
             );
             $this->Mecnun_model->insertLaboratoryF($data);

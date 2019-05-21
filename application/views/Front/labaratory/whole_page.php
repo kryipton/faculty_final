@@ -137,6 +137,13 @@
                         </li>
 
 
+
+                                    ?></p>
+                                <span class="month" style="font-size: 12px"><?php echo $last_events_key['event_time'] ?></span>
+                            </div>
+                        </li>
+
+
                     <?php } ?>
                     <!--                        burada diger tedbirler foreache salinir-->
 

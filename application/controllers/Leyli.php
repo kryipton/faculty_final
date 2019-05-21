@@ -41,6 +41,8 @@ class Leyli extends CI_Controller {
         $data['last_news']   = $this->News_model->get_last_news();
         $data['last_events'] = $this->Events_model->get_last_events();
         $data['all_slide']   = $this->Slide_model->get_all_index();
+        $data['count']   = $this->Mecnun_model->getCounts();
+
 
 		$this->load->view('Front/home_page/whole_page', $data);
 	}
@@ -267,12 +269,16 @@ class Leyli extends CI_Controller {
         $data['teachers'] = $this->Mecnun_model->get_teacher_result_array(array(
             "department_category_az" => $department["category_name_az"],
         ));
+        $data['teachers'] = $this->Events_model->get_last_events();
 
         $this->load->view('Front/department_teachers/whole_page', $data);
     }
 
     public function department_specialities(){
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+
+        $data['all_specialites_of_department']   = $this->Mecnun_model->get_all_specialties();
+
 
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
 
@@ -281,6 +287,7 @@ class Leyli extends CI_Controller {
         $data["department"] = $this->Mecnun_model->get_department_category(array(
             "id" => $id,
         ));
+
 
         $deparment = $data["department"];
 

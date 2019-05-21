@@ -25,5 +25,8 @@ $lang["umumi_melumat"] = "General information";
 
 $lang["ixtisaslar"] = "Specialties";
 
+$lang["ixtisaslar"] = "Specialties";
+
+
 
 

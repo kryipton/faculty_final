@@ -23,6 +23,7 @@
 
 
 
+
                 <ul class="breadcrumbs">
                     <li><a href="<?php
 
@@ -61,7 +62,7 @@
 
                 ?></h2>
 
-           
+
 
             <div class="about_right_text" style="color: grey">
                 <span> 

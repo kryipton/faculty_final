@@ -73,6 +73,13 @@
                             }
                             elseif ($this->session->userdata("dil") == "ru"){
                                 echo base_url('ru/Department_Specialities_Single/'.$spec['id'] . "/$department[id]" );
+                                echo base_url('az/Bachelor/Speciality/'.$spec['id'] );
+                            }
+                            elseif ($this->session->userdata("dil") == "en"){
+                                echo base_url('en/Bachelor/Speciality/'.$spec['id'] );
+                            }
+                            elseif ($this->session->userdata("dil") == "ru"){
+                                echo base_url('ru/Bachelor/Speciality/'.$spec['id'] );
                             }
 
                              ?>">
