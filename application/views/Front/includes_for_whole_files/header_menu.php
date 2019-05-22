@@ -32,7 +32,7 @@
     <![endif]-->
 
     <link rel="icon" href="<?php echo base_url('public/') ?>/images/faculty_logo/kimya.png" type="image/x-icon"/>
-    <title>Ana Səhifə</title>
+    <title><?php echo $this->lang->line("ana_sehife"); ?></title>
 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/') ?>css/animate.css"/>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/') ?>css/bootstrap.css"/>
@@ -102,7 +102,6 @@
                     ?>" title=""><img class="logoIMG" style="border-radius: 50%;background: white;border: 7px solid white;box-sizing: border-box alt="Logo src="<?php echo base_url("public/images/faculty_logo/$logo[logo_img]") ?>"></a>
                 </div>
 <!--                navbarin loqosu-->
-
 
 
 
@@ -320,15 +319,15 @@
 
                             <li>
                                 <a class="trigger" style="padding-top: 0px">
-                                    <a style="padding: 0px!important; float: left; color: black; margin-left: 9px;" href="<?php echo base_url("az/Home")?>">
+                                    <a style="padding: 0px!important; float: left; color: black; margin-left: 9px;" href="<?php echo base_url("az/" . $this->uri->segment(2) . "/"  . $this->uri->segment(3). "/"  . $this->uri->segment(4))?>">
                                         <img width="35px" height="20px" src="<?php echo base_url("upload/language_images/azerbaijan2.jpg")?>" alt="sekil">
                                     </a>
 
-                                    <a style="padding: 0px!important; float: left; color: black; margin-left: 9px" href="<?php echo base_url("ru/Home")?>">
+                                    <a style="padding: 0px!important; float: left; color: black; margin-left: 9px" href="<?php echo base_url("ru/" . $this->uri->segment(2) . "/"  . $this->uri->segment(3). "/"  . $this->uri->segment(4))?>">
                                         <img width=35px" height="20px" src="<?php echo base_url("upload/language_images/russia.png")?>" alt="sekil">
                                     </a>
 
-                                    <a style="padding: 0px!important; float: left; color: black; margin-left: 9px;" href="<?php echo base_url("en/Home")?>">
+                                    <a style="padding: 0px!important; float: left; color: black; margin-left: 9px;" href="<?php echo base_url("en/" . $this->uri->segment(2) . "/"  . $this->uri->segment(3). "/"  . $this->uri->segment(4))?>">
                                         <img width="35px" height="20px" src="<?php echo base_url("upload/language_images/english.png")?>" alt="sekil">
                                     </a>
                                 </a>
@@ -337,7 +336,6 @@
                         </ul>
                     </div>
 <!--                    main navbar-->
-
 
 
                 </div>

@@ -1,4 +1,4 @@
-<title>Bakalavr</title>
+<title><?php echo $this->lang->line("bakalavr"); ?></title>
 <?php $this->load->view('Front/includes_for_whole_files/header_menu'); ?>
 
 

@@ -1,7 +1,10 @@
+<title><?php echo $this->lang->line("tedbirler"); ?></title>
+
+
 <?php $this->load->view('Front/includes_for_whole_files/header_menu'); ?>
 
 
-<title>Tədbir</title>
+
 
 
 <?php

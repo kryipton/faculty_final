@@ -1,4 +1,4 @@
-<title>Magistratura ixtisası</title>
+<title><?php echo $this->lang->line("ixtisaslar"); ?></title>
 
 <?php $this->load->view('Front/includes_for_whole_files/header_menu'); ?>
 

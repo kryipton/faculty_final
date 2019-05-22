@@ -1755,7 +1755,7 @@ class Mecnun extends CI_Controller{
         $data["categories"] = $this->Mecnun_model->get_categories();
 
         $this->load->view('Admin/specialities/speciality_add', $data);
-        $this->load->view('Admin/specialities/speciality_add');
+
     }
 
     public function speciality_add_act()

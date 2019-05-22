@@ -1,4 +1,4 @@
-<title>Fakültə Laboratoriyaları</title>
+<title><?php echo $this->lang->line("labaratoriyalar"); ?></title>
 <?php $this->load->view('Front/includes_for_whole_files/header_menu'); ?>
 
 <div class="content_wrapper" style="margin-bottom: 150px;">
