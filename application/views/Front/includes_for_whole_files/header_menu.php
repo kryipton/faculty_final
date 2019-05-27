@@ -3,15 +3,14 @@
 
  DEVELOPERS 
     
-    Rza Talibov    rza.t@code.edu.az
-    Mahir Valiyev  mahir.v@code.edu.az
+    Cavid Lələyev    cavidleleyev@gmail.com
+    Mütalib Qədirov  mutalib0101@mail.ru
 
 -->
 
 <!doctype html>
 <html lang="zxx">
 
-<!-- Mirrored from www.pixxett.com/htmldemos/learnmate/index2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Oct 2017 10:41:03 GMT -->
 <head>
     <script
             src="https://code.jquery.com/jquery-3.2.1.js"
@@ -57,7 +56,7 @@
 </head>
 <body id="home" class="cms_index4">
 
-<link rel="icon" href="<?php echo base_url('public/') ?>/images/faculty_logo/kimya.png" type="image/x-icon"/>
+    <link rel="icon" href="<?php echo base_url('public/') ?>/images/faculty_logo/kimya.png" type="image/x-icon"/>
     <title>Laboratoriya</title>
 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/') ?>css/animate.css"/>
@@ -112,20 +111,44 @@
 <!--                    mobil navbar-->
                     <div id="dl-menu" class="dl-menuwrapper">
                         <button class="dl-trigger visible-sm visible-xs"><i class="fa fa-bars"></i></button>
-                        <ul class="dl-menu">
+                        <ul class="dl-menu c_dl_menu">
                             <li>
-                                <h5 class="sp_module_title"></h5>
+
                             </li>
 
                             <li>
-                                <a href="<?php echo base_url('Home') ?>">
+                                <a href="<?php
+
+                                if ($this->session->userdata("dil") == "az"){
+                                    echo base_url('az/Home');
+                                }
+                                elseif ($this->session->userdata("dil") == "en"){
+                                    echo base_url('en/Home');
+                                }
+                                elseif ($this->session->userdata("dil") == "ru"){
+                                    echo base_url('ru/Home');
+                                }
+
+                                ?>">
                                     <?php echo $this->lang->line("ana_sehife"); ?>
                                 </a>
 
                             </li>
 
                             <li>
-                                <a class="trigger" href="<?php echo base_url('About') ?>">
+                                <a class="trigger" href="<?php
+
+                                if ($this->session->userdata("dil") == "az"){
+                                    echo base_url('az/About');
+                                }
+                                elseif ($this->session->userdata("dil") == "en"){
+                                    echo base_url('en/About');
+                                }
+                                elseif ($this->session->userdata("dil") == "ru"){
+                                    echo base_url('ru/About');
+                                }
+
+                                ?>">
                                     <?php echo $this->lang->line("haqqimizda"); ?>
                                 </a>
                             </li>
@@ -181,16 +204,58 @@
                             </li>
 
                             <li>
-                                <a class="trigger" href="<?php echo base_url('Contact') ?>">
+                                <a class="trigger" href="<?php
+
+                                if ($this->session->userdata("dil") == "az"){
+                                    echo base_url('az/Contact');
+                                }
+                                elseif ($this->session->userdata("dil") == "en"){
+                                    echo base_url('en/Contact');
+                                }
+                                elseif ($this->session->userdata("dil") == "ru"){
+                                    echo base_url('ru/Contact');
+                                }
+
+                                ?>">
                                     <?php echo $this->lang->line("elaqe"); ?>
                                 </a>
                             </li>
 
                             <li>
-                                <a class="trigger" href="<?php echo base_url('Labaratory') ?>">
+                                <a class="trigger" href="<?php
+
+                                if ($this->session->userdata("dil") == "az"){
+                                    echo base_url('az/Labaratory');
+                                }
+                                elseif ($this->session->userdata("dil") == "en"){
+                                    echo base_url('en/Labaratory');
+                                }
+                                elseif ($this->session->userdata("dil") == "ru"){
+                                    echo base_url('ru/Labaratory');
+                                }
+
+                                ?>">
                                     <?php echo $this->lang->line("labaratoriyalar"); ?>
                                 </a>
                             </li>
+
+
+                            <a class="c_navbar_mobil_lang" href="">
+                                <a style="padding: 0px!important; float: left; color: black; margin-left: 9px;" href="<?php echo base_url("az/" . $this->uri->segment(2) . "/"  . $this->uri->segment(3). "/"  . $this->uri->segment(4))?>">
+                                    <img width="35px" height="20px" src="<?php echo base_url("upload/language_images/azerbaijan2.jpg")?>" alt="sekil">
+                                </a>
+
+                                <a style="padding: 0px!important; float: left; color: black; margin-left: 9px" href="<?php echo base_url("ru/" . $this->uri->segment(2) . "/"  . $this->uri->segment(3). "/"  . $this->uri->segment(4))?>">
+                                    <img width=35px" height="20px" src="<?php echo base_url("upload/language_images/russia.png")?>" alt="sekil">
+                                </a>
+
+                                <a style="padding: 0px!important; float: left; color: black; margin-left: 9px;" href="<?php echo base_url("en/" . $this->uri->segment(2) . "/"  . $this->uri->segment(3). "/"  . $this->uri->segment(4))?>">
+                                    <img width="35px" height="20px" src="<?php echo base_url("upload/language_images/english.png")?>" alt="sekil">
+                                </a>
+                            </a>
+
+
+
 
                         </ul>
 

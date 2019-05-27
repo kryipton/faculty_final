@@ -351,3 +351,98 @@
     cursor: pointer;
 }
 
+
+
+
+@media screen and (max-width: 768px) {
+    .c_students{
+        display: none!important;
+    }
+
+    .c_students_whole{
+        height: 300px;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 1026px) {
+    body{
+        padding-bottom: 0!important;
+    }
+}
+
+
+/*===================================================xebrler hissesi=======================================================================*/
+
+.c_mobil_news{
+    display: none;
+}
+
+.c_mobil_news_button{
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .c_mobil_news_button{
+        display: inline-block;
+    }
+
+
+    .c_news{
+        display: none;
+    }
+
+    .c_mobil_news{
+        display: inline-block;
+        width: 100%;
+        min-height: 400px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        /*background-color: red;*/
+    }
+
+    .c_news_content{
+        max-width: 70%;
+        margin: 0 auto;
+        min-height: 200px;
+        margin-bottom: 30px;
+        background-color: goldenrod;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+
+    #c_new_4{
+        display: none;
+    }
+
+}
+
+
+.c_3{
+    max-width: 1300px!important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@media screen and (max-width: 480px) {
+    .c_3{
+        margin-top: 140px;
+    }
+}
+
+
+
+.c_navbar_mobil_lang{
+    margin-top: 55px!important;
+    margin-bottom: 15px!important;
+}
+
+.c_dl_menu{
+    padding-bottom: 7px!important;
+}
