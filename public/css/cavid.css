@@ -446,3 +446,23 @@
 .c_dl_menu{
     padding-bottom: 7px!important;
 }
+
+
+
+@media screen and (max-width: 1236px) {
+    .main_menu_wrap{
+        display: none!important;
+    }
+
+    #dl-menu{
+        display: inline-block!important;
+    }
+
+    .dl-trigger{
+        display: inline-block!important;
+    }
+
+}
+.main_menu_wrap{
+    width: 865px!important;
+}

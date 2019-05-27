@@ -249,7 +249,7 @@ section, .header, .footer {
 }
 
 .container {
-    width: 1270px;
+    max-width: 1270px;
 }
 
 .content_wrapper {
@@ -2727,6 +2727,7 @@ ul.breadcrumbs li a:hover, ul.breadcrumbs li a:focus {
 
 .aside_wrapper {
     display: inline-block;
+    z-index: 999!important;
     padding: 0px;
 }
 
@@ -5042,7 +5043,7 @@ body.offcanvas .offcanvas_overlay {
 
 @media (max-width: 1280px) {
     .container {
-        width: 1247px;
+        max-width: 1247px;
     }
 
     .home_middle_search {
@@ -5084,7 +5085,7 @@ body.offcanvas .offcanvas_overlay {
 
 @media (max-width: 1024px) {
     .container {
-        width: 1004px;
+        max-width: 1004px;
     }
 
     .features .feature_txt h4 {
