@@ -84,13 +84,13 @@
                                              data-responsive="off" style="z-index: 7; min-width: 410px; max-width: 410px;
                                         max-width: 60px; white-space: normal;"><?php
 
-                                            if ($this->session->userdata("dil") == "az"){
-                                                echo $all_slide['slide_desc_az'];
-                                            }elseif ($this->session->userdata("dil") == "en"){
-                                                echo $all_slide['slide_desc_en'];
-                                            }elseif ($this->session->userdata("dil") == "ru"){
-                                                echo $all_slide['slide_desc_ru'];
-                                            }
+//                                            if ($this->session->userdata("dil") == "az"){
+//                                                echo $all_slide['slide_desc_az'];
+//                                            }elseif ($this->session->userdata("dil") == "en"){
+//                                                echo $all_slide['slide_desc_en'];
+//                                            }elseif ($this->session->userdata("dil") == "ru"){
+//                                                echo $all_slide['slide_desc_ru'];
+//                                            }
 
                                             ?>
                                         </div>
