@@ -142,7 +142,7 @@
 
         <!--    bakalavr magistr doktorantura-->
         <div id="features" class="features">
-            <div class="container">
+            <div class="c_3">
 
 
 
@@ -160,7 +160,7 @@
 
                 ?>">
 
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="feature_block_wrap">
                             <div class="teacher">
                                 <div class="feature_block">
@@ -188,7 +188,7 @@
                 }
 
                 ?>">
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="feature_block_wrap">
                             <div class="library">
                                 <div class="feature_block">
@@ -217,7 +217,7 @@
                 }
 
                 ?>">
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="feature_block_wrap">
                             <div class="courses">
                                 <div class="feature_block">
@@ -239,7 +239,7 @@
 
 
         <!--    xeberler hissesi-->
-        <div class="courses">
+        <div class="courses c_news">
             <div class="container">
                 <div class="head_part">
                     <h2><?php echo $this->lang->line("xeberler"); ?></h2>
@@ -252,7 +252,6 @@
                         <div class="col-lg-12 news-container">
                             <div class="news col-lg-3 col-lg-offset-9">
                                 <ul class="list-group" style="color: #098BE2">
-
 
                                     <!--                                burada slidenin sag terefinde olan balaca xeberler foreache salinir-->
                                     <?php foreach($last_news as $last_news_key){ ?>
@@ -332,8 +331,6 @@
                                     <?php } ?>
                                     <!--                                burada slidenin sag terefinde olan balaca xeberler foreache salinir-->
 
-
-
                                 </ul>
                             </div>
                             <div id="myCarousel" class="carousel slide col-lg-9">
@@ -385,7 +382,6 @@
                                     <?php } ?>
                                     <!--                                burada xeber slideye gelende olacaq melumatlar foreeache salinir-->
 
-
                                 </div>
                             </div>
                         </div>
@@ -397,7 +393,7 @@
         </div>
         <center>
             <!--        burdan diger xeberlere gedir-->
-            <a class="effect effect-1" href="<?php
+            <a class="c_news effect effect-1" href="<?php
 
             if ($this->session->userdata("dil") == "az"){
                 echo base_url("az/News");
@@ -415,6 +411,124 @@
 
 
 
+
+
+        <!--    xeberler mobil hissesi-->
+        <div class="c_mobil_news">
+
+            <?php $id = 1; ?>
+
+            <?php foreach ($last_news as $last_events_key){ ?>
+
+                <div id="<?php
+
+                echo "c_new_" . $id;
+
+                $id = $id + 1;
+
+                ?>" class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="course_block">
+                        <div class="">
+
+                            <!--                                tedbirin sekli-->
+                            <img style="height: 230px;" alt="<?php echo $last_events_key['news_title_az'] ?>" src="<?php echo base_url('upload/news_images/'.$last_events_key['news_img']) ?>">
+                            <!--                                tedbirin sekli-->
+
+
+
+                            <!--                                bu hissede tedbirin idsi gonderilir single page acmaq ucnun-->
+                            <div class="course_img_hoverlay_btn">
+                                <a href="<?php
+
+                                if ($this->session->userdata("dil") == "az"){
+                                    echo base_url('az/Single_page_news/').$last_events_key['news_id'];
+                                }elseif ($this->session->userdata("dil") == "en"){
+                                    echo base_url('en/Single_page_news/').$last_events_key['news_id'];
+                                }elseif ($this->session->userdata("dil") == "ru"){
+                                    echo base_url('ru/Single_page_news/').$last_events_key['news_id'];
+                                }
+
+                                ?>" title="Ətraflı" class="fa fa-eye"></a>
+                            </div>
+                            <!--                                bu hissede tedbirin idsi gonderilir single page acmaq ucnun -->
+
+                        </div>
+                        <div class="psychology">
+
+                            <div class="course_info">
+
+                                <!--                                    tedbirin basliqi-->
+                                <h4><?php
+
+                                    if ($this->session->userdata("dil") == "az"){
+                                        echo $last_events_key['news_title_az'];
+                                    }elseif ($this->session->userdata("dil") == "en"){
+                                        echo $last_events_key['news_title_en'];
+                                    }elseif ($this->session->userdata("dil") == "ru"){
+                                        echo $last_events_key['news_title_ru'];
+                                    }
+
+                                    ?></h4>
+                                <!--                                    tedbirin basliqi-->
+
+
+                                <!--                                    tedbirin contenti-->
+                                <?php
+
+                                if ($this->session->userdata("dil") == "az"){
+                                    echo substr($last_events_key['news_description_az'], 0,55) . "...";
+                                }elseif ($this->session->userdata("dil") == "en"){
+                                    echo substr($last_events_key['news_description_en'], 0,55) . "...";
+                                }elseif ($this->session->userdata("dil") == "ru"){
+                                    echo substr($last_events_key['news_description_ru'], 0,55) . "...";
+                                }
+
+                                ?>
+                                <!--                                    tedbirin contenti-->
+
+
+
+                            </div>
+                        </div>
+                        <div class="psychology course_count_wrap">
+                            <div class="course_count">
+                                <span class="glyphicon glyphicon-calendar"></span>
+
+                                <!--                                        xeberin yuklenme vaxti-->
+                                <?php echo $last_events_key['news_time'] ?>
+                                <!--                                        xeberin yuklenme vaxti-->
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <?php } ?>
+
+        </div>
+        <center>
+            <!--        burdan diger xeberlere gedir-->
+            <a class="c_mobil_news_button effect effect-1" href="<?php
+
+            if ($this->session->userdata("dil") == "az"){
+                echo base_url("az/News");
+            }elseif ($this->session->userdata("dil") == "en"){
+                echo base_url("en/News");
+            }elseif ($this->session->userdata("dil") == "ru"){
+                echo base_url("ru/News");
+            }
+
+            ?>" title="Digər Xəbərlər"><?php echo $this->lang->line("diger");?></a>
+            <!--        burdan diger xeberlere gedir-->
+        </center>
+        <!--    xeberler mobil hissesi-->
+
+
+
+
+
+
         <!--    xeberler slidenin islemesi ucun olan script-->
         <script>
             $('.item:first-child').addClass( "active" );
@@ -426,13 +540,13 @@
         <!--    telebeler muellimler labaratoriyalar-->
         <div id="count" class="count" data-stellar-background-ratio="0.3"
              style="background: url(images/slider_inclass1.jpg); background-attachment: fixed; margin-top: 50px; background-position: 50% 50%;">
-            <div class="count_wrapper">
+            <div class="count_wrapper c_students_whole">
                 <div class="container">
                     <!--  <div class="head_part ">
                          <h2>Qəbul</h2>
                          <p> </p>
                      </div> -->
-                    <div class="row">
+                    <div class="row c_students">
                         <div style="padding-left: 165px;">
                             <div class="col-sm-4 col-md-4 col-xs-6">
                                 <div class="funfact expert text-center">
@@ -479,8 +593,7 @@
 
 
                     <!--                butun tedbirler cagirilir-->
-                    <?php
-                    foreach ($last_events as $last_events_key){ ?>
+                    <?php foreach ($last_events as $last_events_key){ ?>
 
                         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                             <div class="course_block">
@@ -560,8 +673,7 @@
                             </div>
                         </div>
 
-                    <?php }
-                    ?>
+                    <?php } ?>
 
 
 
