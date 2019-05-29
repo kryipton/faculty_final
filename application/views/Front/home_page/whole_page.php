@@ -61,7 +61,7 @@
                                              style="margin-top: 150px;z-index: 6; white-space: nowrap;font-size: 45px;"> <?php
 
                                             if ($this->session->userdata("dil") == "az"){
-                                                echo $all_slide['slide_title_az'];
+                                                echo$all_slide['slide_title_az'];
                                             }elseif ($this->session->userdata("dil") == "en"){
                                                 echo $all_slide['slide_title_en'];
                                             }elseif ($this->session->userdata("dil") == "ru"){
@@ -366,11 +366,11 @@
                                                         <?php
 
                                                         if ($this->session->userdata("dil") == "az"){
-                                                            echo $last_news[2]['news_title_az'];
+                                                            echo $last_news_key['news_title_az'];
                                                         }elseif ($this->session->userdata("dil") == "en"){
-                                                            echo $last_news[2]['news_title_en'];
+                                                            echo $last_news_key['news_title_en'];
                                                         }elseif ($this->session->userdata("dil") == "ru"){
-                                                            echo $last_news[2]['news_title_ru'];
+                                                            echo $last_news_key['news_title_ru'];
                                                         }
 
                                                         ?>

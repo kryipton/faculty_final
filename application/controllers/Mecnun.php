@@ -422,6 +422,8 @@ class Mecnun extends CI_Controller{
         $config['upload_path']   = 'upload/event_images/';
         $config['max_size']     = '10000';
         $config['allowed_types'] = 'jpg|jpeg|png';
+        $config['file_name'] = $_FILES['event_image']['name'];
+
         $this->upload->initialize($config);
 
         if (!empty($event_title_az) && !empty($event_title_en) && !empty($event_title_ru) && !empty($event_desc_az)){
@@ -480,6 +482,8 @@ class Mecnun extends CI_Controller{
         $config['upload_path']   = 'upload/event_images/';
         $config['max_size']     = '10000';
         $config['allowed_types'] = 'jpg|jpeg|png';
+        $config['file_name'] = $_FILES['event_image']['name'];
+
         $this->upload->initialize($config);
 
         if (!empty($event_title_az) && !empty($event_title_en) && !empty($event_title_ru) && !empty($event_desc_az)){

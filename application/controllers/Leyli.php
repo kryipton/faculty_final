@@ -90,7 +90,7 @@ class Leyli extends CI_Controller {
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
 
-        $data['last_events'] = $this->Events_model->get_last_events();
+        $data['last_events'] = $this->Events_model->events();
 
         $this->load->view('Front/actions/whole_page', $data);
     }

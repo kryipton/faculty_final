@@ -35,5 +35,4 @@
     })
 </script>
 
-<!-- Mirrored from www.pixxett.com/htmldemos/learnmate/index2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Oct 2017 10:41:22 GMT -->
 </html>

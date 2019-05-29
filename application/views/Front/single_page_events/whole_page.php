@@ -20,11 +20,11 @@ if($event){ ?>
                     <h2 style="text-align: right;color: white"><?php
 
                         if ($this->session->userdata("dil") == "az"){
-                            echo substr($event['event_title_az'], 0,71);
+                            echo substr($event['event_title_az'], 0,100);
                         }elseif ($this->session->userdata("dil") == "en"){
-                            echo substr($event['event_title_en'], 0,71);
+                            echo substr($event['event_title_en'], 0,100);
                         }elseif ($this->session->userdata("dil") == "ru"){
-                            echo substr($event['event_title_ru'], 0,71);
+                            echo substr($event['event_title_ru'], 0,100 );
                         }
 
                         ?></h2>
@@ -81,11 +81,11 @@ if($event){ ?>
                                 <h1><?php
 
                                     if ($this->session->userdata("dil") == "az"){
-                                        echo substr($event['event_title_az'], 0,71);
+                                        echo $event['event_title_az'];
                                     }elseif ($this->session->userdata("dil") == "en"){
-                                        echo substr($event['event_title_en'], 0,71);
+                                        echo$event['event_title_en'];
                                     }elseif ($this->session->userdata("dil") == "ru"){
-                                        echo substr($event['event_title_ru'], 0,71);
+                                        echo$event['event_title_ru'];
                                     }
 
 

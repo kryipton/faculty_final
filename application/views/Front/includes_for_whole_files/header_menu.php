@@ -4,7 +4,7 @@
  DEVELOPERS 
     
     Cavid Lələyev    cavidleleyev@gmail.com
-    Mütalib Qədirov  mutalib0101@mail.ru
+    Mütalib Qədirov  mutalib0101@gmail.com
 
 -->
 
@@ -384,15 +384,55 @@
 
                             <li>
                                 <a class="trigger" style="padding-top: 0px">
-                                    <a style="padding: 0px!important; float: left; color: black; margin-left: 9px;" href="<?php echo base_url("az/" . $this->uri->segment(2) . "/"  . $this->uri->segment(3). "/"  . $this->uri->segment(4))?>">
+                                    <a style="padding: 0px!important; float: left; color: black; margin-left: 9px;" href="<?php
+
+                                    $segment2 = $this->uri->segment(2);
+                                    $segment3 = $this->uri->segment(3);
+                                    $segment4 = $this->uri->segment(4);
+
+                                    if (!empty($this->uri->segment(2)) && !empty($this->uri->segment(3)) && !empty($this->uri->segment(4))){
+                                        echo base_url("az/" . $segment2   . "/" .  $segment3  . "/" . $segment4);
+                                    }elseif(!empty($this->uri->segment(2)) && !empty($this->uri->segment(3))){
+                                        echo base_url("az/" . $segment2   . "/" .  $segment3);
+                                    }elseif(!empty($this->uri->segment(2))){
+                                        echo base_url("az/" . $segment2);
+                                    }else{
+                                        echo base_url("az/Home");
+                                    }
+
+                                    ?>">
                                         <img width="35px" height="20px" src="<?php echo base_url("upload/language_images/azerbaijan2.jpg")?>" alt="sekil">
                                     </a>
 
-                                    <a style="padding: 0px!important; float: left; color: black; margin-left: 9px" href="<?php echo base_url("ru/" . $this->uri->segment(2) . "/"  . $this->uri->segment(3). "/"  . $this->uri->segment(4))?>">
+                                    <a style="padding: 0px!important; float: left; color: black; margin-left: 9px" href="<?php
+
+                                    if (!empty($this->uri->segment(2)) && !empty($this->uri->segment(3)) && !empty($this->uri->segment(4))){
+                                        echo base_url("ru/" . $segment2   . "/" .  $segment3   . "/" . $segment4);
+                                    }elseif(!empty($this->uri->segment(2)) && !empty($this->uri->segment(3))){
+                                        echo base_url("ru/" . $segment2   . "/" .  $segment3);
+                                    }elseif(!empty($this->uri->segment(2))){
+                                        echo base_url("ru/" . $segment2);
+                                    }else{
+                                        echo base_url("ru/Home");
+                                    }
+
+                                    ?>">
                                         <img width=35px" height="20px" src="<?php echo base_url("upload/language_images/russia.png")?>" alt="sekil">
                                     </a>
 
-                                    <a style="padding: 0px!important; float: left; color: black; margin-left: 9px;" href="<?php echo base_url("en/" . $this->uri->segment(2) . "/"  . $this->uri->segment(3). "/"  . $this->uri->segment(4))?>">
+                                    <a style="padding: 0px!important; float: left; color: black; margin-left: 9px;" href="<?php
+
+                                    if (!empty($this->uri->segment(2)) && !empty($this->uri->segment(3)) && !empty($this->uri->segment(4))){
+                                        echo base_url("en/" . $segment2   . "/" .  $segment3   . "/" . $segment4);
+                                    }elseif(!empty($this->uri->segment(2)) && !empty($this->uri->segment(3))){
+                                        echo base_url("en/" . $segment2   . "/" .  $segment3);
+                                    }elseif(!empty($this->uri->segment(2))){
+                                        echo base_url("en/" . $segment2);
+                                    }else{
+                                        echo base_url("en/Home");
+                                    }
+
+                                    ?>">
                                         <img width="35px" height="20px" src="<?php echo base_url("upload/language_images/english.png")?>" alt="sekil">
                                     </a>
                                 </a>
