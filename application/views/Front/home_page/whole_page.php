@@ -430,7 +430,7 @@
                         <div class="">
 
                             <!--                                tedbirin sekli-->
-                            <img style="height: 230px;" alt="<?php echo $last_events_key['news_title_az'] ?>" src="<?php echo base_url('upload/news_images/'.$last_events_key['news_img']) ?>">
+                            <img class="c_object_fit" style="height: 230px;" alt="<?php echo $last_events_key['news_title_az'] ?>" src="<?php echo base_url('upload/news_images/'.$last_events_key['news_img']) ?>">
                             <!--                                tedbirin sekli-->
 
 
@@ -536,6 +536,9 @@
 
 
 
+
+
+
         <!--    telebeler muellimler labaratoriyalar-->
         <div id="count" class="count" data-stellar-background-ratio="0.3"
              style="background: url(images/slider_inclass1.jpg); background-attachment: fixed; margin-top: 50px; background-position: 50% 50%;">
@@ -582,6 +585,9 @@
         <!--    telebeler muellimler labaratoriyalar-->
 
 
+
+
+
         <!--    tedbirler hissesi-->
         <div class="courses">
             <div class="container">
@@ -599,7 +605,7 @@
                                 <div class="">
 
                                     <!--                                tedbirin sekli-->
-                                    <img style="height: 230px;" alt="<?php echo $last_events_key['event_title_az'] ?>" src="<?php echo base_url('upload/event_images/'.$last_events_key['event_img']) ?>">
+                                    <img class="c_object_fit" style="height: 230px;" alt="<?php echo $last_events_key['event_title_az'] ?>" src="<?php echo base_url('upload/event_images/'.$last_events_key['event_img']) ?>">
                                     <!--                                tedbirin sekli-->
 
 

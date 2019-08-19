@@ -497,4 +497,11 @@
     color: white;
 }
 
-.pagination a:hover:not(.active) {background-color: #ddd;}
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+
+.c_object_fit{
+    object-fit: cover;
+}
