@@ -55,8 +55,6 @@
                             </select>
                             <br>
 
-                            <label for="">Haqqında</label>
-                            <textarea style="resize: none" class="form-control ckeditor" name="teacher_about_az" id="" cols="30" rows="10" placeholder=""><?php echo $teacher["teacher_about_az"] ?></textarea><br>
 
                         </div>
                     </div>
@@ -93,8 +91,6 @@
                             </select>
                             <br>
 
-                            <label for="">Haqqında</label>
-                            <textarea style="resize: none" class="form-control ckeditor" name="teacher_about_ru" id="" cols="30" rows="10" placeholder=""><?php echo $teacher["teacher_about_ru"] ?></textarea><br>
 
                         </div>
                     </div>
@@ -130,9 +126,7 @@
                             </select>
                             <br>
 
-                            <label for="">Haqqında</label>
-                            <textarea style="resize: none" class="form-control ckeditor" name="teacher_about_en" id="" cols="30" rows="10" placeholder=""><?php echo $teacher["teacher_about_en"] ?></textarea>
-                            <br>
+
 
 
                         </div>

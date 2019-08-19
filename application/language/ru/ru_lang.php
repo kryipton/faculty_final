@@ -38,6 +38,7 @@ $lang["magistr_tehsili"] = "Мастер образование";
 
 $lang["doktorantura_tehsili"] = "Докторантура";
 
+$lang["xebere_get"] = "Перейти К Новостям";
 
 
 

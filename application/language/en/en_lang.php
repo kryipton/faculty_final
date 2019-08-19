@@ -42,6 +42,9 @@ $lang["magistr_tehsili"] = "Master education";
 
 $lang["doktorantura_tehsili"] = "Doctorate education";
 
+$lang["xebere_get"] = "Go To The New";
+
+
 
 
 

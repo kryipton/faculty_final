@@ -107,10 +107,10 @@
                                                      data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;"
                                                      data-transform_out="y:50px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
                                                      data-start="650" data-splitin="none" data-splitout="none"
-                                                     data-actions='[{"event":"click","action":"scrollbelow","offset":"px"}]'
+                                                     data-actions='[{"event":"click","action":"","offset":"px"}]'
                                                      data-basealign="slide" data-responsive_offset="off" data-responsive="off" style="z-index: 8;
                                         white-space: nowrap; border-color: rgba(255, 255, 255, 0.5); outline: none; box-shadow: none; box-sizing: border-box; -moz-box-sizing: border-box;
-                                        -webkit-box-sizing: border-box;"><?php echo $this->lang->line("diger"); ?>
+                                        -webkit-box-sizing: border-box;"><?php echo $this->lang->line("xebere_get"); ?>
                                                 </div>
                                             </a>
                                         <?php }else{
@@ -337,7 +337,7 @@
 
                                     <!--                                burada xeber slide gelende olacaq melumatlar foreeache salinir-->
                                     <?php foreach($last_news as $last_news_key){ ?>
-                                        <div style="" class="item" >
+                                        <div style="cursor: pointer" class="item c_href" >
 
                                             <!--                                        xeberin sekli-->
                                             <img class="" src="<?php echo base_url('upload/news_images/'.$last_news_key['news_img']) ?>" alt="">
@@ -347,7 +347,7 @@
                                                 <h4 class="">
 
                                                     <!--                                                single page ucun link-->
-                                                    <a href="<?php
+                                                    <a class="c_href_a" href="<?php
 
                                                     if ($this->session->userdata("dil") == "az"){
                                                         echo base_url("az/Single_page_news/$last_news_key[news_id]");

@@ -37,6 +37,9 @@ $lang["magistr_tehsili"] = "Magistr təhsili";
 
 $lang["doktorantura_tehsili"] = "Doktorantura təhsili";
 
+$lang["xebere_get"] = "Xəbərə Get";
+
+
 
 
 

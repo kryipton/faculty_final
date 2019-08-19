@@ -17,6 +17,7 @@
 
             <form action="<?php echo base_url('himalaY_muellimler_elave_edilmesi') ?>" method="POST" enctype="multipart/form-data">
 
+
             <h2 style="color: red;"><?php echo $this->session->flashdata("alert")?></h2>
 
             <div class="tab-content" style="margin-top: 30px">
@@ -48,8 +49,6 @@
                             </select>
                             <br>
 
-                            <label for="">Haqqında</label>
-                            <textarea style="resize: none" class="form-control ckeditor" name="teacher_about_az" id="" cols="30" rows="10" placeholder=""></textarea><br>
 
                     </div>
                 </div>
@@ -80,8 +79,6 @@
                             </select>
                             <br>
 
-                            <label for="">Haqqında</label>
-                            <textarea style="resize: none" class="form-control ckeditor" name="teacher_about_ru" id="" cols="30" rows="10" placeholder=""></textarea><br>
 
                     </div>
                 </div>
@@ -112,15 +109,13 @@
                             </select>
                             <br>
 
-                            <label for="">Haqqında</label>
-                            <textarea style="resize: none" class="form-control ckeditor" name="teacher_about_en" id="" cols="30" rows="10" placeholder=""></textarea>
-                            <br>
+
 
 
                     </div>
                 </div>
 
-                <input type="file" class="form-control" name="teacher_photo"><br>
+                <input style="width: 65%; margin-left: 15px" type="file" class="form-control" name="teacher_photo"><br>
 
             </div>
 
