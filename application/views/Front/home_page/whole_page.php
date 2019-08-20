@@ -57,7 +57,7 @@
                                         </div>
 
                                         <div class="tp-caption BigBold-Title tp-resizeme rs-parallaxlevel-0"
-                                             style="margin-top: 150px;z-index: 6; white-space: nowrap;font-size: 45px;"> <?php
+                                             style="margin-top: 150px;z-index: 6; white-space: nowrap;font-size: 25px;"> <?php
 
                                             if ($this->session->userdata("dil") == "az"){
                                                 echo$all_slide['slide_title_az'];
@@ -97,7 +97,7 @@
                                         <?php
                                         if($all_slide['slide_link']){ ?>
                                             <a href="<?php echo $all_slide['slide_link'] ?>">
-                                                <div class="tp-caption BigBold-Button rev-btn rs-parallaxlevel-0" id="slide-309-layer-7"
+                                                <div class="tp-caption BigBold-Button rev-btn rs-parallaxlevel-0 c_responsive_button_for_slide" id="slide-309-layer-7"
                                                      data-x="['88','88','88','88']" data-hoffset="['480','480','30','20']"
                                                      data-y="['35','35','35','35']" data-voffset="['50','50','30','20']"
                                                      data-width="none" data-height="none" data-whitespace="nowrap"
@@ -635,11 +635,11 @@
                                         <h4><?php
 
                                             if ($this->session->userdata("dil") == "az"){
-                                                echo $last_events_key['event_title_az'];
+                                                echo $last_events_key['event_title_az']."...";
                                             }elseif ($this->session->userdata("dil") == "en"){
-                                                echo $last_events_key['event_title_en'];
+                                                echo $last_events_key['event_title_en']."...";
                                             }elseif ($this->session->userdata("dil") == "ru"){
-                                                echo $last_events_key['event_title_ru'];
+                                                echo $last_events_key['event_title_ru']."...";
                                             }
 
                                             ?></h4>
@@ -650,11 +650,11 @@
                                         <?php
 
                                         if ($this->session->userdata("dil") == "az"){
-                                            echo substr($last_events_key['event_desc_az'], 0,150);
+                                            echo substr($last_events_key['event_desc_az'], 0,100)."...";
                                         }elseif ($this->session->userdata("dil") == "en"){
-                                            echo substr($last_events_key['event_desc_en'], 0,150);
+                                            echo substr($last_events_key['event_desc_en'], 0,100)."...";
                                         }elseif ($this->session->userdata("dil") == "ru"){
-                                            echo substr($last_events_key['event_desc_ru'], 0,150);
+                                            echo substr($last_events_key['event_desc_ru'], 0,100)."...";
                                         }
 
                                         ?>

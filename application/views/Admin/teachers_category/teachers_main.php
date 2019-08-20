@@ -21,9 +21,9 @@
                 <tr>
                     <th  scope="col">Sıra</th>
                     <th scope="col">Adı</th>
+                    <th scope="col">Soyadı</th>
                     <th  scope="col">Dərəcə</th>
                     <th scope="col">Kafedra</th>
-                    <th  scope="col">Müəllim Haqqında</th>
                     <th  scope="col">Şəkil</th>
                     <th  scope="col">Əməliyyat</th>
                 </tr>
@@ -39,8 +39,8 @@
                         <th><?php echo $teacher["teacher_id"]?></th>
                         <th><?php echo $teacher["teacher_name_az"]?></th>
                         <th><?php echo $teacher["teacher_surname_az"]?></th>
+                        <th><?php echo $teacher["teacher_position_az"]?></th>
                         <th><?php echo $teacher["department_category_az"]?></th>
-                        <th><?php echo $teacher["teacher_about_az"]?></th>
                         <th>
                             <img width="70px" height="70px" src="<?php echo base_url("upload/teacher_images/"). $teacher["teacher_photo"]?>" alt="sekil">
                         </th>

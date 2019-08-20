@@ -32,26 +32,24 @@
 
                 ?>"><b><?php
 
-
-
                         if ($this->session->userdata("dil") == "az"){
-                            echo substr($last_events_key['event_title_az'],0,50);
+                            echo $last_events_key['event_title_az']."...";
                         }elseif ($this->session->userdata("dil") == "en"){
-                            echo substr($last_events_key['event_title_en'],0,50);
+                            echo $last_events_key['event_title_en']."...";
                         }elseif ($this->session->userdata("dil") == "ru"){
-                            echo substr($last_events_key['event_title_ru'],0,50);
+                            echo $last_events_key['event_title_ru']."...";
                         }
 
-                        ?></b></a>
+                        ?>ne</b></a>
             </h5>
-            <p> <?php
+            <p>  <?php
 
                 if ($this->session->userdata("dil") == "az"){
-                    echo substr($last_events_key['event_desc_az'], 0,50);
+                    echo substr($last_events_key['event_desc_az'], 0,100)."...";
                 }elseif ($this->session->userdata("dil") == "en"){
-                    echo substr($last_events_key['event_desc_en'], 0,50);
+                    echo substr($last_events_key['event_desc_en'], 0,100)."...";
                 }elseif ($this->session->userdata("dil") == "ru"){
-                    echo substr($last_events_key['event_desc_ru'], 0,50);
+                    echo substr($last_events_key['event_desc_ru'], 0,100)."...";
                 }
 
                 ?></p>

@@ -10,11 +10,14 @@
 
 <!--    xeberler hissesi-->
 
-    <div class="courses" style="margin-top: 50px;">
+    <br><br>
+
+    <div class="head_part">
+        <h2><?php echo $this->lang->line("xeberler"); ?></h2>
+    </div>
+
+    <div class="courses" style="margin-top: 0px;">
         <div class="container">
-            <div class="head_part">
-                <h2><?php echo $this->lang->line("xeberler"); ?></h2>
-            </div>
 
 
            <?php if (!empty($last_news)){ ?>
@@ -30,13 +33,13 @@
                                    <img style="height: 230px;" alt="<?php
 
                                    if ($this->session->userdata("dil") == "az"){
-                                       echo substr($last_news_key['news_title_az'], 0,71);
+                                       echo substr($last_news_key['news_title_az'], 0,71)."...";
                                    }
                                    elseif ($this->session->userdata("dil") == "en"){
-                                       echo substr($last_news_key['news_title_en'], 0,71);
+                                       echo substr($last_news_key['news_title_en'], 0,71)."...";
                                    }
                                    elseif ($this->session->userdata("dil") == "ru"){
-                                       echo substr($last_news_key['news_title_ru'], 0,71);
+                                       echo substr($last_news_key['news_title_ru'], 0,71)."...";
                                    }
 
                                    ?>" src="<?php echo base_url('upload/news_images/'.$last_news_key['news_img']) ?>">
@@ -88,6 +91,7 @@
 
                </div>
 
+               <br><br>
                <div class="pagination">
                    <?php echo $links?>
                </div>

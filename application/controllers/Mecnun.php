@@ -617,7 +617,7 @@ class Mecnun extends CI_Controller{
                 );
 
                 $this->Mecnun_model->add_teacher($data);
-                $msg = 'Xəbər uğurla əlavə olundu! ';
+                $msg = 'Müəllim uğurla əlavə olundu! ';
                 $this->session->set_flashdata('success',$msg);
                 redirect(base_url('himalaY_muellimler'));
 
@@ -720,7 +720,7 @@ class Mecnun extends CI_Controller{
             );
 
             $this->Mecnun_model->update_teacher($where, $data);
-            $msg = 'Xəbər uğurla yeniləndi';
+            $msg = 'Məllim uğurla yeniləndi';
             $this->session->set_flashdata('success',$msg);
             redirect(base_url('himalaY_muellimler'));
 
@@ -1769,7 +1769,6 @@ class Mecnun extends CI_Controller{
         $speciality_department_ru = $this->input->post("speciality_department_category_ru");
 
         if (!empty($speciality_department_ru) && !empty($speciality_department_en) && !empty($speciality_department_az) && !empty($speciality_code) && !empty($speciality_name_az) && !empty($speciality_about_az) && !empty($speciality_about_ru) && !empty($speciality_name_en) && !empty($speciality_about_en) && !empty($speciality_name_ru)) {
-            if (!empty($speciality_code) && !empty($speciality_name_az) && !empty($speciality_about_az) && !empty($speciality_about_ru) && !empty($speciality_name_en) && !empty($speciality_about_en) && !empty($speciality_name_ru)) {
                 $data = array(
                     "speciality_code" => $speciality_code,
                     "speciality_name_az" => $speciality_name_az,
@@ -1795,7 +1794,7 @@ class Mecnun extends CI_Controller{
 
 
         }
-    }
+
 
     public function speciality_delete($id)
     {

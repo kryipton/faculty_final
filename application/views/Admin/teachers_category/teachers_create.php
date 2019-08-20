@@ -119,8 +119,9 @@
 
             </div>
 
-            <input type="submit" value="Əlavə et" class="btn btn-info" style="margin-top: 25px; margin-left: 30px">
-<!--            <button type="submit">Elave et</button>-->
+
+                <input type="submit" value="Əlavə et" class="btn btn-info" style="margin-top: 25px; margin-left: 30px">
+                <!--            <button type="submit">Elave et</button>-->
 
             </form>
 

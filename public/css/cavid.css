@@ -505,3 +505,10 @@
 .c_object_fit{
     object-fit: cover;
 }
+
+@media only screen and (max-width: 521px) {
+    .c_responsive_button_for_slide{
+        left: -900px !important;
+    }
+}
+

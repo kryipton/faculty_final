@@ -57,26 +57,23 @@
                                             <h4><?php
 
                                                 if ($this->session->userdata("dil") == "az"){
-                                                    echo $last_events_key['event_title_az'];
+                                                    echo $last_events_key['event_title_az']."...";
                                                 }elseif ($this->session->userdata("dil") == "en"){
-                                                    echo $last_events_key['event_title_en'];
+                                                    echo $last_events_key['event_title_en']."...";
                                                 }elseif ($this->session->userdata("dil") == "ru"){
-                                                    echo $last_events_key['event_title_ru'];
+                                                    echo $last_events_key['event_title_ru']."...";
                                                 }
 
                                                 ?></h4>
                                             <?php
 
-
                                             if ($this->session->userdata("dil") == "az"){
-                                                echo substr($last_events_key['event_desc_az'], 0,150);
+                                                echo substr($last_events_key['event_desc_az'], 0,100)."...";
                                             }elseif ($this->session->userdata("dil") == "en"){
-                                                echo substr($last_events_key['event_desc_az'], 0,150);
+                                                echo substr($last_events_key['event_desc_en'], 0,100)."...";
                                             }elseif ($this->session->userdata("dil") == "ru"){
-                                                echo substr($last_events_key['event_desc_az'], 0,150);
+                                                echo substr($last_events_key['event_desc_ru'], 0,100)."...";
                                             }
-
-
 
                                             ?>
                                         </div>

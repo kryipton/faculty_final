@@ -132,11 +132,13 @@
                         </div>
                     </div>
 
-                    <input type="file" class="form-control" name="teacher_photo"><br>
+
+                    <input style="width: 65%; margin-left: 15px" type="file" class="form-control" name="teacher_photo"><br>
+
 
                 </div>
 
-                <input type="submit" value="Əlavə et" class="btn btn-info" style="margin-top: 25px; margin-left: 30px">
+                <input type="submit" value="Yenilə" class="btn btn-info" style="margin-top: 25px; margin-left: 30px">
                 <!--            <button type="submit">Elave et</button>-->
 
             </form>
