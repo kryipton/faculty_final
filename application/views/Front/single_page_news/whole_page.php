@@ -79,6 +79,9 @@ if($new){ ?>
 
             <div class="container">
 
+
+
+
                 <div class="dtl_wrapper col-lg-9 col-md-8 col-sm-12 col-xs-12">
 
                     <div class="dtl_inner_wrap">

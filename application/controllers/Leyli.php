@@ -173,6 +173,7 @@ class Leyli extends CI_Controller {
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
         $data["services"] = $this->Services_model->get_services();
+        $data['last_events'] = $this->Events_model->get_last_events();
 
         $data['data'] = $this->Bachelor_model->get_desc();
 
@@ -183,6 +184,7 @@ class Leyli extends CI_Controller {
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
         $data["services"] = $this->Services_model->get_services();
+        $data['last_events'] = $this->Events_model->get_last_events();
 
         $data['data'] = $this->Bachelor_model->get_bachelor_specialities();
 
@@ -193,6 +195,7 @@ class Leyli extends CI_Controller {
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
         $data["services"] = $this->Services_model->get_services();
+        $data['last_events'] = $this->Events_model->get_last_events();
 
         $data['speciality_info'] = $this->Bachelor_model->get_bachelor_speciality(array(
             "bachelor_id" => $id,
@@ -205,6 +208,7 @@ class Leyli extends CI_Controller {
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
         $data["services"] = $this->Services_model->get_services();
+        $data['last_events'] = $this->Events_model->get_last_events();
 
         $data['data'] = $this->Master_model->get_desc();
 
@@ -215,6 +219,7 @@ class Leyli extends CI_Controller {
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
         $data["services"] = $this->Services_model->get_services();
+        $data['last_events'] = $this->Events_model->get_last_events();
 
         $data['data'] = $this->Master_model->get_master_specialities();
 
@@ -225,6 +230,7 @@ class Leyli extends CI_Controller {
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
         $data["services"] = $this->Services_model->get_services();
+        $data['last_events'] = $this->Events_model->get_last_events();
 
         $data['data'] = $this->Master_model->get_master_speciality(array(
             "master_id" => $id,
@@ -237,6 +243,7 @@ class Leyli extends CI_Controller {
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
         $data["services"] = $this->Services_model->get_services();
+        $data['last_events'] = $this->Events_model->get_last_events();
 
         $data['data'] = $this->Doctorate_model->get_desc();
 
@@ -247,6 +254,7 @@ class Leyli extends CI_Controller {
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
         $data["services"] = $this->Services_model->get_services();
+        $data['last_events'] = $this->Events_model->get_last_events();
 
         $data['data'] = $this->Doctorate_model->get_doctorate_specialities();
 
@@ -257,6 +265,7 @@ class Leyli extends CI_Controller {
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
         $data["services"] = $this->Services_model->get_services();
+        $data['last_events'] = $this->Events_model->get_last_events();
 
         $data['data'] = $this->Doctorate_model->get_doctorate_speciality(array(
             "doctorate_id" => $id,

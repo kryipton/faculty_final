@@ -1,6 +1,7 @@
 body {
     font-size: 15px;
-    font-family: 'Lato', "Helvetica Neue", "Helvetica", 'Roboto', 'Arial', sans-serif;
+    /*font-family: 'Lato', "Helvetica Neue", "Helvetica", 'Roboto', 'Arial', sans-serif;*/
+    font-family: Palatino Linotype!important;
     line-height: 25px;
     letter-spacing: 0.5px;
 }
@@ -11,7 +12,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lato', "Helvetica Neue", "Helvetica", 'Roboto', 'Arial', sans-serif;
+    /*font-family: 'Lato', "Helvetica Neue", "Helvetica", 'Roboto', 'Arial', sans-serif;*/
+    font-family: Palatino Linotype!important;
     color: #3b4351;
     font-size: 1em;
     line-height: 1.2;

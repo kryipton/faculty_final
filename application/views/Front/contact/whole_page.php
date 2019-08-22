@@ -39,7 +39,7 @@
     <?php $this->load->view('Front/about/left_menu'); ?>
 
     <div class="col-md-8">
-        <div class="about_right" style="padding: 20px 0px 0px 10px">
+        <div class="about_right" style="padding: 20px 10px 0px 10px">
             <h2><?php echo $this->lang->line("elaqe"); ?></h2>
             <div class="about_right_text" style="color: grey">
                 <?php

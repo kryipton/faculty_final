@@ -1,7 +1,7 @@
 
 
  <div class="aside_wrapper col-lg-3 col-md-4 col-sm-12 col-xs-12">
-    <div style="min-height: 450px;padding: 20px 0px 0px 10px">
+    <div style="min-height: 450px;padding: 20px 10px 0px 10px">
 
 
 
