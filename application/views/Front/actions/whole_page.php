@@ -89,7 +89,8 @@
 
                     </div>
 
-                    <div class="pagination">
+                    <br><br>
+                    <div class="pagination" style="margin-left: 14px">
                         <?php echo $links?>
                     </div>
 

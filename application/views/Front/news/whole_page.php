@@ -96,7 +96,7 @@
                </div>
 
                <br><br>
-               <div class="pagination">
+               <div class="pagination" style="margin-left: 14px">
                    <?php echo $links?>
                </div>
 

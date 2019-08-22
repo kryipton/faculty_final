@@ -5,6 +5,7 @@ class Mecnun extends CI_Controller{
     {
         parent::__construct();
         $this->load->model('Mecnun_model');
+        $this->load->model('Services_model');
         if(!get_active_user()){
             redirect(base_url('himalaY_secure'));
         }
@@ -1150,6 +1151,103 @@ class Mecnun extends CI_Controller{
         }
 
 
+
+    }
+
+
+//     ============= Xidmetler Hissesi ================
+
+    public function services()
+    {
+
+        $data['services'] = $this->Services_model->get_services();
+        $this->load->view('Admin/services/services_main',$data);
+    }
+
+    public function add_services()
+    {
+        $this->load->view('Admin/services/services_add');
+    }
+
+    public function add_services_act()
+    {
+
+        $name_az = strip_tags($this->input->post("name_az"));
+        $name_en = strip_tags($this->input->post("name_en"));
+        $name_ru = strip_tags($this->input->post("name_ru"));
+        $link = strip_tags($this->input->post("link"));
+
+        if (!empty($name_az) && !empty($name_ru) &&!empty($name_en) &&!empty($link)){
+
+            $this->Services_model->add_service(array(
+                "name_az" => $name_az,
+                "name_en" => $name_en,
+                "name_ru" => $name_ru,
+                "link" => $link,
+            ));
+
+            $this->session->set_flashdata('success', "Xidmət Əlavə olundu");
+            redirect(base_url('himalaY_xidmetler'));
+
+        }else{
+            $msg = 'Zəhmət olmasa boşluq buraxmayın ! ';
+            $this->session->set_flashdata('alert',$msg);
+
+            redirect(base_url('himalaY_xidmetler_elave_et'));
+        }
+
+
+
+    }
+
+    public function delete_services($id){
+
+        $this->Services_model->delete_service(array("id" => $id));
+
+
+        $this->session->set_flashdata('success', "Xidmət silindi");
+        redirect(base_url('himalaY_xidmetler'));
+
+    }
+
+    public function update_services($id){
+        $data["service"] = $this->Services_model->get_service(array(
+            "id" => $id,
+        ));
+
+        $this->load->view("Admin/services/services_update", $data);
+    }
+
+    public function update_services_act($id){
+        $name_az = strip_tags($this->input->post("name_az"));
+        $name_en = strip_tags($this->input->post("name_en"));
+        $name_ru = strip_tags($this->input->post("name_ru"));
+        $link = strip_tags($this->input->post("link"));
+
+        if (!empty($name_az) && !empty($name_ru) &&!empty($name_en) &&!empty($link)){
+            $this->Services_model->update_service(
+
+                array(
+                    "id" => $id,
+                ),
+
+                array(
+                "name_az" => $name_az,
+                "name_en" => $name_en,
+                "name_ru" => $name_ru,
+                "link" => $link,
+                )
+            );
+
+            $this->session->set_flashdata('success', "Xidmət Yeniləndi");
+            redirect(base_url('himalaY_xidmetler'));
+
+        }else{
+            $msg = 'Zəhmət olmasa boşluq buraxmayın ! ';
+            $this->session->set_flashdata('alert',$msg);
+
+            redirect(base_url("himalaY_xidmetler_yenile/$id"));
+        }
 
     }
 

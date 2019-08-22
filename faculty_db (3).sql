@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 20, 2019 at 11:16 AM
+-- Generation Time: Aug 22, 2019 at 08:00 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -455,6 +455,28 @@ INSERT INTO `news_db` (`news_id`, `news_title_az`, `news_title_en`, `news_title_
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `services`
+--
+
+CREATE TABLE `services` (
+  `id` int(11) NOT NULL,
+  `name_az` varchar(255) NOT NULL,
+  `name_ru` varchar(255) NOT NULL,
+  `name_en` varchar(255) NOT NULL,
+  `link` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `services`
+--
+
+INSERT INTO `services` (`id`, `name_az`, `name_ru`, `name_en`, `link`) VALUES
+(2, 'xidmet az', 'xidmet ruasdsadasd', 'xidmet enasdasd', 'http://localhost/phpmyadmin/sql.php?server=1&db=faculty_db&table=services&pos=0'),
+(5, 'asdsad', 'asdasd', 'adasd', 'adasd');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `slide`
 --
 
@@ -475,8 +497,7 @@ CREATE TABLE `slide` (
 --
 
 INSERT INTO `slide` (`slide_id`, `slide_image`, `slide_title_az`, `slide_title_en`, `slide_title_ru`, `slide_desc_az`, `slide_desc_en`, `slide_desc_ru`, `slide_link`) VALUES
-(32, '5ceb9e7dea198.jpeg', 'Respublika Gününə həsr olunmuş kitab sərgisi keçirilib', 'The book exhibition dedicated to the Republic Day ', 'Состоялась книжная выставка, посвященная Дню Респу', '<p>On May 27 the book exhibition dedicated to the 28 May - Republic Day was held at AzII E-Book House of the Azerbaijan State Oil and Industry University (ASOIU).</p>\r\n\r\n<p>The exhibition includes books reflecting the socio-political, social, economic, scientific, cultural and international relations of our Republic during the tenure of national leader Heydar Aliyev after the establishment, activity and success of the Azerbaijan Democratic Republic, as well as the restoration of the state independence of Azerbaijan.</p>\r\n', '<p>On May 27 the book exhibition dedicated to the 28 May - Republic Day was held at AzII E-Book House of the Azerbaijan State Oil and Industry University (ASOIU).</p>\r\n\r\n<p>The exhibition includes books reflecting the socio-political, social, economic, scientific, cultural and international relations of our Republic during the tenure of national leader Heydar Aliyev after the establishment, activity and success of the Azerbaijan Democratic Republic, as well as the restoration of the state independence of Azerbaijan.</p>\r\n', '<p>27 мая в библиотеке Азербайджанского государственного университета нефти и промышленности (АГУНП) &quot;Azİİ Elektron Kitab Evi&quot; проведена книжная выставка, посвященная 28 Мая - Дню Республики.</p>\r\n\r\n<p>На выставке были представлены книги, отражающие создание, деятельность и успехи Азербайджанской Демократической Республики, а также общественно-политическую, социально-экономическую, культурную жизнь Республики во время правления общенационального лидера Гейдара Алиева после восстановления государственной независимости Азербайджана.</p>\r\n', 'http://localhost/faculty/az/Single_page_events/23'),
-(33, 'art.jpg', 'Slide az', 'Slide en', 'Slide ru', '<p>asdsadad</p>\r\n', '<p>asdadad</p>\r\n', '<p>adasdasda</p>\r\n', 'http://localhost/faculty/az/Single_page_events/53');
+(32, '5ceb9e7dea198.jpeg', 'Respublika Gününə həsr olunmuş kitab sərgisi keçirilib', 'The book exhibition dedicated to the Republic Day ', 'Состоялась книжная выставка, посвященная Дню Респу', '<p>On May 27 the book exhibition dedicated to the 28 May - Republic Day was held at AzII E-Book House of the Azerbaijan State Oil and Industry University (ASOIU).</p>\r\n\r\n<p>The exhibition includes books reflecting the socio-political, social, economic, scientific, cultural and international relations of our Republic during the tenure of national leader Heydar Aliyev after the establishment, activity and success of the Azerbaijan Democratic Republic, as well as the restoration of the state independence of Azerbaijan.</p>\r\n', '<p>On May 27 the book exhibition dedicated to the 28 May - Republic Day was held at AzII E-Book House of the Azerbaijan State Oil and Industry University (ASOIU).</p>\r\n\r\n<p>The exhibition includes books reflecting the socio-political, social, economic, scientific, cultural and international relations of our Republic during the tenure of national leader Heydar Aliyev after the establishment, activity and success of the Azerbaijan Democratic Republic, as well as the restoration of the state independence of Azerbaijan.</p>\r\n', '<p>27 мая в библиотеке Азербайджанского государственного университета нефти и промышленности (АГУНП) &quot;Azİİ Elektron Kitab Evi&quot; проведена книжная выставка, посвященная 28 Мая - Дню Республики.</p>\r\n\r\n<p>На выставке были представлены книги, отражающие создание, деятельность и успехи Азербайджанской Демократической Республики, а также общественно-политическую, социально-экономическую, культурную жизнь Республики во время правления общенационального лидера Гейдара Алиева после восстановления государственной независимости Азербайджана.</p>\r\n', 'http://asoiu.edu.az/public/az');
 
 -- --------------------------------------------------------
 
@@ -685,6 +706,12 @@ ALTER TABLE `news_db`
   ADD PRIMARY KEY (`news_id`);
 
 --
+-- Indexes for table `services`
+--
+ALTER TABLE `services`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `slide`
 --
 ALTER TABLE `slide`
@@ -824,13 +851,19 @@ ALTER TABLE `master_speciality_db`
 -- AUTO_INCREMENT for table `news_db`
 --
 ALTER TABLE `news_db`
-  MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+
+--
+-- AUTO_INCREMENT for table `services`
+--
+ALTER TABLE `services`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `slide`
 --
 ALTER TABLE `slide`
-  MODIFY `slide_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `slide_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `specialty_db`
@@ -842,7 +875,7 @@ ALTER TABLE `specialty_db`
 -- AUTO_INCREMENT for table `teachers_db`
 --
 ALTER TABLE `teachers_db`
-  MODIFY `teacher_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `teacher_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `users_db`

@@ -25,6 +25,7 @@
             <a class="a2" href="<?php echo base_url('himalaY') ?>"><li class="a1">Dashboard</li></a>
 
             <a class="a2" href="<?php echo base_url('himalaY_haqqimizda') ?>"><li class="a1">Haqqımızda</li></a>
+            <a class="a2" href="<?php echo base_url('himalaY_xidmetler') ?>"><li class="a1">Xidmətlər</li></a>
             <a class="a2" href="<?php echo base_url('himalaY_elaqe') ?>"><li class="a1">Əlaqə</li></a>
             <a class="a2" href="<?php echo base_url('himalaY_loqo') ?>"><li class="a1">Loqo Və Başlıqı</li></a>
 
