@@ -15,21 +15,32 @@ $(".c_location_new").click(function () {
 $(document).scroll(function() {
 
     if($(document).scrollTop() > 90){
-        $('.dropbtn').css({
-            "padding" :  "20px 0 20px",
-        });
 
         $('.dropdown-content').css({
             "top" :  "40px",
         })
     }else{
-        $('.dropbtn').css({
-            "padding" :  "32px 0 33px",
-        });
 
         $('.dropdown-content').css({
             "top" :  "60px",
         })
+    }
+
+
+    if($(document).scrollTop() > 50){
+        $('.dropbtn').css({
+            "padding" :  "20px 0 20px",
+        });
+
+
+
+    }else{
+        $('.dropbtn').css({
+            "padding" :  "32px 0 33px",
+        });
+
+     
+
     }
 
 });
