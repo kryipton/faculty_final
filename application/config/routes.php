@@ -248,6 +248,15 @@ $route['himalaY_haqqimizda_duzenle/(.*)'] = 'Mecnun/update_about/$1';
 $route['himalaY_haqqimizda_duzenle_act/(.*)'] = 'Mecnun/update_about_act/$1';
 
 
+//Xidmetler
+$route['himalaY_xidmetler'] = 'Mecnun/services';
+$route['himalaY_xidmetler_elave_et'] = 'Mecnun/add_services';
+$route['himalaY_xidmetler_elave_edilmesi'] = 'Mecnun/add_services_act';
+$route['himalaY_xidmetler_yenile/(.*)'] = 'Mecnun/update_services/$1';
+$route['himalaY_xidmetler_yenilenmesi/(.*)'] = 'Mecnun/update_services_act/$1';
+$route['himalaY_xidmetler_silme/(.*)'] = 'Mecnun/delete_services/$1';
+
+
 
 //Elaqe
 $route['himalaY_elaqe'] = 'Mecnun/contact';
