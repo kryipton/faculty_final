@@ -107,7 +107,6 @@ if($new){ ?>
                                 <div class="detail_text_wrap">
                                     <div class="info_wrapper">
                                         <div class="info_head">
-                                            <h4><?php echo $this->lang->line("etrafli"); ?></h4>
                                             <p><?php
 
                                                 if ($this->session->userdata("dil") == "az"){

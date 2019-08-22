@@ -1,6 +1,7 @@
 <?php
 
 $lang["ana_sehife"] = "Ana Səhifə";
+$lang["adnsu"] = "ADNSU";
 $lang["haqqimizda"] = "Haqqımızda";
 $lang["kafedralar"] = "Kafedralar";
 $lang["elaqe"] = "Əlaqə";
@@ -38,6 +39,11 @@ $lang["magistr_tehsili"] = "Magistr təhsili";
 $lang["doktorantura_tehsili"] = "Doktorantura təhsili";
 
 $lang["xebere_get"] = "Xəbərə Get";
+
+$lang["dil"] = "Dil";
+
+$lang["xidmetler"] = "Xidmətlər";
+
 
 
 

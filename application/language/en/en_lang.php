@@ -2,6 +2,7 @@
 
 
 $lang["ana_sehife"] = "Home Page";
+$lang["adnsu"] = "ASOIU";
 $lang["haqqimizda"] = "About";
 $lang["kafedralar"] = "Departments";
 $lang["elaqe"] = "Contact";
@@ -43,6 +44,11 @@ $lang["magistr_tehsili"] = "Master education";
 $lang["doktorantura_tehsili"] = "Doctorate education";
 
 $lang["xebere_get"] = "Go To The New";
+
+$lang["dil"] = "Language";
+
+$lang["xidmetler"] = "Services";
+
 
 
 

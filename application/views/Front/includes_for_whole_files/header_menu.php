@@ -76,6 +76,8 @@
 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/') ?>css/cavid.css"/>
 
+
+
 <header>
 <!--navbar-->
     <nav>
@@ -105,7 +107,7 @@
 
 
 <!--                mobil ve esas navbar-->
-                <div class="col-md-9 col-sm-7 col-xs-7 pull-xs-right">
+                <div class="col-md-10 col-sm-7 col-xs-7 pull-xs-right">
 
 
 <!--                    mobil navbar-->
@@ -120,17 +122,17 @@
                                 <a href="<?php
 
                                 if ($this->session->userdata("dil") == "az"){
-                                    echo base_url('az/Home');
+                                    echo "http://asoiu.edu.az/az";
                                 }
                                 elseif ($this->session->userdata("dil") == "en"){
-                                    echo base_url('en/Home');
+                                    echo "http://asoiu.edu.az/en";
                                 }
                                 elseif ($this->session->userdata("dil") == "ru"){
-                                    echo base_url('ru/Home');
+                                    echo "http://asoiu.edu.az/ru";
                                 }
 
                                 ?>">
-                                    <?php echo $this->lang->line("ana_sehife"); ?>
+                                    <?php echo $this->lang->line("adnsu"); ?>
                                 </a>
 
                             </li>
@@ -207,24 +209,6 @@
                                 <a class="trigger" href="<?php
 
                                 if ($this->session->userdata("dil") == "az"){
-                                    echo base_url('az/Contact');
-                                }
-                                elseif ($this->session->userdata("dil") == "en"){
-                                    echo base_url('en/Contact');
-                                }
-                                elseif ($this->session->userdata("dil") == "ru"){
-                                    echo base_url('ru/Contact');
-                                }
-
-                                ?>">
-                                    <?php echo $this->lang->line("elaqe"); ?>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="trigger" href="<?php
-
-                                if ($this->session->userdata("dil") == "az"){
                                     echo base_url('az/Labaratory');
                                 }
                                 elseif ($this->session->userdata("dil") == "en"){
@@ -239,6 +223,73 @@
                                 </a>
                             </li>
 
+                            <li>
+                                <a href="#">
+                                    <?php echo $this->lang->line("xidmetler"); ?>
+
+                                </a>
+                                <ul class="dl-submenu">
+
+                                    <?php foreach ($all_categories_of_department as $category){ ?>
+                                        <li>
+
+                                            <!--                                            burada kateqoriyalarin hrefi dile gore siralanir-->
+                                            <a href="<?php
+
+                                            if ($this->session->userdata("dil") == "az"){
+                                                echo base_url("az/Department/$category[id]");
+                                            }
+                                            elseif ($this->session->userdata("dil") == "en"){
+                                                echo base_url("en/Department/$category[id]");
+                                            }
+                                            elseif ($this->session->userdata("dil") == "ru"){
+                                                echo base_url("ru/Department/$category[id]");
+                                            }
+
+                                            ?>">
+                                                <!--                                            burada kateqoriyalarin hrefi dile gore siralanir-->
+
+
+
+                                                <!--                                                burda kateqoriyalar dile gore siralanir-->
+                                                <?php if ($this->session->userdata("dil") == "az"){
+                                                    echo $category["category_name_az"];
+                                                }?>
+
+                                                <?php if ($this->session->userdata("dil") == "en"){
+                                                    echo $category["category_name_en"];
+                                                }?>
+
+                                                <?php if ($this->session->userdata("dil") == "ru"){
+                                                    echo $category["category_name_ru"];
+                                                }?>
+                                                <!--                                                burda kateqoriyalar dile gore siralanir-->
+
+
+                                            </a>
+                                        </li>
+                                    <?php }?>
+
+                                </ul>
+                            </li>
+
+                            <li style="margin-bottom: 10px!important;" >
+                                <a class="trigger" href="<?php
+
+                                if ($this->session->userdata("dil") == "az"){
+                                    echo base_url('az/Contact');
+                                }
+                                elseif ($this->session->userdata("dil") == "en"){
+                                    echo base_url('en/Contact');
+                                }
+                                elseif ($this->session->userdata("dil") == "ru"){
+                                    echo base_url('ru/Contact');
+                                }
+
+                                ?>">
+                                    <?php echo $this->lang->line("elaqe"); ?>
+                                </a>
+                            </li>
 
                             <a class="c_navbar_mobil_lang" href="">
                                 <a style="padding: 0px!important; float: left; color: black; margin-left: 9px;" href="<?php echo base_url("az/" . $this->uri->segment(2) . "/"  . $this->uri->segment(3). "/"  . $this->uri->segment(4))?>">
@@ -264,25 +315,25 @@
 
 
 <!--                    main navbar-->
-                    <div class="main_menu_wrap">
+                    <div class="main_menu_wrap c_main_menu_wrap">
                         <ul class="main_menu">
 
 
                             <li>
-                                <a class="trigger" href="<?php
+                                <a  class="trigger" target="_blank" href="<?php
 
                                     if ($this->session->userdata("dil") == "az"){
-                                        echo base_url('az/Home');
+                                        echo "http://asoiu.edu.az/az";
                                     }
                                     elseif ($this->session->userdata("dil") == "en"){
-                                        echo base_url('en/Home');
+                                        echo "http://asoiu.edu.az/en";
                                     }
                                     elseif ($this->session->userdata("dil") == "ru"){
-                                        echo base_url('ru/Home');
+                                        echo "http://asoiu.edu.az/ru";
                                     }
 
-                                ?>">
-                                    <?php echo $this->lang->line("ana_sehife"); ?>
+                                ?>" >
+                                    <?php echo $this->lang->line("adnsu"); ?>
                                 </a>
                             </li>
                             
@@ -352,23 +403,6 @@
                                 <a class="trigger" href="<?php
 
                                     if ($this->session->userdata("dil") == "az"){
-                                        echo base_url('az/Contact');
-                                    }
-                                    elseif ($this->session->userdata("dil") == "en"){
-                                        echo base_url('en/Contact');
-                                    }
-                                    elseif ($this->session->userdata("dil") == "ru"){
-                                        echo base_url('ru/Contact');
-                                    }
-                                    ?>">
-                                    <?php echo $this->lang->line("elaqe"); ?>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="trigger" href="<?php
-
-                                    if ($this->session->userdata("dil") == "az"){
                                         echo base_url('az/Labaratory');
                                     }
                                     elseif ($this->session->userdata("dil") == "en"){
@@ -384,61 +418,260 @@
                             </li>
 
                             <li>
-                                <a class="trigger" style="padding-top: 0px">
-                                    <a style="padding: 0px!important; float: left; color: black; margin-left: 9px;" href="<?php
+                                <a class="trigger">
+                                    <?php echo $this->lang->line("xidmetler"); ?>
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                                <ul class="submenu">
 
-                                    $segment2 = $this->uri->segment(2);
-                                    $segment3 = $this->uri->segment(3);
-                                    $segment4 = $this->uri->segment(4);
 
-                                    if (!empty($this->uri->segment(2)) && !empty($this->uri->segment(3)) && !empty($this->uri->segment(4))){
-                                        echo base_url("az/" . $segment2   . "/" .  $segment3  . "/" . $segment4);
-                                    }elseif(!empty($this->uri->segment(2)) && !empty($this->uri->segment(3))){
-                                        echo base_url("az/" . $segment2   . "/" .  $segment3);
-                                    }elseif(!empty($this->uri->segment(2))){
-                                        echo base_url("az/" . $segment2);
-                                    }else{
-                                        echo base_url("az/Home");
-                                    }
+                                    <?php foreach ($all_categories_of_department as $category){?>
+                                        <li>
+                                            <a href="<?php
 
-                                    ?>">
-                                        <img width="35px" height="20px" src="<?php echo base_url("upload/language_images/azerbaijan2.jpg")?>" alt="sekil">
-                                    </a>
+                                            if ($this->session->userdata("dil") == "az"){
+                                                echo base_url("az/Department/$category[id]");
+                                            }
+                                            elseif ($this->session->userdata("dil") == "en"){
+                                                echo base_url("en/Department/$category[id]");
+                                            }
+                                            elseif ($this->session->userdata("dil") == "ru"){
+                                                echo base_url("ru/Department/$category[id]");
+                                            }
 
-                                    <a style="padding: 0px!important; float: left; color: black; margin-left: 9px" href="<?php
+                                            ?>">
 
-                                    if (!empty($this->uri->segment(2)) && !empty($this->uri->segment(3)) && !empty($this->uri->segment(4))){
-                                        echo base_url("ru/" . $segment2   . "/" .  $segment3   . "/" . $segment4);
-                                    }elseif(!empty($this->uri->segment(2)) && !empty($this->uri->segment(3))){
-                                        echo base_url("ru/" . $segment2   . "/" .  $segment3);
-                                    }elseif(!empty($this->uri->segment(2))){
-                                        echo base_url("ru/" . $segment2);
-                                    }else{
-                                        echo base_url("ru/Home");
-                                    }
+                                                <?php if ($this->session->userdata("dil") == "az"){
+                                                    echo $category["category_name_az"];
+                                                }?>
 
-                                    ?>">
-                                        <img width=35px" height="20px" src="<?php echo base_url("upload/language_images/russia.png")?>" alt="sekil">
-                                    </a>
+                                                <?php if ($this->session->userdata("dil") == "en"){
+                                                    echo $category["category_name_en"];
+                                                }?>
 
-                                    <a style="padding: 0px!important; float: left; color: black; margin-left: 9px;" href="<?php
+                                                <?php if ($this->session->userdata("dil") == "ru"){
+                                                    echo $category["category_name_ru"];
+                                                }?>
 
-                                    if (!empty($this->uri->segment(2)) && !empty($this->uri->segment(3)) && !empty($this->uri->segment(4))){
-                                        echo base_url("en/" . $segment2   . "/" .  $segment3   . "/" . $segment4);
-                                    }elseif(!empty($this->uri->segment(2)) && !empty($this->uri->segment(3))){
-                                        echo base_url("en/" . $segment2   . "/" .  $segment3);
-                                    }elseif(!empty($this->uri->segment(2))){
-                                        echo base_url("en/" . $segment2);
-                                    }else{
-                                        echo base_url("en/Home");
-                                    }
+                                            </a>
+                                        </li>
+                                        <br>
+                                    <?php }?>
 
-                                    ?>">
-                                        <img width="35px" height="20px" src="<?php echo base_url("upload/language_images/english.png")?>" alt="sekil">
-                                    </a>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a class="trigger" href="<?php
+
+                                if ($this->session->userdata("dil") == "az"){
+                                    echo base_url('az/Contact');
+                                }
+                                elseif ($this->session->userdata("dil") == "en"){
+                                    echo base_url('en/Contact');
+                                }
+                                elseif ($this->session->userdata("dil") == "ru"){
+                                    echo base_url('ru/Contact');
+                                }
+                                ?>">
+                                    <?php echo $this->lang->line("elaqe"); ?>
                                 </a>
                             </li>
 
+                            <li>
+
+                                <div class="dropdown" style="cursor: pointer;">
+                                    <p href="#" class="dropbtn trigger">
+
+                                        <?php
+
+                                        if ($this->session->userdata("dil") == "az"){ ?>
+                                            <a style="padding: 0px!important; float: left; color: black; margin-left: 9px;" href="<?php
+
+                                            $segment2 = $this->uri->segment(2);
+                                            $segment3 = $this->uri->segment(3);
+                                            $segment4 = $this->uri->segment(4);
+
+                                            if (!empty($this->uri->segment(2)) && !empty($this->uri->segment(3)) && !empty($this->uri->segment(4))){
+                                                echo base_url("az/" . $segment2   . "/" .  $segment3  . "/" . $segment4);
+                                            }elseif(!empty($this->uri->segment(2)) && !empty($this->uri->segment(3))){
+                                                echo base_url("az/" . $segment2   . "/" .  $segment3);
+                                            }elseif(!empty($this->uri->segment(2))){
+                                                echo base_url("az/" . $segment2);
+                                            }else{
+                                                echo base_url("az/Home");
+                                            }
+
+                                            ?>">
+                                                <img width="35px" height="20px" src="<?php echo base_url("upload/language_images/azerbaijan2.jpg")?>" alt="sekil">
+                                            </a>
+                                        <?php } elseif ($this->session->userdata("dil") == "en"){ ?>
+                                            <a style="padding: 0px!important; float: left; color: black; margin-left: 9px;" href="<?php
+
+                                            $segment2 = $this->uri->segment(2);
+                                            $segment3 = $this->uri->segment(3);
+                                            $segment4 = $this->uri->segment(4);
+
+                                            if (!empty($this->uri->segment(2)) && !empty($this->uri->segment(3)) && !empty($this->uri->segment(4))){
+                                                echo base_url("az/" . $segment2   . "/" .  $segment3  . "/" . $segment4);
+                                            }elseif(!empty($this->uri->segment(2)) && !empty($this->uri->segment(3))){
+                                                echo base_url("az/" . $segment2   . "/" .  $segment3);
+                                            }elseif(!empty($this->uri->segment(2))){
+                                                echo base_url("az/" . $segment2);
+                                            }else{
+                                                echo base_url("az/Home");
+                                            }
+
+                                            ?>">
+                                                <img width="35px" height="20px" src="<?php echo base_url("upload/language_images/english.png")?>" alt="sekil">
+                                            </a>
+                                        <?php } elseif ($this->session->userdata("dil") == "ru"){?>
+                                            <a style="padding: 0px!important; float: left; color: black; margin-left: 9px;" href="<?php
+
+                                            $segment2 = $this->uri->segment(2);
+                                            $segment3 = $this->uri->segment(3);
+                                            $segment4 = $this->uri->segment(4);
+
+                                            if (!empty($this->uri->segment(2)) && !empty($this->uri->segment(3)) && !empty($this->uri->segment(4))){
+                                                echo base_url("az/" . $segment2   . "/" .  $segment3  . "/" . $segment4);
+                                            }elseif(!empty($this->uri->segment(2)) && !empty($this->uri->segment(3))){
+                                                echo base_url("az/" . $segment2   . "/" .  $segment3);
+                                            }elseif(!empty($this->uri->segment(2))){
+                                                echo base_url("az/" . $segment2);
+                                            }else{
+                                                echo base_url("az/Home");
+                                            }
+
+                                            ?>">
+                                                <img width="35px" height="20px" src="<?php echo base_url("upload/language_images/russia.png")?>" alt="sekil">
+                                            </a>
+                                        <?php } ?>
+
+                                    </p>
+                                    <div class="dropdown-content c_dropdown_content">
+
+                                        <?php
+
+                                        if ($this->session->userdata("dil") == "az"){ ?>
+
+
+                                            <a class="c_language_flag" style="padding: 0px!important; float: left; color: black; margin-left: 9px" href="<?php
+
+                                            if (!empty($this->uri->segment(2)) && !empty($this->uri->segment(3)) && !empty($this->uri->segment(4))){
+                                                echo base_url("ru/" . $segment2   . "/" .  $segment3   . "/" . $segment4);
+                                            }elseif(!empty($this->uri->segment(2)) && !empty($this->uri->segment(3))){
+                                                echo base_url("ru/" . $segment2   . "/" .  $segment3);
+                                            }elseif(!empty($this->uri->segment(2))){
+                                                echo base_url("ru/" . $segment2);
+                                            }else{
+                                                echo base_url("ru/Home");
+                                            }
+
+                                            ?>">
+                                                <img width=35px" height="20px" src="<?php echo base_url("upload/language_images/russia.png")?>" alt="sekil">
+                                            </a>
+
+                                            <a class="c_language_flag" style="padding: 0px!important; float: left; color: black; margin-left: 9px;" href="<?php
+
+                                            if (!empty($this->uri->segment(2)) && !empty($this->uri->segment(3)) && !empty($this->uri->segment(4))){
+                                                echo base_url("en/" . $segment2   . "/" .  $segment3   . "/" . $segment4);
+                                            }elseif(!empty($this->uri->segment(2)) && !empty($this->uri->segment(3))){
+                                                echo base_url("en/" . $segment2   . "/" .  $segment3);
+                                            }elseif(!empty($this->uri->segment(2))){
+                                                echo base_url("en/" . $segment2);
+                                            }else{
+                                                echo base_url("en/Home");
+                                            }
+
+                                            ?>">
+                                                <img width="35px" height="20px" src="<?php echo base_url("upload/language_images/english.png")?>" alt="sekil">
+                                            </a>
+
+                                        <?php }elseif ($this->session->userdata("dil") == "en"){ ?>
+
+                                            <a class="c_language_flag" style="padding: 0px!important; float: left; color: black; margin-left: 9px;" href="<?php
+
+                                            $segment2 = $this->uri->segment(2);
+                                            $segment3 = $this->uri->segment(3);
+                                            $segment4 = $this->uri->segment(4);
+
+                                            if (!empty($this->uri->segment(2)) && !empty($this->uri->segment(3)) && !empty($this->uri->segment(4))){
+                                                echo base_url("az/" . $segment2   . "/" .  $segment3  . "/" . $segment4);
+                                            }elseif(!empty($this->uri->segment(2)) && !empty($this->uri->segment(3))){
+                                                echo base_url("az/" . $segment2   . "/" .  $segment3);
+                                            }elseif(!empty($this->uri->segment(2))){
+                                                echo base_url("az/" . $segment2);
+                                            }else{
+                                                echo base_url("az/Home");
+                                            }
+
+                                            ?>">
+                                                <img width="35px" height="20px" src="<?php echo base_url("upload/language_images/azerbaijan2.jpg")?>" alt="sekil">
+                                            </a>
+
+                                            <a class="c_language_flag" style="padding: 0px!important; float: left; color: black; margin-left: 9px;" href="<?php
+
+                                            if (!empty($this->uri->segment(2)) && !empty($this->uri->segment(3)) && !empty($this->uri->segment(4))){
+                                                echo base_url("ru/" . $segment2   . "/" .  $segment3   . "/" . $segment4);
+                                            }elseif(!empty($this->uri->segment(2)) && !empty($this->uri->segment(3))){
+                                                echo base_url("ru/" . $segment2   . "/" .  $segment3);
+                                            }elseif(!empty($this->uri->segment(2))){
+                                                echo base_url("ru/" . $segment2);
+                                            }else{
+                                                echo base_url("ru/Home");
+                                            }
+
+                                            ?>">
+                                                <img width="35px" height="20px" src="<?php echo base_url("upload/language_images/russia.png")?>" alt="sekil">
+                                            </a>
+
+                                        <?php  } elseif ($this->session->userdata("dil") == "ru"){?>
+
+                                            <a class="c_language_flag" style="padding: 0px!important; float: left; color: black; margin-left: 9px;" href="<?php
+
+                                            $segment2 = $this->uri->segment(2);
+                                            $segment3 = $this->uri->segment(3);
+                                            $segment4 = $this->uri->segment(4);
+
+                                            if (!empty($this->uri->segment(2)) && !empty($this->uri->segment(3)) && !empty($this->uri->segment(4))){
+                                                echo base_url("az/" . $segment2   . "/" .  $segment3  . "/" . $segment4);
+                                            }elseif(!empty($this->uri->segment(2)) && !empty($this->uri->segment(3))){
+                                                echo base_url("az/" . $segment2   . "/" .  $segment3);
+                                            }elseif(!empty($this->uri->segment(2))){
+                                                echo base_url("az/" . $segment2);
+                                            }else{
+                                                echo base_url("az/Home");
+                                            }
+
+                                            ?>">
+                                                <img width="35px" height="20px" src="<?php echo base_url("upload/language_images/azerbaijan2.jpg")?>" alt="sekil">
+                                            </a>
+
+                                            <a class="c_language_flag" style="padding: 0px!important; float: left; color: black; margin-left: 9px;" href="<?php
+
+                                            if (!empty($this->uri->segment(2)) && !empty($this->uri->segment(3)) && !empty($this->uri->segment(4))){
+                                                echo base_url("en/" . $segment2   . "/" .  $segment3   . "/" . $segment4);
+                                            }elseif(!empty($this->uri->segment(2)) && !empty($this->uri->segment(3))){
+                                                echo base_url("en/" . $segment2   . "/" .  $segment3);
+                                            }elseif(!empty($this->uri->segment(2))){
+                                                echo base_url("en/" . $segment2);
+                                            }else{
+                                                echo base_url("en/Home");
+                                            }
+
+                                            ?>">
+                                                <img width="35px" height="20px" src="<?php echo base_url("upload/language_images/english.png")?>" alt="sekil">
+                                            </a>
+
+                                        <?php }
+
+                                        ?>
+
+
+                                    </div>
+                                </div>
+
+                            </li>
                         </ul>
                     </div>
 <!--                    main navbar-->

@@ -56,7 +56,7 @@
                                         background: rgba(0,0,0,0.45);">
                                         </div>
 
-                                        <div class="tp-caption BigBold-Title tp-resizeme rs-parallaxlevel-0"
+                                        <div class="tp-caption BigBold-Title tp-resizeme rs-parallaxlevel-0 c_text"
                                              style="margin-top: 150px;z-index: 6; white-space: nowrap;font-size: 25px;"> <?php
 
                                             if ($this->session->userdata("dil") == "az"){
@@ -243,92 +243,92 @@
                 <div class="head_part">
                     <h2><?php echo $this->lang->line("xeberler"); ?></h2>
                 </div>
+                <hr class="c_hr">
                 <div class="course_wrapper">
-
-
-
                     <div class="container" style="overflow: hidden">
                         <div class="col-lg-12 news-container">
                             <div class="news col-lg-3 col-lg-offset-9">
                                 <ul class="list-group" style="color: #098BE2">
 
-                                    <!--                                burada slidenin sag terefinde olan balaca xeberler foreache salinir-->
-                                    <?php foreach($last_news as $last_news_key){ ?>
+<!--                                burada slidenin sag terefinde olan balaca xeberler foreache salinir-->
 
                                         <!--                                    burada xeberin sekli olacaq-->
-                                        <li style="background-image: url(<?php echo base_url('upload/news_images/'.$last_news[0]['news_img']) ?>);background-size: cover;background-position: center;color: white" class="list-group-item" data-target="#myCarousel" data-slide-to="0">
+                                        <li style="background-image: url(<?php echo base_url('upload/news_images/'.$last_news[0]['news_img']) ?>);background-size: cover;background-position: center;color: white" class="list-group-item c_padding0" data-target="#myCarousel" data-slide-to="0">
                                             <!--                                    burada xeberin sekli olacaq-->
 
 
-                                            <!--                                    burada xeberin basliqi olacaq-->
-                                            <span><?php
+                                            <div class="c_slide_title_div">
+                                                <!--                                    burada xeberin basliqi olacaq-->
+                                                <span class="c_slide_title"><?php
 
-                                                if ($this->session->userdata("dil") == "az"){
-                                                    echo $last_news[0]['news_title_az'];
-                                                }elseif ($this->session->userdata("dil") == "en"){
-                                                    echo $last_news[0]['news_title_en'];
-                                                }elseif ($this->session->userdata("dil") == "ru"){
-                                                    echo $last_news[0]['news_title_ru'];
-                                                }
+                                                    if ($this->session->userdata("dil") == "az"){
+                                                        echo $last_news[0]['news_title_az'];
+                                                    }elseif ($this->session->userdata("dil") == "en"){
+                                                        echo $last_news[0]['news_title_en'];
+                                                    }elseif ($this->session->userdata("dil") == "ru"){
+                                                        echo $last_news[0]['news_title_ru'];
+                                                    }
 
-                                                 ?></span>
-                                            <!--                                    burada xeberin basliqi olacaq-->
+                                                    ?></span>
+                                                <!--                                    burada xeberin basliqi olacaq-->
 
-                                        </li>
-
-
-
-                                        <!--                                        burada xeberin sekli olacaq-->
-                                        <li style="background-image: url(<?php echo base_url('upload/news_images/'.$last_news[1]['news_img']) ?>);background-size: cover;background-position: center;color: white" class="list-group-item" data-target="#myCarousel" data-slide-to="1"><!--                                        burada xeberin basliqi olacaq-->
-                                            <!--                                        burada xeberin sekli olacaq-->
-
-
-                                            <!--                                    burada xeberin basliqi olacaq-->
-                                            <span style="font-size: 18px"><?php
-
-
-                                                if ($this->session->userdata("dil") == "az"){
-                                                    echo $last_news[1]['news_title_az'];
-                                                }elseif ($this->session->userdata("dil") == "en"){
-                                                    echo $last_news[1]['news_title_en'];
-                                                }elseif ($this->session->userdata("dil") == "ru"){
-                                                    echo $last_news[1]['news_title_ru'];
-                                                }
-
-                                                ?></span>
-                                            <!--                                    burada xeberin basliqi olacaq-->
+                                            </div>
 
                                         </li>
 
 
 
                                         <!--                                        burada xeberin sekli olacaq-->
-                                        <li style="background-image: url(<?php echo base_url('upload/news_images/'.$last_news[2]['news_img']) ?>);background-size: cover;background-position: center;color: white" class="list-group-item" data-target="#myCarousel" data-slide-to="2">
+                                        <li style="background-image: url(<?php echo base_url('upload/news_images/'.$last_news[1]['news_img']) ?>);background-size: cover;background-position: center;color: white" class="list-group-item c_padding0" data-target="#myCarousel" data-slide-to="1"><!--                                        burada xeberin basliqi olacaq-->
                                             <!--                                        burada xeberin sekli olacaq-->
 
 
+                                            <div class="c_slide_title_div">
+                                                <!--                                    burada xeberin basliqi olacaq-->
+                                                <span class="c_slide_title"><?php
 
-                                            <!--                                    burada xeberin basliqi olacaq-->
-                                            <span><?php
+                                                    if ($this->session->userdata("dil") == "az"){
+                                                        echo $last_news[1]['news_title_az'];
+                                                    }elseif ($this->session->userdata("dil") == "en"){
+                                                        echo $last_news[1]['news_title_en'];
+                                                    }elseif ($this->session->userdata("dil") == "ru"){
+                                                        echo $last_news[1]['news_title_ru'];
+                                                    }
 
+                                                    ?></span>
+                                                <!--                                    burada xeberin basliqi olacaq-->
 
-                                                if ($this->session->userdata("dil") == "az"){
-                                                    echo $last_news[2]['news_title_az'];
-                                                }elseif ($this->session->userdata("dil") == "en"){
-                                                    echo $last_news[2]['news_title_en'];
-                                                }elseif ($this->session->userdata("dil") == "ru"){
-                                                    echo $last_news[2]['news_title_ru'];
-                                                }
-
-                                                ?></span>
-                                            <!--                                    burada xeberin basliqi olacaq-->
-
+                                            </div>
                                         </li>
 
 
 
-                                    <?php } ?>
-                                    <!--                                burada slidenin sag terefinde olan balaca xeberler foreache salinir-->
+                                        <!--                                        burada xeberin sekli olacaq-->
+                                        <li style="background-image: url(<?php echo base_url('upload/news_images/'.$last_news[2]['news_img']) ?>);background-size: cover;background-position: center;color: white" class="list-group-item c_padding0" data-target="#myCarousel" data-slide-to="2">
+                                            <!--                                        burada xeberin sekli olacaq-->
+
+
+
+                                            <div class="c_slide_title_div">
+                                                <!--                                    burada xeberin basliqi olacaq-->
+                                                <span class="c_slide_title"><?php
+
+                                                    if ($this->session->userdata("dil") == "az"){
+                                                        echo $last_news[2]['news_title_az'];
+                                                    }elseif ($this->session->userdata("dil") == "en"){
+                                                        echo $last_news[2]['news_title_en'];
+                                                    }elseif ($this->session->userdata("dil") == "ru"){
+                                                        echo $last_news[2]['news_title_ru'];
+                                                    }
+
+                                                    ?></span>
+                                                <!--                                    burada xeberin basliqi olacaq-->
+
+                                            </div>
+                                        </li>
+
+
+<!--                                burada slidenin sag terefinde olan balaca xeberler foreache salinir-->
 
                                 </ul>
                             </div>
@@ -343,7 +343,7 @@
                                             <img class="" src="<?php echo base_url('upload/news_images/'.$last_news_key['news_img']) ?>" alt="">
                                             <!--                                        xeberin sekli-->
 
-                                            <div class="carousel-caption col-lg-12">
+                                            <div class="carousel-caption col-lg-12" style="background-color: rgba(0, 0, 0, 0.73)!important;">
                                                 <h4 class="">
 
                                                     <!--                                                single page ucun link-->
@@ -415,6 +415,12 @@
         <!--    xeberler mobil hissesi-->
         <div class="c_mobil_news">
 
+            <div class="head_part">
+                <h2><?php echo $this->lang->line("xeberler") ;?></h2>
+            </div>
+
+            <hr class="c_hr">
+
             <?php $id = 1; ?>
 
             <?php foreach ($last_news as $last_events_key){ ?>
@@ -426,38 +432,32 @@
                 $id = $id + 1;
 
                 ?>" class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                    <div class="course_block">
+                    <div class="course_block c_course_block">
                         <div class="">
 
                             <!--                                tedbirin sekli-->
                             <img class="c_object_fit" style="height: 230px;" alt="<?php echo $last_events_key['news_title_az'] ?>" src="<?php echo base_url('upload/news_images/'.$last_events_key['news_img']) ?>">
                             <!--                                tedbirin sekli-->
 
-
-
-                            <!--                                bu hissede tedbirin idsi gonderilir single page acmaq ucnun-->
-                            <div class="course_img_hoverlay_btn">
-                                <a href="<?php
-
-                                if ($this->session->userdata("dil") == "az"){
-                                    echo base_url('az/Single_page_news/').$last_events_key['news_id'];
-                                }elseif ($this->session->userdata("dil") == "en"){
-                                    echo base_url('en/Single_page_news/').$last_events_key['news_id'];
-                                }elseif ($this->session->userdata("dil") == "ru"){
-                                    echo base_url('ru/Single_page_news/').$last_events_key['news_id'];
-                                }
-
-                                ?>" title="Ətraflı" class="fa fa-eye"></a>
-                            </div>
-                            <!--                                bu hissede tedbirin idsi gonderilir single page acmaq ucnun -->
-
                         </div>
-                        <div class="psychology">
+
+
+                        <div class="psychology c_title_href" data-url = "<?php
+
+                        if ($this->session->userdata("dil") == "az"){
+                            echo base_url('az/Single_page_news/').$last_events_key['news_id'];
+                        }elseif ($this->session->userdata("dil") == "en"){
+                            echo base_url('en/Single_page_news/').$last_events_key['news_id'];
+                        }elseif ($this->session->userdata("dil") == "ru"){
+                            echo base_url('ru/Single_page_news/').$last_events_key['news_id'];
+                        }
+
+                        ?>">
 
                             <div class="course_info">
 
                                 <!--                                    tedbirin basliqi-->
-                                <h4><?php
+                                <span style="cursor:pointer;"><?php
 
                                     if ($this->session->userdata("dil") == "az"){
                                         echo $last_events_key['news_title_az'];
@@ -467,23 +467,8 @@
                                         echo $last_events_key['news_title_ru'];
                                     }
 
-                                    ?></h4>
+                                    ?></span>
                                 <!--                                    tedbirin basliqi-->
-
-
-                                <!--                                    tedbirin contenti-->
-                                <?php
-
-                                if ($this->session->userdata("dil") == "az"){
-                                    echo substr($last_events_key['news_description_az'], 0,55) . "...";
-                                }elseif ($this->session->userdata("dil") == "en"){
-                                    echo substr($last_events_key['news_description_en'], 0,55) . "...";
-                                }elseif ($this->session->userdata("dil") == "ru"){
-                                    echo substr($last_events_key['news_description_ru'], 0,55) . "...";
-                                }
-
-                                ?>
-                                <!--                                    tedbirin contenti-->
 
 
 
@@ -590,75 +575,63 @@
 
         <!--    tedbirler hissesi-->
         <div class="courses">
-            <div class="container">
-                <div class="head_part">
-                    <h2><?php echo $this->lang->line("tedbirler") ;?></h2>
-                </div>
-                <div class="course_wrapper">
+
+            <center>
+
+                <div class="course_wrapper c_wrapper ">
+
+                    <div class="head_part">
+                        <h2><?php echo $this->lang->line("tedbirler") ;?></h2>
+                    </div>
+
+                    <hr class="c_hr">
 
 
                     <!--                butun tedbirler cagirilir-->
                     <?php foreach ($last_events as $last_events_key){ ?>
 
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                            <div class="course_block">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="course_block c_course_block" style="border-radius: 5px">
                                 <div class="">
 
                                     <!--                                tedbirin sekli-->
-                                    <img class="c_object_fit" style="height: 230px;" alt="<?php echo $last_events_key['event_title_az'] ?>" src="<?php echo base_url('upload/event_images/'.$last_events_key['event_img']) ?>">
+                                    <img class="c_object_fit" style="height: 230px; border-radius: 5px" alt="<?php echo $last_events_key['event_title_az'] ?>" src="<?php echo base_url('upload/event_images/'.$last_events_key['event_img']) ?>">
                                     <!--                                tedbirin sekli-->
 
 
 
-                                    <!--                                bu hissede tedbirin idsi gonderilir single page acmaq ucnun-->
-                                    <div class="course_img_hoverlay_btn">
-                                        <a href="<?php
-
-                                        if ($this->session->userdata("dil") == "az"){
-                                            echo base_url('az/Single_page_events/').$last_events_key['event_id'];
-                                        }elseif ($this->session->userdata("dil") == "en"){
-                                            echo base_url('en/Single_page_events/').$last_events_key['event_id'];
-                                        }elseif ($this->session->userdata("dil") == "ru"){
-                                            echo base_url('ru/Single_page_events/').$last_events_key['event_id'];
-                                        }
-
-                                        ?>" title="Ətraflı" class="fa fa-eye"></a>
-                                    </div>
-                                    <!--                                bu hissede tedbirin idsi gonderilir single page acmaq ucnun -->
-
                                 </div>
-                                <div class="psychology">
+                                <div class="psychology c_title_href" data-url = "<?php
+
+                                if ($this->session->userdata("dil") == "az"){
+                                    echo base_url('az/Single_page_events/').$last_events_key['event_id'];
+                                }elseif ($this->session->userdata("dil") == "en"){
+                                    echo base_url('en/Single_page_events/').$last_events_key['event_id'];
+                                }elseif ($this->session->userdata("dil") == "ru"){
+                                    echo base_url('ru/Single_page_events/').$last_events_key['event_id'];
+                                }
+
+                                ?>">
 
                                     <div class="course_info">
 
                                         <!--                                    tedbirin basliqi-->
-                                        <h4><?php
+                                        <span style="cursor:pointer;">
+                                            <?php
 
                                             if ($this->session->userdata("dil") == "az"){
-                                                echo $last_events_key['event_title_az']."...";
+                                                echo $last_events_key['event_title_az'];
                                             }elseif ($this->session->userdata("dil") == "en"){
-                                                echo $last_events_key['event_title_en']."...";
+                                                echo $last_events_key['event_title_en'];
                                             }elseif ($this->session->userdata("dil") == "ru"){
-                                                echo $last_events_key['event_title_ru']."...";
+                                                echo $last_events_key['event_title_ru'];
                                             }
 
-                                            ?></h4>
+                                            ?>
+                                        </span>
                                         <!--                                    tedbirin basliqi-->
 
 
-                                        <!--                                    tedbirin contenti-->
-                                        <?php
-
-                                        if ($this->session->userdata("dil") == "az"){
-                                            echo substr($last_events_key['event_desc_az'], 0,100)."...";
-                                        }elseif ($this->session->userdata("dil") == "en"){
-                                            echo substr($last_events_key['event_desc_en'], 0,100)."...";
-                                        }elseif ($this->session->userdata("dil") == "ru"){
-                                            echo substr($last_events_key['event_desc_ru'], 0,100)."...";
-                                        }
-
-                                        ?>
-                                        <!--                                    tedbirin contenti-->
 
 
 
@@ -683,7 +656,8 @@
 
 
                 </div>
-            </div>
+            </center>
+
 
 
             <center>

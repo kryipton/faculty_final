@@ -2,6 +2,7 @@
 
 
 $lang["ana_sehife"] = "Главная";
+$lang["adnsu"] = "АГУНП";
 $lang["haqqimizda"] = "Около";
 $lang["kafedralar"] = "Ведомства";
 $lang["elaqe"] = "Контакт";
@@ -39,6 +40,12 @@ $lang["magistr_tehsili"] = "Мастер образование";
 $lang["doktorantura_tehsili"] = "Докторантура";
 
 $lang["xebere_get"] = "Перейти К Новостям";
+
+$lang["dil"] = "Язк";
+
+$lang["xidmetler"] = "Услуги";
+
+
 
 
 
