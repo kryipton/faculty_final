@@ -3547,7 +3547,7 @@ ul.breadcrumbs li a:hover, ul.breadcrumbs li a:focus {
 }
 
 .dtl_wrap .dtl_head h1:before {
-    content: "\f02e";
+    /*content: "\f02e";*/
     display: inline-block;
     font-family: FontAwesome;
     text-rendering: auto;

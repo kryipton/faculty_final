@@ -135,7 +135,7 @@ if($event){ ?>
                 <div class="aside_wrapper col-lg-3 col-md-4 col-sm-12 col-xs-12">
 
 
-                    <div class="course_tutor event_single_right">
+                    <div class="course_tutor event_single_right" style="border-radius: 10px">
                         <h4><?php echo $this->lang->line("tedbirler"); ?></h4>
                         <ul>
 

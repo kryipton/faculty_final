@@ -46,7 +46,7 @@
 
 
             <!--        sol terefde olan linkler-->
-            <div class="category_course about_left_b">
+            <div class="category_course about_left_b" style="border-radius: 10px">
                 <h4><?php
 
 
@@ -93,7 +93,7 @@
 
 
             <!--        sol terefde olan diger tedbirler -->
-            <div class="category_events about_left_e">
+            <div class="category_events about_left_e" style="border-radius: 10px">
                 <h4><?php echo $this->lang->line("tedbirler"); ?></h4>
                 <ul>
 

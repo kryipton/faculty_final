@@ -44,8 +44,16 @@
 
                                    ?>" src="<?php echo base_url('upload/news_images/'.$last_news_key['news_img']) ?>">
 
-                                   <div class="course_img_hoverlay_btn">
-                                       <a href="<?php
+
+                               </div>
+
+
+
+                               <div class="psychology">
+
+                                   <div class="course_info">
+
+                                       <span style="cursor:pointer;" class="c_location_new" data-url = " <?php
 
                                        if ($this->session->userdata("dil") == "az"){
                                            echo base_url("az/Single_page_news/$last_news_key[news_id]");
@@ -55,27 +63,23 @@
                                            echo base_url("ru/Single_page_news/$last_news_key[news_id]");
                                        }
 
-                                       ?>" title="Ətraflı" class="fa fa-eye">
+                                       ?>">
+                                          <?php
 
-                                       </a>
-                                   </div>
-                               </div>
-                               <div class="psychology">
+                                          if ($this->session->userdata("dil") == "az"){
+                                              echo substr($last_news_key['news_title_az'],0,150);
+                                          }
+                                          elseif ($this->session->userdata("dil") == "en"){
+                                              echo substr($last_news_key['news_title_en'], 0,150);
+                                          }
+                                          elseif ($this->session->userdata("dil") == "ru"){
+                                              echo substr($last_news_key['news_title_ru'], 0,150);
+                                          }
 
-                                   <div class="course_info">
-                                       <?php
+                                          ?>
+                                       </span>
 
-                                       if ($this->session->userdata("dil") == "az"){
-                                           echo substr($last_news_key['news_title_az'],0,150);
-                                       }
-                                       elseif ($this->session->userdata("dil") == "en"){
-                                           echo substr($last_news_key['news_title_en'], 0,150);
-                                       }
-                                       elseif ($this->session->userdata("dil") == "ru"){
-                                           echo substr($last_news_key['news_title_ru'], 0,150);
-                                       }
 
-                                       ?>
                                    </div>
                                </div>
                                <div class="psychology course_count_wrap">

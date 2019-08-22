@@ -7,6 +7,10 @@ $(".c_title_href").click(function () {
     window.location.href = $(this).data("url");
 });
 
+$(".c_location_new").click(function () {
+    window.location.href = $(this).data("url");
+});
+
 
 $(document).scroll(function() {
 
