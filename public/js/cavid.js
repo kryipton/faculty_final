@@ -34,5 +34,6 @@ $(document).scroll(function() {
 
 });
 
-
-
+$(".c_text").click(function () {
+    window.location.href = $(this).data("url");
+});

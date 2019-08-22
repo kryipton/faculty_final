@@ -230,21 +230,13 @@
                                 </a>
                                 <ul class="dl-submenu">
 
-                                    <?php foreach ($all_categories_of_department as $category){ ?>
+                                    <?php foreach ($services as $service){?>
                                         <li>
 
                                             <!--                                            burada kateqoriyalarin hrefi dile gore siralanir-->
                                             <a href="<?php
 
-                                            if ($this->session->userdata("dil") == "az"){
-                                                echo base_url("az/Department/$category[id]");
-                                            }
-                                            elseif ($this->session->userdata("dil") == "en"){
-                                                echo base_url("en/Department/$category[id]");
-                                            }
-                                            elseif ($this->session->userdata("dil") == "ru"){
-                                                echo base_url("ru/Department/$category[id]");
-                                            }
+                                            echo $service["link"];
 
                                             ?>">
                                                 <!--                                            burada kateqoriyalarin hrefi dile gore siralanir-->
@@ -252,16 +244,17 @@
 
 
                                                 <!--                                                burda kateqoriyalar dile gore siralanir-->
+
                                                 <?php if ($this->session->userdata("dil") == "az"){
-                                                    echo $category["category_name_az"];
+                                                    echo $service["name_az"];
                                                 }?>
 
                                                 <?php if ($this->session->userdata("dil") == "en"){
-                                                    echo $category["category_name_en"];
+                                                    echo $service["name_en"];
                                                 }?>
 
                                                 <?php if ($this->session->userdata("dil") == "ru"){
-                                                    echo $category["category_name_ru"];
+                                                    echo $service["name_ru"];
                                                 }?>
                                                 <!--                                                burda kateqoriyalar dile gore siralanir-->
 
@@ -304,8 +297,6 @@
                                     <img width="35px" height="20px" src="<?php echo base_url("upload/language_images/english.png")?>" alt="sekil">
                                 </a>
                             </a>
-
-
 
 
                         </ul>

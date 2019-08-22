@@ -56,67 +56,29 @@
                                         background: rgba(0,0,0,0.45);">
                                         </div>
 
-                                        <div class="tp-caption BigBold-Title tp-resizeme rs-parallaxlevel-0 c_text"
-                                             style="margin-top: 150px;z-index: 6; white-space: nowrap;font-size: 25px;"> <?php
+                                        <center>
 
-                                            if ($this->session->userdata("dil") == "az"){
-                                                echo$all_slide['slide_title_az'];
-                                            }elseif ($this->session->userdata("dil") == "en"){
-                                                echo $all_slide['slide_title_en'];
-                                            }elseif ($this->session->userdata("dil") == "ru"){
-                                                echo $all_slide['slide_title_ru'];
-                                            }
+                                            <div class="tp-caption BigBold-Title tp-resizeme rs-parallaxlevel-0 c_text container" data-url = "<?php echo $all_slide['slide_link'] ?>"
+                                                 style="text-align: center!important; cursor:pointer; margin-top: 150px;z-index: 6; white-space: nowrap;font-size: 27px!important;">
 
-                                            ?>
-                                        </div>
 
-                                        <div class="tp-caption BigBold-SubTitle rs-parallaxlevel-0" id="slide-309-layer-4"
-                                             data-x="['center','center','center','center']" data-hoffset="['55','55','33','20']"
-                                             data-whitespace="normal" data-y="['25','25','25','25']"
-                                             data-voffset="['40','1','74','58']" data-fontsize="['19','19','19','16']"
-                                             data-lineheight="['27','27','27','22']" data-width="['410','410','410','280']"
-                                             data-height="['60','100','100','100']" data-transform_idle="o:1;" data-start="650"
-                                             data-splitin="none" data-splitout="none"
-                                             data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;"
-                                             data-basealign="slide" data-responsive_offset="off"
-                                             data-transform_out="y:50px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                                             data-responsive="off" style="z-index: 7; min-width: 410px; max-width: 410px;
-                                        max-width: 60px; white-space: normal;"><?php
+                                                   <?php
 
-//                                            if ($this->session->userdata("dil") == "az"){
-//                                                echo $all_slide['slide_desc_az'];
-//                                            }elseif ($this->session->userdata("dil") == "en"){
-//                                                echo $all_slide['slide_desc_en'];
-//                                            }elseif ($this->session->userdata("dil") == "ru"){
-//                                                echo $all_slide['slide_desc_ru'];
-//                                            }
+                                                   if ($this->session->userdata("dil") == "az"){
+                                                       echo$all_slide['slide_title_az'];
+                                                   }elseif ($this->session->userdata("dil") == "en"){
+                                                       echo $all_slide['slide_title_en'];
+                                                   }elseif ($this->session->userdata("dil") == "ru"){
+                                                       echo $all_slide['slide_title_ru'];
+                                                   }
 
-                                            ?>
-                                        </div>
+                                                   ?>
 
-                                        <?php
-                                        if($all_slide['slide_link']){ ?>
-                                            <a href="<?php echo $all_slide['slide_link'] ?>">
-                                                <div class="tp-caption BigBold-Button rev-btn rs-parallaxlevel-0 c_responsive_button_for_slide" id="slide-309-layer-7"
-                                                     data-x="['88','88','88','88']" data-hoffset="['480','480','30','20']"
-                                                     data-y="['35','35','35','35']" data-voffset="['50','50','30','20']"
-                                                     data-width="none" data-height="none" data-whitespace="nowrap"
-                                                     data-transform_idle="o:1;"
-                                                     data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
-                                                     data-style_hover="c:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);cursor:pointer;"
-                                                     data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;"
-                                                     data-transform_out="y:50px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                                                     data-start="650" data-splitin="none" data-splitout="none"
-                                                     data-actions='[{"event":"click","action":"","offset":"px"}]'
-                                                     data-basealign="slide" data-responsive_offset="off" data-responsive="off" style="z-index: 8;
-                                        white-space: nowrap; border-color: rgba(255, 255, 255, 0.5); outline: none; box-shadow: none; box-sizing: border-box; -moz-box-sizing: border-box;
-                                        -webkit-box-sizing: border-box;"><?php echo $this->lang->line("xebere_get"); ?>
-                                                </div>
-                                            </a>
-                                        <?php }else{
-                                            echo '';
-                                        }
-                                        ?>
+
+                                            </div>
+
+                                        </center>
+
 
                                     </li>
                                 <?php }
