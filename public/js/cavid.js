@@ -39,7 +39,7 @@ $(document).scroll(function() {
             "padding" :  "32px 0 33px",
         });
 
-     
+
 
     }
 
@@ -48,3 +48,4 @@ $(document).scroll(function() {
 $(".c_text").click(function () {
     window.location.href = $(this).data("url");
 });
+
