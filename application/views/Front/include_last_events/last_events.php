@@ -28,6 +28,9 @@
             </h5>
 
             <span class="month" style="font-size: 12px"><?php echo $last_events_key['event_time'] ?></span>
+
+            <hr class="c_hr2">
+
         </div>
     </li>
 
