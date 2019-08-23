@@ -7,7 +7,7 @@
 
     <div class="breadcrumb_wrap" >
         <div class="breadcrumb_wrap_inner" style="background-image: url('<?php echo base_url("public/images/top1.jpg")?>');height: 250px;">
-            <div class="container" style="margin-top: 75px;">
+            <div class="container">
                 <ul class="breadcrumbs">
                     <li><a href="<?php
 
@@ -28,9 +28,9 @@
         </div>
     </div>
 
-    <div style="margin-bottom: 100px !important;margin-top: 20px;">
+    <div style="margin-bottom: 600px !important;margin-top: 20px;">
         <div class="col-md-3">
-            <div class="category_course" style="border-radius: 10px; margin-top: 75px;">
+            <div class="category_course" style="margin-top: 75px;">
                 <ul>
                     <li><a href="<?php
 
@@ -72,27 +72,9 @@
                             echo base_url('ru/Master/Contact');
                         }
 
-
+                        ?>"><?php echo $this->lang->line("elaqe"); ?></a></li>
                 </ul>
             </div>
-
-            <!--        sol terefde olan diger tedbirler -->
-            <div class="category_events about_left_e" style="border-radius: 10px">
-                <h4><?php echo $this->lang->line("tedbirler"); ?></h4>
-                <ul>
-
-
-                    <!--                        burada diger tedbirler foreache salinir-->
-
-                    <?php $this->load->view('Front/include_last_events/last_events'); ?>
-
-                    <!--                        burada diger tedbirler foreache salinir-->
-
-
-                </ul>
-            </div>
-            <!--        sol terefde olan diger tedbirler -->
-
         </div>
 
         <div class="col-md-8">
@@ -100,7 +82,6 @@
             <div class="about_right" style="padding: 20px 0px 0px 10px">
 
                 <div class="about_right_text">
-
 
                     <?php
 
@@ -128,3 +109,5 @@
 
 
 <?php $this->load->view('Front/includes_for_whole_files/footer_menu'); ?>
+
+
