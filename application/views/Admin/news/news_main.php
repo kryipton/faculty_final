@@ -50,12 +50,17 @@
                         </th>
                         <td>
                             <a href="<?php echo base_url('himalaY_xeber_duzenle/').$news['news_id']?>" class="btn btn-primary btn-sm"
-                               style="background: #3C8DBC; border:0px solid #3C8DBC">
+                               style="margin: 15px; background: #3C8DBC; border:0px solid #3C8DBC ">
                                 <i class="fa fa-pencil" aria-hidden="true"></i>
                             </a>
                             <a href="<?php echo base_url('himalaY_xeber_sil/').$news['news_id']?>" class="btn btn-primary btn-sm"
-                               style="background: #DD4B39;border:0px solid #DD4B39">
+                               style=" background: #DD4B39;border:0px solid #DD4B39 ">
                                 <i class="fa fa-times" aria-hidden="true"></i>
+                            </a>
+
+                            <a href="<?php echo base_url('himalaY_xeber_gallery/').$news['news_id']?>" class="btn btn-primary btn-sm"
+                               style="margin: 10px; background: #854df1; border:0px solid #DD4B39 " >
+                                <i class="fa fa-image" aria-hidden="true"></i><span>GALLERY</span>
                             </a>
                         </td>
 

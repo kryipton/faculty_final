@@ -48,6 +48,26 @@ class Mecnun_model extends  CI_Model{
     {
         $this->db->where($where)->update('news_db',$news_data);
     }
+//--------------------------- Xeber Gallery ---------------------------------------
+    public function get_gallery()
+    {
+        return $this->db->order_by("portfolio_id", "DESC")->get("news_gallery")->result_array();
+    }
+
+    public function get_news_gallery($where){
+        return $this->db->where($where)->order_by("id", "DESC")->get("news_gallery")->result_array();
+    }
+
+    public function news_gallery_add($data){
+      return  $this->db->insert("news_gallery", $data);
+    }
+
+    public function news_gallery_delete($where){
+        return $this->db->where($where)->delete("news_gallery");
+    }
+
+
+
 
     //==================================================   Slider emeliyatlari =======================================================================
 

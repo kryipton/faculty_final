@@ -130,6 +130,10 @@ class Mecnun extends CI_Controller{
             'news_id' => $id,
         ];
         $this->Mecnun_model->deleteNews($where);
+        $this->Mecnun_model->news_gallery_delete(array(
+            "news_id" => $id,
+        ));
+
         redirect(base_url('himalaY_xeberler'));
     }
 
@@ -213,6 +217,77 @@ class Mecnun extends CI_Controller{
 
 
     }
+
+
+    public function gallery($id){
+        $data["photos"] = $this->Mecnun_model->get_news_gallery([
+            "news_id" => $id
+        ]);
+        $data["news"] = $this->Mecnun_model->getOneNews([
+            "news_id" => $id
+        ]);
+        $this->load->view('Admin/news/news_gallery/whole_page',$data);
+    }
+
+    public function news_gallery_add($id){
+        //      sekiller dropzonedan upload edilir
+        $config['upload_path'] = 'upload/news_images/gallery';
+        $config['allowed_types'] = 'jpg|jpeg|png|gif';
+        $config['file_name'] = $_FILES['file']['name'];
+
+        $this->load->library('upload',$config);
+        $this->upload->initialize($config);
+        $cond = $this->upload->do_upload("file");
+
+
+        //      upload edilecek sekil database e yuklenir
+        $data  = array(
+            "name"                  => ($cond) ? $this->upload->data('file_name') : "default.jpg",
+            "upload_date"           => date("Y/m/d"),
+            "news_id"               =>   $id,
+        );
+
+
+        //      eyger sekil upload oldusa succes olmadisa warning alerti versin
+        if ($cond){
+            $this->session->set_flashdata("alert", "Şəkil Yükləndi!");
+        }else{
+            $this->session->set_flashdata("alert_danger", "Şəkil Yüklənmədi!");
+        }
+
+        $this->Mecnun_model->news_gallery_add($data);
+    }
+
+
+    public function news_gallery_refresh($id)
+    {
+        $data["photos"] = $this->Mecnun_model->get_news_gallery([
+            "news_id" => $id
+        ]);
+        $data["news"] = $this->Mecnun_model->getOneNews([
+            "news_id" => $id
+        ]);
+      $render =  $this->load->view('Admin/news/news_gallery/render_page/news_table_list',$data, true);
+      echo $render;
+    }
+
+    public function news_gallery_delete($news_id, $gallery_id){
+        $this->Mecnun_model->news_gallery_delete(array(
+            "id" => $gallery_id,
+        ));
+
+
+        $data["photos"] = $this->Mecnun_model->get_news_gallery([
+            "news_id" => $news_id
+        ]);
+        $data["news"] = $this->Mecnun_model->getOneNews([
+            "news_id" => $news_id
+        ]);
+
+        $this->load->view('Admin/news/news_gallery/whole_page',$data);
+
+    }
+
 
 
 
