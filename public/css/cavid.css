@@ -659,3 +659,29 @@
 }
 
 
+@media only screen and (max-width: 991px) {
+    .logoIMG{
+        width: 100px!important;
+    }
+}
+
+@media only screen and (max-width: 801px) {
+    .logoIMG{
+        width: 70px!important;
+    }
+}
+
+
+.c_text{
+    background: #d6ffd1;
+    float: left;
+    margin: 0% 6%;
+    max-height: 25em;
+    padding-top: 11em;
+    position: relative;
+    vertical-align: middle;
+}
+
+body{
+    font-family: Palatino Linotype!important;
+}

@@ -41,7 +41,7 @@
 
     <!--    left menu-->
     <div class="aside_wrapper col-lg-3 col-md-3 col-sm-12 col-xs-12">
-        <div style="min-height: 450px;padding: 20px 0px 0px 10px">
+        <div style="min-height: 450px;padding: 20px 10px 0px 10px">
 
 
 
@@ -120,7 +120,7 @@
 
 
     <div class="col-md-9">
-        <div class="about_right" style="padding: 20px 0px 0px 10px">
+        <div class="about_right" style="padding: 20px 10px 0px 10px">
             <h2><?php echo $this->lang->line("labaratoriyalar"); ?></h2>
 
             <div class="about_right_text" style="color: grey">

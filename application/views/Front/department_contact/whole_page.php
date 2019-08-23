@@ -1,7 +1,7 @@
 <title><?php echo $this->lang->line("elaqe"); ?></title>
 <?php $this->load->view('Front/includes_for_whole_files/header_menu'); ?>
 
-<div class="content_wrapper" style="margin-bottom: 150px;">
+<div class="content_wrapper" style="margin-bottom: 80px;">
 
     <div class="breadcrumb_wrap">
         <div class="breadcrumb_wrap_inner about_head">
