@@ -127,6 +127,13 @@ if($new){ ?>
 
                                     </div>
 
+
+                                    <div class="gallery-post">
+                                        <?php foreach ($photos as $photo) {?>
+                                            <a rel="lightbox" href="<?php echo base_url("upload/news_images/gallery/").$photo['name']?>" data-lightbox="gallery"><img style="margin:4px; width:auto;height: 100px; " src="<?php echo base_url("upload/news_images/gallery/").$photo['name']?>"></a>
+                                        <?php } ?>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -169,3 +176,9 @@ if($new){ ?>
 
 <?php $this->load->view('Front/includes_for_whole_files/footer_menu'); ?>
 
+<script>
+    lightbox.option({
+        'maxWidth': 800,
+        'maxHeight': 800,
+    })
+</script>

@@ -272,10 +272,15 @@ class Mecnun extends CI_Controller{
     }
 
     public function news_gallery_delete($news_id, $gallery_id){
+
+        $photo= $this->Mecnun_model->get_news_gallery_one([
+            "id" => $gallery_id
+        ]);
+
         $this->Mecnun_model->news_gallery_delete(array(
             "id" => $gallery_id,
         ));
-
+        unlink("upload/news_images/gallery/".$photo['name']);
 
         $data["photos"] = $this->Mecnun_model->get_news_gallery([
             "news_id" => $news_id
@@ -283,8 +288,7 @@ class Mecnun extends CI_Controller{
         $data["news"] = $this->Mecnun_model->getOneNews([
             "news_id" => $news_id
         ]);
-
-        $this->load->view('Admin/news/news_gallery/whole_page',$data);
+      $this->load->view('Admin/news/news_gallery/whole_page',$data);
 
     }
 

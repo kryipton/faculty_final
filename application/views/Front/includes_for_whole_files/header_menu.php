@@ -68,6 +68,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/') ?>css/mob_menu.css"/>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/') ?>css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/') ?>css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/') ?>css/lightbox.min.css"/>
 
     <link href='https://fonts.googleapis.com/css?family=Raleway:800,500%7CLato:400,300,400italic,700,700italic,300italic,900italic,900,100,100italic%7CRoboto:400,500,600'
           rel='stylesheet' type='text/css'/>

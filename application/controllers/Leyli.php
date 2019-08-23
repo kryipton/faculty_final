@@ -152,6 +152,13 @@ class Leyli extends CI_Controller {
 
         $data['last_events']   = $this->Events_model->get_last_events();
 
+        //Gallery
+        $data["photos"] = $this->Mecnun_model->get_news_gallery([
+            "news_id" => $id
+        ]);
+        //Gallery
+
+
         $this->load->view('Front/single_page_news/whole_page', $data);
     }
 
