@@ -157,6 +157,10 @@ $route['himalaY_xeber_elave_et_act'] = 'Mecnun/add_news_act';
 $route['himalaY_xeber_sil/(.*)'] = 'Mecnun/delete_news/$1';
 $route['himalaY_xeber_duzenle/(.*)'] = 'Mecnun/update_news/$1';
 $route['himalaY_xeber_duzenle_act/(.*)'] = 'Mecnun/update_news_act/$1';
+$route['himalaY_xeber_gallery/(.*)'] = 'Mecnun/gallery/$1';
+$route['himalaY_xeber_gallery_add/(.*)'] = 'Mecnun/news_gallery_add/$1';
+$route['himalaY_xeber_gallery_refresh/(.*)'] = 'Mecnun/news_gallery_refresh/$1';;
+$route['himalaY_xeber_gallery_sil/(.*)/(.*)'] = 'Mecnun/news_gallery_delete/$1/$2';;
 
 
 
