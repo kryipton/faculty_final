@@ -15,5 +15,14 @@ class Master_model extends  CI_Model{
         return $this->db->where($where)->get('master_speciality_db')->row_array();
     }
 
+    public function get_contact()
+    {
+        return $this->db->get('master_contact')->row_array();
 
+    }
+
+    public function update_contact($data)
+    {
+        $this->db->update("master_contact",$data);
+    }
 }

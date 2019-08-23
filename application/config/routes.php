@@ -89,12 +89,19 @@ $route['(:any)/Bachelor/Speciality'] = 'Leyli/bachelor_speciality';
 //Bakalavr tek ixtisas hissesi
 $route['(:any)/Bachelor/Speciality/(.*)'] = 'Leyli/bachelor_speciality_single/$2/$1';
 
+//Bakalavr ixtisaslar hissesi
+$route['(:any)/Bachelor/Contact'] = 'Leyli/bachelor_contact';
+
 
 //Master hissesi
 $route['(:any)/Master'] = 'Leyli/master';
 
 //Master ixtisaslar hissesi
 $route['(:any)/Master/Speciality'] = 'Leyli/master_speciality';
+
+
+//Master contact hissesi
+$route['(:any)/Master/Contact'] = 'Leyli/master_contact';
 
 //Master tek ixtisas hissesi
 $route['(:any)/Master/Speciality/(.*)'] = 'Leyli/master_speciality_single/$2/$1';
@@ -104,6 +111,10 @@ $route['(:any)/Doctorate'] = 'Leyli/doctorate';
 
 //Doktorantura ixtisaslar hissesi
 $route['(:any)/Doctorate/Speciality'] = 'Leyli/doctorate_speciality';
+
+
+//Doktorantura contacthissesi
+$route['(:any)/Doctorate/Contact'] = 'Leyli/doctorate_contact';
 
 //Doktorantura tek ixtisas hissesi
 $route['(:any)/Doctorate/Speciality/(.*)'] = 'Leyli/doctorate_speciality_single/$2/$1';
@@ -286,6 +297,9 @@ $route['himalaY_bakalavr_ixtisas_elave_etme'] = 'Mecnun/add_bachelor_speciality_
 $route['himalaY_bakalavr_ixtisas_silme/(.*)'] = 'Mecnun/delete_bachelor_speciality/$1';
 $route['himalaY_bakalavr_ixtisas_yenile/(.*)'] = 'Mecnun/update_bachelor_speciality/$1';
 $route['himalaY_bakalavr_ixtisas_yenileme/(.*)'] = 'Mecnun/update_bachelor_speciality_act/$1';
+$route['himalaY_bakalavr_elaqe'] = 'Mecnun/bachelor_contact';
+$route['himalaY_bakalavr_elaqe_update'] = 'Mecnun/update_bachelor_contact';
+
 
 //Magistr
 $route['himalaY_magistr'] = 'Mecnun/master';
@@ -297,6 +311,8 @@ $route['himalaY_magistr_ixtisas_elave_etme'] = 'Mecnun/add_master_speciality_act
 $route['himalaY_magistr_ixtisas_silme/(.*)'] = 'Mecnun/delete_master_speciality/$1';
 $route['himalaY_magistr_ixtisas_yenile/(.*)'] = 'Mecnun/update_master_speciality/$1';
 $route['himalaY_magistr_ixtisas_yenileme/(.*)'] = 'Mecnun/update_master_speciality_act/$1';
+$route['himalaY_magistr_elaqe'] = 'Mecnun/master_contact';
+$route['himalaY_magistr_elaqe_update'] = 'Mecnun/update_master_contact';
 
 
 //Doktorantura
@@ -309,6 +325,8 @@ $route['himalaY_doktorantura_ixtisas_elave_etme'] = 'Mecnun/add_doctorate_specia
 $route['himalaY_doktorantura_ixtisas_silme/(.*)'] = 'Mecnun/delete_doctorate_speciality/$1';
 $route['himalaY_doktorantura_ixtisas_yenile/(.*)'] = 'Mecnun/update_doctorate_speciality/$1';
 $route['himalaY_doktorantura_ixtisas_yenileme/(.*)'] = 'Mecnun/update_doctorate_speciality_act/$1';
+$route['himalaY_doktorantura_elaqe'] = 'Mecnun/doctorate_contact';
+$route['himalaY_doktorantura_elaqe_update'] = 'Mecnun/update_doctorate_contact';
 
 // Ixtisaslar
 

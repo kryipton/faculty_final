@@ -1,4 +1,4 @@
-<title><?php echo $this->lang->line("ixtisaslar"); ?></title>
+<title><?php echo $this->lang->line("bakalavr"); ?></title>
 <?php $this->load->view('Front/includes_for_whole_files/header_menu'); ?>
 
 
@@ -43,7 +43,7 @@
                             echo base_url('ru/Bachelor');
                         }
 
-                        ?>"><?php echo $this->lang->line("umumi_melumat"); ?></a></li>
+                        ?>"> <?php echo $this->lang->line("umumi_melumat"); ?> </a></li>
                     <li><a href="<?php
 
                         if ($this->session->userdata("dil") == "az"){
@@ -75,40 +75,34 @@
             </div>
         </div>
 
-
-
         <div class="col-md-8">
-            <h2 class="text-center head_f_p"><?php
-
-                if ($this->session->userdata("dil") == "az"){
-                    echo $speciality_info['bachelor_text_about_az'];
-                }
-                elseif ($this->session->userdata("dil") == "en"){
-                    echo $speciality_info['bachelor_text_about_en'];
-                }
-                elseif ($this->session->userdata("dil") == "ru"){
-                    echo $speciality_info['bachelor_text_about_ru'];
-                }
-
-                ?></h2>
+            <h2><?php echo $this->lang->line("bakalavr_tehsili"); ?></h2>
             <div class="about_right" style="padding: 20px 0px 0px 10px">
 
-                <div><?php
+                <div class="about_right_text">
+
+                    <?php
 
                     if ($this->session->userdata("dil") == "az"){
-                        echo $speciality_info['bachelor_text_text_az'];
+                        echo $contact['contact_az'];
                     }
                     elseif ($this->session->userdata("dil") == "en"){
-                        echo $speciality_info['bachelor_text_text_en'];
+                        echo $contact['contact_en'];
                     }
                     elseif ($this->session->userdata("dil") == "ru"){
-                        echo $speciality_info['bachelor_text_text_ru'];
+                        echo $contact['contact_ru'];
                     }
 
-                    ?></div>
+                    ?>
+
+                </div>
+
             </div>
         </div>
     </div>
+
+
+
 </div>
 
 

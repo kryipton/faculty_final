@@ -13,6 +13,8 @@
             <p style="background: lightgrey;padding: 40px 10px;margin-top: 20px;">
                 <a href="<?php echo base_url("himalaY_bakalavr_yenile")?>" class="btn btn-info">Ümumi məlumat Edit</a>
                 <a href="<?php echo base_url('himalaY_bakalavr_ixtisaslar') ?>" class="btn btn-info">Ixtisaslar</a>
+                <a href="<?php echo base_url('himalaY_bakalavr_elaqe') ?>" class="btn btn-info">Əlaqə</a>
+
 
             <h1>Haqqimizda</h1>
             <br><br>

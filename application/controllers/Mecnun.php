@@ -6,6 +6,9 @@ class Mecnun extends CI_Controller{
         parent::__construct();
         $this->load->model('Mecnun_model');
         $this->load->model('Services_model');
+        $this->load->model('Master_model');
+        $this->load->model('Bachelor_model');
+        $this->load->model('Doctorate_model');
         if(!get_active_user()){
             redirect(base_url('himalaY_secure'));
         }
@@ -1589,6 +1592,41 @@ class Mecnun extends CI_Controller{
         redirect("himalaY_bakalavr_ixtisaslar");
     }
 
+    public function bachelor_contact()
+    {
+        $data['contact']=$this->Bachelor_model->get_contact();
+
+        $this->load->view('Admin/bachelor/bachelor_contact',$data);
+    }
+
+    public function update_bachelor_contact()
+    {
+        $text_az = $this->input->post("master_about_az");
+        $text_en = $this->input->post("master_about_en");
+        $text_ru = $this->input->post("master_about_ru");
+
+        if (!empty($text_az) && !empty($text_ru) && !empty($text_en)){
+            $data = array(
+                "contact_az" => $text_az,
+                "contact_en" => $text_en,
+                "contact_ru" => $text_ru,
+            );
+
+            $this->Bachelor_model->update_contact($data);
+
+            $this->session->set_flashdata("success", "Melumat yenilendi");
+
+            redirect("himalaY_bakalavr_elaqe");
+
+        }else{
+            $this->session->set_flashdata("danger", "Boşluq buraxmayın");
+            redirect("himalaY_bakalavr_elaqe");
+        }
+
+
+    }
+
+
 
 
 
@@ -1745,6 +1783,40 @@ class Mecnun extends CI_Controller{
         ));
 
         redirect("himalaY_magistr_ixtisaslar");
+    }
+
+    public function master_contact()
+    {
+        $data['contact']=$this->Master_model->get_contact();
+
+        $this->load->view('Admin/master/master_contact',$data);
+    }
+
+    public function update_master_contact()
+    {
+        $text_az = $this->input->post("master_about_az");
+        $text_en = $this->input->post("master_about_en");
+        $text_ru = $this->input->post("master_about_ru");
+
+        if (!empty($text_az) && !empty($text_ru) && !empty($text_en)){
+            $data = array(
+                "contact_az" => $text_az,
+                "contact_en" => $text_en,
+                "contact_ru" => $text_ru,
+            );
+
+            $this->Master_model->update_contact($data);
+
+            $this->session->set_flashdata("success", "Melumat yenilendi");
+
+            redirect("himalaY_magistr_elaqe");
+
+        }else{
+            $this->session->set_flashdata("danger", "Boşluq buraxmayın");
+            redirect("himalaY_magistr_elaqe");
+        }
+
+
     }
 
 
@@ -1906,6 +1978,41 @@ class Mecnun extends CI_Controller{
 
         redirect("himalaY_doktorantura_ixtisaslar");
     }
+
+    public function doctorate_contact()
+    {
+        $data['contact']=$this->Doctorate_model->get_contact();
+
+        $this->load->view('Admin/doctorate/doctorate_contact',$data);
+    }
+
+    public function update_doctorate_contact()
+    {
+        $text_az = $this->input->post("master_about_az");
+        $text_en = $this->input->post("master_about_en");
+        $text_ru = $this->input->post("master_about_ru");
+
+        if (!empty($text_az) && !empty($text_ru) && !empty($text_en)){
+            $data = array(
+                "contact_az" => $text_az,
+                "contact_en" => $text_en,
+                "contact_ru" => $text_ru,
+            );
+
+            $this->Doctorate_model->update_contact($data);
+
+            $this->session->set_flashdata("success", "Melumat yenilendi");
+
+            redirect("himalaY_doktorantura_elaqe");
+
+        }else{
+            $this->session->set_flashdata("danger", "Boşluq buraxmayın");
+            redirect("himalaY_doktorantura_elaqe");
+        }
+
+
+    }
+
 
 
 

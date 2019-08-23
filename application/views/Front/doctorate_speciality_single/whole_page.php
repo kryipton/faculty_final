@@ -58,6 +58,20 @@
                         }
 
                         ?>"><?php echo $this->lang->line("ixtisaslar"); ?></a></li>
+
+                    <li><a href="<?php
+
+                        if ($this->session->userdata("dil") == "az"){
+                            echo base_url('az/Doctorate/Contact');
+                        }
+                        elseif ($this->session->userdata("dil") == "en"){
+                            echo base_url('en/Doctorate/Contact');
+                        }
+                        elseif ($this->session->userdata("dil") == "ru"){
+                            echo base_url('ru/Doctorate/Contact');
+                        }
+
+                        ?>"><?php echo $this->lang->line("elaqe"); ?></a></li>
                 </ul>
             </div>
         </div>

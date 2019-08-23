@@ -57,6 +57,20 @@
                         }
 
                         ?>"><?php echo $this->lang->line("ixtisaslar"); ?></a></li>
+
+                    <li><a href="<?php
+
+                        if ($this->session->userdata("dil") == "az"){
+                            echo base_url('az/Bachelor/Contact');
+                        }
+                        elseif ($this->session->userdata("dil") == "en"){
+                            echo base_url('en/Bachelor/Contact');
+                        }
+                        elseif ($this->session->userdata("dil") == "ru"){
+                            echo base_url('ru/Bachelor/Contact');
+                        }
+
+                        ?>"><?php echo $this->lang->line("elaqe"); ?></a></li>
                 </ul>
             </div>
         </div>

@@ -208,6 +208,17 @@ class Leyli extends CI_Controller {
         $this->load->view('Front/bachelor_speciality_single/whole_page', $data);
     }
 
+    public function bachelor_contact()
+    {
+        $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
+        $data["services"] = $this->Services_model->get_services();
+
+        $data['contact']=$this->Bachelor_model->get_contact();
+
+        $this->load->view('Front/bachelor_contact/whole_page',$data);
+    }
+
     public function master(){
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
@@ -240,6 +251,18 @@ class Leyli extends CI_Controller {
         $this->load->view('Front/master_speciality_single/whole_page', $data);
     }
 
+    public function master_contact()
+    {
+        $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
+        $data["services"] = $this->Services_model->get_services();
+
+        $data['contact']=$this->Master_model->get_contact();
+
+        $this->load->view('Front/master_contact/whole_page',$data);
+    }
+
+
     public function doctorate(){
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
@@ -271,6 +294,18 @@ class Leyli extends CI_Controller {
 
         $this->load->view('Front/doctorate_speciality_single/whole_page', $data);
     }
+
+    public function doctorate_contact()
+    {
+        $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
+        $data["services"] = $this->Services_model->get_services();
+
+        $data['contact']=$this->Doctorate_model->get_contact();
+
+        $this->load->view('Front/doctorate_contact/whole_page',$data);
+    }
+
 
     public function department(){
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();

@@ -10,6 +10,7 @@
     </div>
 </div>
 
+
 <?php $this->load->view('Front/includes_for_whole_files/scripts'); ?>
 
 

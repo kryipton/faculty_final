@@ -15,5 +15,17 @@ class Doctorate_model extends  CI_Model{
         return $this->db->where($where)->get('doctorate_speciality_db')->row_array();
     }
 
+    public function get_contact()
+    {
+        return $this->db->get('doctorate_contact')->row_array();
+
+    }
+
+    public function update_contact($data)
+    {
+        $this->db->update("doctorate_contact",$data);
+    }
+
+
 
 }

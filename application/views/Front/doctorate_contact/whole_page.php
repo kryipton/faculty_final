@@ -1,4 +1,5 @@
-<title><?php echo $this->lang->line("ixtisaslar"); ?></title>
+<title><?php echo $this->lang->line("doktorantura"); ?></title>
+
 <?php $this->load->view('Front/includes_for_whole_files/header_menu'); ?>
 
 
@@ -20,7 +21,7 @@
                             echo base_url('ru/Home');
                         }
 
-                        ?>"><?php echo $this->lang->line("ana_sehife"); ?></a>  /   </li>
+                        ?>"><?php echo $this->lang->line("ana_sehife"); ?></a>  /</li>
                     <li><?php echo $this->lang->line("umumi_melumat"); ?></li>
                 </ul>
             </div>
@@ -34,26 +35,26 @@
                     <li><a href="<?php
 
                         if ($this->session->userdata("dil") == "az"){
-                            echo base_url('az/Bachelor');
+                            echo base_url('az/Doctorate');
                         }
                         elseif ($this->session->userdata("dil") == "en"){
-                            echo base_url('en/Bachelor');
+                            echo base_url('en/Doctorate');
                         }
                         elseif ($this->session->userdata("dil") == "ru"){
-                            echo base_url('ru/Bachelor');
+                            echo base_url('ru/Doctorate');
                         }
 
                         ?>"><?php echo $this->lang->line("umumi_melumat"); ?></a></li>
                     <li><a href="<?php
 
                         if ($this->session->userdata("dil") == "az"){
-                            echo base_url('az/Bachelor/Speciality');
+                            echo base_url('az/Doctorate/Speciality');
                         }
                         elseif ($this->session->userdata("dil") == "en"){
-                            echo base_url('en/Bachelor/Speciality');
+                            echo base_url('en/Doctorate/Speciality');
                         }
                         elseif ($this->session->userdata("dil") == "ru"){
-                            echo base_url('ru/Bachelor/Speciality');
+                            echo base_url('ru/Doctorate/Speciality');
                         }
 
                         ?>"><?php echo $this->lang->line("ixtisaslar"); ?></a></li>
@@ -61,13 +62,13 @@
                     <li><a href="<?php
 
                         if ($this->session->userdata("dil") == "az"){
-                            echo base_url('az/Bachelor/Contact');
+                            echo base_url('az/Doctorate/Contact');
                         }
                         elseif ($this->session->userdata("dil") == "en"){
-                            echo base_url('en/Bachelor/Contact');
+                            echo base_url('en/Doctorate/Contact');
                         }
                         elseif ($this->session->userdata("dil") == "ru"){
-                            echo base_url('ru/Bachelor/Contact');
+                            echo base_url('ru/Doctorate/Contact');
                         }
 
                         ?>"><?php echo $this->lang->line("elaqe"); ?></a></li>
@@ -75,40 +76,32 @@
             </div>
         </div>
 
-
-
         <div class="col-md-8">
-            <h2 class="text-center head_f_p"><?php
-
-                if ($this->session->userdata("dil") == "az"){
-                    echo $speciality_info['bachelor_text_about_az'];
-                }
-                elseif ($this->session->userdata("dil") == "en"){
-                    echo $speciality_info['bachelor_text_about_en'];
-                }
-                elseif ($this->session->userdata("dil") == "ru"){
-                    echo $speciality_info['bachelor_text_about_ru'];
-                }
-
-                ?></h2>
+            <h2><?php echo $this->lang->line("doktorantura_tehsili"); ?></h2>
             <div class="about_right" style="padding: 20px 0px 0px 10px">
 
-                <div><?php
+                <div class="about_right_text">
+                    <?php
 
                     if ($this->session->userdata("dil") == "az"){
-                        echo $speciality_info['bachelor_text_text_az'];
+                        echo $contact['contact_az'];
                     }
                     elseif ($this->session->userdata("dil") == "en"){
-                        echo $speciality_info['bachelor_text_text_en'];
+                        echo $contact['contact_en'];
                     }
                     elseif ($this->session->userdata("dil") == "ru"){
-                        echo $speciality_info['bachelor_text_text_ru'];
+                        echo $contact['contact_ru'];
                     }
 
-                    ?></div>
+                    ?>
+                </div>
+
             </div>
         </div>
     </div>
+
+
+
 </div>
 
 
