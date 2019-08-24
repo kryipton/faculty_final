@@ -74,6 +74,22 @@
                         ?>"><?php echo $this->lang->line("elaqe"); ?></a></li>
                 </ul>
             </div>
+            <!--        sol terefde olan diger tedbirler -->
+            <div class="category_events about_left_e" style="border-radius: 10px">
+                <h4><?php echo $this->lang->line("tedbirler"); ?></h4>
+                <ul>
+
+
+                    <!--                        burada diger tedbirler foreache salinir-->
+
+                    <?php $this->load->view('Front/include_last_events/last_events'); ?>
+
+                    <!--                        burada diger tedbirler foreache salinir-->
+
+
+                </ul>
+            </div>
+            <!--        sol terefde olan diger tedbirler -->
         </div>
 
         <div class="col-md-8">
