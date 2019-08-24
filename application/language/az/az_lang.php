@@ -44,6 +44,12 @@ $lang["dil"] = "Dil";
 
 $lang["xidmetler"] = "Xidmətlər";
 
+$lang["vezife"] = "Vəzifə";
+
+$lang["mail"] = "E-Poçt";
+
+
+
 
 
 

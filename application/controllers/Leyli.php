@@ -216,6 +216,7 @@ class Leyli extends CI_Controller {
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
         $data["services"] = $this->Services_model->get_services();
+        $data['last_events'] = $this->Events_model->get_last_events();
 
         $data['contact']=$this->Bachelor_model->get_contact();
 
@@ -379,6 +380,31 @@ class Leyli extends CI_Controller {
 
         $this->load->view('Front/department_teachers/whole_page', $data);
     }
+
+    public function department_teachers_single(){
+        $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
+        $data["services"] = $this->Services_model->get_services();
+
+        $data['data'] = $this->Department_model->get_desc();
+
+        $data['last_events'] = $this->Events_model->get_last_events();
+
+        $id = $this->uri->segment(3);
+        $teacher_id = $this->uri->segment(4);
+
+        $data["department"] = $this->Mecnun_model->get_department_category(array(
+            "id" => $id,
+        ));
+
+        $data['teacher'] = $this->Mecnun_model->get_teacher(array(
+            "teacher_id" => $teacher_id,
+        ));
+        $data['last_events'] = $this->Events_model->get_last_events();
+
+        $this->load->view('Front/department_teachers_single/whole_page', $data);
+    }
+
 
     public function department_specialities(){
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();

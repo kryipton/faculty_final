@@ -49,7 +49,9 @@ $lang["dil"] = "Language";
 
 $lang["xidmetler"] = "Services";
 
+$lang["vezife"] = "Position";
 
+$lang["mail"] = "Email";
 
 
 

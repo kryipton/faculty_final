@@ -39,6 +39,8 @@
                             <label for="">Dərəcə</label>
                             <input value="<?php echo $teacher["teacher_position_az"] ?>" type="text" class="form-control" name="teacher_position_az"><br>
 
+                            <label for="">Mail</label>
+                            <input type="text" class="form-control" name="teacher_mail" value="<?php echo $teacher["teacher_mail"] ?>"><br>
 
 
                             <label for="">Kafedra</label>
@@ -53,6 +55,18 @@
                                     <?php }?>
                                 <?php }?>
                             </select>
+                            <br>
+
+                            <label for="">Nesriyyat </label>
+                            <textarea name="c1_text_az" class="ckeditor" id="" cols="30" rows="10" required>
+                                <?php echo $teacher["editor1_az"] ?>
+                            </textarea>
+                            <br>
+
+                            <label for="">Haqqında </label>
+                            <textarea name="c2_text_az" class="ckeditor" id="" cols="30" rows="10" required>
+                                <?php echo $teacher["editor2_az"]?>
+                            </textarea>
                             <br>
 
 
@@ -91,6 +105,18 @@
                             </select>
                             <br>
 
+                            <label for="">Nesriyyat </label>
+                            <textarea name="c1_text_ru" class="ckeditor" id="" cols="30" rows="10" required>
+                                <?php echo $teacher["editor1_ru"] ?>
+                            </textarea>
+                            <br>
+
+                            <label for="">Haqqında </label>
+                            <textarea name="c2_text_ru" class="ckeditor" id="" cols="30" rows="10" required>
+                                <?php echo $teacher["editor2_ru"]?>
+                            </textarea>
+                            <br>
+
 
                         </div>
                     </div>
@@ -112,7 +138,6 @@
                             <input value="<?php echo $teacher["teacher_position_en"] ?>" type="text" class="form-control" name="teacher_position_en"><br>
 
 
-
                             <label for="">Kafedra</label>
                             <select name="teacher_department_category_en" id="" class="form-control" style="height: 40px">
                                 <option value="<?php echo $teacher["department_category_en"]?>"><?php echo $teacher["department_category_en"] ?></option>
@@ -126,6 +151,17 @@
                             </select>
                             <br>
 
+                            <label for="">Nesriyyat </label>
+                            <textarea name="c1_text_en" class="ckeditor" id="" cols="30" rows="10" required>
+                                <?php echo $teacher["editor1_en"] ?>
+                            </textarea>
+                            <br>
+
+                            <label for="">Haqqında </label>
+                            <textarea name="c2_text_en" class="ckeditor" id="" cols="30" rows="10" required>
+                                <?php echo $teacher["editor2_en"]?>
+                            </textarea>
+                            <br>
 
 
 

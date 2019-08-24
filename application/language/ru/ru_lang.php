@@ -45,6 +45,10 @@ $lang["dil"] = "Язк";
 
 $lang["xidmetler"] = "Услуги";
 
+$lang["vezife"] = "Позиция";
+
+$lang["mail"] = "Почта";
+
 
 
 

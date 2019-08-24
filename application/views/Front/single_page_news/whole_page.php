@@ -125,16 +125,21 @@ if($new){ ?>
                                                 ?></p>
                                         </div>
                                     </div>
-                                    <div class="info_wrapper">
-                                        <span class="glyphicon glyphicon-calendar"></span><?php echo $new['news_time'] ?>
 
-                                    </div>
 
 
                                     <div class="gallery-post">
                                         <?php foreach ($photos as $photo) {?>
-                                            <a rel="lightbox" href="<?php echo base_url("upload/news_images/gallery/").$photo['name']?>" data-lightbox="gallery"><img style="margin:4px; width:auto;height: 100px; " src="<?php echo base_url("upload/news_images/gallery/").$photo['name']?>"></a>
+                                            <a rel="lightbox" href="<?php echo base_url("upload/news_images/gallery/").$photo['name']?>" data-lightbox="gallery">
+                                                <img style="" class="c_img_hover" src="<?php echo base_url("upload/news_images/gallery/").$photo['name']?>">
+                                            </a>
                                         <?php } ?>
+                                    </div>
+
+
+                                    <div class="info_wrapper">
+                                        <span class="glyphicon glyphicon-calendar"></span><?php echo $new['news_time'] ?>
+
                                     </div>
 
                                 </div>

@@ -662,7 +662,17 @@ class Mecnun extends CI_Controller{
          $teacher_department_category_ru  = $this->input->post('teacher_department_category_ru');
 
 
-         $teacher_picture  = $this->input->post('teacher_photo');
+        $teacher_editor1_az  = $this->input->post('c1_text_az');
+        $teacher_editor1_en  = $this->input->post('c1_text_en');
+        $teacher_editor1_ru  = $this->input->post('c1_text_ru');
+
+        $teacher_editor2_az  = $this->input->post('c2_text_az');
+        $teacher_editor2_en  = $this->input->post('c2_text_en');
+        $teacher_editor2_ru  = $this->input->post('c2_text_ru');
+
+        $teacher_mail  = strip_tags($this->input->post('teacher_mail'));
+
+        $teacher_picture  = $this->input->post('teacher_photo');
 
 
 
@@ -672,7 +682,7 @@ class Mecnun extends CI_Controller{
         $config['allowed_types'] = 'jpg|jpeg|png';
         $this->upload->initialize($config);
 
-        if( !empty($teacher_name_az) && !empty($teacher_name_ru) &&  !empty($teacher_name_en) && !empty($teacher_surname_az) && !empty($teacher_surname_en) && !empty($teacher_surname_ru) && !empty($teacher_position_az) && !empty($teacher_position_ru) && !empty($teacher_position_en) && !empty($teacher_department_category_az) && !empty($teacher_department_category_en) && !empty($teacher_department_category_ru))
+        if( !empty($teacher_name_az) && !empty($teacher_name_ru) &&  !empty($teacher_name_en) && !empty($teacher_surname_az) && !empty($teacher_surname_en) && !empty($teacher_surname_ru) && !empty($teacher_position_az) && !empty($teacher_position_ru) && !empty($teacher_position_en) && !empty($teacher_department_category_az) && !empty($teacher_department_category_en) && !empty($teacher_department_category_ru) && !empty($teacher_editor1_az) && !empty($teacher_editor1_en) && !empty($teacher_editor1_ru) && !empty($teacher_editor2_az) && !empty($teacher_editor2_en) && !empty($teacher_editor2_ru) && !empty($teacher_mail))
         {
 
                 $data = array(
@@ -688,6 +698,16 @@ class Mecnun extends CI_Controller{
                     'teacher_position_az' => $teacher_position_az,
                     'teacher_position_en' => $teacher_position_en,
                     'teacher_position_ru' => $teacher_position_ru,
+
+                    'editor1_az' => $teacher_editor1_az,
+                    'editor1_en' => $teacher_editor1_en,
+                    'editor1_ru' => $teacher_editor1_ru,
+
+                    'editor2_az' => $teacher_editor2_az,
+                    'editor2_en' => $teacher_editor2_en,
+                    'editor2_ru' => $teacher_editor2_ru,
+
+                    'teacher_mail' => $teacher_mail,
 
 
                     'department_category_az' => $teacher_department_category_az,
@@ -750,6 +770,15 @@ class Mecnun extends CI_Controller{
         $teacher_position_ru  = strip_tags($this->input->post('teacher_position_ru'));
 
 
+        $teacher_editor1_az  = $this->input->post('c1_text_az');
+        $teacher_editor1_en  = $this->input->post('c1_text_en');
+        $teacher_editor1_ru  = $this->input->post('c1_text_ru');
+
+        $teacher_editor2_az  = $this->input->post('c2_text_az');
+        $teacher_editor2_en  = $this->input->post('c2_text_en');
+        $teacher_editor2_ru  = $this->input->post('c2_text_ru');
+
+        $teacher_mail  = strip_tags($this->input->post('teacher_mail'));
 
 
         $teacher_department_category_az  = $this->input->post('teacher_department_category_az');
@@ -771,7 +800,7 @@ class Mecnun extends CI_Controller{
         $config['allowed_types'] = 'jpg|jpeg|png';
         $this->upload->initialize($config);
 
-        if( !empty($teacher_name_az) && !empty($teacher_name_ru) &&  !empty($teacher_name_en) && !empty($teacher_surname_az) && !empty($teacher_surname_en) && !empty($teacher_surname_ru) && !empty($teacher_position_az) && !empty($teacher_position_ru) && !empty($teacher_position_en) && !empty($teacher_department_category_az) && !empty($teacher_department_category_en) && !empty($teacher_department_category_ru))
+        if( !empty($teacher_name_az) && !empty($teacher_name_ru) &&  !empty($teacher_name_en) && !empty($teacher_surname_az) && !empty($teacher_surname_en) && !empty($teacher_surname_ru) && !empty($teacher_position_az) && !empty($teacher_position_ru) && !empty($teacher_position_en) && !empty($teacher_department_category_az) && !empty($teacher_department_category_en) && !empty($teacher_department_category_ru) && !empty($teacher_editor1_az) && !empty($teacher_editor1_en) && !empty($teacher_editor1_ru) && !empty($teacher_editor2_az) && !empty($teacher_editor2_en) && !empty($teacher_editor2_ru) && !empty($teacher_mail))
         {
 
             $data = array(
@@ -788,6 +817,15 @@ class Mecnun extends CI_Controller{
                 'teacher_position_en' => $teacher_position_en,
                 'teacher_position_ru' => $teacher_position_ru,
 
+                'editor1_az' => $teacher_editor1_az,
+                'editor1_en' => $teacher_editor1_en,
+                'editor1_ru' => $teacher_editor1_ru,
+
+                'editor2_az' => $teacher_editor2_az,
+                'editor2_en' => $teacher_editor2_en,
+                'editor2_ru' => $teacher_editor2_ru,
+
+                'teacher_mail' => $teacher_mail,
 
                 'department_category_az' => $teacher_department_category_az,
                 'department_category_en' => $teacher_department_category_en,

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 22, 2019 at 08:00 PM
+-- Generation Time: Aug 24, 2019 at 11:05 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -41,7 +41,7 @@ CREATE TABLE `about_db` (
 --
 
 INSERT INTO `about_db` (`about_id`, `faculty_name`, `about_text_az`, `about_text_en`, `about_text_ru`) VALUES
-(1, 'kimya', '<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p style=\"text-align:center\"><span style=\"font-size:18px\">Fak&uuml;ltədə 1 akademik, 20 professor, 69 dosent, 18 baş m&uuml;əllim və assistent &ccedil;alışır. Hazırda Kimya texnologiya fak&uuml;ltəsinin g&uuml;nd&uuml;z ş&ouml;bəsində 831 nəfər əyani, 64 nəfər isə qiyabi ş&ouml;bədə təhsil alır.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:18px\">2016-cı ildən ADNSU rektorunun əmri ilə fak&uuml;ltənin nəzdində &laquo;Yeni kimyəvi materiallar və texnologiyalar&raquo; adlı elmi-tədqiqat laboratoriyası yaradılıb. Laboratoriyaya k.e.d, professor Bağıyev Vaqif La&ccedil;ın oğlu rəhbərlik edir.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">&Uuml;mumilikdə fak&uuml;ltədə 13 professor, 4 elmlər doktoru, 68 dosent, 2 assistent və 29 laborant &ccedil;alışır.</span></p>\r\n\r\n<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:18px\">ADNSU-da kimya&ccedil;ı m&uuml;həndislərin hazırlığı 1921-ci ildən kimya ş&ouml;bəsi kimi &laquo;Neft sənayesi&raquo; fak&uuml;ltəsində, 1934-ci ildən &laquo;Neft texnologiyası&raquo;, 1940-cı ildən isə &laquo;Kimya texnologiyası&raquo; fak&uuml;ltəsində həyata ke&ccedil;irilir.Fak&uuml;ltədə yarandığı g&uuml;ndən indiyədək neft emalı və neft-kimya sənayesi &uuml;&ccedil;&uuml;n 18000-ə yaxın kimya&ccedil;ı-m&uuml;həndis texnoloq hazırlanıb. 1981-ci ildən fak&uuml;ltədə xarici &ouml;lkə vətəndaşlarının hazırlığı həyata ke&ccedil;irilir. &Ouml;tən illər ərzində d&uuml;nyanın 54 &ouml;lkəsi &uuml;&ccedil;&uuml;n 332 bakalavr, 326 magistr və 33 elmlər namizədi hazırlanıb.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">2009/2010-cu tədris ilinədək fak&uuml;ltədə: 1. &laquo;Kimya-texnologiyası&raquo;, 2. &laquo;Ekologiya və təbiətdən istifadə&raquo; və 3. &laquo;Həyat fəaliyyətinin təhl&uuml;kəsizliyi&raquo; istiqamətləri, 2009/2010-cu tədris ilindən isə 1.&raquo;Kimya m&uuml;həndisliyi&raquo;, 2. &laquo;Ekologiya m&uuml;həndisliyi&raquo; və 3. &laquo; F&ouml;vqəladə hallar və həyat fəaliyyətinin təhl&uuml;kəsizliyi&raquo; ixtisasları və 11 ixtisaslaşma &uuml;zrə kredit sistemi ilə bakalavr hazırlığı &nbsp;həyata ke&ccedil;irilir.Fak&uuml;ltədə 3 istiqamət: 1. &laquo;Kimya texnologiyası&raquo; 2. &laquo;Ekologiya və təbiətdən istifadə&raquo; və 3. &laquo;Həyat fəaliyyətinin təhl&uuml;kəsizliyi&raquo; istiqamətləri və 3 ixtisas &uuml;zrə magistr hazırlığı həyata ke&ccedil;irilir.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:18px\">Fak&uuml;ltənin nəzdində 4 &uuml;mumi və 4 ixtisas kafedrası, 7 tədris, 6 problem və Rusiyanın &laquo;Lukoyl&raquo; firmasının təsis&ccedil;iliyi ilə &laquo;Fizika-kimyəvi &nbsp;analiz metodları&raquo; mərkəzləşdirilmiş laboratoriya fəaliyyət g&ouml;stərir.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">2016-cı ildən fak&uuml;ltədə 2 istiqamət; &laquo;Kimya m&uuml;həndisliyi&raquo; və &laquo;Ekologiya m&uuml;həndisliyi&raquo; ixtisasları &uuml;zrə y&uuml;ksək ixtisaslı m&uuml;həndis hazırlanır.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">Kafedralar: M&ouml;vcud olan 7 kafedra 2016-cı ilin fevral ayından birləşdirilərək:</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<ul>\r\n	<li><span style=\"font-size:18px\"><strong>&laquo;Kimya və qeyri-&uuml;zvi maddələrin texnologiyası&raquo;</strong></span></li>\r\n	<li><span style=\"font-size:18px\"><strong>&laquo;&Uuml;zvi maddələr və y&uuml;ksək molekullu birləşmələrin texnologiyası&raquo;</strong></span></li>\r\n	<li><span style=\"font-size:18px\"><strong>&laquo;Neft-kimya texnologiyası və sənaye ekologiyası&raquo; kafedraları yaradılıb.</strong></span></li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:18px\">Fak&uuml;ltənin nəzdində həm&ccedil;inin &ldquo;İctimai elmlər&raquo; kafedrası da fəaliyyət g&ouml;stərir.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">Kimya texnologiya fak&uuml;ltəsində&nbsp;<strong><em>4 tyutor</em></strong>&nbsp;fəaliyyət g&ouml;stərir.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<ol>\r\n	<li><span style=\"font-size:18px\"><strong>&nbsp;Qədimov İlqar Kamil oğlu</strong></span></li>\r\n	<li><span style=\"font-size:18px\"><strong>&nbsp;Ağayev Famil Bayram oğlu</strong></span></li>\r\n	<li><span style=\"font-size:18px\"><strong>&nbsp;Əhmədova Dinarə Vəlyəddin qızı</strong></span></li>\r\n	<li><span style=\"font-size:18px\"><strong>&nbsp;Həsənova Fərqanə &Ccedil;ingiz qızı&nbsp;</strong></span></li>\r\n</ol>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:18px\">&laquo;Kimya və qeyri-&uuml;zvi maddələrin texnologiyası&raquo; kafedrasında 43 əməkdaş, o c&uuml;mlədən 2 professor, 2 elmlər doktoru və 25 dosent, 1 assistent və 13 laborant fəaliyyət g&ouml;stərir.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:18px\">&laquo;&Uuml;zvi maddələr və y&uuml;ksək molekullu birləşmələrin texnologiyası&raquo; kafedrasında 21 əməkdaş, o c&uuml;mlədən 2 professor və 10 dosent, 1 assistent, 1 baş m&uuml;əllim və 9 laborant fəaliyyət g&ouml;stərir.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:18px\">&laquo;Neft-kimya texnolgoiyası və sənaye ekologiyasi&raquo; kafedrasında 48 əməkdaş, o c&uuml;mlədən 8 professor, 21 dosent &ccedil;alışır.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:18px\">&laquo;İctimai elmlər&raquo; kafedrasında 18 əməkdaş, o c&uuml;mlədən 1 professor və 2 nəfəri elmlər doktoru olmaqla 11 dosent, 3 baş m&uuml;əllim və 3 m&uuml;əllimdən ibarətdir. Kafedrada həm&ccedil;inin 4 əvəz&ccedil;i m&uuml;əllim &ccedil;alışır. Tədris k&ouml;mək&ccedil;i heyəti isə 2 nəfərdən ibarətdir.</span></p>\r\n\r\n<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n', '<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:18px\">There are 1 academician, 20 professors, 69 associate professors, 18 senior teachers and assistants at the faculty. Currently, 831 students are studying in the full-time department of the Faculty of Chemical Technology and 64 are studying in correspondence.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">Since 2016, by the order of the rector of the ADNSU, a scientific research laboratory &quot;New Chemical Materials and Technologies&quot; was established under the faculty. The laboratory is headed by Prof. Bagiev Vagif Lachin.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">There are 13 professors, 4 doctors, 68 associate professors, 2 assistants and 29 laboratory assistants in the faculty.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">The preparation of chemical engineers at ADNSU has been carried out in the Department of Chemistry since 1921 at the Faculty of Petroleum Industry, from 1934 at the Faculty of Petroleum Technology, and from 1940 at the Faculty of Chemical Technology. About 18,000 chemical engineer-technologists have been trained for the chemical industry. Since 1981, the faculty has been training foreign nationals. Over the past years, 332 undergraduates, 326 masters and 33 candidates of science have been prepared for 54 countries.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">At the faculty until 2009/2010 academic year: 1. &quot;Chemical technology&quot;, 2. &quot;Ecology and the use of nature&quot; and 3. &quot;Life safety&quot; directions, and 1. &quot;Chemical Engineering&quot; from 2009/2010 academic year, 2. Bachelor of Ecology Engineering and 3 specialties &quot;Emergency and safety of life&quot; and credit system on 11 specialties. 3 directions at the faculty: 1. &quot;Chemical technology&quot; 2. &quot;Ecology and use of nature&quot; and 3. Master&#39;s degree in 3 specialties &quot;Life Safety&quot; is being carried out.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">The faculty has 4 general and 4 special chairs, 7 teaching, 6 problems and a centralized laboratory &quot;Physical and chemical analysis methods&quot; founded by the Russian firm &quot;Lukoil&quot;.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">2 directions at the faculty since 2016; Highly qualified engineers are trained in Chemical Engineering and Environmental Engineering.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">Chairs: 7 existing chairs have been united since February 2016:</span></p>\r\n\r\n<p><span style=\"font-size:18px\">&laquo;Chemical technology of inorganic substances&raquo;<br />\r\n&laquo;Technology of Organic Substances and High-Molecular Compounds&raquo;<br />\r\nChairs &quot;Petrochemical technology and industrial ecology&quot; were established.</span></p>\r\n\r\n<p><br />\r\n<span style=\"font-size:18px\">There is also the Department of Social Sciences at the faculty.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">There are 4 Tutors at the Faculty of Chemical Technology.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">Kadimov Ilgar Kamil oglu<br />\r\nAghayev Famil Bayram oglu<br />\r\nAkhmedova Dinara Ulyaddin&#39;s daughter<br />\r\nHasanova Fargana Chingiz kizi</span></p>\r\n\r\n<p><br />\r\n<span style=\"font-size:18px\">The department of &quot;Chemistry and Technology of Inorganic Substances&quot; has 43 employees, including 2 professors, 2 doctors and 25 associate professors, 1 assistant and 13 laboratory assistants.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">The department of &quot;Organic Substances and Technology of High-Molecular Compounds&quot; has 21 employees, including 2 professors and 10 associate professors, 1 assistant, 1 senior teacher and 9 laboratory assistants.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">At the Department of Petrochemical Technology and Industrial Ecology there are 48 employees, including 8 professors and 21 associate professors.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">The Department of Social Sciences consists of 11 associate professors, 3 senior teachers and 3 teachers, including 18 professors, including 1 professor and 2 doctors of sciences. The department also has 4 substitute teachers. Teaching auxiliary staff consists of 2 persons.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n', '<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:18px\">На факультете работают 1 академик, 20 профессоров, 69 доцентов, 18 старших преподавателей и ассистентов. В настоящее время на очном отделении химико-технологического факультета обучаются 831 студент, на заочном отделении - 64.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">С 2016 года по приказу ректора АДНСУ при факультете создана научно-исследовательская лаборатория &laquo;Новые химические материалы и технологии&raquo;. Лабораторию возглавляет проф. Багиев Вагиф Лачин.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">На факультете работают 13 профессоров, 4 доктора, 68 доцентов, 2 ассистента и 29 лаборантов.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">Подготовка инженеров-химиков в АДНСУ велась на химическом факультете с 1921 года на факультете нефтяной промышленности, с 1934 года на факультете нефтяных технологий и с 1940 года на факультете химической технологии. Для химической промышленности подготовлено около 18 000 инженеров-технологов. С 1981 года на факультете ведется подготовка иностранных граждан. За последние годы подготовлено 332 магистранта, 326 магистров и 33 кандидата наук для 54 стран.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">На факультете до 2009/2010 учебного года: 1. &laquo;Химические технологии&raquo;, 2. &laquo;Экология и природопользование&raquo; и 3. Направления &laquo;Безопасность жизнедеятельности&raquo;, и 1. &laquo;Химическая технология&raquo; с 2009/2010 учебного года, 2. Бакалавр инженерной экологии и 3 специальности &laquo;Чрезвычайная ситуация и безопасность жизни&raquo; и кредитная система по 11 специальностям. 3 направления на факультете: 1. &laquo;Химическая технология&raquo; 2. &laquo;Экология и природопользование&raquo; и 3. Выполняется магистратура по 3 специальностям &laquo;Безопасность жизнедеятельности&raquo;.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">На факультете работают 4 общие и 4 специальные кафедры, 7 учебных, 6 проблемных и централизованная лаборатория &laquo;Методы физико-химического анализа&raquo;, созданная российской фирмой &laquo;Лукойл&raquo;.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">2 направления на факультете с 2016 года; Высококвалифицированные инженеры обучаются в области химического и экологического инжиниринга.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">Председатели: 7 существующих кафедр были объединены с февраля 2016 года:</span></p>\r\n\r\n<p><span style=\"font-size:18px\">&laquo;Химическая технология неорганических веществ&raquo;<br />\r\n&laquo;Технология органических веществ и высокомолекулярных соединений&raquo;<br />\r\nСозданы кафедры &laquo;Нефтехимические технологии и промышленная экология&raquo;.</span></p>\r\n\r\n<p><br />\r\n<span style=\"font-size:18px\">На факультете также есть кафедра общественных наук.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">На химико-технологическом факультете работают 4 преподавателя.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">Кадимов Ильгар Камиль оглы<br />\r\nАгаев Фамиль Байрам оглы<br />\r\nДочь Ахмедовой Динары Ульяддин<br />\r\nХасанова Фаргана Чингиз кызы</span></p>\r\n\r\n<p><br />\r\n<span style=\"font-size:18px\">На кафедре &laquo;Химия и технология неорганических веществ&raquo; работают 43 сотрудника, в том числе 2 профессора, 2 доктора и 25 доцентов, 1 ассистент и 13 лаборантов.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">На кафедре &laquo;Органические вещества и технологии высокомолекулярных соединений&raquo; работает 21 сотрудник, в том числе 2 профессора и 10 доцентов, 1 ассистент, 1 старший преподаватель и 9 лаборантов.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">На кафедре нефтехимических технологий и промышленной экологии работают 48 сотрудников, в том числе 8 профессоров и 21 доцент.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">Кафедра общественных наук состоит из 11 доцентов, 3 старших преподавателей и 3 преподавателей, в том числе 18 профессоров, в том числе 1 профессор и 2 доктора наук. На кафедре также работают 4 заместителя преподавателя. Учебно-вспомогательный персонал состоит из 2 человек.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n');
+(1, 'kimya', '<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p style=\"text-align:center\"><span style=\"font-size:18px\">Fak&uuml;ltədə 1 akademik, 20 professor, 69 dosent, 18 baş m&uuml;əllim və assistent &ccedil;alışır. Hazırda Kimya texnologiya fak&uuml;ltəsinin g&uuml;nd&uuml;z ş&ouml;bəsində 831 nəfər əyani, 64 nəfər isə qiyabi ş&ouml;bədə təhsil alır.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:18px\">2016-cı ildən ADNSU rektorunun əmri ilə fak&uuml;ltənin nəzdində &laquo;Yeni kimyəvi materiallar və texnologiyalar&raquo; adlı elmi-tədqiqat laboratoriyası yaradılıb. Laboratoriyaya k.e.d, professor Bağıyev Vaqif La&ccedil;ın oğlu rəhbərlik edir.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">&Uuml;mumilikdə fak&uuml;ltədə 13 professor, 4 elmlər doktoru, 68 dosent, 2 assistent və 29 laborant &ccedil;alışır.</span></p>\r\n\r\n<p style=\"text-align:center\">&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:18px\">ADNSU-da kimya&ccedil;ı m&uuml;həndislərin hazırlığı 1921-ci ildən kimya ş&ouml;bəsi kimi &laquo;Neft sənayesi&raquo; fak&uuml;ltəsində, 1934-ci ildən &laquo;Neft texnologiyası&raquo;, 1940-cı ildən isə &laquo;Kimya texnologiyası&raquo; fak&uuml;ltəsində həyata ke&ccedil;irilir.Fak&uuml;ltədə yarandığı g&uuml;ndən indiyədək neft emalı və neft-kimya sənayesi &uuml;&ccedil;&uuml;n 18000-ə yaxın kimya&ccedil;ı-m&uuml;həndis texnoloq hazırlanıb. 1981-ci ildən fak&uuml;ltədə xarici &ouml;lkə vətəndaşlarının hazırlığı həyata ke&ccedil;irilir. &Ouml;tən illər ərzində d&uuml;nyanın 54 &ouml;lkəsi &uuml;&ccedil;&uuml;n 332 bakalavr, 326 magistr və 33 elmlər namizədi hazırlanıb.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">2009/2010-cu tədris ilinədək fak&uuml;ltədə: 1. &laquo;Kimya-texnologiyası&raquo;, 2. &laquo;Ekologiya və təbiətdən istifadə&raquo; və 3. &laquo;Həyat fəaliyyətinin təhl&uuml;kəsizliyi&raquo; istiqamətləri, 2009/2010-cu tədris ilindən isə 1.&raquo;Kimya m&uuml;həndisliyi&raquo;, 2. &laquo;Ekologiya m&uuml;həndisliyi&raquo; və 3. &laquo; F&ouml;vqəladə hallar və həyat fəaliyyətinin təhl&uuml;kəsizliyi&raquo; ixtisasları və 11 ixtisaslaşma &uuml;zrə kredit sistemi ilə bakalavr hazırlığı &nbsp;həyata ke&ccedil;irilir.Fak&uuml;ltədə 3 istiqamət: 1. &laquo;Kimya texnologiyası&raquo; 2. &laquo;Ekologiya və təbiətdən istifadə&raquo; və 3. &laquo;Həyat fəaliyyətinin təhl&uuml;kəsizliyi&raquo; istiqamətləri və 3 ixtisas &uuml;zrə magistr hazırlığı həyata ke&ccedil;irilir.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:18px\">Fak&uuml;ltənin nəzdində 4 &uuml;mumi və 4 ixtisas kafedrası, 7 tədris, 6 problem və Rusiyanın &laquo;Lukoyl&raquo; firmasının təsis&ccedil;iliyi ilə &laquo;Fizika-kimyəvi &nbsp;analiz metodları&raquo; mərkəzləşdirilmiş laboratoriya fəaliyyət g&ouml;stərir.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">2016-cı ildən fak&uuml;ltədə 2 istiqamət; &laquo;Kimya m&uuml;həndisliyi&raquo; və &laquo;Ekologiya m&uuml;həndisliyi&raquo; ixtisasları &uuml;zrə y&uuml;ksək ixtisaslı m&uuml;həndis hazırlanır.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">Kafedralar: M&ouml;vcud olan 7 kafedra 2016-cı ilin fevral ayından birləşdirilərək:</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<ul>\r\n	<li><span style=\"font-size:18px\"><strong>&laquo;Kimya və qeyri-&uuml;zvi maddələrin texnologiyası&raquo;</strong></span></li>\r\n	<li><span style=\"font-size:18px\"><strong>&laquo;&Uuml;zvi maddələr və y&uuml;ksək molekullu birləşmələrin texnologiyası&raquo;</strong></span></li>\r\n	<li><span style=\"font-size:18px\"><strong>&laquo;Neft-kimya texnologiyası və sənaye ekologiyası&raquo; kafedraları yaradılıb.</strong></span></li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:18px\">Fak&uuml;ltənin nəzdində həm&ccedil;inin &ldquo;İctimai elmlər&raquo; kafedrası da fəaliyyət g&ouml;stərir.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">Kimya texnologiya fak&uuml;ltəsində&nbsp;<strong><em>4 tyutor</em></strong>&nbsp;fəaliyyət g&ouml;stərir.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<ol>\r\n	<li><span style=\"font-size:18px\"><strong>&nbsp;Qədimov İlqar Kamil oğlu</strong></span></li>\r\n	<li><span style=\"font-size:18px\"><strong>&nbsp;Ağayev Famil Bayram oğlu</strong></span></li>\r\n	<li><span style=\"font-size:18px\"><strong>&nbsp;Əhmədova Dinarə Vəlyəddin qızı</strong></span></li>\r\n	<li><span style=\"font-size:18px\"><strong>&nbsp;Həsənova Fərqanə &Ccedil;ingiz qızı&nbsp;</strong></span></li>\r\n</ol>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:18px\">&laquo;Kimya və qeyri-&uuml;zvi maddələrin texnologiyası&raquo; kafedrasında 43 əməkdaş, o c&uuml;mlədən 2 professor, 2 elmlər doktoru və 25 dosent, 1 assistent və 13 laborant fəaliyyət g&ouml;stərir.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:18px\">&laquo;&Uuml;zvi maddələr və y&uuml;ksək molekullu birləşmələrin texnologiyası&raquo; kafedrasında 21 əməkdaş, o c&uuml;mlədən 2 professor və 10 dosent, 1 assistent, 1 baş m&uuml;əllim və 9 laborant fəaliyyət g&ouml;stərir.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:18px\">&laquo;Neft-kimya texnolgoiyası və sənaye ekologiyasi&raquo; kafedrasında 48 əməkdaş, o c&uuml;mlədən 8 professor, 21 dosent &ccedil;alışır.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:18px\">&laquo;İctimai elmlər&raquo; kafedrasında 18 əməkdaş, o c&uuml;mlədən 1 professor və 2 nəfəri elmlər doktoru olmaqla 11 dosent, 3 baş m&uuml;əllim və 3 m&uuml;əllimdən ibarətdir. Kafedrada həm&ccedil;inin 4 əvəz&ccedil;i m&uuml;əllim &ccedil;alışır. Tədris k&ouml;mək&ccedil;i heyəti isə 2 nəfərdən ibarətdir.</span></p>\r\n\r\n<p style=\"text-align:center\">&nbsp;</p>\r\n', '<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:18px\">There are 1 academician, 20 professors, 69 associate professors, 18 senior teachers and assistants at the faculty. Currently, 831 students are studying in the full-time department of the Faculty of Chemical Technology and 64 are studying in correspondence.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">Since 2016, by the order of the rector of the ADNSU, a scientific research laboratory &quot;New Chemical Materials and Technologies&quot; was established under the faculty. The laboratory is headed by Prof. Bagiev Vagif Lachin.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">There are 13 professors, 4 doctors, 68 associate professors, 2 assistants and 29 laboratory assistants in the faculty.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">The preparation of chemical engineers at ADNSU has been carried out in the Department of Chemistry since 1921 at the Faculty of Petroleum Industry, from 1934 at the Faculty of Petroleum Technology, and from 1940 at the Faculty of Chemical Technology. About 18,000 chemical engineer-technologists have been trained for the chemical industry. Since 1981, the faculty has been training foreign nationals. Over the past years, 332 undergraduates, 326 masters and 33 candidates of science have been prepared for 54 countries.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">At the faculty until 2009/2010 academic year: 1. &quot;Chemical technology&quot;, 2. &quot;Ecology and the use of nature&quot; and 3. &quot;Life safety&quot; directions, and 1. &quot;Chemical Engineering&quot; from 2009/2010 academic year, 2. Bachelor of Ecology Engineering and 3 specialties &quot;Emergency and safety of life&quot; and credit system on 11 specialties. 3 directions at the faculty: 1. &quot;Chemical technology&quot; 2. &quot;Ecology and use of nature&quot; and 3. Master&#39;s degree in 3 specialties &quot;Life Safety&quot; is being carried out.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">The faculty has 4 general and 4 special chairs, 7 teaching, 6 problems and a centralized laboratory &quot;Physical and chemical analysis methods&quot; founded by the Russian firm &quot;Lukoil&quot;.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">2 directions at the faculty since 2016; Highly qualified engineers are trained in Chemical Engineering and Environmental Engineering.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">Chairs: 7 existing chairs have been united since February 2016:</span></p>\r\n\r\n<p><span style=\"font-size:18px\">&laquo;Chemical technology of inorganic substances&raquo;<br />\r\n&laquo;Technology of Organic Substances and High-Molecular Compounds&raquo;<br />\r\nChairs &quot;Petrochemical technology and industrial ecology&quot; were established.</span></p>\r\n\r\n<p><br />\r\n<span style=\"font-size:18px\">There is also the Department of Social Sciences at the faculty.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">There are 4 Tutors at the Faculty of Chemical Technology.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">Kadimov Ilgar Kamil oglu<br />\r\nAghayev Famil Bayram oglu<br />\r\nAkhmedova Dinara Ulyaddin&#39;s daughter<br />\r\nHasanova Fargana Chingiz kizi</span></p>\r\n\r\n<p><br />\r\n<span style=\"font-size:18px\">The department of &quot;Chemistry and Technology of Inorganic Substances&quot; has 43 employees, including 2 professors, 2 doctors and 25 associate professors, 1 assistant and 13 laboratory assistants.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">The department of &quot;Organic Substances and Technology of High-Molecular Compounds&quot; has 21 employees, including 2 professors and 10 associate professors, 1 assistant, 1 senior teacher and 9 laboratory assistants.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">At the Department of Petrochemical Technology and Industrial Ecology there are 48 employees, including 8 professors and 21 associate professors.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">The Department of Social Sciences consists of 11 associate professors, 3 senior teachers and 3 teachers, including 18 professors, including 1 professor and 2 doctors of sciences. The department also has 4 substitute teachers. Teaching auxiliary staff consists of 2 persons.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n', '<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:18px\">На факультете работают 1 академик, 20 профессоров, 69 доцентов, 18 старших преподавателей и ассистентов. В настоящее время на очном отделении химико-технологического факультета обучаются 831 студент, на заочном отделении - 64.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">С 2016 года по приказу ректора АДНСУ при факультете создана научно-исследовательская лаборатория &laquo;Новые химические материалы и технологии&raquo;. Лабораторию возглавляет проф. Багиев Вагиф Лачин.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">На факультете работают 13 профессоров, 4 доктора, 68 доцентов, 2 ассистента и 29 лаборантов.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">Подготовка инженеров-химиков в АДНСУ велась на химическом факультете с 1921 года на факультете нефтяной промышленности, с 1934 года на факультете нефтяных технологий и с 1940 года на факультете химической технологии. Для химической промышленности подготовлено около 18 000 инженеров-технологов. С 1981 года на факультете ведется подготовка иностранных граждан. За последние годы подготовлено 332 магистранта, 326 магистров и 33 кандидата наук для 54 стран.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">На факультете до 2009/2010 учебного года: 1. &laquo;Химические технологии&raquo;, 2. &laquo;Экология и природопользование&raquo; и 3. Направления &laquo;Безопасность жизнедеятельности&raquo;, и 1. &laquo;Химическая технология&raquo; с 2009/2010 учебного года, 2. Бакалавр инженерной экологии и 3 специальности &laquo;Чрезвычайная ситуация и безопасность жизни&raquo; и кредитная система по 11 специальностям. 3 направления на факультете: 1. &laquo;Химическая технология&raquo; 2. &laquo;Экология и природопользование&raquo; и 3. Выполняется магистратура по 3 специальностям &laquo;Безопасность жизнедеятельности&raquo;.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">На факультете работают 4 общие и 4 специальные кафедры, 7 учебных, 6 проблемных и централизованная лаборатория &laquo;Методы физико-химического анализа&raquo;, созданная российской фирмой &laquo;Лукойл&raquo;.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">2 направления на факультете с 2016 года; Высококвалифицированные инженеры обучаются в области химического и экологического инжиниринга.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">Председатели: 7 существующих кафедр были объединены с февраля 2016 года:</span></p>\r\n\r\n<p><span style=\"font-size:18px\">&laquo;Химическая технология неорганических веществ&raquo;<br />\r\n&laquo;Технология органических веществ и высокомолекулярных соединений&raquo;<br />\r\nСозданы кафедры &laquo;Нефтехимические технологии и промышленная экология&raquo;.</span></p>\r\n\r\n<p><br />\r\n<span style=\"font-size:18px\">На факультете также есть кафедра общественных наук.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">На химико-технологическом факультете работают 4 преподавателя.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">Кадимов Ильгар Камиль оглы<br />\r\nАгаев Фамиль Байрам оглы<br />\r\nДочь Ахмедовой Динары Ульяддин<br />\r\nХасанова Фаргана Чингиз кызы</span></p>\r\n\r\n<p><br />\r\n<span style=\"font-size:18px\">На кафедре &laquo;Химия и технология неорганических веществ&raquo; работают 43 сотрудника, в том числе 2 профессора, 2 доктора и 25 доцентов, 1 ассистент и 13 лаборантов.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">На кафедре &laquo;Органические вещества и технологии высокомолекулярных соединений&raquo; работает 21 сотрудник, в том числе 2 профессора и 10 доцентов, 1 ассистент, 1 старший преподаватель и 9 лаборантов.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">На кафедре нефтехимических технологий и промышленной экологии работают 48 сотрудников, в том числе 8 профессоров и 21 доцент.</span></p>\r\n\r\n<p><span style=\"font-size:18px\">Кафедра общественных наук состоит из 11 доцентов, 3 старших преподавателей и 3 преподавателей, в том числе 18 профессоров, в том числе 1 профессор и 2 доктора наук. На кафедре также работают 4 заместителя преподавателя. Учебно-вспомогательный персонал состоит из 2 человек.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n');
 
 -- --------------------------------------------------------
 
@@ -62,6 +62,26 @@ CREATE TABLE `bachelor_about_text` (
 
 INSERT INTO `bachelor_about_text` (`id`, `bachelor_about_text_az`, `bachelor_about_text_en`, `bachelor_about_text_ru`) VALUES
 (1, '<p>&nbsp;</p>\r\n\r\n<p><span style=\"color:#000000\">ADNSU-da ali təhsilin hər &uuml;&ccedil; səviyyəsində &ndash; bakalavriat, magistratura və doktorantura səviyyələrində kadr hazırlığı həyata ke&ccedil;irilir. Universitetdə təhsilin keyfiyyətinin yaxşılaşdırması &uuml;&ccedil;&uuml;n 7 fak&uuml;ltə və 27 kafedra fasiləsiz xidmət g&ouml;stərir. Hazırda bakalavriat səviyyəsində təqribən 13000 tələbə, o c&uuml;mlədən 410 tələbə ADNSU-nun nəzdindəki Fransız-Azərbaycan Universitetində (UFAZ) təhsil alır. Magistratura səviyyəsində 1180 tələbə təhsilini davam etdirir, doktorantura səviyyəsində 244 nəfər elmi fəaliyyətlə məşğul olur. Tələbələrə Azərbaycan, rus və ingilis dillərində tədris almaq təklif olunur.</span></p>\r\n', '<p style=\"margin-left:0cm; margin-right:0cm\">&nbsp;</p>\r\n\r\n<p style=\"margin-left:0cm; margin-right:0cm\"><span style=\"color:#000000\">The ADNSU provides training for all three levels of higher education - bachelor&#39;s, master&#39;s and doctoral. 7 faculties and 27 chairs provide uninterrupted service to improve the quality of education at the university. At present, about 13,000 undergraduate students, including 410 students study at the French-Azerbaijani University (UFAZ) at ADNSU. At the master&#39;s level, 1180 students are continuing their education, and 244 doctoral students are engaged in research activities. Students are offered to study in Azerbaijani, Russian and English.</span></p>\r\n', '<p>&nbsp;</p>\r\n\r\n<p><span style=\"color:#000000\">В АГУНП осуществляется подготовка кадров на всех трех уровнях образования &ndash; в бакалавриате, магистратуре и докторантуре. В университете действуют 7 факультетов и 27 кафедр. В настоящее время в бакалавриате учатся около 13000 студентов, в т.ч. 410 студентов во Французско-Азербайджанском Университете (UFAZ) при АГУНП, 1200 студентов продолжают обучение в магистратуре, 250 &ndash; заняты научной деятельностью в докторантуре. Студентам предоставляется возможность обучения на азербайджанском, русском и английском языках.</span></p>\r\n');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bachelor_contact`
+--
+
+CREATE TABLE `bachelor_contact` (
+  `id` int(11) NOT NULL,
+  `contact_az` text NOT NULL,
+  `contact_en` text NOT NULL,
+  `contact_ru` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `bachelor_contact`
+--
+
+INSERT INTO `bachelor_contact` (`id`, `contact_az`, `contact_en`, `contact_ru`) VALUES
+(1, '<p>azss</p>\r\n', '<p>en155ss</p>\r\n\r\n<p>&nbsp;</p>\r\n', '<p>sss</p>\r\n');
 
 -- --------------------------------------------------------
 
@@ -266,6 +286,26 @@ INSERT INTO `doctorate_about_text` (`id`, `doctorate_about_text_az`, `doctorate_
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `doctorate_contact`
+--
+
+CREATE TABLE `doctorate_contact` (
+  `id` int(11) NOT NULL,
+  `contact_az` text NOT NULL,
+  `contact_en` text NOT NULL,
+  `contact_ru` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `doctorate_contact`
+--
+
+INSERT INTO `doctorate_contact` (`id`, `contact_az`, `contact_en`, `contact_ru`) VALUES
+(1, '<p>azaaas</p>\r\n', '<p>encxzx</p>\r\n', '<p>ruaca</p>\r\n');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `doctorate_speciality_db`
 --
 
@@ -394,6 +434,26 @@ INSERT INTO `master_about_text` (`id`, `master_about_text_az`, `master_about_tex
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `master_contact`
+--
+
+CREATE TABLE `master_contact` (
+  `id` int(11) NOT NULL,
+  `contact_az` text NOT NULL,
+  `contact_en` text NOT NULL,
+  `contact_ru` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `master_contact`
+--
+
+INSERT INTO `master_contact` (`id`, `contact_az`, `contact_en`, `contact_ru`) VALUES
+(1, '<p>salamalae</p>\r\n', '<p>ends dss</p>\r\n', '<p>ruada s</p>\r\n');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `master_speciality_db`
 --
 
@@ -455,6 +515,33 @@ INSERT INTO `news_db` (`news_id`, `news_title_az`, `news_title_en`, `news_title_
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `news_gallery`
+--
+
+CREATE TABLE `news_gallery` (
+  `id` int(11) NOT NULL,
+  `news_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `upload_date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `news_gallery`
+--
+
+INSERT INTO `news_gallery` (`id`, `news_id`, `name`, `upload_date`) VALUES
+(25, 36, '54ef402d5ac9a_b6ddfb00b752e0fe81488a44c8977d613.jpeg', '2019-08-23'),
+(26, 36, '5SCP_s.jpg', '2019-08-23'),
+(27, 36, '564c70258aedd3.JPG', '2019-08-23'),
+(28, 36, '633f19cd04671379b2257db894167c36--visual-basic-tutorials-visual-basic-programming-tutorials6.jpg', '2019-08-23'),
+(29, 36, '56998487.jpg', '2019-08-23'),
+(30, 36, '893043463.jpg', '2019-08-23'),
+(32, 36, 'a8e19488bbb8dcaee7a07afedcaceb0c--web-conferencing-ppt-template.jpg', '2019-08-23'),
+(37, 36, '54ef402d5ac9a_b6ddfb00b752e0fe81488a44c8977d614.jpeg', '2019-08-23');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `services`
 --
 
@@ -471,7 +558,7 @@ CREATE TABLE `services` (
 --
 
 INSERT INTO `services` (`id`, `name_az`, `name_ru`, `name_en`, `link`) VALUES
-(2, 'xidmet az', 'xidmet ruasdsadasd', 'xidmet enasdasd', 'http://localhost/phpmyadmin/sql.php?server=1&db=faculty_db&table=services&pos=0'),
+(2, 'xidmet az', 'xidmet ruasdsadasd', 'xidmet enasdasd', 'http://asoiu.edu.az/az'),
 (5, 'asdsad', 'asdasd', 'adasd', 'adasd');
 
 -- --------------------------------------------------------
@@ -497,7 +584,7 @@ CREATE TABLE `slide` (
 --
 
 INSERT INTO `slide` (`slide_id`, `slide_image`, `slide_title_az`, `slide_title_en`, `slide_title_ru`, `slide_desc_az`, `slide_desc_en`, `slide_desc_ru`, `slide_link`) VALUES
-(32, '5ceb9e7dea198.jpeg', 'Respublika Gününə həsr olunmuş kitab sərgisi keçirilib', 'The book exhibition dedicated to the Republic Day ', 'Состоялась книжная выставка, посвященная Дню Респу', '<p>On May 27 the book exhibition dedicated to the 28 May - Republic Day was held at AzII E-Book House of the Azerbaijan State Oil and Industry University (ASOIU).</p>\r\n\r\n<p>The exhibition includes books reflecting the socio-political, social, economic, scientific, cultural and international relations of our Republic during the tenure of national leader Heydar Aliyev after the establishment, activity and success of the Azerbaijan Democratic Republic, as well as the restoration of the state independence of Azerbaijan.</p>\r\n', '<p>On May 27 the book exhibition dedicated to the 28 May - Republic Day was held at AzII E-Book House of the Azerbaijan State Oil and Industry University (ASOIU).</p>\r\n\r\n<p>The exhibition includes books reflecting the socio-political, social, economic, scientific, cultural and international relations of our Republic during the tenure of national leader Heydar Aliyev after the establishment, activity and success of the Azerbaijan Democratic Republic, as well as the restoration of the state independence of Azerbaijan.</p>\r\n', '<p>27 мая в библиотеке Азербайджанского государственного университета нефти и промышленности (АГУНП) &quot;Azİİ Elektron Kitab Evi&quot; проведена книжная выставка, посвященная 28 Мая - Дню Республики.</p>\r\n\r\n<p>На выставке были представлены книги, отражающие создание, деятельность и успехи Азербайджанской Демократической Республики, а также общественно-политическую, социально-экономическую, культурную жизнь Республики во время правления общенационального лидера Гейдара Алиева после восстановления государственной независимости Азербайджана.</p>\r\n', 'http://asoiu.edu.az/public/az');
+(32, '5ceb9e7dea198.jpeg', 'Respublika Gününə həsr olunmuş kitab sərgisi keçirilibsadasdasdadasdasdasadasd', 'The book exhibition dedicated to the Republic Day ', 'Состоялась книжная выставка, посвященная Дню Респу', '<p>On May 27 the book exhibition dedicated to the 28 May - Republic Day was held at AzII E-Book House of the Azerbaijan State Oil and Industry University (ASOIU).</p>\r\n\r\n<p>The exhibition includes books reflecting the socio-political, social, economic, scientific, cultural and international relations of our Republic during the tenure of national leader Heydar Aliyev after the establishment, activity and success of the Azerbaijan Democratic Republic, as well as the restoration of the state independence of Azerbaijan.</p>\r\n', '<p>On May 27 the book exhibition dedicated to the 28 May - Republic Day was held at AzII E-Book House of the Azerbaijan State Oil and Industry University (ASOIU).</p>\r\n\r\n<p>The exhibition includes books reflecting the socio-political, social, economic, scientific, cultural and international relations of our Republic during the tenure of national leader Heydar Aliyev after the establishment, activity and success of the Azerbaijan Democratic Republic, as well as the restoration of the state independence of Azerbaijan.</p>\r\n', '<p>27 мая в библиотеке Азербайджанского государственного университета нефти и промышленности (АГУНП) &quot;Azİİ Elektron Kitab Evi&quot; проведена книжная выставка, посвященная 28 Мая - Дню Республики.</p>\r\n\r\n<p>На выставке были представлены книги, отражающие создание, деятельность и успехи Азербайджанской Демократической Республики, а также общественно-политическую, социально-экономическую, культурную жизнь Республики во время правления общенационального лидера Гейдара Алиева после восстановления государственной независимости Азербайджана.</p>\r\n', 'http://asoiu.edu.az/public/az');
 
 -- --------------------------------------------------------
 
@@ -541,18 +628,27 @@ CREATE TABLE `teachers_db` (
   `teacher_surname_ru` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `teacher_about_ru` text COLLATE utf8_unicode_ci NOT NULL,
   `teacher_position_ru` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `department_category_ru` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+  `department_category_ru` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `editor1_az` text COLLATE utf8_unicode_ci NOT NULL,
+  `editor1_en` text COLLATE utf8_unicode_ci NOT NULL,
+  `editor1_ru` text COLLATE utf8_unicode_ci NOT NULL,
+  `editor2_az` text COLLATE utf8_unicode_ci NOT NULL,
+  `editor2_en` text COLLATE utf8_unicode_ci NOT NULL,
+  `editor2_ru` text COLLATE utf8_unicode_ci NOT NULL,
+  `teacher_mail` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `teachers_db`
 --
 
-INSERT INTO `teachers_db` (`teacher_id`, `teacher_name_az`, `teacher_surname_az`, `teacher_about_az`, `teacher_position_az`, `teacher_photo`, `department_category_az`, `teacher_name_en`, `teacher_surname_en`, `teacher_about_en`, `teacher_position_en`, `department_category_en`, `teacher_name_ru`, `teacher_surname_ru`, `teacher_about_ru`, `teacher_position_ru`, `department_category_ru`) VALUES
-(10, 'Qasım', 'Məmmədov', '<p>asd</p>\r\n', 'Dosent', '5844fdcd98c45.jpg', 'ekologiya kafedrasi', 'Qasım', 'Məmmədov', '<p>asd</p>\r\n', 'Dosent', 'echology department', 'Qasım', 'Məmmədov', '<p>asd</p>\r\n', 'Dosent', 'отдел экологии'),
-(11, 'Rauf', 'Əliyarov', '<p>asdad</p>\r\n', 'Dosent', '5844fdf941954.jpg', 'ekologiya kafedrasi', 'Rauf', 'Əliyarov', '<p>asd</p>\r\n', 'Dosent en', 'echology department', 'Rauf', 'Əliyarov', '<p>asd</p>\r\n', 'Dosent ru', 'отдел экологии'),
-(12, 'Rafiq', 'Camalov', '<p>asd</p>\r\n', 'Dosent', '5844fdf44f1ea.jpg', 'ekologiya kafedrasi', 'asd', 'asd', '<p>asds</p>\r\n', 'asd', 'echology department', 'asd', 'asd', '<p>asd</p>\r\n', 'asd', 'отдел экологии'),
-(13, 'Ata', 'Babayev', '<p>asd</p>\r\n', 'Dosent', '5844fddc8eb80.jpg', 'ekologiya kafedrasi', 'asd', 'asd', '<p>asd</p>\r\n', 'asd', 'echology department', 'asd', 'asd', '<p>asd</p>\r\n', 'asd', 'отдел экологии');
+INSERT INTO `teachers_db` (`teacher_id`, `teacher_name_az`, `teacher_surname_az`, `teacher_about_az`, `teacher_position_az`, `teacher_photo`, `department_category_az`, `teacher_name_en`, `teacher_surname_en`, `teacher_about_en`, `teacher_position_en`, `department_category_en`, `teacher_name_ru`, `teacher_surname_ru`, `teacher_about_ru`, `teacher_position_ru`, `department_category_ru`, `editor1_az`, `editor1_en`, `editor1_ru`, `editor2_az`, `editor2_en`, `editor2_ru`, `teacher_mail`) VALUES
+(10, 'Qasım', 'Məmmədov', '<p>asd</p>\r\n', 'Dosent', '5844fdcd98c45.jpg', 'ekologiya kafedrasi', 'Qasım', 'Məmmədov', '<p>asd</p>\r\n', 'Dosent', 'echology department', 'Qasım', 'Məmmədov', '<p>asd</p>\r\n', 'Dosent', 'отдел экологии', '', '', '', '', '', '', ''),
+(11, 'Rauf', 'Əliyarov', '<p>asdad</p>\r\n', 'Dosent', '5844fdf941954.jpg', 'uzvi kimya kafedrasi', 'Rauf', 'Əliyarov', '<p>asd</p>\r\n', 'Dosent en', 'echology department', 'Rauf', 'Əliyarov', '<p>asd</p>\r\n', 'Dosent ru', 'отдел экологии', '', '', '', '', '', '', ''),
+(12, 'Rafiq', 'Camalov', '<p>asd</p>\r\n', 'Dosent', '5844fdf44f1ea.jpg', 'ekologiya kafedrasi', 'asd', 'asd', '<p>asds</p>\r\n', 'asd', 'echology department', 'asd', 'asd', '<p>asd</p>\r\n', 'asd', 'отдел экологии', '', '', '', '', '', '', ''),
+(13, 'Ata', 'Babayev', '<p>asd</p>\r\n', 'Dosent', '5844fddc8eb80.jpg', 'ekologiya kafedrasi', 'asd', 'asd', '<p>asd</p>\r\n', 'asd', 'echology department', 'asd', 'asd', '<p>asd</p>\r\n', 'asd', 'отдел экологии', '', '', '', '', '', '', ''),
+(14, 'Cavid az', ' leleyev az', '', 'muellim', 'avatar.png', 'Idareetme ve sistemler muhendisliyi', 'Cavid en', 'leleyev en', '', 'muellim en', 'Control and system engineering', 'Cavid ru', 'leleyev ru', '', 'muellim ru', 'фывфаввпывфвы', '<p>asdasd az</p>\r\n', '<p>asdsad en&nbsp;</p>\r\n', '<p>asdasdas ru</p>\r\n', '<p>ad3322323asdas az</p>\r\n', '<p>312321 en</p>\r\n', '<p>&nbsp;12312 ru</p>\r\n', 'asdasdasd@adasd'),
+(15, 'asda', 'asd', '', 'asd', 'default.png', 'ekologiya kafedrasi', 'asd', 'asd', '', 'asd', 'echology department', 'adsa', 'asd', '', 'asd', 'отдел экологии', '<p>asd</p>\r\n', '', '', '<p>asd</p>\r\n', '', '', 'asd@asdasds');
 
 -- --------------------------------------------------------
 
@@ -610,6 +706,12 @@ ALTER TABLE `bachelor_about_text`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `bachelor_contact`
+--
+ALTER TABLE `bachelor_contact`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `bachelor_speciality_db`
 --
 ALTER TABLE `bachelor_speciality_db`
@@ -664,6 +766,12 @@ ALTER TABLE `doctorate_about_text`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `doctorate_contact`
+--
+ALTER TABLE `doctorate_contact`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `doctorate_speciality_db`
 --
 ALTER TABLE `doctorate_speciality_db`
@@ -694,6 +802,12 @@ ALTER TABLE `master_about_text`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `master_contact`
+--
+ALTER TABLE `master_contact`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `master_speciality_db`
 --
 ALTER TABLE `master_speciality_db`
@@ -704,6 +818,12 @@ ALTER TABLE `master_speciality_db`
 --
 ALTER TABLE `news_db`
   ADD PRIMARY KEY (`news_id`);
+
+--
+-- Indexes for table `news_gallery`
+--
+ALTER TABLE `news_gallery`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `services`
@@ -755,6 +875,12 @@ ALTER TABLE `about_db`
 -- AUTO_INCREMENT for table `bachelor_about_text`
 --
 ALTER TABLE `bachelor_about_text`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `bachelor_contact`
+--
+ALTER TABLE `bachelor_contact`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
@@ -812,6 +938,12 @@ ALTER TABLE `doctorate_about_text`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `doctorate_contact`
+--
+ALTER TABLE `doctorate_contact`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `doctorate_speciality_db`
 --
 ALTER TABLE `doctorate_speciality_db`
@@ -842,6 +974,12 @@ ALTER TABLE `master_about_text`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `master_contact`
+--
+ALTER TABLE `master_contact`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `master_speciality_db`
 --
 ALTER TABLE `master_speciality_db`
@@ -852,6 +990,12 @@ ALTER TABLE `master_speciality_db`
 --
 ALTER TABLE `news_db`
   MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+
+--
+-- AUTO_INCREMENT for table `news_gallery`
+--
+ALTER TABLE `news_gallery`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT for table `services`
@@ -875,7 +1019,7 @@ ALTER TABLE `specialty_db`
 -- AUTO_INCREMENT for table `teachers_db`
 --
 ALTER TABLE `teachers_db`
-  MODIFY `teacher_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `teacher_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `users_db`

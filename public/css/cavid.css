@@ -671,6 +671,17 @@
     }
 }
 
+@media only screen and (max-width: 436px) {
+    .c_teacher_name{
+        font-size: 21px!important;
+    }
+
+    .c_card_title2{
+        font-size: 18px!important;
+    }
+
+}
+
 
 .c_text{
     background: #d6ffd1;
@@ -684,4 +695,59 @@
 
 body{
     font-family: Palatino Linotype!important;
+}
+
+.c_img_hover{
+    margin:4px;
+    width:175px!important;
+    height: 100px!important;
+    transform: scale(1)!important;
+    object-fit: cover;
+    filter: brightness(100%) !important;
+}
+
+.c_img_hover:hover{
+    filter: brightness(90%)!important;
+}
+
+
+
+
+
+
+.c2_container {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    max-width: 720px;
+    min-height: 350px;
+    background: #fffefe;
+    box-shadow: 5px 5px 15px rgba(26, 18, 18, 0.24);
+    border-radius: 10px;
+    padding: 15px!important;
+    margin-bottom: 40px;
+}
+
+.c2_desc{
+    margin-top: 20px;
+}
+
+.c2_images{
+    /*width: 290px;*/
+    margin-top: 20px;
+    /*width: 200px;*/
+    /*height: 200px;*/
+    object-fit: cover;
+}
+
+
+.c2_images img{
+    width: 100%;
+
+}
+
+
+.c_card_title2{
+    font-size: 15px;
+    margin-top: 20px;
 }

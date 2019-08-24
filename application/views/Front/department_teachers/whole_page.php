@@ -49,89 +49,116 @@
         <div class="about_right" style="padding: 20px 0px 0px 10px">
             <h2><?php echo $this->lang->line("muellimler"); ?></h2>
             <div class="about_right_text" style="color: grey">
+                <br><br>
+                <div class="container-fluid">
+                    <div class="row">
+
+
+                        <?php foreach ($teachers as $teacher) { ?>
+                            <div class="col-md-6">
+                            <div class="c2_container">
+                                <div class="c2_images col-md-6 col-sm-12">
+                                    <img src="<?php echo base_url("upload/teacher_images/$teacher[teacher_photo]")?>" />
+                                </div>
+
+                                <div class="c2_product col-md-6 col-sm-12">
+                                    <p style="margin-top: 32px; font-size: 25px; color: black; margin-bottom: 30px">
+                                        <?php
+
+                                        if ($this->session->userdata("dil") == "az"){
+                                            echo $teacher["teacher_name_az"];
+                                        }
+                                        elseif ($this->session->userdata("dil") == "en"){
+                                            echo $teacher["teacher_name_en"];
+                                        }
+                                        elseif ($this->session->userdata("dil") == "ru"){
+                                            echo $teacher["teacher_name_ru"];
+                                        }
+
+                                        ?>
+
+                                        <?php
+
+
+                                        if ($this->session->userdata("dil") == "az"){
+                                            echo $teacher["teacher_surname_az"];
+                                        }
+                                        elseif ($this->session->userdata("dil") == "en"){
+                                            echo $teacher["teacher_surname_en"];
+                                        }
+                                        elseif ($this->session->userdata("dil") == "ru"){
+                                            echo $teacher["teacher_surname_ru"];
+                                        }
+
+                                        ?>
+                                    </p>
+                                    <p class="c_card_title2">  <?php echo $this->lang->line("vezife")?>: <?php
+
+                                        if ($this->session->userdata("dil") == "az"){
+                                            echo $teacher["teacher_position_az"];
+                                        }
+                                        elseif ($this->session->userdata("dil") == "en"){
+                                            echo $teacher["teacher_position_en"];
+                                        }
+                                        elseif ($this->session->userdata("dil") == "ru"){
+                                            echo $teacher["teacher_position_ru"];
+                                        }
+
+                                        ?></p>
+                                    <p class="c_card_title2"><?php echo $this->lang->line("mail")?>: <?php  echo $teacher["teacher_mail"];?></p>
+                                </div>
 
 
 
-                <?php $count = 1; ?>
+                                <div class="col-sm-12">
 
-                <?php foreach ($teachers as $teacher) { ?>
-                    <div class="col-md-6">
+                                    <p class="c2_desc">
+                                        <?php
 
-                        <?php
-                              $class = "c_class" . $count;
-                        ?>
+                                        if ($this->session->userdata("dil") == "az"){
+                                            echo $teacher["editor1_az"];
+                                        }
+                                        elseif ($this->session->userdata("dil") == "en"){
+                                            echo $teacher["editor1_en"];
+                                        }
+                                        elseif ($this->session->userdata("dil") == "ru"){
+                                            echo $teacher["editor1_ru"];
+                                        }
 
-                        <!--                bura ozel css -->
-                        <style>
-                            .<?php echo $class?>:before {
-                                content: "";
-                                background: transparent url(<?php echo base_url("upload/teacher_images/" . $teacher["teacher_photo"]);?>) no-repeat center center;
-                                background-size: cover;
-                                width: 100%;
-                                display: block;
-                                height: 100%;
-                                position: absolute;
-                                border-radius: 15px;
-                                transition: all 1.4s;
-                                left: 0;
-                                right: 0;
-                                margin: auto;
-                                top: 0;
-                            }
-                        </style>
-                        <!--                bura ozel css -->
+                                        ?>
+                                    </p>
 
-                        <div class="card <?php echo $class;
-                                                    $count = $count + 1;
-                                         ?>">
-                            <div class="card-inner">
-                                <h2><?php
+                                    <a href="<?php
+
+                                    $department_id = $this->uri->segment(3);
 
                                     if ($this->session->userdata("dil") == "az"){
-                                        echo $teacher["teacher_name_az"];
+                                        echo base_url("az/Department_Teachers_Single/$department_id/$teacher[teacher_id]");
                                     }
                                     elseif ($this->session->userdata("dil") == "en"){
-                                        echo $teacher["teacher_name_en"];
+                                        echo base_url("en/Department_Teachers_Single/$department_id/$teacher[teacher_id]");
                                     }
                                     elseif ($this->session->userdata("dil") == "ru"){
-                                        echo $teacher["teacher_name_ru"];
+                                        echo base_url("ru/Department_Teachers_Single/$department_id/$teacher[teacher_id]");
                                     }
 
-                                  ?></h2>
-
-                                <p><?php
-
-
-                                    if ($this->session->userdata("dil") == "az"){
-                                        echo $teacher["teacher_surname_az"];
-                                    }
-                                    elseif ($this->session->userdata("dil") == "en"){
-                                        echo $teacher["teacher_surname_en"];
-                                    }
-                                    elseif ($this->session->userdata("dil") == "ru"){
-                                        echo $teacher["teacher_surname_ru"];
-                                    }
-
-                                     ?></p>
-
-                                <p><?php
-
-                                    if ($this->session->userdata("dil") == "az"){
-                                        echo $teacher["teacher_position_az"];
-                                    }
-                                    elseif ($this->session->userdata("dil") == "en"){
-                                        echo $teacher["teacher_position_en"];
-                                    }
-                                    elseif ($this->session->userdata("dil") == "ru"){
-                                        echo $teacher["teacher_position_ru"];
-                                    }
-
-                                    ?></p>
+                                    ?>" type="button" class="btn btn-sm btn-primary" style="color: white!important; background-color: #0f61a0;; float: right; font-size: 12px;">
+                                        <?php echo $this->lang->line("etrafli")?>
+                                    </a>
+                                </div>
 
                             </div>
                         </div>
+                        <?php }?>
+
                     </div>
-                <?php }?>
+                </div>
+
+
+
+
+
+
 
 
 

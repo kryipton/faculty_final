@@ -39,6 +39,8 @@
                             <label for="">Dərəcə</label>
                             <input type="text" class="form-control" name="teacher_position_az"><br>
 
+                            <label for="">Mail</label>
+                            <input type="email" class="form-control" name="teacher_mail"><br>
 
 
                             <label for="">Kafedra</label>
@@ -49,6 +51,14 @@
                             </select>
                             <br>
 
+
+                        <label for="">Nesriyyat </label>
+                        <textarea name="c1_text_az" class="ckeditor" id="" cols="30" rows="10" required></textarea>
+                        <br>
+
+                        <label for="">Haqqında </label>
+                        <textarea name="c2_text_az" class="ckeditor" id="" cols="30" rows="10" required></textarea>
+                        <br>
 
                     </div>
                 </div>
@@ -79,6 +89,13 @@
                             </select>
                             <br>
 
+                        <label for="">Nesriyyat </label>
+                        <textarea name="c1_text_ru" class="ckeditor" id="" cols="30" rows="10" required></textarea>
+                        <br>
+
+                        <label for="">Haqqında </label>
+                        <textarea name="c2_text_ru" class="ckeditor" id="" cols="30" rows="10" required></textarea>
+                        <br>
 
                     </div>
                 </div>
@@ -109,7 +126,13 @@
                             </select>
                             <br>
 
+                        <label for="">Nesriyyat </label>
+                        <textarea name="c1_text_en" class="ckeditor" id="" cols="30" rows="10" required></textarea>
+                        <br>
 
+                        <label for="">Haqqında </label>
+                        <textarea name="c2_text_en" class="ckeditor" id="" cols="30" rows="10" required></textarea>
+                        <br>
 
 
                     </div>
