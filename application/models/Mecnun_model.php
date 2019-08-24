@@ -58,6 +58,10 @@ class Mecnun_model extends  CI_Model{
         return $this->db->where($where)->order_by("id", "DESC")->get("news_gallery")->result_array();
     }
 
+    public function get_news_gallery_one($where){
+        return $this->db->where($where)->get("news_gallery")->row_array();
+    }
+
     public function news_gallery_add($data){
       return  $this->db->insert("news_gallery", $data);
     }

@@ -81,6 +81,8 @@
 
                         ?>"><?php echo $this->lang->line("elaqe"); ?></a></li>
 
+
+
                 </ul>
             </div>
 
@@ -95,6 +97,7 @@
                     <?php $this->load->view('Front/include_last_events/last_events'); ?>
 
                     <!--                        burada diger tedbirler foreache salinir-->
+
 
 
                 </ul>

@@ -79,7 +79,9 @@
 <?php $this->load->view('Admin/includes_for_all/admin_footer'); ?>
 
 <script>
-    //dropzone nun dinamik sekilleri yuklemesi
+
+    Dropzone.autoDiscover =false;
+        //dropzone nun dinamik sekilleri yuklemesi
     var name = "dropzone";
     if($("#" + name).length != 0) {
         var myDropzone = new Dropzone("#dropzone");
@@ -92,4 +94,5 @@
             })
         });
     }
+
 </script>

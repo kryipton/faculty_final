@@ -1,3 +1,6 @@
+
+<?php if (!empty($photos)){?>
+
 <table class="table table-striped table-bordered news_table">
     <thead>
     <tr>
@@ -21,7 +24,7 @@
 
 
             <td>
-                <a href="<?php echo base_url("himalaY_xeber_gallery_sil/$news[news_id]/$photo[id]")?>" class="btn btn-primary btn-sm"
+                <a href="<?php echo base_url("himalaY_xeber_gallery_sil/$news[news_id]/$photo[id]")?>" class="btn btn-primary btn-sm m_delete"
                    style="background: #DD4B39;border:0px solid #DD4B39">
                     <i class="fa fa-times" aria-hidden="true"></i>
                 </a>
@@ -34,3 +37,9 @@
     ?>
     </tbody>
 </table>
+
+<?php } else{ ?>
+
+    <h2>Şəkil yoxdur</h2>
+
+<?php } ?>

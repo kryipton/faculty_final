@@ -1,3 +1,5 @@
+<script type="text/javascript" src="<?php echo base_url('public/') ?>js/lightbox-plus-jquery.min.js"></script>
+
 <script type="text/javascript" src="<?php echo base_url('public/') ?>js/jquery-3.1.0.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url('public/') ?>js/modernizr.custom.js"></script>
 <script type="text/javascript" src="<?php echo base_url('public/') ?>js/jquery.dlmenu.js"></script>

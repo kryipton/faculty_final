@@ -16,4 +16,15 @@ class Bachelor_model extends  CI_Model{
     }
 
 
+    public function get_contact()
+    {
+        return $this->db->get('bachelor_contact')->row_array();
+
+    }
+
+    public function update_contact($data)
+    {
+        $this->db->update("bachelor_contact",$data);
+    }
+
 }
