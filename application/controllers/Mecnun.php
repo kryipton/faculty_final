@@ -320,9 +320,7 @@ class Mecnun extends CI_Controller{
         $slide_title_az = $this->input->post('slide_title_az');
         $slide_title_en = $this->input->post('slide_title_en');
         $slide_title_ru = $this->input->post('slide_title_ru');
-        $slide_desc_az  = $this->input->post('slide_desc_az');
-        $slide_desc_en  = $this->input->post('slide_desc_en');
-        $slide_desc_ru  = $this->input->post('slide_desc_ru');
+
         $slide_link     = $this->input->post('slide_link');
 
 
@@ -333,7 +331,7 @@ class Mecnun extends CI_Controller{
         $this->upload->initialize($config);
 
 
-        if (!empty($slide_title_az) && !empty($slide_title_en) && !empty($slide_title_ru) && !empty($slide_desc_az)){
+        if (!empty($slide_title_az) && !empty($slide_title_en) && !empty($slide_title_ru) && !empty($slide_link)){
 
 
             $slide_data = array(
@@ -341,9 +339,7 @@ class Mecnun extends CI_Controller{
                 'slide_title_az' => $slide_title_az,
                 'slide_title_en' => $slide_title_en,
                 'slide_title_ru' => $slide_title_ru,
-                'slide_desc_az'  => $slide_desc_az,
-                'slide_desc_en'  => $slide_desc_en,
-                'slide_desc_ru'  => $slide_desc_ru,
+
                 'slide_link'     => $slide_link,
                 'slide_image'    => ($this->upload->do_upload('slide_img')) ? $this->upload->data('file_name') : 'default.jpg'
 
@@ -400,9 +396,7 @@ class Mecnun extends CI_Controller{
         $slide_title_az = $this->input->post('slide_title_az');
         $slide_title_en = $this->input->post('slide_title_en');
         $slide_title_ru = $this->input->post('slide_title_ru');
-        $slide_desc_az  = $this->input->post('slide_desc_az');
-        $slide_desc_en  = $this->input->post('slide_desc_en');
-        $slide_desc_ru  = $this->input->post('slide_desc_ru');
+
         $slide_link     = $this->input->post('slide_link');
 
 
@@ -412,7 +406,7 @@ class Mecnun extends CI_Controller{
 
         $this->upload->initialize($config);
 
-        if (!empty($slide_title_az) && !empty($slide_title_en) && !empty($slide_title_ru) && !empty($slide_desc_az)){
+        if (!empty($slide_title_az) && !empty($slide_title_en) && !empty($slide_title_ru) && !empty($slide_link)){
             if ($this->upload->do_upload('slide_img')) {
 
                 $slide_img = $this->upload->data('file_name');
@@ -440,9 +434,7 @@ class Mecnun extends CI_Controller{
                     'slide_title_az' => $slide_title_az,
                     'slide_title_en' => $slide_title_en,
                     'slide_title_ru' => $slide_title_ru,
-                    'slide_desc_az' => $slide_desc_az,
-                    'slide_desc_en' => $slide_desc_en,
-                    'slide_desc_ru' => $slide_desc_ru,
+
                     'slide_link' => $slide_link,
                 );
                 $this->Mecnun_model->updateSlider($where, $slide_data);

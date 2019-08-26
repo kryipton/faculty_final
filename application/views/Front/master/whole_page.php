@@ -77,7 +77,7 @@
             </div>
             <!--        sol terefde olan diger tedbirler -->
             <div class="category_events about_left_e" style="border-radius: 10px">
-                <h4><?php echo $this->lang->line("tedbirler"); ?></h4>
+                <h4><?php echo $this->lang->line("xeberler"); ?></h4>
                 <ul>
 
 

@@ -58,7 +58,7 @@
                             <div class="col-md-6">
                             <div class="c2_container">
                                 <div class="c2_images col-md-6 col-sm-12">
-                                    <img src="<?php echo base_url("upload/teacher_images/$teacher[teacher_photo]")?>" />
+                                    <img height="" src="<?php echo base_url("upload/teacher_images/$teacher[teacher_photo]")?>" />
                                 </div>
 
                                 <div class="c2_product col-md-6 col-sm-12">
@@ -92,7 +92,7 @@
 
                                         ?>
                                     </p>
-                                    <p class="c_card_title2">  <?php echo $this->lang->line("vezife")?>: <?php
+                                    <p class="c_card_title2"> <b><?php echo $this->lang->line("vezife")?>:</b> <?php
 
                                         if ($this->session->userdata("dil") == "az"){
                                             echo $teacher["teacher_position_az"];
@@ -105,24 +105,36 @@
                                         }
 
                                         ?></p>
-                                    <p class="c_card_title2"><?php echo $this->lang->line("mail")?>: <?php  echo $teacher["teacher_mail"];?></p>
+                                    <p class="c_card_title2"> <b><?php echo $this->lang->line("mail")?>:</b> <?php  echo $teacher["teacher_mail"];?></p>
                                 </div>
 
 
 
                                 <div class="col-sm-12">
 
-                                    <p class="c2_desc">
+                                    <p class="c2_desc" style="font-size: 14px!important">
                                         <?php
 
                                         if ($this->session->userdata("dil") == "az"){
-                                            echo $teacher["editor1_az"];
+                                            if (strlen($teacher["editor1_az"]) > 280){
+                                                echo substr($teacher["editor1_az"], 0 , 280) . "...";
+                                            }else{
+                                                echo $teacher["editor1_az"];
+                                            }
                                         }
                                         elseif ($this->session->userdata("dil") == "en"){
-                                            echo $teacher["editor1_en"];
+                                            if (strlen($teacher["editor1_en"]) > 280){
+                                                echo substr($teacher["editor1_en"], 0 , 280) . "...";
+                                            }else{
+                                                echo $teacher["editor1_en"];
+                                            }
                                         }
                                         elseif ($this->session->userdata("dil") == "ru"){
-                                            echo $teacher["editor1_ru"];
+                                            if (strlen($teacher["editor1_ru"]) > 280){
+                                                echo substr($teacher["editor1_ru"], 0 , 280) . "...";
+                                            }else{
+                                                echo $teacher["editor1_ru"];
+                                            }
                                         }
 
                                         ?>

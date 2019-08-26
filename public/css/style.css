@@ -1317,7 +1317,7 @@ body.cms_index5 {
     margin-bottom: 30px;
     padding: 20px;
     float: left;
-    height: 452px;
+    height: 391px;
     width: 100%;
     position: relative;
     background-color: #fff;
@@ -1412,7 +1412,7 @@ body.cms_index5 {
     float: none;
     overflow: hidden;
     text-align: left;
-    padding-left: 20px;
+    padding-left: 0px;
 }
 
 .course_info h4 {
@@ -1498,7 +1498,7 @@ body.cms_index5 {
 .course_block .course_count_wrap {
     border-top: 1px solid #e5e5e5;
     margin: 5px auto -5px;
-    padding: 15px 0px 0px;
+    padding: 10px 0px 0px;
     display: inline-block;
     width: 100%;
 }
@@ -3562,6 +3562,7 @@ ul.breadcrumbs li a:hover, ul.breadcrumbs li a:focus {
 }
 
 .detail_text_wrap {
+    background-color: white;
     padding: 0px 25px;
 }
 

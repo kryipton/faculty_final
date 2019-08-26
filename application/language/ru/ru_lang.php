@@ -10,7 +10,7 @@ $lang["labaratoriyalar"] = "Лаборатории";
 $lang["bakalavr"] = "Холостяк";
 $lang["magistr"] = "Мастер";
 $lang["doktorantura"] = "Докторская степень";
-$lang["xeberler"] = "новости";
+$lang["xeberler"] = "Новости";
 
 
 $lang["muellimler"] = "Учителей";

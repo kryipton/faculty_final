@@ -6,12 +6,16 @@
 <div class="content_wrapper" >
 
 
+    <br><br><br>
+    <div class="head_part">
+        <h2><?php echo $this->lang->line("tedbirler")?></h2>
+    </div>
+
+
     <!--    tedbirler hissesi-->
-    <div class="courses">
+    <div class="courses" style="padding-top: 49px!important;">
+
         <div class="container">
-            <div class="head_part">
-                <h2>Tədbirlər</h2>
-            </div>
             <div class="course_wrapper">
 
 
@@ -55,15 +59,34 @@
                                         <div class="course_info">
 
                                             <!--                                    tedbirin basliqi-->
-                                            <span style="cursor:pointer;">
+                                            <span style="cursor:pointer;" class="c_size">
                                             <?php
 
                                             if ($this->session->userdata("dil") == "az"){
-                                                echo $last_events_key['event_title_az'];
+
+                                                if (strlen($last_events_key['event_title_az']) > 70){
+                                                    echo substr($last_events_key['event_title_az'], 0 , 70) . "...";
+                                                }else{
+                                                    echo $last_events_key['event_title_az'];
+                                                }
+
                                             }elseif ($this->session->userdata("dil") == "en"){
-                                                echo $last_events_key['event_title_en'];
+
+                                                if (strlen($last_events_key['event_title_en']) > 70){
+                                                    echo substr($last_events_key['event_title_en'], 0 , 70) . "...";
+                                                }else{
+                                                    echo $last_events_key['event_title_en'];
+                                                }
+
                                             }elseif ($this->session->userdata("dil") == "ru"){
-                                                echo $last_events_key['event_title_ru'];
+
+
+                                                if (strlen($last_events_key['event_title_ru']) > 70){
+                                                    echo substr($last_events_key['event_title_ru'], 0 , 70) . "...";
+                                                }else{
+                                                    echo $last_events_key['event_title_ru'];
+                                                }
+
                                             }
 
                                             ?>
@@ -90,8 +113,11 @@
                     </div>
 
                     <br><br>
-                    <div class="pagination" style="margin-left: 14px">
-                        <?php echo $links?>
+
+                    <div class="pagination" style="text-align: center">
+                       <center>
+                           <?php echo $links?>
+                       </center>
                     </div>
 
 

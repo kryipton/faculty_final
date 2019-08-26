@@ -33,14 +33,6 @@
                     <input type="text" class="form-control" name="slide_link" value="<?php echo $slide['slide_link'] ?>">
 
 
-                    <label for="">Slide haqqında AZ </label>
-                    <textarea style="resize: none" class="form-control ckeditor" name="slide_desc_az" id="" cols="30" rows="10" placeholder=""><?php echo $slide['slide_desc_az'] ?></textarea><br>
-
-                    <label for="">Slide haqqında EN</label>
-                    <textarea style="resize: none" class="form-control ckeditor" name="slide_desc_en" id="" cols="30" rows="10" placeholder=""><?php echo $slide['slide_desc_en'] ?></textarea><br>
-
-                    <label for="">Slide haqqında RU</label>
-                    <textarea style="resize: none" class="form-control ckeditor" name="slide_desc_ru" id="" cols="30" rows="10" placeholder=""><?php echo $slide['slide_desc_ru'] ?></textarea><br>
 
 
                     <input type="file" class="form-control" name="slide_img">

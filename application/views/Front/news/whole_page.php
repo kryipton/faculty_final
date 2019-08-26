@@ -16,7 +16,7 @@
         <h2><?php echo $this->lang->line("xeberler"); ?></h2>
     </div>
 
-    <div class="courses" style="margin-top: 0px;">
+    <div class="courses" style="padding-top:41px!important; margin-top: 0px;">
         <div class="container">
 
 
@@ -53,7 +53,7 @@
 
                                    <div class="course_info">
 
-                                       <span style="cursor:pointer;" class="c_location_new" data-url = " <?php
+                                       <span style="cursor:pointer;" class="c_location_new c_size" data-url = " <?php
 
                                        if ($this->session->userdata("dil") == "az"){
                                            echo base_url("az/Single_page_news/$last_news_key[news_id]");
@@ -67,13 +67,30 @@
                                           <?php
 
                                           if ($this->session->userdata("dil") == "az"){
-                                              echo substr($last_news_key['news_title_az'],0,150);
+
+                                              if (strlen($last_news_key['news_title_az']) > 70){
+                                                  echo substr($last_news_key['news_title_az'],0,70) . "...";
+                                              }else{
+                                                  echo $last_news_key['news_title_az'];
+                                              }
+
                                           }
                                           elseif ($this->session->userdata("dil") == "en"){
-                                              echo substr($last_news_key['news_title_en'], 0,150);
+
+                                              if (strlen($last_news_key['news_title_en']) > 70){
+                                                  echo substr($last_news_key['news_title_en'],0,70) . "...";
+                                              }else{
+                                                  echo $last_news_key['news_title_en'];
+                                              }
+
                                           }
                                           elseif ($this->session->userdata("dil") == "ru"){
-                                              echo substr($last_news_key['news_title_ru'], 0,150);
+
+                                              if (strlen($last_news_key['news_title_ru']) > 70){
+                                                  echo substr($last_news_key['news_title_ru'],0,70) . "...";
+                                              }else{
+                                                  echo $last_news_key['news_title_ru'];
+                                              }
                                           }
 
                                           ?>
@@ -96,8 +113,10 @@
                </div>
 
                <br><br>
-               <div class="pagination" style="margin-left: 14px">
-                   <?php echo $links?>
+               <div class="pagination" style="">
+                   <center>
+                       <?php echo $links?>
+                   </center>
                </div>
 
 

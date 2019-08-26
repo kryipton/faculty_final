@@ -90,7 +90,7 @@
 
                                 ?>
                             </p>
-                            <p class="c_card_title2" style="font-size: 20px; margin-top: 20px"><?php echo $this->lang->line("vezife")?>: <?php
+                            <p class="c_card_title2" style="font-size: 20px; margin-top: 20px"><b><?php echo $this->lang->line("vezife")?>:</b> <?php
 
                                 if ($this->session->userdata("dil") == "az"){
                                     echo $teacher["teacher_position_az"];
@@ -103,7 +103,7 @@
                                 }
 
                                 ?></p>
-                            <p class="c_card_title2" style="font-size: 20px; margin-top: 20px"><?php echo $this->lang->line("mail")?>: <?php echo $teacher["teacher_mail"];?></p>
+                            <p class="c_card_title2" style="font-size: 20px; margin-top: 20px"><b><?php echo $this->lang->line("mail")?>:</b> <?php echo $teacher["teacher_mail"];?></p>
                         </div>
 
                         <div class="col-xs-12">
