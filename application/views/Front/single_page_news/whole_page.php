@@ -89,8 +89,8 @@ if($new){ ?>
                                     </div>
 
 
-                                    <div class="info_wrapper">
-                                        <span class="glyphicon glyphicon-calendar"></span><?php echo $new['news_time'] ?>
+                                    <div style="margin-bottom: 6px;" class="info_wrapper">
+                                        <span  class="glyphicon glyphicon-calendar"></span><?php echo $new['news_time'] ?>
 
                                     </div>
 

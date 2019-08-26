@@ -70,8 +70,8 @@ if($event){ ?>
                                                 ?></p>
                                         </div>
                                     </div>
-                                    <div class="info_wrapper">
-                                        <span class="glyphicon glyphicon-calendar"></span><?php echo $event['event_time'] ?>
+                                    <div style="margin-bottom: 6px;" class="info_wrapper">
+                                        <span style="margin-bottom: 15px" class="glyphicon glyphicon-calendar"></span><?php echo $event['event_time'] ?>
 
                                     </div>
 

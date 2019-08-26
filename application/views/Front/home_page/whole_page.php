@@ -8,7 +8,7 @@
 
 
         <!--    slide hissesi-->
-        <div id="slider" class="main_slider" style="background: url(<?php echo base_url('public/') ?>/images/websiteback.svg) repeat" >
+        <div id="slider" class="main_slider"  >
             <div class="example">
                 <div class="content">
                     <div id="rev_slider_104_1_wrapper" class="rev_slider_wrapper fullscreen-container"
@@ -97,12 +97,12 @@
 
                 </div>
             </div>
-        </div style="background: url(<?php echo base_url('public/') ?>/images/websiteback.svg) repeat"style="background: url(<?php echo base_url('public/') ?>/images/websiteback.svg) repeat">
+        </div >
         <!--    slide hissesi-->
 
 
         <!--    bakalavr magistr doktorantura-->
-        <div style="background: url(<?php echo base_url('public/') ?>/images/websiteback.svg) repeat" id="features" class="features">
+        <div repeat" id="features" class="features">
             <div class="c_3">
 
 
@@ -200,7 +200,7 @@
 
 
         <!--    xeberler hissesi-->
-        <div style="background: url(<?php echo base_url('public/') ?>/images/websiteback.svg) repeat" class="courses c_news">
+        <div class="courses c_news">
             <div class="container">
                 <div class="head_part">
                     <h2><?php echo $this->lang->line("xeberler"); ?></h2>
@@ -375,7 +375,7 @@
 
 
         <!--    xeberler mobil hissesi-->
-        <div style="background: url(<?php echo base_url('public/') ?>/images/websiteback.svg) repeat" class="c_mobil_news">
+        <div class="c_mobil_news">
 
             <div class="head_part">
                 <h2><?php echo $this->lang->line("xeberler") ;?></h2>
@@ -512,7 +512,7 @@
 
         <!--    telebeler muellimler labaratoriyalar-->
         <div id="count" class="count" data-stellar-background-ratio="0.3"
-             style="background: url(<?php echo base_url('public/') ?>/images/websiteback.svg) repeat; background-attachment: fixed; margin-top: 50px; background-position: 50% 50%;">
+             style=" background-attachment: fixed; margin-top: 50px; background-position: 50% 50%;">
             <div class="count_wrapper c_students_whole">
                 <div class="container">
                     <!--  <div class="head_part ">
@@ -560,7 +560,7 @@
 
 
         <!--    tedbirler hissesi-->
-        <div style="background: url(<?php echo base_url('public/') ?>/images/websiteback.svg) repeat" class="courses">
+        <div  class="courses">
 
             <center>
 

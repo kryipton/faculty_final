@@ -30,7 +30,7 @@
     <script type="text/javascript" src="<?php echo base_url('public/') ?>js/respond.min.js"></script>
     <![endif]-->
 
-    <link rel="icon" href="<?php echo base_url('public/') ?>/images/faculty_logo/kimya.png" type="image/x-icon"/>
+    <link rel="icon" href="<?php echo base_url("public/images/faculty_logo/$logo[logo_img]") ?>" type="image/x-icon"/>
     <title><?php echo $this->lang->line("ana_sehife"); ?></title>
 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/') ?>css/animate.css"/>
