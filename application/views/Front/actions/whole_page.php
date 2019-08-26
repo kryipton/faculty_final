@@ -3,7 +3,7 @@
 
 
 <!--main content-->
-<div class="content_wrapper" >
+<div class="content_wrapper" style="background: url(<?php echo base_url('public/') ?>images/websiteback.svg) repeat" >
 
 
     <br><br><br>
@@ -13,15 +13,15 @@
 
 
     <!--    tedbirler hissesi-->
-    <div class="courses" style="padding-top: 49px!important;">
+    <div class="courses" style="padding-top: 49px!important; background: url(<?php echo base_url('public/') ?>images/websiteback.svg) repeat"  >
 
         <div class="container">
-            <div class="course_wrapper">
+            <div style="background: url(<?php echo base_url('public/') ?>images/websiteback.svg) repeat" class="course_wrapper"  >
 
 
                 <?php if (!empty($last_events)){ ?>
 
-                    <div class="course_wrapper">
+                    <div class="course_wrapper" style="background: url(<?php echo base_url('public/') ?>images/websiteback.svg) repeat">
 
                         <?php
                         foreach ($last_events as $last_events_key){ ?>
