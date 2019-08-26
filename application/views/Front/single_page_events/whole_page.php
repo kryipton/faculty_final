@@ -17,55 +17,9 @@ if($event){ ?>
              style="background: url('<?php echo base_url("public/images/top1.jpg")?>'); background-attachment: fixed; background-position: 50% 50%;">
             <div class="breadcrumb_wrap_inner">
                 <div class="container">
-                    <h2 style="text-align: right;color: white"><?php
 
-                        if ($this->session->userdata("dil") == "az"){
-                            echo substr($event['event_title_az'], 0,100);
-                        }elseif ($this->session->userdata("dil") == "en"){
-                            echo substr($event['event_title_en'], 0,100);
-                        }elseif ($this->session->userdata("dil") == "ru"){
-                            echo substr($event['event_title_ru'], 0,100 );
-                        }
+                    <h1 style="text-transform: none"><?php echo $this->lang->line("tedbirler")?></h1>
 
-                        ?></h2>
-
-                    <ul class="breadcrumbs">
-                        <li><a href="<?php
-
-
-                            if ($this->session->userdata("dil") == "az"){
-                                echo base_url("az/Home");
-                            }elseif ($this->session->userdata("dil") == "en"){
-                                echo base_url("en/Home");
-                            }elseif ($this->session->userdata("dil") == "ru"){
-                                echo base_url("ru/Home");
-                            }
-
-                            ?>"><?php echo $this->lang->line("ana_sehife"); ?></a> /</li>
-                        <li><a href="<?php
-
-                            if ($this->session->userdata("dil") == "az"){
-                                echo base_url("az/Actions");
-                            }elseif ($this->session->userdata("dil") == "en"){
-                                echo base_url("en/Actions");
-                            }elseif ($this->session->userdata("dil") == "ru"){
-                                echo base_url("ru/Actions");
-                            }
-
-                            ?>"><?php echo $this->lang->line("tedbirler"); ?></a> /
-                        </li>
-                        <li><?php
-
-                            if ($this->session->userdata("dil") == "az"){
-                                echo substr($event['event_title_az'], 0,100);
-                            }elseif ($this->session->userdata("dil") == "en"){
-                                echo substr($event['event_title_en'], 0,100);
-                            }elseif ($this->session->userdata("dil") == "ru"){
-                                echo substr($event['event_title_ru'], 0,100 );
-                            }
-
-                            ?></li>
-                    </ul>
 
                 </div>
             </div>
@@ -136,7 +90,7 @@ if($event){ ?>
 
 
                     <div class="course_tutor event_single_right" style="border-radius: 10px">
-                        <h4><?php echo $this->lang->line("xeberler"); ?></h4>
+                        <h4><?php echo $this->lang->line("diger_xeberler"); ?></h4>
                         <ul>
 
 

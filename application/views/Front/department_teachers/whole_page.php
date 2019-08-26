@@ -21,24 +21,7 @@
 
                     ?>
                 </h1>
-                <ul class="breadcrumbs">
-                    <li><a href="<?php
 
-                        if ($this->session->userdata("dil") == "az"){
-                            echo base_url('az/Home');
-                        }
-                        elseif ($this->session->userdata("dil") == "en"){
-                            echo base_url('en/Home');
-                        }
-                        elseif ($this->session->userdata("dil") == "ru"){
-                            echo base_url('ru/Home');
-                        }
-
-                        ?>">
-                            <?php echo $this->lang->line("ana_sehife"); ?>
-                        </a> /</li>
-                    <li>  <?php echo $this->lang->line("muellimler"); ?></li>
-                </ul>
             </div>
         </div>
     </div>
@@ -57,12 +40,12 @@
                         <?php foreach ($teachers as $teacher) { ?>
                             <div class="col-md-6">
                             <div class="c2_container">
-                                <div class="c2_images col-md-6 col-sm-12">
+                                <div class="c2_images col-md-4 col-sm-12">
                                     <img height="" src="<?php echo base_url("upload/teacher_images/$teacher[teacher_photo]")?>" />
                                 </div>
 
-                                <div class="c2_product col-md-6 col-sm-12">
-                                    <p style="margin-top: 32px; font-size: 25px; color: black; margin-bottom: 30px">
+                                <div class="c2_product col-md-8 col-sm-12">
+                                    <p style="margin-top: 32px; font-size: 20px; color: black; margin-bottom: 11px">
                                         <?php
 
                                         if ($this->session->userdata("dil") == "az"){
@@ -105,6 +88,22 @@
                                         }
 
                                         ?></p>
+
+                                    <p class="c_card_title2"> <b><?php echo $this->lang->line("elmi_derece")?>:</b> <?php
+
+                                        if ($this->session->userdata("dil") == "az"){
+                                            echo $teacher["teacher_knowledge_position_az"];
+                                        }
+                                        elseif ($this->session->userdata("dil") == "en"){
+                                            echo $teacher["teacher_knowledge_position_en"];
+                                        }
+                                        elseif ($this->session->userdata("dil") == "ru"){
+                                            echo $teacher["teacher_knowledge_position_ru"];
+                                        }
+
+                                        ?></p>
+
+
                                     <p class="c_card_title2"> <b><?php echo $this->lang->line("mail")?>:</b> <?php  echo $teacher["teacher_mail"];?></p>
                                 </div>
 

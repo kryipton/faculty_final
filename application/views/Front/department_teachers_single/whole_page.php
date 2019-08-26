@@ -21,24 +21,7 @@
 
                     ?>
                 </h1>
-                <ul class="breadcrumbs">
-                    <li><a href="<?php
 
-                        if ($this->session->userdata("dil") == "az"){
-                            echo base_url('az/Home');
-                        }
-                        elseif ($this->session->userdata("dil") == "en"){
-                            echo base_url('en/Home');
-                        }
-                        elseif ($this->session->userdata("dil") == "ru"){
-                            echo base_url('ru/Home');
-                        }
-
-                        ?>">
-                            <?php echo $this->lang->line("ana_sehife"); ?>
-                        </a> /</li>
-                    <li>  <?php echo $this->lang->line("muellimler"); ?></li>
-                </ul>
             </div>
         </div>
     </div>
@@ -103,6 +86,21 @@
                                 }
 
                                 ?></p>
+
+                            <p class="c_card_title2" style="font-size: 20px; margin-top: 20px"><b><?php echo $this->lang->line("elmi_derece")?>:</b> <?php
+
+                                if ($this->session->userdata("dil") == "az"){
+                                    echo $teacher["teacher_knowledge_position_az"];
+                                }
+                                elseif ($this->session->userdata("dil") == "en"){
+                                    echo $teacher["teacher_knowledge_position_en"];
+                                }
+                                elseif ($this->session->userdata("dil") == "ru"){
+                                    echo $teacher["teacher_knowledge_position_ru"];
+                                }
+
+                                ?></p>
+
                             <p class="c_card_title2" style="font-size: 20px; margin-top: 20px"><b><?php echo $this->lang->line("mail")?>:</b> <?php echo $teacher["teacher_mail"];?></p>
                         </div>
 

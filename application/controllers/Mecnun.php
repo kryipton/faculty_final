@@ -649,7 +649,12 @@ class Mecnun extends CI_Controller{
          $teacher_position_ru  = strip_tags($this->input->post('teacher_position_ru'));
 
 
-         $teacher_department_category_az  = $this->input->post('teacher_department_category_az');
+        $teacher_knowledge_position_az  = strip_tags($this->input->post('teacher_knowledge_position_az'));
+        $teacher_knowledge_position_en  = strip_tags($this->input->post('teacher_knowledge_position_en'));
+        $teacher_knowledge_position_ru  = strip_tags($this->input->post('teacher_knowledge_position_ru'));
+
+
+        $teacher_department_category_az  = $this->input->post('teacher_department_category_az');
          $teacher_department_category_en  = $this->input->post('teacher_department_category_en');
          $teacher_department_category_ru  = $this->input->post('teacher_department_category_ru');
 
@@ -690,6 +695,10 @@ class Mecnun extends CI_Controller{
                     'teacher_position_az' => $teacher_position_az,
                     'teacher_position_en' => $teacher_position_en,
                     'teacher_position_ru' => $teacher_position_ru,
+
+                    'teacher_knowledge_position_az' => $teacher_knowledge_position_az,
+                    'teacher_knowledge_position_en' => $teacher_knowledge_position_en,
+                    'teacher_knowledge_position_ru' => $teacher_knowledge_position_ru,
 
                     'editor1_az' => $teacher_editor1_az,
                     'editor1_en' => $teacher_editor1_en,
@@ -761,6 +770,10 @@ class Mecnun extends CI_Controller{
         $teacher_position_en  = strip_tags($this->input->post('teacher_position_en'));
         $teacher_position_ru  = strip_tags($this->input->post('teacher_position_ru'));
 
+        $teacher_knowledge_position_az  = strip_tags($this->input->post('teacher_knowledge_position_az'));
+        $teacher_knowledge_position_en  = strip_tags($this->input->post('teacher_knowledge_position_en'));
+        $teacher_knowledge_position_ru  = strip_tags($this->input->post('teacher_knowledge_position_ru'));
+
 
         $teacher_editor1_az  = $this->input->post('c1_text_az');
         $teacher_editor1_en  = $this->input->post('c1_text_en');
@@ -808,6 +821,10 @@ class Mecnun extends CI_Controller{
                 'teacher_position_az' => $teacher_position_az,
                 'teacher_position_en' => $teacher_position_en,
                 'teacher_position_ru' => $teacher_position_ru,
+
+                'teacher_knowledge_position_az' => $teacher_knowledge_position_az,
+                'teacher_knowledge_position_en' => $teacher_knowledge_position_en,
+                'teacher_knowledge_position_ru' => $teacher_knowledge_position_ru,
 
                 'editor1_az' => $teacher_editor1_az,
                 'editor1_en' => $teacher_editor1_en,

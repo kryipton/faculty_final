@@ -36,8 +36,14 @@
                             <label for="">Soyad</label>
                             <input value="<?php echo $teacher["teacher_surname_az"] ?>" type="text" class="form-control" name="teacher_surname_az"><br>
 
-                            <label for="">Dərəcə</label>
+
+                            <label for="">Vəzifə</label>
                             <input value="<?php echo $teacher["teacher_position_az"] ?>" type="text" class="form-control" name="teacher_position_az"><br>
+
+                            <label for="">Elmi Dərəcə</label>
+                            <input value="<?php echo $teacher["teacher_knowledge_position_az"] ?>" type="text" class="form-control" name="teacher_knowledge_position_az"><br>
+
+
 
                             <label for="">Mail</label>
                             <input type="text" class="form-control" name="teacher_mail" value="<?php echo $teacher["teacher_mail"] ?>"><br>
@@ -86,8 +92,12 @@
                             <label for="">Soyad</label>
                             <input value="<?php echo $teacher["teacher_surname_ru"] ?>" type="text" class="form-control" name="teacher_surname_ru"><br>
 
-                            <label for="">Dərəcə</label>
-                            <input value="<?php echo $teacher["teacher_position_ru"] ?>" type="text" class="form-control" name="teacher_position_ru"><br>
+                            <label for="">Vəzifə</label>
+                            <input  value="<?php echo $teacher["teacher_position_ru"] ?>" type="text" class="form-control" name="teacher_position_ru"><br>
+
+                            <label for="">Elmi Dərəcə</label>
+                            <input  value="<?php echo $teacher["teacher_knowledge_position_ru"] ?>" type="text" class="form-control" name="teacher_knowledge_position_ru"><br>
+
 
 
 
@@ -134,8 +144,13 @@
                             <label for="">Soyad</label>
                             <input value="<?php echo $teacher["teacher_surname_en"] ?>" type="text" class="form-control" name="teacher_surname_en"><br>
 
-                            <label for="">Dərəcə</label>
-                            <input value="<?php echo $teacher["teacher_position_en"] ?>" type="text" class="form-control" name="teacher_position_en"><br>
+                            <label for="">Vəzifə</label>
+                            <input value="<?php echo $teacher["teacher_position_en"] ?>"  type="text" class="form-control" name="teacher_position_en"><br>
+
+                            <label for="">Elmi Dərəcə</label>
+                            <input value="<?php echo $teacher["teacher_knowledge_position_en"] ?>"  type="text" class="form-control" name="teacher_knowledge_position_en"><br>
+
+
 
 
                             <label for="">Kafedra</label>

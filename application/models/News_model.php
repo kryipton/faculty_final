@@ -25,9 +25,13 @@ class News_model extends CI_Model{
     }
 
     public function get_last_news(){
-       return $this->db->order_by('news_id','DESC')->limit(4)->get('news_db')->result_array();
+       return $this->db->order_by('news_id','DESC')->limit(7)->get('news_db')->result_array();
     }
 
+
+    public function get_last_news2(){
+        return $this->db->order_by('news_id','DESC')->limit(4)->get('news_db')->result_array();
+    }
 
     public function get_last_news_all(){
         return $this->db->order_by('news_id','DESC')->get('news_db')->result_array();

@@ -49,6 +49,10 @@ $lang["vezife"] = "Позиция";
 
 $lang["mail"] = "Почта";
 
+$lang["elmi_derece"] = "Ученая степень";
+
+$lang["diger_xeberler"] = "Другие новости";
+
 
 
 

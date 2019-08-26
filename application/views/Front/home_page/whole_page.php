@@ -385,7 +385,7 @@
 
             <?php $id = 1; ?>
 
-            <?php foreach ($last_news as $last_events_key){ ?>
+            <?php foreach ($last_news2 as $last_events_key){ ?>
 
                 <div id="<?php
 

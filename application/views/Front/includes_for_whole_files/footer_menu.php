@@ -65,36 +65,7 @@
         </div>
     </div>
 
-    <div class="col-md-12 backgroun ">
-        <div class="container marb">
-            <div class="col-md-6 col-sm-6 col-xs-6 sa padding1 c_2019">
 
-                <center>
-                    <span class="copyright c_2019">© <?php echo date("Y")?></span>
-                </center>
-
-            </div>
-
-
-            <div class="col-md-6 col-sm-6 col-xs-6 sa ">
-
-                <center>
-                    <div class="sosial footerSosial">
-                        <a href="https://www.facebook.com/Azii1920.ADNSU/">
-                            <i class="fa fa-facebook c_icon_footer" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://twitter.com/dkadnsu">
-                            <i class="fa fa-twitter c_icon_footer" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://www.youtube.com/results?search_query=adnsu">
-                            <i class="fa fa-youtube c_icon_footer" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </center>
-            </div>
-        </div>
-
-    </div>
 </section>
 <!--footer end-->
 

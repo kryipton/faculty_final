@@ -16,60 +16,12 @@ if($new){ ?>
              style="background: url('<?php echo base_url("public/images/top1.jpg")?>');">
             <div class="breadcrumb_wrap_inner">
                 <div class="container">
-                    <h2 style="text-align: right;color: white"><?php
+                    <h1 style="text-align: center;color: white; text-transform: none"><?php
 
-                        if ($this->session->userdata("dil") == "az"){
-                            echo substr($new['news_title_az'], 0,71);
-                        }
-                        elseif ($this->session->userdata("dil") == "en"){
-                            echo substr($new['news_title_en'], 0,71);
-                        }
-                        elseif ($this->session->userdata("dil") == "ru"){
-                            echo substr($new['news_title_ru'], 0,71);
-                        }
+                        echo $this->lang->line("xeberler")
 
-                        ?></h2>
-                    <ul class="breadcrumbs">
-                        <li><a href="<?php
+                        ?></h1>
 
-                            if ($this->session->userdata("dil") == "az"){
-                                echo base_url('az/Home');
-                            }
-                            elseif ($this->session->userdata("dil") == "en"){
-                                echo base_url('en/Home');
-                            }
-                            elseif ($this->session->userdata("dil") == "ru"){
-                                echo base_url('ru/Home');
-                            }
-
-                            ?>"><?php echo $this->lang->line("ana_sehife"); ?></a>  /   </li>
-                        <li><a href="<?php
-
-                            if ($this->session->userdata("dil") == "az"){
-                                echo base_url("az/News");
-                            }elseif ($this->session->userdata("dil") == "en"){
-                                echo base_url("en/News");
-                            }elseif ($this->session->userdata("dil") == "ru"){
-                                echo base_url("ru/News");
-                            }
-
-                            ?>"><?php echo $this->lang->line("xeberler"); ?></a> /
-                        </li>
-                        <li><?php
-
-                            if ($this->session->userdata("dil") == "az"){
-                                echo substr($new['news_title_az'], 0,120);
-                            }
-                            elseif ($this->session->userdata("dil") == "en"){
-                                echo substr($new['news_title_en'], 0,120);
-                            }
-                            elseif ($this->session->userdata("dil") == "ru"){
-                                echo substr($new['news_title_ru'], 0,120);
-                            }
-
-                            ?>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -157,7 +109,7 @@ if($new){ ?>
 
 
                     <div class="course_tutor event_single_right" style="border-radius: 10px">
-                        <h4><?php echo $this->lang->line("tedbirler"); ?></h4>
+                        <h4><?php echo $this->lang->line("diger_xeberler"); ?></h4>
                         <ul>
 
                             <?php $this->load->view('Front/include_last_events/last_events'); ?>

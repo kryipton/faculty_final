@@ -36,10 +36,13 @@
                             <label for="">Soyad</label>
                             <input type="text" class="form-control" name="teacher_surname_az"><br>
 
-                            <label for="">Dərəcə</label>
+                            <label for="">Vəzifə</label>
                             <input type="text" class="form-control" name="teacher_position_az"><br>
 
-                            <label for="">Mail</label>
+                            <label for="">Elmi Dərəcə</label>
+                            <input type="text" class="form-control" name="teacher_knowledge_position_az"><br>
+
+                        <label for="">Mail</label>
                             <input type="email" class="form-control" name="teacher_mail"><br>
 
 
@@ -76,12 +79,14 @@
                             <label for="">Soyad</label>
                             <input type="text" class="form-control" name="teacher_surname_ru"><br>
 
-                            <label for="">Dərəcə</label>
+                            <label for="">Vəzifə</label>
                             <input type="text" class="form-control" name="teacher_position_ru"><br>
 
+                            <label for="">Elmi Dərəcə</label>
+                            <input type="text" class="form-control" name="teacher_knowledge_position_ru"><br>
 
 
-                            <label for="">Kafedra</label>
+                        <label for="">Kafedra</label>
                             <select name="teacher_department_category_ru" id="" class="form-control" style="height: 40px">
                                 <?php foreach ($categories as $category){ ?>
                                     <option value="<?php echo $category["category_name_ru"]?>"><?php echo $category["category_name_ru"] ?></option>
@@ -113,12 +118,14 @@
                             <label for="">Soyad</label>
                             <input type="text" class="form-control" name="teacher_surname_en"><br>
 
-                            <label for="">Dərəcə</label>
+                            <label for="">Vəzifə</label>
                             <input type="text" class="form-control" name="teacher_position_en"><br>
 
+                            <label for="">Elmi Dərəcə</label>
+                            <input type="text" class="form-control" name="teacher_knowledge_position_en"><br>
 
 
-                            <label for="">Kafedra</label>
+                        <label for="">Kafedra</label>
                             <select name="teacher_department_category_en" id="" class="form-control" style="height: 40px">
                                 <?php foreach ($categories as $category){ ?>
                                     <option value="<?php echo $category["category_name_en"]?>"><?php echo $category["category_name_en"] ?></option>

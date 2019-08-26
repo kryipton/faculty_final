@@ -21,20 +21,7 @@
                     }
 
                     ?></h1>
-                <ul class="breadcrumbs">
-                    <li><a href="<?php
 
-                        if ($this->session->userdata("dil") == "az"){
-                            echo base_url("az/Home");
-                        }elseif ($this->session->userdata("dil") == "en"){
-                            echo base_url("en/Home");
-                        }elseif ($this->session->userdata("dil") == "ru"){
-                            echo base_url("ru/Home");
-                        }
-
-                        ?>"><?php echo $this->lang->line("ana_sehife"); ?></a> /</li>
-                    <li><?php echo $this->lang->line("labaratoriyalar"); ?></li>
-                </ul>
             </div>
         </div>
     </div>
@@ -94,7 +81,7 @@
 
             <!--        sol terefde olan diger tedbirler -->
             <div class="category_events about_left_e" style="border-radius: 10px">
-                <h4><?php echo $this->lang->line("xeberler"); ?></h4>
+                <h4><?php echo $this->lang->line("diger_xeberler"); ?></h4>
                 <ul>
 
 

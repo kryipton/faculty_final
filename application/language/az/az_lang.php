@@ -48,6 +48,11 @@ $lang["vezife"] = "Vəzifə";
 
 $lang["mail"] = "E-Poçt";
 
+$lang["elmi_derece"] = "Elmi dərəcə";
+
+$lang["diger_xeberler"] = "Digər xəbərlər";
+
+
 
 
 
