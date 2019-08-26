@@ -7,23 +7,18 @@
     <div class="breadcrumb_wrap">
         <div class="breadcrumb_wrap_inner about_head">
             <div class="container">
-                <h1>Kimya texnologiya fakültəsi</h1>
-                <ul class="breadcrumbs">
-                    <li><a href="<?php
+                <h1>
 
-                        if ($this->session->userdata("dil") == "az"){
-                            echo base_url('az/Home');
-                        }
-                        elseif ($this->session->userdata("dil") == "en"){
-                            echo base_url('en/Home');
-                        }
-                        elseif ($this->session->userdata("dil") == "ru"){
-                            echo base_url('ru/Home');
-                        }
+                    <?php  if ($this->session->userdata("dil") == "az"){
+                        echo $logo["site_title_az"];
+                    }elseif ($this->session->userdata("dil") == "en"){
+                        echo $logo["site_title_en"];
+                    }elseif ($this->session->userdata("dil") == "ru"){
+                        echo $logo["site_title_ru"];
+                    }?>
 
-                        ?>"><?php echo $this->lang->line("ana_sehife"); ?></a> /</li>
-                    <li><?php echo $this->lang->line("umumi_melumat"); ?></li>
-                </ul>
+                </h1>
+
             </div>
         </div>
     </div>

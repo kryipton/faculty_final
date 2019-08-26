@@ -10,7 +10,7 @@ $lang["labaratoriyalar"] = "Лаборатории";
 $lang["bakalavr"] = "Холостяк";
 $lang["magistr"] = "Мастер";
 $lang["doktorantura"] = "Докторская степень";
-$lang["xeberler"] = "новости";
+$lang["xeberler"] = "Новости";
 
 
 $lang["muellimler"] = "Учителей";
@@ -44,6 +44,14 @@ $lang["xebere_get"] = "Перейти К Новостям";
 $lang["dil"] = "Язк";
 
 $lang["xidmetler"] = "Услуги";
+
+$lang["vezife"] = "Позиция";
+
+$lang["mail"] = "Почта";
+
+$lang["elmi_derece"] = "Ученая степень";
+
+$lang["diger_xeberler"] = "Другие новости";
 
 
 

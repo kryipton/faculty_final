@@ -479,7 +479,7 @@
 
 .pagination a {
     color: black;
-    float: left;
+    /*float: left;*/
     padding: 8px 16px;
     text-decoration: none;
     transition: background-color .3s;
@@ -489,7 +489,7 @@
 
 .pagination strong{
     /*color: black;*/
-    float: left!important;
+    /*float: left!important;*/
     padding: 8px 16px!important;
     text-decoration: none!important;
     transition: background-color .3s!important;
@@ -671,6 +671,18 @@
     }
 }
 
+@media only screen and (max-width: 436px) {
+    .c_teacher_name{
+        font-size: 21px!important;
+    }
+
+    .c_card_title2{
+        font-size: 18px!important;
+        color: dimgrey;
+    }
+
+}
+
 
 .c_text{
     background: #d6ffd1;
@@ -685,3 +697,166 @@
 body{
     font-family: Palatino Linotype!important;
 }
+
+.c_img_hover{
+    margin:4px;
+    width:175px!important;
+    height: 100px!important;
+    transform: scale(1)!important;
+    object-fit: cover;
+    filter: brightness(100%) !important;
+}
+
+.c_img_hover:hover{
+    filter: brightness(90%)!important;
+}
+
+
+
+
+
+
+.c2_container {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    max-width: 720px;
+    min-height: 350px;
+    background: #fffefe;
+    box-shadow: 5px 5px 15px rgba(26, 18, 18, 0.24);
+    border-radius: 10px;
+    padding: 15px!important;
+    margin-bottom: 40px;
+}
+
+.c2_desc{
+    margin-top: 20px;
+}
+
+.c2_images{
+    /*width: 290px;*/
+    margin-top: 20px;
+    /*width: 200px;*/
+    /*height: 200px;*/
+    object-fit: cover;
+}
+
+
+.c2_images img{
+    width: 100%;
+    height: 156px!important;
+    object-fit: cover;
+}
+
+
+.c_card_title2{
+    font-size: 15px;
+    margin-top: 0px;
+}
+
+
+.c_size{
+    font-size: 16px!important;
+}
+
+
+
+/*footer start*/
+
+/*------------------------------------- footer start ---------------------------*/
+
+
+.backgroun{
+    background: #29485B;
+}
+.padding1{
+    padding: 3px;
+}
+.footerLogo{
+    height:inherit;
+
+    background: #29485B;
+    color: white;
+    padding-top: 50px;
+    background-position: center;
+    background-size: cover;
+}
+.footerLogo ul{
+    list-style: none;
+    height: 63px;
+    background: black;
+    background: #29485B;
+
+
+}
+.footerLogo ul li{
+    float: left;
+    height: 50px;
+    margin-left: 6px;
+    background: #29485B;
+
+}
+.footerLogo ul li img{
+    /*width: 100%;*/
+    height: 50px;
+    text-align: center;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.footerLogo ul li img:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.footerSosial{
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+.copyright{
+    font-size: 20px;
+    color: white;
+    font-family: Tahoma;
+}
+.iconColor{
+    padding-top: 0px;
+    color: white;
+}
+
+.marb{
+    padding-bottom: 15px;
+}
+
+.c_icon_footer{
+    font-size: 19px;
+}
+
+
+.c_president{
+    line-height: 54px;
+    opacity: 0.6;
+}
+
+.footer_logo_special:hover .c_president{
+    opacity: 1;
+    color: white;
+}
+
+.footer_logo_special:hover{
+    color: white;
+}
+
+
+.c_president:hover .footer_logo_special{
+    opacity: 1;
+}
+
+
+.c_2019{
+    background: transparent!important;
+}
+/*------------------------------------- footer end   ---------------------------*/
+
+/*footer end*/
+
+

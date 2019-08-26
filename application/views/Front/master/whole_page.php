@@ -7,30 +7,15 @@
 
     <div class="breadcrumb_wrap" >
         <div class="breadcrumb_wrap_inner" style="background-image: url('<?php echo base_url("public/images/top1.jpg")?>');height: 250px;">
-            <div class="container">
-                <ul class="breadcrumbs">
-                    <li><a href="<?php
+            <div class="container" style="margin-top: 75px;">
 
-                        if ($this->session->userdata("dil") == "az"){
-                            echo base_url('az/Home');
-                        }
-                        elseif ($this->session->userdata("dil") == "en"){
-                            echo base_url('en/Home');
-                        }
-                        elseif ($this->session->userdata("dil") == "ru"){
-                            echo base_url('ru/Home');
-                        }
-
-                        ?>"><?php echo $this->lang->line("ana_sehife"); ?></a>  /</li>
-                    <li><?php echo $this->lang->line("umumi_melumat"); ?></li>
-                </ul>
             </div>
         </div>
     </div>
 
     <div style="margin-bottom: 600px !important;margin-top: 20px;">
         <div class="col-md-3">
-            <div class="category_course" style="margin-top: 75px;">
+            <div class="category_course" style="margin-top: 75px; border-radius: 10px">
                 <ul>
                     <li><a href="<?php
 
@@ -77,7 +62,7 @@
             </div>
             <!--        sol terefde olan diger tedbirler -->
             <div class="category_events about_left_e" style="border-radius: 10px">
-                <h4><?php echo $this->lang->line("tedbirler"); ?></h4>
+                <h4 style="font-weight: bold; color: white; "><?php echo $this->lang->line("diger_xeberler"); ?></h4>
                 <ul>
 
 

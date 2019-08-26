@@ -41,6 +41,7 @@ class Leyli extends CI_Controller {
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['last_news']   = $this->News_model->get_last_news();
+        $data['last_news2']   = $this->News_model->get_last_news2();
         $data['last_events'] = $this->Events_model->get_last_events();
         $data['all_slide']   = $this->Slide_model->get_all_index();
         $data['count']   = $this->Mecnun_model->getCounts();
@@ -55,7 +56,7 @@ class Leyli extends CI_Controller {
 
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
 
-        $data['last_events'] = $this->Events_model->get_last_events();
+        $data['last_events'] = $this->News_model->get_last_news();
 
         $data['about'] = $this->About_model->about_get();
         $data["services"] = $this->Services_model->get_services();
@@ -68,7 +69,7 @@ class Leyli extends CI_Controller {
 
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
 
-        $data['last_events'] = $this->Events_model->get_last_events();
+        $data['last_events'] = $this->News_model->get_last_news();
 
         $data['contact'] = $this->Mecnun_model->getContact();
         $data["services"] = $this->Services_model->get_services();
@@ -82,7 +83,7 @@ class Leyli extends CI_Controller {
 
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
 
-        $data['last_events'] = $this->Events_model->get_last_events();
+        $data['last_events'] = $this->News_model->get_last_news();
 
         $data['laboratories'] = $this->Mecnun_model->getLaboratoriesF();
 
@@ -102,7 +103,7 @@ class Leyli extends CI_Controller {
         $config["base_url"]  = base_url($this->uri->segment(1) . "/Actions");
         $config["total_rows"] = $this->Events_model->get_count_events_pagination();
         $config["uri_segment"] = 3;
-        $config["per_page"] = 6;
+        $config["per_page"] = 12;
         $config["first_link"] = "<<";
         $config["last_link"] = ">>";
 
@@ -125,7 +126,7 @@ class Leyli extends CI_Controller {
         $config["base_url"]  = base_url($this->uri->segment(1) . "/News");
         $config["total_rows"] = $this->News_model->get_count_news_pagination();
         $config["uri_segment"] = 3;
-        $config["per_page"] = 6;
+        $config["per_page"] = 12;
         $config["first_link"] = "<<";
         $config["last_link"] = ">>";
 
@@ -150,7 +151,7 @@ class Leyli extends CI_Controller {
             "news_id" => $id,
         ));
 
-        $data['last_events']   = $this->Events_model->get_last_events();
+        $data['last_events'] = $this->News_model->get_last_news();
 
         //Gallery
         $data["photos"] = $this->Mecnun_model->get_news_gallery([
@@ -171,7 +172,7 @@ class Leyli extends CI_Controller {
             "event_id" => $id,
         ));
 
-        $data['last_events']   = $this->Events_model->get_last_events();
+        $data['last_events'] = $this->News_model->get_last_news();
 
         $this->load->view('Front/single_page_events/whole_page', $data);
     }
@@ -180,7 +181,7 @@ class Leyli extends CI_Controller {
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
         $data["services"] = $this->Services_model->get_services();
-        $data['last_events'] = $this->Events_model->get_last_events();
+        $data['last_events'] = $this->News_model->get_last_news();
 
         $data['data'] = $this->Bachelor_model->get_desc();
 
@@ -191,7 +192,7 @@ class Leyli extends CI_Controller {
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
         $data["services"] = $this->Services_model->get_services();
-        $data['last_events'] = $this->Events_model->get_last_events();
+        $data['last_events'] = $this->News_model->get_last_news();
 
         $data['data'] = $this->Bachelor_model->get_bachelor_specialities();
 
@@ -202,7 +203,7 @@ class Leyli extends CI_Controller {
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
         $data["services"] = $this->Services_model->get_services();
-        $data['last_events'] = $this->Events_model->get_last_events();
+        $data['last_events'] = $this->News_model->get_last_news();
 
         $data['speciality_info'] = $this->Bachelor_model->get_bachelor_speciality(array(
             "bachelor_id" => $id,
@@ -216,6 +217,7 @@ class Leyli extends CI_Controller {
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
         $data["services"] = $this->Services_model->get_services();
+        $data['last_events'] = $this->News_model->get_last_news();
 
         $data['contact']=$this->Bachelor_model->get_contact();
 
@@ -226,7 +228,7 @@ class Leyli extends CI_Controller {
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
         $data["services"] = $this->Services_model->get_services();
-        $data['last_events'] = $this->Events_model->get_last_events();
+        $data['last_events'] = $this->News_model->get_last_news();
 
         $data['data'] = $this->Master_model->get_desc();
 
@@ -237,7 +239,7 @@ class Leyli extends CI_Controller {
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
         $data["services"] = $this->Services_model->get_services();
-        $data['last_events'] = $this->Events_model->get_last_events();
+        $data['last_events'] = $this->News_model->get_last_news();
 
         $data['data'] = $this->Master_model->get_master_specialities();
 
@@ -248,7 +250,7 @@ class Leyli extends CI_Controller {
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
         $data["services"] = $this->Services_model->get_services();
-        $data['last_events'] = $this->Events_model->get_last_events();
+        $data['last_events'] = $this->News_model->get_last_news();
 
         $data['data'] = $this->Master_model->get_master_speciality(array(
             "master_id" => $id,
@@ -262,7 +264,7 @@ class Leyli extends CI_Controller {
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
         $data["services"] = $this->Services_model->get_services();
-        $data['last_events'] = $this->Events_model->get_last_events();
+        $data['last_events'] = $this->News_model->get_last_news();
 
 
         $data['contact']=$this->Master_model->get_contact();
@@ -275,7 +277,7 @@ class Leyli extends CI_Controller {
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
         $data["services"] = $this->Services_model->get_services();
-        $data['last_events'] = $this->Events_model->get_last_events();
+        $data['last_events'] = $this->News_model->get_last_news();
 
         $data['data'] = $this->Doctorate_model->get_desc();
 
@@ -286,7 +288,7 @@ class Leyli extends CI_Controller {
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
         $data["services"] = $this->Services_model->get_services();
-        $data['last_events'] = $this->Events_model->get_last_events();
+        $data['last_events'] = $this->News_model->get_last_news();
 
         $data['data'] = $this->Doctorate_model->get_doctorate_specialities();
 
@@ -297,7 +299,7 @@ class Leyli extends CI_Controller {
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
         $data["services"] = $this->Services_model->get_services();
-        $data['last_events'] = $this->Events_model->get_last_events();
+        $data['last_events'] = $this->News_model->get_last_news();
 
         $data['data'] = $this->Doctorate_model->get_doctorate_speciality(array(
             "doctorate_id" => $id,
@@ -311,7 +313,7 @@ class Leyli extends CI_Controller {
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
         $data["services"] = $this->Services_model->get_services();
-        $data['last_events'] = $this->Events_model->get_last_events();
+        $data['last_events'] = $this->News_model->get_last_news();
 
 
         $data['contact']=$this->Doctorate_model->get_contact();
@@ -333,7 +335,7 @@ class Leyli extends CI_Controller {
 
         $data['logo']   = $this->Mecnun_model->get_logo_and_title();
 
-        $data['last_events'] = $this->Events_model->get_last_events();
+        $data['last_events'] = $this->News_model->get_last_news();
 
         $this->load->view('Front/department/whole_page', $data);
     }
@@ -350,7 +352,7 @@ class Leyli extends CI_Controller {
 
         $data['data'] = $this->Department_model->get_desc();
 
-        $data['last_events'] = $this->Events_model->get_last_events();
+        $data['last_events'] = $this->News_model->get_last_news();
 
         $this->load->view('Front/department_contact/whole_page', $data);
     }
@@ -375,10 +377,35 @@ class Leyli extends CI_Controller {
         $data['teachers'] = $this->Mecnun_model->get_teacher_result_array(array(
             "department_category_az" => $department["category_name_az"],
         ));
-        $data['last_events'] = $this->Events_model->get_last_events();
+        $data['last_events'] = $this->News_model->get_last_news();
 
         $this->load->view('Front/department_teachers/whole_page', $data);
     }
+
+    public function department_teachers_single(){
+        $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
+        $data["services"] = $this->Services_model->get_services();
+
+        $data['data'] = $this->Department_model->get_desc();
+
+        $data['last_events'] = $this->Events_model->get_last_events();
+
+        $id = $this->uri->segment(3);
+        $teacher_id = $this->uri->segment(4);
+
+        $data["department"] = $this->Mecnun_model->get_department_category(array(
+            "id" => $id,
+        ));
+
+        $data['teacher'] = $this->Mecnun_model->get_teacher(array(
+            "teacher_id" => $teacher_id,
+        ));
+        $data['last_events'] = $this->News_model->get_last_news();
+
+        $this->load->view('Front/department_teachers_single/whole_page', $data);
+    }
+
 
     public function department_specialities(){
         $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
@@ -406,7 +433,7 @@ class Leyli extends CI_Controller {
 
         $data['data'] = $this->Department_model->get_desc();
 
-        $data['last_events'] = $this->Events_model->get_last_events();
+        $data['last_events'] = $this->News_model->get_last_news();
 
         $this->load->view('Front/department_specialities/whole_page', $data);
     }
@@ -434,7 +461,7 @@ class Leyli extends CI_Controller {
 
         $data['data'] = $this->Department_model->get_desc();
 
-        $data['last_events'] = $this->Events_model->get_last_events();
+        $data['last_events'] = $this->News_model->get_last_news();
 
         $this->load->view('Front/department_specialities_single/whole_page', $data);
     }
@@ -464,7 +491,7 @@ class Leyli extends CI_Controller {
 
         $data['data'] = $this->Department_model->get_desc();
 
-        $data['last_events'] = $this->Events_model->get_last_events();
+        $data['last_events'] = $this->News_model->get_last_news();
 
         $this->load->view('Front/department_labaratory/whole_page', $data);
     }

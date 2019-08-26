@@ -10,66 +10,18 @@
 
 if($new){ ?>
 
-    <div class="content_wrapper">
+    <div class="content_wrapper" style="background: url(<?php echo base_url('public/') ?>/images/websiteback.svg) repeat">
 
         <div class="breadcrumb_wrap" data-stellar-background-ratio="0.3"
              style="background: url('<?php echo base_url("public/images/top1.jpg")?>');">
             <div class="breadcrumb_wrap_inner">
                 <div class="container">
-                    <h2 style="text-align: right;color: white"><?php
+                    <h1 style="text-align: center;color: white; text-transform: none"><?php
 
-                        if ($this->session->userdata("dil") == "az"){
-                            echo substr($new['news_title_az'], 0,71);
-                        }
-                        elseif ($this->session->userdata("dil") == "en"){
-                            echo substr($new['news_title_en'], 0,71);
-                        }
-                        elseif ($this->session->userdata("dil") == "ru"){
-                            echo substr($new['news_title_ru'], 0,71);
-                        }
+                        echo $this->lang->line("xeberler")
 
-                        ?></h2>
-                    <ul class="breadcrumbs">
-                        <li><a href="<?php
+                        ?></h1>
 
-                            if ($this->session->userdata("dil") == "az"){
-                                echo base_url('az/Home');
-                            }
-                            elseif ($this->session->userdata("dil") == "en"){
-                                echo base_url('en/Home');
-                            }
-                            elseif ($this->session->userdata("dil") == "ru"){
-                                echo base_url('ru/Home');
-                            }
-
-                            ?>"><?php echo $this->lang->line("ana_sehife"); ?></a>  /   </li>
-                        <li><a href="<?php
-
-                            if ($this->session->userdata("dil") == "az"){
-                                echo base_url("az/News");
-                            }elseif ($this->session->userdata("dil") == "en"){
-                                echo base_url("en/News");
-                            }elseif ($this->session->userdata("dil") == "ru"){
-                                echo base_url("ru/News");
-                            }
-
-                            ?>"><?php echo $this->lang->line("xeberler"); ?></a> /
-                        </li>
-                        <li><?php
-
-                            if ($this->session->userdata("dil") == "az"){
-                                echo substr($new['news_title_az'], 0,120);
-                            }
-                            elseif ($this->session->userdata("dil") == "en"){
-                                echo substr($new['news_title_en'], 0,120);
-                            }
-                            elseif ($this->session->userdata("dil") == "ru"){
-                                echo substr($new['news_title_ru'], 0,120);
-                            }
-
-                            ?>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -125,16 +77,21 @@ if($new){ ?>
                                                 ?></p>
                                         </div>
                                     </div>
-                                    <div class="info_wrapper">
-                                        <span class="glyphicon glyphicon-calendar"></span><?php echo $new['news_time'] ?>
 
-                                    </div>
 
 
                                     <div class="gallery-post">
                                         <?php foreach ($photos as $photo) {?>
-                                            <a rel="lightbox" href="<?php echo base_url("upload/news_images/gallery/").$photo['name']?>" data-lightbox="gallery"><img style="margin:4px; width:auto;height: 100px; " src="<?php echo base_url("upload/news_images/gallery/").$photo['name']?>"></a>
+                                            <a rel="lightbox" href="<?php echo base_url("upload/news_images/gallery/").$photo['name']?>" data-lightbox="gallery">
+                                                <img style="" class="c_img_hover" src="<?php echo base_url("upload/news_images/gallery/").$photo['name']?>">
+                                            </a>
                                         <?php } ?>
+                                    </div>
+
+
+                                    <div class="info_wrapper">
+                                        <span class="glyphicon glyphicon-calendar"></span><?php echo $new['news_time'] ?>
+
                                     </div>
 
                                 </div>
@@ -152,7 +109,7 @@ if($new){ ?>
 
 
                     <div class="course_tutor event_single_right" style="border-radius: 10px">
-                        <h4><?php echo $this->lang->line("tedbirler"); ?></h4>
+                        <h4><?php echo $this->lang->line("diger_xeberler"); ?></h4>
                         <ul>
 
                             <?php $this->load->view('Front/include_last_events/last_events'); ?>

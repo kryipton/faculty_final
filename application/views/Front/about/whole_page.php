@@ -24,21 +24,7 @@
 
 
 
-                <ul class="breadcrumbs">
-                    <li><a href="<?php
 
-
-                        if ($this->session->userdata("dil") == "az"){
-                            echo base_url("az/Home");
-                        }elseif ($this->session->userdata("dil") == "en"){
-                            echo base_url("en/Home");
-                        }elseif ($this->session->userdata("dil") == "ru"){
-                            echo base_url("ru/Home");
-                        }
-
-                        ?>"?><?php echo $this->lang->line("ana_sehife"); ?></a> /</li>
-                    <li><?php echo $this->lang->line("haqqimizda"); ?></li>
-                </ul>
             </div>
         </div>
     </div>

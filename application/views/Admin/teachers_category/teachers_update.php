@@ -36,9 +36,17 @@
                             <label for="">Soyad</label>
                             <input value="<?php echo $teacher["teacher_surname_az"] ?>" type="text" class="form-control" name="teacher_surname_az"><br>
 
-                            <label for="">Dərəcə</label>
+
+                            <label for="">Vəzifə</label>
                             <input value="<?php echo $teacher["teacher_position_az"] ?>" type="text" class="form-control" name="teacher_position_az"><br>
 
+                            <label for="">Elmi Dərəcə</label>
+                            <input value="<?php echo $teacher["teacher_knowledge_position_az"] ?>" type="text" class="form-control" name="teacher_knowledge_position_az"><br>
+
+
+
+                            <label for="">Mail</label>
+                            <input type="text" class="form-control" name="teacher_mail" value="<?php echo $teacher["teacher_mail"] ?>"><br>
 
 
                             <label for="">Kafedra</label>
@@ -53,6 +61,18 @@
                                     <?php }?>
                                 <?php }?>
                             </select>
+                            <br>
+
+                            <label for="">Nesriyyat </label>
+                            <textarea name="c1_text_az" class="ckeditor" id="" cols="30" rows="10" required>
+                                <?php echo $teacher["editor1_az"] ?>
+                            </textarea>
+                            <br>
+
+                            <label for="">Haqqında </label>
+                            <textarea name="c2_text_az" class="ckeditor" id="" cols="30" rows="10" required>
+                                <?php echo $teacher["editor2_az"]?>
+                            </textarea>
                             <br>
 
 
@@ -72,8 +92,12 @@
                             <label for="">Soyad</label>
                             <input value="<?php echo $teacher["teacher_surname_ru"] ?>" type="text" class="form-control" name="teacher_surname_ru"><br>
 
-                            <label for="">Dərəcə</label>
-                            <input value="<?php echo $teacher["teacher_position_ru"] ?>" type="text" class="form-control" name="teacher_position_ru"><br>
+                            <label for="">Vəzifə</label>
+                            <input  value="<?php echo $teacher["teacher_position_ru"] ?>" type="text" class="form-control" name="teacher_position_ru"><br>
+
+                            <label for="">Elmi Dərəcə</label>
+                            <input  value="<?php echo $teacher["teacher_knowledge_position_ru"] ?>" type="text" class="form-control" name="teacher_knowledge_position_ru"><br>
+
 
 
 
@@ -89,6 +113,18 @@
                                     <?php }?>
                                 <?php }?>
                             </select>
+                            <br>
+
+                            <label for="">Nesriyyat </label>
+                            <textarea name="c1_text_ru" class="ckeditor" id="" cols="30" rows="10" required>
+                                <?php echo $teacher["editor1_ru"] ?>
+                            </textarea>
+                            <br>
+
+                            <label for="">Haqqında </label>
+                            <textarea name="c2_text_ru" class="ckeditor" id="" cols="30" rows="10" required>
+                                <?php echo $teacher["editor2_ru"]?>
+                            </textarea>
                             <br>
 
 
@@ -108,8 +144,12 @@
                             <label for="">Soyad</label>
                             <input value="<?php echo $teacher["teacher_surname_en"] ?>" type="text" class="form-control" name="teacher_surname_en"><br>
 
-                            <label for="">Dərəcə</label>
-                            <input value="<?php echo $teacher["teacher_position_en"] ?>" type="text" class="form-control" name="teacher_position_en"><br>
+                            <label for="">Vəzifə</label>
+                            <input value="<?php echo $teacher["teacher_position_en"] ?>"  type="text" class="form-control" name="teacher_position_en"><br>
+
+                            <label for="">Elmi Dərəcə</label>
+                            <input value="<?php echo $teacher["teacher_knowledge_position_en"] ?>"  type="text" class="form-control" name="teacher_knowledge_position_en"><br>
+
 
 
 
@@ -126,6 +166,17 @@
                             </select>
                             <br>
 
+                            <label for="">Nesriyyat </label>
+                            <textarea name="c1_text_en" class="ckeditor" id="" cols="30" rows="10" required>
+                                <?php echo $teacher["editor1_en"] ?>
+                            </textarea>
+                            <br>
+
+                            <label for="">Haqqında </label>
+                            <textarea name="c2_text_en" class="ckeditor" id="" cols="30" rows="10" required>
+                                <?php echo $teacher["editor2_en"]?>
+                            </textarea>
+                            <br>
 
 
 

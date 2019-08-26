@@ -39,15 +39,7 @@
                     <input type="text" class="form-control" name="slide_link">
 
 
-                    <label for="">Slide haqqında Az </label>
-                    <textarea style="resize: none" class="form-control ckeditor" name="slide_desc_az" id="" cols="30" rows="10" placeholder=""></textarea><br>
-
-                    <label for="">Slide haqqında En </label>
-                    <textarea style="resize: none" class="form-control ckeditor" name="slide_desc_en" id="" cols="30" rows="10" placeholder=""></textarea><br>
-
-                    <label for="">Slide haqqında Ru </label>
-                    <textarea style="resize: none" class="form-control ckeditor" name="slide_desc_ru" id="" cols="30" rows="10" placeholder=""></textarea><br>
-
+                  
 
                     <input type="file" class="form-control" name="slide_img">
 

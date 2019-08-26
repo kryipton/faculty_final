@@ -92,6 +92,15 @@
     color:white;
 }
 
+.a1{
+    padding-top: 15px!important;
+}
+
+.a1:hover{
+    background-color: rgba(0, 175, 239, 0.85);
+    color: white;
+    padding-left: 25px;
+}
 
 
 

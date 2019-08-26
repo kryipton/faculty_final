@@ -4,11 +4,11 @@
 
 
     <!--main content-->
-    <div class="content_wrapper" >
+    <div class="content_wrapper" style="background: url(<?php echo base_url('public/') ?>/images/websiteback.svg) repeat">
 
 
         <!--    slide hissesi-->
-        <div id="slider" class="main_slider" >
+        <div id="slider" class="main_slider" style="background: url(<?php echo base_url('public/') ?>/images/websiteback.svg) repeat" >
             <div class="example">
                 <div class="content">
                     <div id="rev_slider_104_1_wrapper" class="rev_slider_wrapper fullscreen-container"
@@ -61,7 +61,7 @@
                                             <div class="tp-caption BigBold-Title tp-resizeme rs-parallaxlevel-0 c_text container" data-url = "<?php echo $all_slide['slide_link'] ?>"
                                                  style="text-align: center!important; cursor:pointer; margin-top: 150px;z-index: 6; white-space: nowrap;font-size: 27px!important;">
 
-
+                                                <span>
                                                    <?php
 
                                                    if ($this->session->userdata("dil") == "az"){
@@ -73,7 +73,7 @@
                                                    }
 
                                                    ?>
-
+                                                </span>
 
                                             </div>
 
@@ -97,12 +97,12 @@
 
                 </div>
             </div>
-        </div>
+        </div style="background: url(<?php echo base_url('public/') ?>/images/websiteback.svg) repeat"style="background: url(<?php echo base_url('public/') ?>/images/websiteback.svg) repeat">
         <!--    slide hissesi-->
 
 
         <!--    bakalavr magistr doktorantura-->
-        <div id="features" class="features">
+        <div style="background: url(<?php echo base_url('public/') ?>/images/websiteback.svg) repeat" id="features" class="features">
             <div class="c_3">
 
 
@@ -200,7 +200,7 @@
 
 
         <!--    xeberler hissesi-->
-        <div class="courses c_news">
+        <div style="background: url(<?php echo base_url('public/') ?>/images/websiteback.svg) repeat" class="courses c_news">
             <div class="container">
                 <div class="head_part">
                     <h2><?php echo $this->lang->line("xeberler"); ?></h2>
@@ -375,7 +375,7 @@
 
 
         <!--    xeberler mobil hissesi-->
-        <div class="c_mobil_news">
+        <div style="background: url(<?php echo base_url('public/') ?>/images/websiteback.svg) repeat" class="c_mobil_news">
 
             <div class="head_part">
                 <h2><?php echo $this->lang->line("xeberler") ;?></h2>
@@ -385,7 +385,7 @@
 
             <?php $id = 1; ?>
 
-            <?php foreach ($last_news as $last_events_key){ ?>
+            <?php foreach ($last_news2 as $last_events_key){ ?>
 
                 <div id="<?php
 
@@ -419,17 +419,41 @@
                             <div class="course_info">
 
                                 <!--                                    tedbirin basliqi-->
-                                <span style="cursor:pointer;"><?php
+                                <span style="cursor:pointer;" class="c_size"><?php
+
+
+
 
                                     if ($this->session->userdata("dil") == "az"){
-                                        echo $last_events_key['news_title_az'];
+
+                                        if (strlen($last_events_key['news_title_az']) > 120){
+                                            echo substr($last_events_key['news_title_az'], 0 , 120) . "...";
+                                        }else{
+                                            echo $last_events_key['news_title_az'];
+                                        }
+
                                     }elseif ($this->session->userdata("dil") == "en"){
-                                        echo $last_events_key['news_title_en'];
+
+                                        if (strlen($last_events_key['news_title_en']) > 120){
+                                            echo substr($last_events_key['news_title_en'], 0 , 120) . "...";
+                                        }else{
+                                            echo $last_events_key['news_title_en'];
+                                        }
+
                                     }elseif ($this->session->userdata("dil") == "ru"){
-                                        echo $last_events_key['news_title_ru'];
+
+
+                                        if (strlen($last_events_key['news_title_ru']) > 120){
+                                            echo substr($last_events_key['news_title_ru'], 0 , 120) . "...";
+                                        }else{
+                                            echo $last_events_key['news_title_ru'];
+                                        }
+
                                     }
 
-                                    ?></span>
+                                    ?>
+
+                                </span>
                                 <!--                                    tedbirin basliqi-->
 
 
@@ -488,7 +512,7 @@
 
         <!--    telebeler muellimler labaratoriyalar-->
         <div id="count" class="count" data-stellar-background-ratio="0.3"
-             style="background: url(images/slider_inclass1.jpg); background-attachment: fixed; margin-top: 50px; background-position: 50% 50%;">
+             style="background: url(<?php echo base_url('public/') ?>/images/websiteback.svg) repeat; background-attachment: fixed; margin-top: 50px; background-position: 50% 50%;">
             <div class="count_wrapper c_students_whole">
                 <div class="container">
                     <!--  <div class="head_part ">
@@ -536,7 +560,7 @@
 
 
         <!--    tedbirler hissesi-->
-        <div class="courses">
+        <div style="background: url(<?php echo base_url('public/') ?>/images/websiteback.svg) repeat" class="courses">
 
             <center>
 
@@ -578,18 +602,37 @@
                                     <div class="course_info">
 
                                         <!--                                    tedbirin basliqi-->
-                                        <span style="cursor:pointer;">
-                                            <?php
+                                        <span style="cursor:pointer;" class="c_size">
+                                           <?php
 
-                                            if ($this->session->userdata("dil") == "az"){
-                                                echo $last_events_key['event_title_az'];
-                                            }elseif ($this->session->userdata("dil") == "en"){
-                                                echo $last_events_key['event_title_en'];
-                                            }elseif ($this->session->userdata("dil") == "ru"){
-                                                echo $last_events_key['event_title_ru'];
-                                            }
+                                           if ($this->session->userdata("dil") == "az"){
 
-                                            ?>
+                                               if (strlen($last_events_key['event_title_az']) > 90){
+                                                   echo substr($last_events_key['event_title_az'], 0 , 90) . "...";
+                                               }else{
+                                                   echo $last_events_key['event_title_az'];
+                                               }
+
+                                           }elseif ($this->session->userdata("dil") == "en"){
+
+                                               if (strlen($last_events_key['event_title_en']) > 90){
+                                                   echo substr($last_events_key['event_title_en'], 0 , 90) . "...";
+                                               }else{
+                                                   echo $last_events_key['event_title_en'];
+                                               }
+
+                                           }elseif ($this->session->userdata("dil") == "ru"){
+
+
+                                               if (strlen($last_events_key['event_title_ru']) > 90){
+                                                   echo substr($last_events_key['event_title_ru'], 0 , 90) . "...";
+                                               }else{
+                                                   echo $last_events_key['event_title_ru'];
+                                               }
+
+                                           }
+
+                                           ?>
                                         </span>
                                         <!--                                    tedbirin basliqi-->
 
