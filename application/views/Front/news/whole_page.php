@@ -4,7 +4,7 @@
 
 
 <!--main content-->
-<div style="background: url(<?php echo base_url('public/') ?>images/websiteback.svg) repeat" class="content_wrapper"  >
+<div  class="content_wrapper m_background"  >
 
 
 

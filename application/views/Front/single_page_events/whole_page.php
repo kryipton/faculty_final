@@ -11,7 +11,7 @@
 
 if($event){ ?>
 
-    <div class="content_wrapper" style="background: url(<?php echo base_url('public/') ?>/images/websiteback.svg) repeat">
+    <div class="content_wrapper m_background" >
 
         <div class="breadcrumb_wrap" data-stellar-background-ratio="0.3"
              style="background: url('<?php echo base_url("public/images/top1.jpg")?>'); background-attachment: fixed; background-position: 50% 50%;">
