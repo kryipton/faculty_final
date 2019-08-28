@@ -28,6 +28,7 @@
     width: 150px;
     border-radius: 6px;
     overflow: hidden;
+    border-color: darkgrey;
 }
 
 /* effect-1 styles */

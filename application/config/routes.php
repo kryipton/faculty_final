@@ -334,7 +334,9 @@ $route['himalaY_ixtisas_yenile/(.*)'] = 'Mecnun/speciality_update/$1';
 $route['himalaY_ixtisas_yenile_act/(.*)'] = 'Mecnun/speciality_update_act/$1';
 
 
-
+//Admin yenileme
+$route['himalaY_admin_yenileme'] = 'Mecnun/admin_update';
+$route['himalaY_admin_yenileme_act'] = 'Mecnun/admin_update_act';
 
 
 

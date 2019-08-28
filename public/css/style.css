@@ -2723,7 +2723,7 @@ ul.breadcrumbs li a:hover, ul.breadcrumbs li a:focus {
 
 .dtl_inner.last {
     border-bottom: 0px;
-    padding: 0px 0px 10px;
+    padding: 0px 0px 0px;
     margin-bottom: 0px;
 }
 

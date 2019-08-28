@@ -39,7 +39,7 @@ if($new){ ?>
                     <div class="dtl_inner_wrap">
 
                         <div class="dtl_inner last">
-                            <div class="dtl_head">
+                            <div class="dtl_head" style="background-color: white">
                                 <h1><?php
 
                                     if ($this->session->userdata("dil") == "az"){
