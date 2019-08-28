@@ -2,9 +2,8 @@
 
 <?php $this->load->view('Front/includes_for_whole_files/header_menu'); ?>
 
-
     <!--main content-->
-    <div class="content_wrapper" style="background: url(<?php echo base_url('public/') ?>/images/websiteback.svg) repeat">
+    <div class="content_wrapper m_background" >
 
 
         <!--    slide hissesi-->
