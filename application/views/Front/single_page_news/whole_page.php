@@ -43,13 +43,13 @@ if($new){ ?>
                                 <h1><?php
 
                                     if ($this->session->userdata("dil") == "az"){
-                                        echo substr($new['news_title_az'], 0,71);
+                                        echo $new['news_title_az'];
                                     }
                                     elseif ($this->session->userdata("dil") == "en"){
-                                        echo substr($new['news_title_en'], 0,71);
+                                        echo $new['news_title_en'];
                                     }
                                     elseif ($this->session->userdata("dil") == "ru"){
-                                        echo substr($new['news_title_ru'], 0,71);
+                                        echo $new['news_title_ru'];
                                     }
 
                                     ?></h1>
