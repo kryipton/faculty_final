@@ -12,7 +12,7 @@
 
     <br><br>
 
-    <div class="head_part">
+    <div class="head_part" style="margin-top: 46px!important;">
         <h2><?php echo $this->lang->line("xeberler"); ?></h2>
     </div>
 

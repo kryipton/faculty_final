@@ -7,7 +7,7 @@
 
 
     <br><br><br>
-    <div class="head_part">
+    <div class="head_part" style="margin-top: 20px!important;">
         <h2><?php echo $this->lang->line("tedbirler")?></h2>
     </div>
 
