@@ -280,7 +280,7 @@ header {
 }
 
 header nav {
-    position: relative;
+    position: absolute;
     width: 100%;
     background-color: transparent;
     padding: 0px;
