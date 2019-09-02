@@ -12,7 +12,7 @@
 
     <br><br>
 
-    <div class="head_part" style="margin-top: 46px!important;">
+    <div class="head_part" >
         <h2><?php echo $this->lang->line("xeberler"); ?></h2>
     </div>
 
@@ -30,7 +30,7 @@
                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                            <div class="course_block">
                                <div class="">
-                                   <img style="height: 230px;" alt="<?php
+                                   <img style="object-fit:cover; height: 230px;" alt="<?php
 
                                    if ($this->session->userdata("dil") == "az"){
                                        echo substr($last_news_key['news_title_az'], 0,71)."...";
