@@ -7,7 +7,7 @@
 
 
     <br><br><br>
-    <div class="head_part">
+    <div class="head_part" >
         <h2><?php echo $this->lang->line("tedbirler")?></h2>
     </div>
 
@@ -29,7 +29,7 @@
                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                 <div class="course_block">
                                     <div class="">
-                                        <img style="height: 230px;" alt="<?php
+                                        <img style="object-fit:cover; height: 230px;" alt="<?php
 
                                         if ($this->session->userdata("dil") == "az"){
                                             echo $last_events_key['event_title_az'];

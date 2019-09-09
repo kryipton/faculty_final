@@ -9,6 +9,7 @@ class Mecnun extends CI_Controller{
         $this->load->model('Master_model');
         $this->load->model('Bachelor_model');
         $this->load->model('Doctorate_model');
+        $this->load->model('Admin_model');
         if(!get_active_user()){
             redirect(base_url('himalaY_secure'));
         }
@@ -245,7 +246,7 @@ class Mecnun extends CI_Controller{
 
         //      upload edilecek sekil database e yuklenir
         $data  = array(
-            "name"                  => ($cond) ? $this->upload->data('file_name') : "default.jpg",
+            "name"                  => ($cond) ? $this->upload->data('file_name') : "default.png",
             "upload_date"           => date("Y/m/d"),
             "news_id"               =>   $id,
         );
@@ -283,7 +284,10 @@ class Mecnun extends CI_Controller{
         $this->Mecnun_model->news_gallery_delete(array(
             "id" => $gallery_id,
         ));
-        unlink("upload/news_images/gallery/".$photo['name']);
+
+        if ($photo['name'] != "default.png"){
+            unlink("upload/news_images/gallery/".$photo['name']);
+        }
 
         $data["photos"] = $this->Mecnun_model->get_news_gallery([
             "news_id" => $news_id
@@ -415,9 +419,6 @@ class Mecnun extends CI_Controller{
                     'slide_title_az' => $slide_title_az,
                     'slide_title_en' => $slide_title_en,
                     'slide_title_ru' => $slide_title_ru,
-                    'slide_desc_az' => $slide_desc_az,
-                    'slide_desc_en' => $slide_desc_en,
-                    'slide_desc_ru' => $slide_desc_ru,
                     'slide_link' => $slide_link,
                     'slide_image' => $slide_img
 
@@ -2325,6 +2326,40 @@ class Mecnun extends CI_Controller{
 
 
 
+    //     ============= Admin update Hissesi ================
+
+    public function admin_update(){
+        $data["admin"] = $this->Admin_model->get_admin();
+        $this->load->view('Admin/admin_update/admin_update',$data);
+    }
+
+
+    public function admin_update_act(){
+        $username = strip_tags($this->input->post("name"));
+        $password = strip_tags($this->input->post("password"));
+        $password_again = strip_tags($this->input->post("password_again"));
+
+        if (!empty($username) && !empty($password_again) && !empty($password)){
+
+            if ($password_again == $password){
+                $this->Admin_model->update_admin(array(
+                    "user_name" => $username,
+                    "user_password" => md5($password),
+                ));
+
+                $this->session->set_flashdata("success", "Admin məlumatları yeniləndi");
+                redirect(base_url("himalaY_admin_yenileme"));
+
+            }else{
+                $this->session->set_flashdata("alert", "Şifrələri eyni daxil edin!");
+                redirect(base_url("himalaY_admin_yenileme"));
+            }
+
+        }else{
+           $this->session->set_flashdata("alert", "Boşluq buraxmayın!");
+           redirect(base_url("himalaY_admin_yenileme"));
+        }
+    }
 
 
 

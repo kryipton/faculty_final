@@ -301,7 +301,7 @@
                                         <div style="cursor: pointer" class="item c_href" >
 
                                             <!--                                        xeberin sekli-->
-                                            <img class="" src="<?php echo base_url('upload/news_images/'.$last_news_key['news_img']) ?>" alt="">
+                                            <img style="width: 100%;height: 100%;" src="<?php echo base_url('upload/news_images/'.$last_news_key['news_img']) ?>" alt="">
                                             <!--                                        xeberin sekli-->
 
                                             <div class="carousel-caption col-lg-12" style="background-color: rgba(0, 0, 0, 0.73)!important;">
