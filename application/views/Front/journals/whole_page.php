@@ -117,7 +117,7 @@
                     </div>
 
                     <div class="col-sm-9">
-                        <p class="c_card_journal_title">jurnaLIN BASLIQI</p>
+                        <p class="c_card_journal_title">Jurnalin adi</p>
 
                         <p>Nomresi</p>
 
