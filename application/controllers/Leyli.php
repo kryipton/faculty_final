@@ -28,6 +28,7 @@ class Leyli extends CI_Controller {
         $this->load->model('Doctorate_model');
         $this->load->model('Department_model');
         $this->load->model('Laboratory_model');
+        $this->load->model('Journal_model');
         date_default_timezone_set('Asia/Dhaka');
 
 
@@ -496,6 +497,122 @@ class Leyli extends CI_Controller {
         $this->load->view('Front/department_labaratory/whole_page', $data);
     }
 
+    public function journals(){
+
+        //      bura journallar tabledengetirelecek
+
+        $data['logo']   = $this->Mecnun_model->get_logo_and_title();
+
+        $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+
+        $data['last_events'] = $this->News_model->get_last_news();
+
+        $data['contact'] = $this->Mecnun_model->getContact();
+        $data["services"] = $this->Services_model->get_services();
+
+        $data['journals'] = $this->Journal_model->get_journals();
+
+
+        $this->load->view('Front/journals/whole_page', $data);
+
+
+    }
+
+    public function journals_about($id){
+
+        //      bura journallar tabledengetirelecek
+
+        $data['logo'] = $this->Mecnun_model->get_logo_and_title();
+
+        $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+
+        $data['last_events'] = $this->News_model->get_last_news();
+
+        $data['contact'] = $this->Mecnun_model->getContact();
+        $data["services"] = $this->Services_model->get_services();
+
+        $data["journal"] = $this->Journal_model->get_journal(array(
+            "id" => $id,
+        ));
+
+       $this->load->view('Front/journals_about/whole_page', $data);
+
+
+    }
+
+    public function journals_contact($id){
+
+        //      bura journallar tabledengetirelecek
+
+        $data['logo'] = $this->Mecnun_model->get_logo_and_title();
+
+        $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+
+        $data['last_events'] = $this->News_model->get_last_news();
+
+        $data['contact'] = $this->Mecnun_model->getContact();
+        $data["services"] = $this->Services_model->get_services();
+
+        $data["journal"] = $this->Journal_model->get_journal(array(
+            "id" => $id,
+        ));
+
+        $this->load->view('Front/journals_contact/whole_page', $data);
+
+
+    }
+
+    public function journals_publication($id){
+
+        //      bura journallar tabledengetirelecek
+
+        $data['logo'] = $this->Mecnun_model->get_logo_and_title();
+
+        $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+
+        $data['last_events'] = $this->News_model->get_last_news();
+
+        $data['contact'] = $this->Mecnun_model->getContact();
+        $data["services"] = $this->Services_model->get_services();
+
+        $data["journal"] = $this->Journal_model->get_journal(array(
+            "id" => $id,
+        ));
+
+//        $data["$journal_publications"] = $this->Journal_model->metod_adi(array(
+//            "journal_id" => $id,
+//        ));
+
+        $this->load->view('Front/journals_publication/whole_page', $data);
+
+
+    }
+
+    public function journals_publication_link($id){
+
+        $data['logo'] = $this->Mecnun_model->get_logo_and_title();
+
+        $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+
+        $data['last_events'] = $this->News_model->get_last_news();
+
+        $data['contact'] = $this->Mecnun_model->getContact();
+        $data["services"] = $this->Services_model->get_services();
+
+        $data["journal"] = $this->Journal_model->get_journal(array(
+            "id" => $id,
+        ));
+
+
+
+//        $data["$journal_publications"] = $this->Journal_model->metod_adi(array(
+//            "journal_id" => $id,
+//        ));
+
+        $this->load->view('Front/journals_publication/whole_page', $data);
+
+
+    }
 
 
 

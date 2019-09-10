@@ -57,7 +57,15 @@ $lang["elmi_derece"] = "Academic degree";
 
 $lang["diger_xeberler"] = "Other news";
 
+$lang["elm"] = "Knowledge";
 
+$lang["jurnallar"] = "Journal";
+
+$lang["tiraj"] = "Edition";
+
+$lang["dercler"] = "Publication";
+
+$lang["yukle"] = "Download";
 
 
 
