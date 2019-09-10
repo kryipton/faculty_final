@@ -140,19 +140,24 @@
                                     <p>adi</p>
                                     <a href="<?php
 
-                                    
+//                                    if ($journal_publication["link"] == ""){
+//
+//                                        if ($this->session->userdata("dil") == "az"){
+//                                            echo base_url("upload/publication_files/$journal_publication[file_name]");
+//                                        }
+//                                        elseif ($this->session->userdata("dil") == "en"){
+//                                            echo base_url("upload/publication_files/$journal_publication[file_name]");
+//                                        }
+//                                        elseif ($this->session->userdata("dil") == "ru"){
+//                                            echo base_url("upload/publication_files/$journal_publication[file_name]");
+//                                        }
+//
+//                                    }else{
+//                                        redirect($journal_publication["link"]);
+//                                    }
 
-                                    if ($this->session->userdata("dil") == "az"){
-//                                   echo base_url("az/Journals_publication_link/$journal_publication[id]");
-                                    }
-                                    elseif ($this->session->userdata("dil") == "en"){
-//                                   echo base_url("en/Journals_publication_link/$journal_publication[id]");
-                                    }
-                                    elseif ($this->session->userdata("dil") == "ru"){
-//                                   echo base_url("ru/Journals_publication_link/$journal_publication[id]");
-                                    }
 
-                                    ?>" type="button" class="btn btn-sm btn-primary" style="color: white!important; background-color: #0f61a0; font-size: 12px;">
+                                    ?>" download class="btn btn-sm btn-primary" style="color: white!important; background-color: #0f61a0; font-size: 12px;">
                                         <?php echo $this->lang->line("yukle")?>
                                     </a>
                                 </div>
