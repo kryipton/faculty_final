@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Asia/Baku');
 class Mecnun extends CI_Controller{
 
     public function __construct()

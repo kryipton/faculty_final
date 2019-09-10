@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+date_default_timezone_set('Asia/Baku');
 class Leyli extends CI_Controller {
 
     public function __construct()
