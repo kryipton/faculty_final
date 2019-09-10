@@ -172,6 +172,12 @@
                 <?php }?>
 
 
+<!--                <div class="pagination" style="">-->
+<!--                    <center>-->
+<!--                        --><?php //echo $links?>
+<!--                    </center>-->
+<!--                </div>-->
+
             </div>
 
         </div>
