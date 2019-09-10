@@ -11,6 +11,7 @@ class Mecnun extends CI_Controller{
         $this->load->model('Bachelor_model');
         $this->load->model('Doctorate_model');
         $this->load->model('Admin_model');
+        $this->load->model('Journal_model');
         if(!get_active_user()){
             redirect(base_url('himalaY_secure'));
         }
@@ -296,8 +297,7 @@ class Mecnun extends CI_Controller{
         $data["news"] = $this->Mecnun_model->getOneNews([
             "news_id" => $news_id
         ]);
-      $this->load->view('Admin/news/news_gallery/whole_page',$data);
-
+    redirect(base_url("himalaY_xeber_gallery/").$news_id);
     }
 
 
@@ -2362,7 +2362,26 @@ class Mecnun extends CI_Controller{
         }
     }
 
+    //     ============= Admin update Hissesi ================
 
+
+
+
+
+
+
+
+    //     ================================================= Jurnallar hissesi Hissesi ===========================================================
+    public function journal_main()
+    {
+        $data["journals"] = $this->Journal_model->get_journals();
+        $this->load->view('Admin/journal/whole_page',$data);
+    }
+
+    public function journal_add()
+    {
+        $this->load->view('Admin/journal/create_page');
+    }
 
 }
 

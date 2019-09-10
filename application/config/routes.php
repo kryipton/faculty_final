@@ -361,3 +361,12 @@ $route['himalaY_secure'] = 'LeyMec/login';
 $route['himalaY_secure_act'] = 'LeyMec/login_act';
 $route['himalaY_secure_out'] = 'LeyMec/logOut';
 
+
+//==========================================  Admin panele aid Journallar hissesi ===================================================
+
+$route['himalaY_jurnallar'] = 'Mecnun/journal_main';
+$route['himalaY_jurnallar_elave_et'] = 'Mecnun/journal_add';
+$route['himalaY_jurnallar_yenile/(.*)'] = 'Mecnun/journal_update/$1';
+
+
+
