@@ -71,20 +71,14 @@ $route['(:any)/Labaratory'] = 'Leyli/labaratory';
 
 //Jurnallar hissesi
 $route['(:any)/Journals'] = 'Leyli/journals';
-
 //Jurnallar haqqinda hissesi
 $route['(:any)/Journals_about/(.*)'] = 'Leyli/journals_about/$2';
-
-//Jurnallar haqqinda hissesi
+//Jurnallar elaqe hissesi
 $route['(:any)/Journals_contact/(.*)'] = 'Leyli/journals_contact/$2';
-
-
 //Jurnalin diger dercleri hissesi
-$route['(:any)/Journals_others/(.*)'] = 'Leyli/journals_others/$1';
-
-//Jurnalin diger derclerinin haqqinda hissesi
-$route['(:any)/Journals_others_about/(.*)'] = 'Leyli/journals_others_about/$1';
-
+$route['(:any)/Journals_publication/(.*)'] = 'Leyli/journals_publication/$2';
+//Jurnalin diger dercleri hissesi
+$route['(:any)/Journals_publication_link/(.*)'] = 'Leyli/journals_publication_link/$2';
 
 
 

@@ -29,8 +29,6 @@
     <div class="aside_wrapper col-lg-3 col-md-3 col-sm-12 col-xs-12">
         <div style="min-height: 450px;padding: 20px 10px 0px 10px">
 
-
-
             <!--        sol terefde olan linkler-->
             <div class="category_course about_left_b" style="border-radius: 10px">
                 <h4><?php
@@ -66,11 +64,11 @@
                     <li><a href="<?php
 
                         if ($this->session->userdata("dil") == "az"){
-                            echo base_url('az/Labaratory');
+                            echo base_url("az/Journals_publication/$journal[id]");
                         }elseif ($this->session->userdata("dil") == "en"){
-                            echo base_url('en/Labaratory');
+                            echo base_url("en/Journals_publication/$journal[id]");
                         }elseif ($this->session->userdata("dil") == "ru"){
-                            echo base_url('ru/Labaratory');
+                            echo base_url("ru/Journals_publication/$journal[id]");
                         }
 
                         ?>"><?php echo $this->lang->line("dercler"); ?></a></li>

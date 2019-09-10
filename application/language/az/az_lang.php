@@ -60,6 +60,9 @@ $lang["tiraj"] = "Tiraj";
 
 $lang["dercler"] = "Dərclər";
 
+$lang["yukle"] = "Yüklə ";
+
+
 
 
 

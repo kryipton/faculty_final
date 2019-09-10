@@ -65,6 +65,8 @@ $lang["tiraj"] = "Edition";
 
 $lang["dercler"] = "Publication";
 
+$lang["yukle"] = "Download";
+
 
 
 

@@ -562,6 +562,58 @@ class Leyli extends CI_Controller {
 
     }
 
+    public function journals_publication($id){
+
+        //      bura journallar tabledengetirelecek
+
+        $data['logo'] = $this->Mecnun_model->get_logo_and_title();
+
+        $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+
+        $data['last_events'] = $this->News_model->get_last_news();
+
+        $data['contact'] = $this->Mecnun_model->getContact();
+        $data["services"] = $this->Services_model->get_services();
+
+        $data["journal"] = $this->Journal_model->get_journal(array(
+            "id" => $id,
+        ));
+
+//        $data["$journal_publications"] = $this->Journal_model->metod_adi(array(
+//            "journal_id" => $id,
+//        ));
+
+        $this->load->view('Front/journals_publication/whole_page', $data);
+
+
+    }
+
+    public function journals_publication_link($id){
+
+        $data['logo'] = $this->Mecnun_model->get_logo_and_title();
+
+        $data['all_categories_of_department']   = $this->Mecnun_model->get_all_department_categories();
+
+        $data['last_events'] = $this->News_model->get_last_news();
+
+        $data['contact'] = $this->Mecnun_model->getContact();
+        $data["services"] = $this->Services_model->get_services();
+
+        $data["journal"] = $this->Journal_model->get_journal(array(
+            "id" => $id,
+        ));
+
+
+
+//        $data["$journal_publications"] = $this->Journal_model->metod_adi(array(
+//            "journal_id" => $id,
+//        ));
+
+        $this->load->view('Front/journals_publication/whole_page', $data);
+
+
+    }
+
 
 
 
