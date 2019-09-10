@@ -56,7 +56,9 @@ $lang["elm"] = "Elm";
 
 $lang["jurnallar"] = "Jurnallar";
 
+$lang["tiraj"] = "Tiraj";
 
+$lang["dercler"] = "Dərclər";
 
 
 

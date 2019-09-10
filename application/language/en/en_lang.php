@@ -61,6 +61,10 @@ $lang["elm"] = "Knowledge";
 
 $lang["jurnallar"] = "Journal";
 
+$lang["tiraj"] = "Edition";
+
+$lang["dercler"] = "Publication";
+
 
 
 

@@ -1,14 +1,13 @@
-<title><?php echo $this->lang->line("jurnallar"); ?></title>
-
+<title><?php echo $this->lang->line("elaqe"); ?></title>
 <?php $this->load->view('Front/includes_for_whole_files/header_menu'); ?>
 
-<div class="content_wrapper" style="margin-bottom: 130px;">
+<div class="content_wrapper" style="margin-bottom: 80px;">
 
     <div class="breadcrumb_wrap">
         <div class="breadcrumb_wrap_inner about_head">
             <div class="container">
-                <h1>
-                    <?php
+                <h1><?php
+
 
                     if ($this->session->userdata("dil") == "az"){
                         echo $logo["site_title_az"];
@@ -18,8 +17,9 @@
                         echo $logo["site_title_ru"];
                     }
 
-                    ?>
-                </h1>
+                    ?></h1>
+
+
 
             </div>
         </div>
@@ -88,7 +88,7 @@
                         }
 
                         ?>"><?php echo $this->lang->line("elaqe"); ?></a></li>
-               </ul>
+                </ul>
             </div>
             <!--        sol terefde olan linkler-->
 
@@ -120,67 +120,33 @@
     </div>
     <!--    left menu-->
 
-    <div class="col-md-8" style="margin-bottom: 100px">
+    <div class="col-md-8">
         <div class="about_right" style="padding: 20px 0px 0px 10px">
-
-<!--         burda jurnalin adi -->
-            <h2>
-                <?php
+            <h2><?php echo $this->lang->line("elaqe"); ?></h2>
+            <div class="about_right_text" style="color: grey">
+                <span>
+                    <br>
+                    <?php
 
                     if ($this->session->userdata("dil") == "az"){
-                        echo $journal["name_az"];
-                    }
-                    elseif ($this->session->userdata("dil") == "en"){
-                        echo $journal["name_en"];
-                    }
-                    elseif ($this->session->userdata("dil") == "ru"){
-                        echo $journal["name_ru"];
+                        echo $journal["contact_az"];
+                    }elseif ($this->session->userdata("dil") == "en"){
+                        echo $journal["contact_en"];
+                    }elseif ($this->session->userdata("dil") == "ru"){
+                        echo $journal["contact_ru"];
                     }
 
-                ?>
-            </h2>
+                   ?>
+                     <br><br>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6078.73526600192!2d49.848567!3d40.378544!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x53a5c1e7cc11c36f!2zQXrJmXJiYXljYW4gRMO2dmzJmXQgTmVmdCB2yZkgU8mZbmF5ZSBVbml2ZXJzaXRldGk!5e0!3m2!1sen!2sus!4v1566812188664!5m2!1sen!2sus" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                    <br><br>
 
-            <div class="about_right_text" style="color: grey">
-                <br><br>
-                <div class="container-fluid">
-                    <div class="row">
-
-                        <center>
-                            <img class="c_journal_single_img" src="<?php echo base_url("upload/journal_images/$journal[img_name]")?>" alt="">
-
-
-                            <div class="c_journal_right_text">
-
-                                <br>
-                                <p class="c_edition"><span style="font-weight: bold;"><?php echo $this->lang->line("tiraj")?>:</span> №<?php echo $journal["edition_no"]?></p>
-                                <br>
-                                <p>
-                                    <?php
-
-                                    if ($this->session->userdata("dil") == "az"){
-                                        echo $journal["desc_az"];
-                                    }
-                                    elseif ($this->session->userdata("dil") == "en"){
-                                        echo $journal["desc_en"];
-                                    }
-                                    elseif ($this->session->userdata("dil") == "ru"){
-                                        echo $journal["desc_ru"];
-                                    }
-
-                                    ?>
-                                </p>
-
-
-                            </div>
-
-                        </center>
-                    </div>
-                </div>
-
+                </span>
             </div>
         </div>
     </div>
 
 </div>
+
 
 <?php $this->load->view('Front/includes_for_whole_files/footer_menu'); ?>

@@ -895,7 +895,8 @@ body{
 
 .c_journal_card_div img{
     border-radius: 10px;
-    max-width: 244px;
+    width: 100%;
+    object-fit: cover;
     height: 191px;
 }
 
@@ -904,14 +905,21 @@ body{
     color: #595959 !important;
     font-size: 22px;
     font-weight: bold;
+
 }
 
 .c_journal_single_img{
     max-width: 700px;
     max-height: 700px;
+    border-radius: 10px;
 }
 
-.c_journa_right_text{
-    padding-top: 50px;
-    padding-left: 155px;
+.c_journal_right_text{
+    text-align: left;
+    max-width: 900px;
+}
+
+.c_edition{
+    font-size: 20px;
+    text-align: center;
 }

@@ -111,39 +111,66 @@
 
             <div class="about_right_text" style="color: grey">
 
-                <div class="col-sm-12 c_journal_card_div">
-                    <div class="col-md-3">
-                        <img src="http://localhost/faculty/upload/news_images/5ce64443f0945.jpg" alt="">
+                <?php foreach ($journals as $journal) { ?>
+
+                    <div class="col-xs-12 c_journal_card_div">
+                        <div class="col-sm-3 col-xs-5">
+                            <img src="<?php echo base_url("upload/journal_images/$journal[img_name]")?>" alt="Şəkil Yüklənmədi">
+                        </div>
+
+                        <div class="col-sm-9 col-xs-7">
+
+                            <a href="<?php
+
+                            if ($this->session->userdata("dil") == "az"){
+                                echo base_url("az/Journals_about/$journal[id]");
+                            }
+                            elseif ($this->session->userdata("dil") == "en"){
+                                echo base_url("en/Journals_about/$journal[id]");
+                            }
+                            elseif ($this->session->userdata("dil") == "ru"){
+                                echo base_url("ru/Journals_about/$journal[id]");
+                            }
+
+                            ?>" class="c_card_journal_title">
+                                <?php
+
+                                    if ($this->session->userdata("dil") == "az"){
+                                        echo $journal["name_az"];
+                                    }
+                                    elseif ($this->session->userdata("dil") == "en"){
+                                        echo $journal["name_en"];
+                                    }
+                                    elseif ($this->session->userdata("dil") == "ru"){
+                                        echo $journal["name_ru"];
+                                    }
+
+                                ?>
+                            </a>
+                            <br><br>
+                            <p><?php echo $this->lang->line("tiraj") . ":" . $journal["edition_no"]?></p>
+
+                            <p>
+                                <?php
+
+                                if ($this->session->userdata("dil") == "az"){
+                                    echo $journal["desc_az"];
+                                }
+                                elseif ($this->session->userdata("dil") == "en"){
+                                    echo $journal["desc_en"];
+                                }
+                                elseif ($this->session->userdata("dil") == "ru"){
+                                    echo $journal["desc_ru"];
+                                }
+
+                                ?>
+                            </p>
+
+                        </div>
                     </div>
 
-                    <div class="col-sm-9">
-                        <p class="c_card_journal_title">Jurnalin adi</p>
+                <?php }?>
 
-                        <p>Nomresi</p>
-
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aliquid animi asperiores deserunt distinctio doloremque ea, est in inventore iure magnam natus
-                        </p>
-
-
-                        <a href="<?php
-
-                        if ($this->session->userdata("dil") == "az"){
-                            echo base_url("az/Journals_about/2");
-                        }
-                        elseif ($this->session->userdata("dil") == "en"){
-                            echo base_url("en/Journals_about/2");
-                        }
-                        elseif ($this->session->userdata("dil") == "ru"){
-                            echo base_url("ru/Journals_about/2");
-                        }
-
-                        ?>" type="button" class="btn btn-sm btn-primary" style="color: white!important; background-color: #0f61a0;; float: right; font-size: 12px;">
-                            <?php echo $this->lang->line("etrafli")?>
-                        </a>
-
-                    </div>
-                </div>
 
             </div>
 
