@@ -3,7 +3,7 @@
 
     public function get_journals()
     {
-        return $this->db->get('journal_db')->result_array();
+        return $this->db->order_by("id","DESC")->get('journal_db')->result_array();
     }
 
     public function get_journal($where){
@@ -20,6 +20,23 @@
         $this->db->update('journal_db',$data);
     }
 
+    public function delete($where)
+    {
+        $this->db->where($where)->delete("journal_db");
+    }
 
+
+    public function get_publications($where){
+        return $this->db->where($where)->get('publications')->result_array();
+    }
+
+    public function delete_publication($where)
+    {
+        $this->db->where($where)->delete("publications");
+    }
+
+    public function insert_publication($data){
+        $this->db->insert('publications',$data);
+    }
 
 }

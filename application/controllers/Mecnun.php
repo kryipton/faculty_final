@@ -2383,6 +2383,233 @@ class Mecnun extends CI_Controller{
         $this->load->view('Admin/journal/create_page');
     }
 
+
+    public function journal_add_act()
+    {
+
+        $title_az = strip_tags($this->input->post('title_az'));
+        $title_en = strip_tags($this->input->post('title_en'));
+        $title_ru = strip_tags($this->input->post('title_ru'));
+        $desc_az  = $this->input->post('desc_az');
+        $desc_en  = $this->input->post('desc_en');
+        $desc_ru  = $this->input->post('desc_ru');
+        $contact_az  = $this->input->post('contact_az');
+        $contact_ru  = $this->input->post('contact_ru');
+        $contact_en  = $this->input->post('contact_en');
+        $time     = strip_tags($this->input->post('news_date'));
+        $edition_no   = strip_tags($this->input->post('edition_no'));
+
+        $config['upload_path']   = 'upload/journal_images/';
+        $config['max_size']     = '10000';
+        $config['allowed_types'] = 'jpg|jpeg|png';
+        $config['file_name'] = $_FILES['image_name']['name'];
+
+        $this->upload->initialize($config);
+
+        if (!empty($title_az) && !empty($title_en) && !empty($title_ru) && !empty($desc_az)){
+
+
+            $data = array(
+
+                'name_az' => $title_az,
+                'name_en' => $title_en,
+                'name_ru' =>  $title_ru,
+                'desc_az'  => $desc_az,
+                'desc_en'  => $desc_en,
+                'desc_ru'  => $desc_ru,
+                'contact_az'  => $contact_az,
+                'contact_ru'  => $contact_ru,
+                'contact_en'  => $contact_en,
+                'time'  => $time,
+                'edition_no '  => $edition_no,
+                'img_name'    => ($this->upload->do_upload('image_name')) ? $this->upload->data('file_name') : 'default.png'
+
+
+            );
+
+            $this->Journal_model->insert($data);
+            $msg = 'Yeni jurnal əlavə olundu ! ';
+            $this->session->set_flashdata('success',$msg);
+
+            redirect(base_url('himalaY_jurnallar'));
+        }else{
+
+            $msg = 'Zəhmət olmasa boşluq buraxmayın ! ';
+            $this->session->set_flashdata('alert',$msg);
+
+            redirect(base_url('himalaY_jurnallar_elave_et'));
+        }
+    }
+
+
+    public function journal_delete($id)
+    {
+        $this->Journal_model->delete([
+            'id' => $id
+        ]);
+        $this->session->set_flashdata('success','Jurnal silindi');
+        redirect(base_url('himalaY_jurnallar'));
+    }
+
+    public function journal_update($id)
+    {
+        $data["journal"] = $this->Journal_model->get_journal([
+            'id' => $id
+        ]);
+        $this->load->view('Admin/journal/update_page',$data);
+    }
+
+    public function journal_update_act($id)
+    {
+
+
+        $title_az = strip_tags($this->input->post('title_az'));
+        $title_en = strip_tags($this->input->post('title_en'));
+        $title_ru = strip_tags($this->input->post('title_ru'));
+        $desc_az  = $this->input->post('desc_az');
+        $desc_en  = $this->input->post('desc_en');
+        $desc_ru  = $this->input->post('desc_ru');
+        $contact_az  = $this->input->post('contact_az');
+        $contact_ru  = $this->input->post('contact_ru');
+        $contact_en  = $this->input->post('contact_en');
+        $time     = strip_tags($this->input->post('news_date'));
+        $edition_no   = strip_tags($this->input->post('edition_no'));
+
+        $config['upload_path']   = 'upload/journal_images/';
+        $config['max_size']     = '10000';
+        $config['allowed_types'] = 'jpg|jpeg|png';
+        $config['file_name'] = $_FILES['image_name']['name'];
+
+        $this->upload->initialize($config);
+
+        if (!empty($title_az) && !empty($title_en) && !empty($title_ru) && !empty($desc_az)){
+
+            if ($this->upload->do_upload('image_name')){
+            $data = array(
+
+                'name_az' => $title_az,
+                'name_en' => $title_en,
+                'name_ru' =>  $title_ru,
+                'desc_az'  => $desc_az,
+                'desc_en'  => $desc_en,
+                'desc_ru'  => $desc_ru,
+                'contact_az'  => $contact_az,
+                'contact_ru'  => $contact_ru,
+                'contact_en'  => $contact_en,
+                'time'  => $time,
+                'edition_no '  => $edition_no,
+                'img_name'    => $this->upload->data('file_name')
+
+
+            );}else{
+
+                $data = array(
+
+                    'name_az' => $title_az,
+                    'name_en' => $title_en,
+                    'name_ru' =>  $title_ru,
+                    'desc_az'  => $desc_az,
+                    'desc_en'  => $desc_en,
+                    'desc_ru'  => $desc_ru,
+                    'contact_az'  => $contact_az,
+                    'contact_ru'  => $contact_ru,
+                    'contact_en'  => $contact_en,
+                    'time'  => $time,
+                    'edition_no '  => $edition_no,
+                );
+
+            }
+
+            $this->Journal_model->update($data);
+            $msg = 'Jurnal düzənləndi!';
+
+            $this->session->set_flashdata('success',$msg);
+
+            redirect(base_url('himalaY_jurnallar'));
+        }else{
+
+            $msg = 'Zəhmət olmasa boşluq buraxmayın ! ';
+            $this->session->set_flashdata('alert',$msg);
+
+            redirect(base_url('himalaY_jurnallar_duzenle/').$id);
+        }
+    }
+
+
+    public function journal_publication($id)
+    {
+        $data["publications"] = $this->Journal_model->get_publications([
+            'journal_id' => $id
+        ]);
+
+        $data["journal"] = $this->Journal_model->get_journal([
+            'id' => $id
+        ]);
+        $this->load->view('Admin/journal/publication',$data);
+    }
+
+    public function publication_add($id)
+    {
+        $data["journal"] = $this->Journal_model->get_journal([
+            'id' => $id
+        ]);
+        $this->load->view('Admin/journal/publication_add',$data);
+    }
+
+    public function publication_add_act($id)
+    {
+        $title_az = strip_tags($this->input->post('title_az'));
+        $title_en = strip_tags($this->input->post('title_en'));
+        $title_ru = strip_tags($this->input->post('title_ru'));
+        $time = strip_tags($this->input->post('time'));
+        $link = strip_tags($this->input->post('link'));
+
+
+        $config['upload_path']   = 'upload/publications_files/';
+        $config['max_size']     = '10000';
+        $config['allowed_types'] = 'pdf|doc|docx';
+        $config['file_name'] = $_FILES['image_name']['name'];
+
+        $this->upload->initialize($config);
+
+        if (!empty($time) ){
+
+
+            $data = array(
+
+                'name_az' => $title_az,
+                'name_en' => $title_en,
+                'name_ru' =>  $title_ru,
+                'journal_id' => $id,
+                'time'  => $time,
+                'link' => $link,
+                'file_name'    => $this->upload->data('file_name')
+
+
+            );
+
+            $this->Journal_model->insert_publication($data);
+            $msg = 'Yeni derc əlavə olundu ! ';
+            $this->session->set_flashdata('success',$msg);
+
+            redirect(base_url('himalaY_jurnallar'));
+        }else{
+
+            $msg = 'Zəhmət olmasa boşluq buraxmayın ! ';
+            $this->session->set_flashdata('alert',$msg);
+
+            redirect(base_url('himalaY_jurnallar_elave_et'));
+        }
+    }
+
+    public function publication_delete($id)
+    {
+        $this->Journal_model->delete_publication([
+            'id' => $id
+        ]);
+        $this->session->set_flashdata('success','Derc silindi');
+        redirect(base_url('himalaY_jurnallar_dercler/').$id);
+    }
 }
 
 
