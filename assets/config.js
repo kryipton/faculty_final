@@ -12,11 +12,12 @@ CKEDITOR.editorConfig = function( config ) {
 
 
     // ...
-    config.filebrowserBrowseUrl =  base_url + '/assets/kcfinder/browse.php?opener=ckeditor&type=files';
-    config.filebrowserImageBrowseUrl = base_url +  '/assets/kcfinder/browse.php?opener=ckeditor&type=images';
-    config.filebrowserFlashBrowseUrl = base_url +  '/assets/kcfinder/browse.php?opener=ckeditor&type=flash';
-    config.filebrowserUploadUrl = base_url +  '/assets/kcfinder/upload.php?opener=ckeditor&type=files';
-    config.filebrowserImageUploadUrl = base_url +  '/assets/kcfinder/upload.php?opener=ckeditor&type=images';
-    config.filebrowserFlashUploadUrl = base_url +  '/assets/kcfinder/http://localhost/faculty/upload.php?opener=ckeditor&type=flash';
+
+    config.filebrowserBrowseUrl      = base_url+'/assets/kcfinder/browse.php?opener=ckeditor&type=files';
+    config.filebrowserImageBrowseUrl = base_url+'/assets/kcfinder/browse.php?opener=ckeditor&type=images';
+    config.filebrowserFlashBrowseUrl = base_url+'/assets/kcfinder/browse.php?opener=ckeditor&type=flash';
+    config.filebrowserUploadUrl      = base_url+'/assets/kcfinder/upload.php?opener=ckeditor&type=files';
+    config.filebrowserImageUploadUrl = base_url+'/assets/kcfinder/upload.php?opener=ckeditor&type=images';
+    config.filebrowserFlashUploadUrl = base_url+'/assets/kcfinder/http://localhost/faculty/upload.php?opener=ckeditor&type=flash';
 // ...
 };

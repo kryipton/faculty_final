@@ -1,5 +1,7 @@
 <?php
+date_default_timezone_set('Asia/Baku');
 class LeyMec extends CI_Controller{
+
     public function __construct()
     {
         parent::__construct();
