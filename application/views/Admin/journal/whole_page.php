@@ -32,7 +32,7 @@
                 <tr>
                     <th  scope="col">Tiraj No</th>
                     <th  scope="col">Jurnal adı</th>
-                    <th  scope="col">Jurnal haqqında</th>
+                    <th  scope="col">Dərcləri</th>
                     <th  scope="col">Jurnal vaxtı</th>
                     <th  scope="col">Jurnal şəkili</th>
                     <th  scope="col">Dəyiş / Sil</th>
@@ -48,7 +48,13 @@
 
                         <th><?php  echo $journal['edition_no']?></th>
                         <th><?php  echo substr($journal['name_az'], 0,100)?></th>
-                        <th><?php  echo substr($journal['desc_az'], 0,160)?></th>
+                        <td>
+                            <a href="<?php echo base_url('himalaY_jurnallar_dercler/').$journal['id'] ?>" class="btn btn-primary btn-sm"
+                               style="margin: 30px; background: #854df1; border:0px solid #DD4B39 " >
+                                <i class="fa fa-image" aria-hidden="true"></i><span>Dercler</span>
+                            </a>
+                        </td>
+
                         <th><?php  echo $journal['time']?></th>
                         <th>
                             <img style="width: 150px; height: 90px" src="<?php  echo base_url('upload/journal_images/'.$journal['img_name']) ?>" alt="">
@@ -58,7 +64,7 @@
                                style="background: #3C8DBC; border:1px solid #3C8DBC">
                                 <i class="fa fa-pencil" aria-hidden="true"></i>
                             </a>
-                            <a href="<?php echo base_url('himalaY_jurnallar_sil/').$journal['id']?>" class="btn btn-primary btn-sm"
+                            <a href="<?php echo base_url('himalaY_jurnallar_silme/').$journal['id']?>" class="btn btn-primary btn-sm"
                                style="background: #DD4B39;border:1px solid #DD4B39">
                                 <i class="fa fa-times" aria-hidden="true"></i>
                             </a>
@@ -69,6 +75,7 @@
                     <?php
                 }
                 ?>
+
                 </tbody>
             </table>
 

@@ -363,6 +363,17 @@ $route['himalaY_secure_out'] = 'LeyMec/logOut';
 $route['himalaY_jurnallar'] = 'Mecnun/journal_main';
 $route['himalaY_jurnallar_elave_et'] = 'Mecnun/journal_add';
 $route['himalaY_jurnallar_yenile/(.*)'] = 'Mecnun/journal_update/$1';
+$route['himalaY_jurnallar_elave_et_act'] = 'Mecnun/journal_add_act';
+$route['himalaY_jurnallar_silme/(.*)'] = 'Mecnun/journal_delete/$1';
+$route['himalaY_jurnallar_duzenle/(.*)'] = 'Mecnun/journal_update/$1';
+$route['himalaY_jurnallar_duzenle_act/(.*)'] = 'Mecnun/journal_update_act/$1';
+$route['himalaY_jurnallar_dercler/(.*)'] = 'Mecnun/journal_publication/$1';
+$route['himalaY_jurnallar_dercler_elave_et/(.*)'] = 'Mecnun/publication_add/$1';
+$route['himalaY_jurnallar_dercler_elave_et_act/(.*)'] = 'Mecnun/publication_add_act/$1';
+$route['himalaY_jurnallar_dercler_silme/(.*)'] = 'Mecnun/publication_delete/$1';
+
+
+
 
 
 
