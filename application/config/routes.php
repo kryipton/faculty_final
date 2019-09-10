@@ -69,6 +69,19 @@ $route['(:any)/Contact'] = 'Leyli/contact';
 //Labaratoriya hissesi
 $route['(:any)/Labaratory'] = 'Leyli/labaratory';
 
+//Jurnallar hissesi
+$route['(:any)/Journals'] = 'Leyli/journals';
+
+//Jurnallar haqqinda hissesi
+$route['(:any)/Journals_about/(.*)'] = 'Leyli/journals_about/$1';
+
+//Jurnalin diger dercleri hissesi
+$route['(:any)/Journals_others/(.*)'] = 'Leyli/journals_others/$1';
+
+//Jurnalin diger derclerinin haqqinda hissesi
+$route['(:any)/Journals_others_about/(.*)'] = 'Leyli/journals_others_about/$1';
+
+
 
 
 //Xeberler hissesi

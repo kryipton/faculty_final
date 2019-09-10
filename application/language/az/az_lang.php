@@ -52,6 +52,9 @@ $lang["elmi_derece"] = "Elmi dərəcə";
 
 $lang["diger_xeberler"] = "Digər xəbərlər";
 
+$lang["elm"] = "Elm";
+
+$lang["jurnallar"] = "Jurnallar";
 
 
 

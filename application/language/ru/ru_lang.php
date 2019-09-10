@@ -53,6 +53,9 @@ $lang["elmi_derece"] = "Ученая степень";
 
 $lang["diger_xeberler"] = "Другие новости";
 
+$lang["elm"] = "Знание";
+
+$lang["jurnallar"] = "Журналы";
 
 
 

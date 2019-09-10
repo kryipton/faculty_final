@@ -875,3 +875,43 @@ body{
     }
 }
 
+
+.c_journal_card_div{
+    margin-top: 25px;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.78) !important;
+    -webkit-box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+}
+
+.c_journal_card_div a{
+
+}
+
+
+.c_journal_card_div img{
+    border-radius: 10px;
+    max-width: 244px;
+    height: 191px;
+}
+
+
+.c_card_journal_title{
+    color: #595959 !important;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.c_journal_single_img{
+    max-width: 700px;
+    max-height: 700px;
+}
+
+.c_journa_right_text{
+    padding-top: 50px;
+    padding-left: 155px;
+}
