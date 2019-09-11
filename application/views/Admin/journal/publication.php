@@ -47,14 +47,14 @@
                     <tr>
 
                         <th>
-                            <img style="width: 150px; height: 90px" src="" alt="">
+                            <img style="width: 150px; height: 90px" src="<?php  echo base_url('upload/publications_files/'.$publication['img_name']) ?>" alt="">
                         </th>
                         <th><?php  echo $publication['name_az']?></th>
 
                         <th><?php  echo $publication['time']?></th>
 
                         <td>
-                            <a href="<?php echo base_url('himalaY_jurnallar_dercler_silme/').$publication['id']?>" class="btn btn-primary btn-sm"
+                            <a href="<?php echo base_url('himalaY_jurnallar_dercler_silme/').$publication['id'].'/'.$journal['id']?>" class="btn btn-primary btn-sm"
                                style="background: #DD4B39;border:1px solid #DD4B39">
                                 <i class="fa fa-times" aria-hidden="true"></i>
                             </a>

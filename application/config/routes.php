@@ -373,7 +373,7 @@ $route['himalaY_jurnallar_duzenle_act/(.*)'] = 'Mecnun/journal_update_act/$1';
 $route['himalaY_jurnallar_dercler/(.*)'] = 'Mecnun/journal_publication/$1';
 $route['himalaY_jurnallar_dercler_elave_et/(.*)'] = 'Mecnun/publication_add/$1';
 $route['himalaY_jurnallar_dercler_elave_et_act/(.*)'] = 'Mecnun/publication_add_act/$1';
-$route['himalaY_jurnallar_dercler_silme/(.*)'] = 'Mecnun/publication_delete/$1';
+$route['himalaY_jurnallar_dercler_silme/(.*)/(.*)'] = 'Mecnun/publication_delete/$1/$2';
 
 
 
