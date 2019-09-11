@@ -2447,6 +2447,9 @@ class Mecnun extends CI_Controller{
         $this->Journal_model->delete([
             'id' => $id
         ]);
+        $this->Journal_model->delete_publication([
+            'journal_id' => $id
+        ]);
         $this->session->set_flashdata('success','Jurnal silindi');
         redirect(base_url('himalaY_jurnallar'));
     }
@@ -2564,51 +2567,74 @@ class Mecnun extends CI_Controller{
         $time = strip_tags($this->input->post('time'));
         $link = strip_tags($this->input->post('link'));
 
+        $config = array();
+        $config['upload_path'] = 'upload/publications_files/';
+        $config['allowed_types'] = 'gif|jpg|png|';
+        $config['max_size'] = '100000';
+        $this->load->library('upload', $config, 'imgupload'); // Create custom object for cover upload
+        $this->imgupload->initialize($config);
+        $this->imgupload->do_upload('img_name');
 
-        $config['upload_path']   = 'upload/publications_files/';
-        $config['max_size']     = '10000';
-        $config['allowed_types'] = 'pdf|doc|docx';
-        $config['file_name'] = $_FILES['image_name']['name'];
+        // Pdf upload
+        $config = array();
+        $config['upload_path'] = 'upload/publications_files/';
+        $config['allowed_types'] = 'pdf';
+        $config['max_size'] = '1000000';
+        $this->load->library('upload', $config, 'pdfupload');  // Create custom object for catalog upload
+        $this->pdfupload->initialize($config);
+       $this->pdfupload->do_upload('pdf_name');
 
-        $this->upload->initialize($config);
+        $image = $this->imgupload->data();
+
+        $file = $this->pdfupload->data();
 
         if (!empty($time) ){
 
+            if ($file) {
 
-            $data = array(
+                $data = array(
+                    'name_az' => $title_az,
+                    'name_en' => $title_en,
+                    'name_ru' => $title_ru,
+                    'journal_id' => $id,
+                    'time' => $time,
+                    'link' => $link,
+                    'file_name' => $file['file_name'],
+                    'img_name' => ($this->imgupload->do_upload('img_name')) ? $image['file_name'] : 'default.png'
+                );
+            }else{
+                $data = array(
+                    'name_az' => $title_az,
+                    'name_en' => $title_en,
+                    'name_ru' => $title_ru,
+                    'journal_id' => $id,
+                    'time' => $time,
+                    'link' => $link,
+                    'img_name' => ($this->imgupload->do_upload('img_name')) ? $image['file_name'] : 'default.png'
 
-                'name_az' => $title_az,
-                'name_en' => $title_en,
-                'name_ru' =>  $title_ru,
-                'journal_id' => $id,
-                'time'  => $time,
-                'link' => $link,
-                'file_name'    => $this->upload->data('file_name')
-
-
-            );
-
+                );
+            }
             $this->Journal_model->insert_publication($data);
             $msg = 'Yeni derc əlavə olundu ! ';
             $this->session->set_flashdata('success',$msg);
 
-            redirect(base_url('himalaY_jurnallar'));
+            redirect(base_url('himalaY_jurnallar_dercler/').$id);
         }else{
 
             $msg = 'Zəhmət olmasa boşluq buraxmayın ! ';
             $this->session->set_flashdata('alert',$msg);
 
-            redirect(base_url('himalaY_jurnallar_elave_et'));
+            redirect(base_url('himalaY_jurnallar_dercler_elave_et/').$id);
         }
     }
 
-    public function publication_delete($id)
+    public function publication_delete($id,$journal_id)
     {
         $this->Journal_model->delete_publication([
             'id' => $id
         ]);
         $this->session->set_flashdata('success','Derc silindi');
-        redirect(base_url('himalaY_jurnallar_dercler/').$id);
+        redirect(base_url('himalaY_jurnallar_dercler/').$journal_id);
     }
 }
 

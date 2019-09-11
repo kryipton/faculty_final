@@ -57,7 +57,7 @@
 
                         <th><?php  echo $journal['time']?></th>
                         <th>
-                            <img style="width: 150px; height: 90px" src="<?php  echo base_url('upload/journal_images/'.$journal['img_name']) ?>" alt="">
+                            <img style="width: 150px; height: 90px; object-fit: contain;" src="<?php  echo base_url('upload/journal_images/'.$journal['img_name']) ?>" alt="">
                         </th>
                         <td>
                             <a href="<?php echo base_url('himalaY_jurnallar_duzenle/').$journal['id'] ?>" class="btn btn-primary btn-sm"

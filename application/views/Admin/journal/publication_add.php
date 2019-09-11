@@ -17,6 +17,18 @@
             <br>
             <br>
             <br>
+            <br>
+            <?php if ($this->session->flashdata('success')){ ?>
+                <div class="alert alert-success" role="alert">
+                    <?php echo $this->session->flashdata('success') ?>
+                </div>
+            <?php } ?>
+            <?php if ($this->session->flashdata('alert')){ ?>
+                <div class="alert alert-danger" role="alert">
+                    <?php echo $this->session->flashdata('alert') ?>
+                </div>
+            <?php } ?>
+            <br>
 
 
             <div class="col-md-8">
@@ -39,8 +51,12 @@
                     <label for="">Link URL</label>
                     <input type="text" class="form-control" name="link">                    <br>
 
-                    <label for="">Jurnal şəkili</label>
-                    <input type="file" class="form-control" name="file_name"> <br>
+                    <label for="">Derc şəkili</label>
+                    <input type="file" class="form-control" name="img_name"> <br>
+
+
+                    <label for="">PDF fayl</label>
+                    <input type="file" class="form-control" name="pdf_name"> <br>
 
                     <input type="submit" class="btn btn-info" value="Əlavə et">
                 </form>
