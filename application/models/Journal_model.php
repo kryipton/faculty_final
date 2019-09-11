@@ -11,6 +11,10 @@
         return $this->db->limit($limit, $count)->order_by("id","DESC")->get('journal_db')->result_array();
     }
 
+    public function get_count_journals_pagination(){
+        return $this->db->count_all('journal_db');
+    }
+
 
     public function get_journal($where){
         return $this->db->where($where)->get('journal_db')->row_array();
