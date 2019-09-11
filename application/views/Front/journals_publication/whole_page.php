@@ -131,7 +131,7 @@
                         <div class="col-xs-12" style="border-radius: 10px;background-color: #fff; padding: 10px;padding-top: 22px; box-shadow: 0 9px 10px -1px rgba(0, 0, 0, 0.1);">
                             <center>
                                 <div class="col-xs-12">
-                                    <img style="border-radius: 10px" src="<?php echo base_url("upload/journal_images/$journal_publication[img_name]")?>" alt="">
+                                    <img style="height: 270px;object-fit: contain; border-radius: 10px" src="<?php echo base_url("upload/publications_files/$journal_publication[img_name]")?>" alt="">
                                 </div>
 
                                 <div class="col-xs-12">
@@ -152,20 +152,25 @@
 
                                         ?>
                                     </p>
-                                    <a href="<?php
+                                    <a
+
+                                       <?php if ($journal_publication["file_name"] != ""){?>
+                                       href="<?php
 
                                         if ($this->session->userdata("dil") == "az"){
-                                            echo base_url("upload/journal_images/$journal_publication[file_name]");
+                                            echo base_url("upload/publications_files/$journal_publication[file_name]");
                                         }
                                         elseif ($this->session->userdata("dil") == "en"){
-                                            echo base_url("upload/journal_images/$journal_publication[file_name]");
+                                            echo base_url("upload/publications_files/$journal_publication[file_name]");
                                         }
                                         elseif ($this->session->userdata("dil") == "ru"){
-                                            echo base_url("upload/journal_images/$journal_publication[file_name]");
+                                            echo base_url("upload/publications_files/$journal_publication[file_name]");
                                         }
 
                                     ?>"
-                                       download
+                                       <?php }?>
+
+                                       <?php echo ($journal_publication["file_name"] != "") ? "download" : ""?>
                                        class="btn btn-sm btn-primary c_publication_link"
                                        style="color: white!important; background-color: #0f61a0; font-size: 12px;"
                                        data-url="<?php echo $journal_publication["link"]?>">
