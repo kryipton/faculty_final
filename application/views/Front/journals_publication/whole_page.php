@@ -154,18 +154,18 @@
                                     </p>
                                     <a href="<?php
 
-                                        if ($this->session->userdata("dil") == "az"){
+                                        if ($this->session->userdata("dil") == "az" && $journal_publication["file_name"] != ""){
                                             echo base_url("upload/publications_files/$journal_publication[file_name]");
                                         }
-                                        elseif ($this->session->userdata("dil") == "en"){
+                                        elseif ($this->session->userdata("dil") == "en" && $journal_publication["file_name"] != ""){
                                             echo base_url("upload/publications_files/$journal_publication[file_name]");
                                         }
-                                        elseif ($this->session->userdata("dil") == "ru"){
+                                        elseif ($this->session->userdata("dil") == "ru" && $journal_publication["file_name"] != ""){
                                             echo base_url("upload/publications_files/$journal_publication[file_name]");
                                         }
 
                                     ?>"
-                                       download
+                                       <?php echo ($journal_publication["file_name"] != "") ? "download" : ""?>
                                        class="btn btn-sm btn-primary c_publication_link"
                                        style="color: white!important; background-color: #0f61a0; font-size: 12px;"
                                        data-url="<?php echo $journal_publication["link"]?>">
