@@ -172,11 +172,11 @@
                 <?php }?>
 
 
-<!--                <div class="pagination" style="">-->
-<!--                    <center>-->
-<!--                        --><?php //echo $links?>
-<!--                    </center>-->
-<!--                </div>-->
+                <div class="pagination" style="margin-bottom: 40px; margin-top: 30px">
+                    <center>
+                        <?php echo $links?>
+                    </center>
+                </div>
 
             </div>
 

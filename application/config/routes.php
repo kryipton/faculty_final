@@ -71,6 +71,8 @@ $route['(:any)/Labaratory'] = 'Leyli/labaratory';
 
 //Jurnallar hissesi
 $route['(:any)/Journals'] = 'Leyli/journals';
+$route['(:any)/Journals/(.*)'] = 'Leyli/journals/$1';
+
 //Jurnallar haqqinda hissesi
 $route['(:any)/Journals_about/(.*)'] = 'Leyli/journals_about/$2';
 //Jurnallar elaqe hissesi

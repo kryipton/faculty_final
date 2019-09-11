@@ -509,8 +509,23 @@ class Leyli extends CI_Controller {
         $data["services"] = $this->Services_model->get_services();
 
 
-        $data['journals'] = $this->Journal_model->get_journals();
+//        pagination
+        $this->load->library('pagination');
 
+        $config["base_url"]  = base_url($this->uri->segment(1) . "/Journals");
+        $config["total_rows"] = $this->Journal_model->get_count_journals_pagination();
+        $config["uri_segment"] = 3;
+        $config["per_page"] = 9;
+        $config["first_link"] = "<<";
+        $config["last_link"] = ">>";
+
+        $this->pagination->initialize($config);
+
+
+        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+
+        $data['journals']   = $this->Journal_model->get_journals_pagination($config["per_page"], $page);
+        $data['links']  = $this->pagination->create_links();
 
         $this->load->view('Front/journals/whole_page', $data);
 
