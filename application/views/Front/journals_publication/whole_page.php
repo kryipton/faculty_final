@@ -131,7 +131,7 @@
                         <div class="col-xs-12" style="border-radius: 10px;background-color: #fff; padding: 10px;padding-top: 22px; box-shadow: 0 9px 10px -1px rgba(0, 0, 0, 0.1);">
                             <center>
                                 <div class="col-xs-12">
-                                    <img style="max-height: 270px;object-fit: contain; border-radius: 10px" src="<?php echo base_url("upload/publications_files/$journal_publication[img_name]")?>" alt="">
+                                    <img style="height: 270px;object-fit: contain; border-radius: 10px" src="<?php echo base_url("upload/publications_files/$journal_publication[img_name]")?>" alt="">
                                 </div>
 
                                 <div class="col-xs-12">
