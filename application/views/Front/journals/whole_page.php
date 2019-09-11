@@ -113,12 +113,14 @@
 
                 <?php foreach ($journals as $journal) { ?>
 
-                    <div class="col-xs-12 c_journal_card_div">
-                        <div class="col-sm-3 col-xs-5">
-                            <img src="<?php echo base_url("upload/journal_images/$journal[img_name]")?>" alt="Şəkil Yüklənmədi">
+                    <div class="col-xs-12 c_journal_card_div ">
+                        <div class="c_journal_card_div_margin col-sm-2 col-xs-12">
+                            <center>
+                                <img src="<?php echo base_url("upload/journal_images/$journal[img_name]")?>" alt="Şəkil Yüklənmədi">
+                            </center>
                         </div>
 
-                        <div class="col-sm-9 col-xs-7">
+                        <div class="col-sm-10 col-xs-12">
 
                             <a href="<?php
 
@@ -154,13 +156,31 @@
                                 <?php
 
                                 if ($this->session->userdata("dil") == "az"){
-                                    echo $journal["desc_az"];
+
+
+                                    if (strlen($journal["desc_az"]) > 270){
+                                        echo substr($journal["desc_az"],0,270) . "...";
+                                    }else{
+                                        echo $journal["desc_az"];
+                                    }
+
+
                                 }
                                 elseif ($this->session->userdata("dil") == "en"){
-                                    echo $journal["desc_en"];
+
+                                    if (strlen($journal["desc_en"]) > 270){
+                                        echo substr($journal["desc_en"],0,270) . "...";
+                                    }else{
+                                        echo $journal["desc_en"];
+                                    }
                                 }
                                 elseif ($this->session->userdata("dil") == "ru"){
-                                    echo $journal["desc_ru"];
+
+                                    if (strlen($journal["desc_ru"]) > 270){
+                                        echo substr($journal["desc_ru"],0,270) . "...";
+                                    }else{
+                                        echo $journal["desc_ru"];
+                                    }
                                 }
 
                                 ?>
