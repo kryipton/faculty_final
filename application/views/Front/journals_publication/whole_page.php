@@ -152,19 +152,24 @@
 
                                         ?>
                                     </p>
-                                    <a href="<?php
+                                    <a
 
-                                        if ($this->session->userdata("dil") == "az" && $journal_publication["file_name"] != ""){
+                                       <?php if ($journal_publication["file_name"] != ""){?>
+                                       href="<?php
+
+                                        if ($this->session->userdata("dil") == "az"){
                                             echo base_url("upload/publications_files/$journal_publication[file_name]");
                                         }
-                                        elseif ($this->session->userdata("dil") == "en" && $journal_publication["file_name"] != ""){
+                                        elseif ($this->session->userdata("dil") == "en"){
                                             echo base_url("upload/publications_files/$journal_publication[file_name]");
                                         }
-                                        elseif ($this->session->userdata("dil") == "ru" && $journal_publication["file_name"] != ""){
+                                        elseif ($this->session->userdata("dil") == "ru"){
                                             echo base_url("upload/publications_files/$journal_publication[file_name]");
                                         }
 
                                     ?>"
+                                       <?php }?>
+
                                        <?php echo ($journal_publication["file_name"] != "") ? "download" : ""?>
                                        class="btn btn-sm btn-primary c_publication_link"
                                        style="color: white!important; background-color: #0f61a0; font-size: 12px;"
