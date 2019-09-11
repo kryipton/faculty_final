@@ -27,7 +27,7 @@ class Events_model extends  CI_Model{
     }
 
     public function get_events_pagination($limit, $count){
-        return $this->db->limit($limit, $count)->order_by("id", "DESC")->get('events_db')->result_array();
+        return $this->db->limit($limit, $count)->order_by("event_id", "DESC")->get('events_db')->result_array();
     }
 
     public function get_count_events_pagination(){

@@ -38,7 +38,7 @@ class News_model extends CI_Model{
     }
 
     public function get_news_pagination($limit, $count){
-        return $this->db->limit($limit, $count)->order_by("id", "DESC")->get('news_db')->result_array();
+        return $this->db->limit($limit, $count)->order_by("news_id", "DESC")->get('news_db')->result_array();
     }
 
     public function get_count_news_pagination(){
