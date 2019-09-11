@@ -207,21 +207,51 @@
                             </li>
 
                             <li>
-                                <a class="trigger" href="<?php
 
-                                if ($this->session->userdata("dil") == "az"){
-                                    echo base_url('az/Labaratory');
-                                }
-                                elseif ($this->session->userdata("dil") == "en"){
-                                    echo base_url('en/Labaratory');
-                                }
-                                elseif ($this->session->userdata("dil") == "ru"){
-                                    echo base_url('ru/Labaratory');
-                                }
 
-                                ?>">
-                                    <?php echo $this->lang->line("labaratoriyalar"); ?>
+                                <a href="#">
+                                    <?php echo $this->lang->line("elm"); ?>
+
                                 </a>
+                                <ul class="dl-submenu">
+
+                                    <li>
+                                        <a class="trigger" href="<?php
+
+                                        if ($this->session->userdata("dil") == "az"){
+                                            echo base_url('az/Journals');
+                                        }
+                                        elseif ($this->session->userdata("dil") == "en"){
+                                            echo base_url('en/Journals');
+                                        }
+                                        elseif ($this->session->userdata("dil") == "ru"){
+                                            echo base_url('ru/Journals');
+                                        }
+
+                                        ?>">
+                                            <?php echo $this->lang->line("jurnallar"); ?>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a class="trigger" href="<?php
+
+                                        if ($this->session->userdata("dil") == "az"){
+                                            echo base_url('az/Labaratory');
+                                        }
+                                        elseif ($this->session->userdata("dil") == "en"){
+                                            echo base_url('en/Labaratory');
+                                        }
+                                        elseif ($this->session->userdata("dil") == "ru"){
+                                            echo base_url('ru/Labaratory');
+                                        }
+
+                                        ?>">
+                                            <?php echo $this->lang->line("labaratoriyalar"); ?>
+                                        </a>
+                                    </li>
+
+                                </ul>
 
 
 

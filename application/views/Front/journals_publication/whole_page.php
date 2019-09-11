@@ -124,192 +124,69 @@
 
             <div class="about_right_text" style="color: grey">
 
-<!--                --><?php //foreach ($journals as $journal) { ?>
+                <?php foreach ($journal_publications as $journal_publication) { ?>
 
-                <div class="col-sm-4" style=" margin-bottom: 20px">
+                    <div class="col-sm-3 c_bottom" style="margin-bottom: 20px">
 
-                        <div class="col-xs-12" style="border-radius: 10px;background-color: #fff; padding: 10px; box-shadow: 0 9px 10px -1px rgba(0, 0, 0, 0.1);">
+                        <div class="col-xs-12" style="border-radius: 10px;background-color: #fff; padding: 10px;padding-top: 22px; box-shadow: 0 9px 10px -1px rgba(0, 0, 0, 0.1);">
                             <center>
                                 <div class="col-xs-12">
-                                    <img style="border-radius: 10px" src="http://localhost/faculty/assets/kcfinder/upload/images/804A1250.jpg" alt="">
+                                    <img style="border-radius: 10px" src="<?php echo base_url("upload/journal_images/$journal_publication[img_name]")?>" alt="">
                                 </div>
 
                                 <div class="col-xs-12">
                                     <br>
-                                    <p>tarixi</p>
-                                    <p>adi</p>
+                                    <p><?php echo $journal_publication["time"]?></p>
+                                    <p>
+                                        <?php
+
+                                            if ($this->session->userdata("dil") == "az"){
+                                                echo $journal_publication["name_az"];
+                                            }
+                                            elseif ($this->session->userdata("dil") == "en"){
+                                                echo $journal_publication["name_en"];
+                                            }
+                                            elseif ($this->session->userdata("dil") == "ru"){
+                                                echo $journal_publication["name_ru"];
+                                            }
+
+                                        ?>
+                                    </p>
                                     <a href="<?php
 
-//                                    if ($journal_publication["link"] == ""){
-//
-//                                        if ($this->session->userdata("dil") == "az"){
-//                                            echo base_url("upload/publication_files/$journal_publication[file_name]");
-//                                        }
-//                                        elseif ($this->session->userdata("dil") == "en"){
-//                                            echo base_url("upload/publication_files/$journal_publication[file_name]");
-//                                        }
-//                                        elseif ($this->session->userdata("dil") == "ru"){
-//                                            echo base_url("upload/publication_files/$journal_publication[file_name]");
-//                                        }
-//
-//                                    }else{
-//                                        redirect($journal_publication["link"]);
-//                                    }
+                                        if ($this->session->userdata("dil") == "az"){
+                                            echo base_url("upload/journal_images/$journal_publication[file_name]");
+                                        }
+                                        elseif ($this->session->userdata("dil") == "en"){
+                                            echo base_url("upload/journal_images/$journal_publication[file_name]");
+                                        }
+                                        elseif ($this->session->userdata("dil") == "ru"){
+                                            echo base_url("upload/journal_images/$journal_publication[file_name]");
+                                        }
 
+                                    ?>"
+                                       download
+                                       class="btn btn-sm btn-primary c_publication_link"
+                                       style="color: white!important; background-color: #0f61a0; font-size: 12px;"
+                                       data-url="<?php echo $journal_publication["link"]?>">
 
-                                    ?>" download class="btn btn-sm btn-primary" style="color: white!important; background-color: #0f61a0; font-size: 12px;">
                                         <?php echo $this->lang->line("yukle")?>
                                     </a>
+
                                 </div>
 
                             </center>
                         </div>
 
-                </div>
-
-                <div class="col-sm-4" style=" margin-bottom: 20px">
-
-                    <div class="col-xs-12" style="border-radius: 10px;background-color: #fff; padding: 10px; box-shadow: 0 9px 10px -1px rgba(0, 0, 0, 0.1);">
-                        <center>
-                            <div class="col-xs-12">
-                                <img style="border-radius: 10px" src="http://localhost/faculty/assets/kcfinder/upload/images/804A1250.jpg" alt="">
-                            </div>
-
-                            <div class="col-xs-12">
-                                <br>
-                                <p>tarixi</p>
-                                <p>adi</p>
-                                <a href="<?php
-
-
-                                if ($this->session->userdata("dil") == "az"){
-//                                   echo base_url("az/Journals_publication_link/$journal_publication[id]");
-                                }
-                                elseif ($this->session->userdata("dil") == "en"){
-//                                   echo base_url("en/Journals_publication_link/$journal_publication[id]");
-                                }
-                                elseif ($this->session->userdata("dil") == "ru"){
-//                                   echo base_url("ru/Journals_publication_link/$journal_publication[id]");
-                                }
-
-                                ?>" type="button" class="btn btn-sm btn-primary" style="color: white!important; background-color: #0f61a0; font-size: 12px;">
-                                    <?php echo $this->lang->line("yukle")?>
-                                </a>
-                            </div>
-
-                        </center>
                     </div>
 
+                <?php }?>
+
+                <div class="pagination" style="margin-bottom: 40px; margin-top: 30px">
+                    <center>
+                        <?php echo $links?>
+                    </center>
                 </div>
-
-                <div class="col-sm-4" style=" margin-bottom: 20px">
-
-                    <div class="col-xs-12" style="border-radius: 10px;background-color: #fff; padding: 10px; box-shadow: 0 9px 10px -1px rgba(0, 0, 0, 0.1);">
-                        <center>
-                            <div class="col-xs-12">
-                                <img style="border-radius: 10px" src="http://localhost/faculty/assets/kcfinder/upload/images/804A1250.jpg" alt="">
-                            </div>
-
-                            <div class="col-xs-12">
-                                <br>
-                                <p>tarixi</p>
-                                <p>adi</p>
-                                <a href="<?php
-
-
-                                if ($this->session->userdata("dil") == "az"){
-//                                   echo base_url("az/Journals_publication_link/$journal_publication[id]");
-                                }
-                                elseif ($this->session->userdata("dil") == "en"){
-//                                   echo base_url("en/Journals_publication_link/$journal_publication[id]");
-                                }
-                                elseif ($this->session->userdata("dil") == "ru"){
-//                                   echo base_url("ru/Journals_publication_link/$journal_publication[id]");
-                                }
-
-                                ?>" type="button" class="btn btn-sm btn-primary" style="color: white!important; background-color: #0f61a0; font-size: 12px;">
-                                    <?php echo $this->lang->line("yukle")?>
-                                </a>
-                            </div>
-
-                        </center>
-                    </div>
-
-                </div>
-
-                <div class="col-sm-4" style=" margin-bottom: 20px">
-
-                    <div class="col-xs-12" style="border-radius: 10px;background-color: #fff; padding: 10px; box-shadow: 0 9px 10px -1px rgba(0, 0, 0, 0.1);">
-                        <center>
-                            <div class="col-xs-12">
-                                <img style="border-radius: 10px" src="http://localhost/faculty/assets/kcfinder/upload/images/804A1250.jpg" alt="">
-                            </div>
-
-                            <div class="col-xs-12">
-                                <br>
-                                <p>tarixi</p>
-                                <p>adi</p>
-                                <a href="<?php
-
-
-                                if ($this->session->userdata("dil") == "az"){
-//                                   echo base_url("az/Journals_publication_link/$journal_publication[id]");
-                                }
-                                elseif ($this->session->userdata("dil") == "en"){
-//                                   echo base_url("en/Journals_publication_link/$journal_publication[id]");
-                                }
-                                elseif ($this->session->userdata("dil") == "ru"){
-//                                   echo base_url("ru/Journals_publication_link/$journal_publication[id]");
-                                }
-
-                                ?>" type="button" class="btn btn-sm btn-primary" style="color: white!important; background-color: #0f61a0; font-size: 12px;">
-                                    <?php echo $this->lang->line("yukle")?>
-                                </a>
-                            </div>
-
-                        </center>
-                    </div>
-
-                </div>
-
-                <div class="col-sm-4" style=" margin-bottom: 20px">
-
-                    <div class="col-xs-12" style="border-radius: 10px;background-color: #fff; padding: 10px; box-shadow: 0 9px 10px -1px rgba(0, 0, 0, 0.1);">
-                        <center>
-                            <div class="col-xs-12">
-                                <img style="border-radius: 10px" src="http://localhost/faculty/assets/kcfinder/upload/images/804A1250.jpg" alt="">
-                            </div>
-
-                            <div class="col-xs-12">
-                                <br>
-                                <p>tarixi</p>
-                                <p>adi</p>
-                                <a href="<?php
-
-
-                                if ($this->session->userdata("dil") == "az"){
-//                                   echo base_url("az/Journals_publication_link/$journal_publication[id]");
-                                }
-                                elseif ($this->session->userdata("dil") == "en"){
-//                                   echo base_url("en/Journals_publication_link/$journal_publication[id]");
-                                }
-                                elseif ($this->session->userdata("dil") == "ru"){
-//                                   echo base_url("ru/Journals_publication_link/$journal_publication[id]");
-                                }
-
-                                ?>" type="button" class="btn btn-sm btn-primary" style="color: white!important; background-color: #0f61a0; font-size: 12px;">
-                                    <?php echo $this->lang->line("yukle")?>
-                                </a>
-                            </div>
-
-                        </center>
-                    </div>
-
-                </div>
-
-
-
-                <!--                --><?php //}?>
 
 
             </div>

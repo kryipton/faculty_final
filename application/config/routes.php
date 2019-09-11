@@ -79,6 +79,7 @@ $route['(:any)/Journals_about/(.*)'] = 'Leyli/journals_about/$2';
 $route['(:any)/Journals_contact/(.*)'] = 'Leyli/journals_contact/$2';
 //Jurnalin diger dercleri hissesi
 $route['(:any)/Journals_publication/(.*)'] = 'Leyli/journals_publication/$2';
+$route['(:any)/Journals_publication/(.*)/(.*)'] = 'Leyli/journals_publication/$2/$3';
 
 
 

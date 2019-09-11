@@ -49,3 +49,9 @@ $(".c_text").click(function () {
     window.location.href = $(this).data("url");
 });
 
+$(".c_publication_link").click(function () {
+    if ($(this).data("url") != ""){
+        window.location.href = $(this).data("url");
+    }
+});
+

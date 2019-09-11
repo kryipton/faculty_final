@@ -515,7 +515,7 @@ class Leyli extends CI_Controller {
         $config["base_url"]  = base_url($this->uri->segment(1) . "/Journals");
         $config["total_rows"] = $this->Journal_model->get_count_journals_pagination();
         $config["uri_segment"] = 3;
-        $config["per_page"] = 9;
+        $config["per_page"] = 7;
         $config["first_link"] = "<<";
         $config["last_link"] = ">>";
 
@@ -556,7 +556,6 @@ class Leyli extends CI_Controller {
 
     public function journals_contact($id){
 
-        //      bura journallar tabledengetirelecek
 
         $data['logo'] = $this->Mecnun_model->get_logo_and_title();
 
@@ -578,7 +577,6 @@ class Leyli extends CI_Controller {
 
     public function journals_publication($id){
 
-        //      bura journallar tabledengetirelecek
 
         $data['logo'] = $this->Mecnun_model->get_logo_and_title();
 
@@ -588,14 +586,30 @@ class Leyli extends CI_Controller {
 
         $data['contact'] = $this->Mecnun_model->getContact();
         $data["services"] = $this->Services_model->get_services();
-
         $data["journal"] = $this->Journal_model->get_journal(array(
             "id" => $id,
         ));
 
-//        $data["$journal_publications"] = $this->Journal_model->metod_adi(array(
-//            "journal_id" => $id,
-//        ));
+        //        pagination
+        $this->load->library('pagination');
+
+        $config["base_url"]  = base_url($this->uri->segment(1) . "/Journals_publication/" . $this->uri->segment(3));
+        $config["total_rows"] = $this->Journal_model->get_count_publication_pagination(array(
+            "journal_id" => $id,
+        ));
+        $config["uri_segment"] = 4;
+        $config["per_page"] = 12;
+        $config["first_link"] = "<<";
+        $config["last_link"] = ">>";
+
+        $this->pagination->initialize($config);
+
+
+        $page = ($this->uri->segment(4)) ? $this->uri->segment(4) : 0;
+
+        $data['journal_publications']   = $this->Journal_model->get_publication_pagination(array("journal_id" => $id) ,$config["per_page"], $page);
+
+        $data['links']  = $this->pagination->create_links();
 
         $this->load->view('Front/journals_publication/whole_page', $data);
 

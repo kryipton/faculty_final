@@ -2520,7 +2520,7 @@ class Mecnun extends CI_Controller{
 
             }
 
-            $this->Journal_model->update($data);
+            $this->Journal_model->update(array("id" => $id),$data);
             $msg = 'Jurnal düzənləndi!';
 
             $this->session->set_flashdata('success',$msg);

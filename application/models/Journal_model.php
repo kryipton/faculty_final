@@ -26,8 +26,8 @@
     }
 
 
-    public function update($data){
-        $this->db->update('journal_db',$data);
+    public function update($where, $data){
+        $this->db->where($where)->update('journal_db',$data);
     }
 
     public function delete($where)
@@ -41,15 +41,14 @@
     }
 
 
-    public function get_publication_pagination($limit, $count)
+    public function get_publication_pagination($where, $limit, $count)
     {
-        return $this->db->limit($limit, $count)->order_by("id","DESC")->get('publications')->result_array();
+        return $this->db->where($where)->limit($limit, $count)->order_by("id","DESC")->get('publications')->result_array();
     }
 
-    public function get_count_publication_pagination(){
-        return $this->db->count_all('publications');
+    public function get_count_publication_pagination($where){
+        return $this->db->where($where)->get('publications')->num_rows();
     }
-
 
     public function delete_publication($where)
     {
